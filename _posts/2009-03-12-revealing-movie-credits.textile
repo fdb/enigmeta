@@ -1,0 +1,32 @@
+---
+layout: post
+title: Revealing movie credits
+---
+
+h1. {{ page.title }}
+
+p(meta). 12 Mar 2009 - Antwerp
+
+I think it is funny how some movies reveal everything there is to know about them, just by looking at the movie credits. Not even the actors, just the roles they play:
+
+ * Crack head 1
+ * Elegant woman
+ * Crackhead 2
+ * Mass Appeal Editor
+ * Woman in closet
+ * Crackwhore
+ * Shower Girl
+ * Dealer
+ * Tom
+ * High-school girl
+ * Perfect Urban Gentleman
+ * Pool Player's Homie
+ * High-school girl 1
+ * Junkyard slut
+ * Junkyard stud
+ * Woman on couch
+ * Porn Model
+ * Hooker
+ * Shitkicker
+ 
+The movie, if you're still interested, is called "Bad Biology":http://www.imdb.com/title/tt0974977/. I haven't seen it yet, but judging by the credits and the synopsis talking about the woman with 9 clitorises (clitorii?), I probably should.
