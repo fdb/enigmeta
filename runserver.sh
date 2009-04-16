@@ -1,2 +1,2 @@
 #!/bin/sh
-jekyll --auto --server
+jekyll --pygments --auto --server
