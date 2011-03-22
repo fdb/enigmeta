@@ -5,21 +5,21 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Frederik De Bleser</title>
- <link href="http://enigmeta.com/atom.xml" rel="self"/>
- <link href="http://enigmeta.com/"/>
+ <link href="http://www.enigmeta.com/atom.xml" rel="self"/>
+ <link href="http://www.enigmeta.com/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://enigmeta.com/</id>
+ <id>http://www.enigmeta.com/</id>
  <author>
    <name>Frederik De Bleser</name>
-   <email>frederik@pandora.be</email>
+   <email>frederik@burocrazy.com</email>
  </author>
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://enigmeta.com{{ post.url }}"/>
+   <link href="http://www.enigmeta.com{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://enigmeta.com{{ post.id }}</id>
+   <id>http://www.enigmeta.com{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}

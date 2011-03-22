@@ -2,11 +2,6 @@
 layout: post
 title: PyCon 2009 report
 ---
-
-h1. {{ page.title }}
-
-p(meta). 15 Apr 2009 - Antwerp
-
 This year was my first visit to "PyCon":http://www.pycon.org/ in the United States. Here's the "full schedule for the conference":http://us.pycon.org/2009/conference/schedule/.
 
 In this post, I will give some notes and remarks about the sessions that I followed. For each session I included a link to the session details. Most of them have videos and slides of the talks.
