@@ -2,6 +2,24 @@ h1. Hello!
 
 This is my blog. It uses  "Jekyll":http://github.com/mojombo/jekyll to transform it into a static site that gets pushed to GitHub. It seemed like a good idea at the time.
 
+h1. Installing on Ubuntu
+
+  sudo apt-get install ruby rubygems
+  sudo gem install rubygems-update
+  sudo gem install jekyll
+  sudo easy_install pygments
+
+h1. Running
+
+To build the website:
+
+  rake
+
+To run the built-in server:
+
+  rake server
+  
+
 h1. License
 
 Content under the directories _posts/ and images/ is copyright Frederik De Bleser. The rest is currently a verbatim copy of code by "Tom Preston-Werner":http://tom.preston-werner.com/, which is MIT Licensed. 
