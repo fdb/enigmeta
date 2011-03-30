@@ -1,2 +1,3 @@
-auto: true
-server: true
+auto: false
+server: false
+pygments: true
