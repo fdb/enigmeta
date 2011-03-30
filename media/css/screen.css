@@ -113,7 +113,6 @@ h2 {
     float: left;
     width: 140px;
     height: 100px;
-
     margin-left: 10px;
     margin-right: 10px;
     position: relative;
@@ -194,6 +193,7 @@ h2 {
 #search {
   position: relative;
   left: 310px;
+  top: 3px;
   margin-left: 10px;
   margin-right: 10px;
   float: left;
@@ -219,7 +219,7 @@ h2 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 620px;
+  width: 612px;
   position: relative;
 }
 
@@ -326,7 +326,7 @@ h2 {
 
 /* Highlighting */
 
-#post pre {
+#content pre {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     background-color: #eee;
@@ -334,11 +334,11 @@ h2 {
     margin-bottom: 10px;
 }
 
-#post code {
+#content code {
   margin: 0;
   padding: 0;
 }
 
-#post pre code {
+#content pre code {
     border: none;
 }
