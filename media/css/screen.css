@@ -194,11 +194,19 @@ h2 {
 #search {
   position: relative;
   left: 310px;
-  top: 3px;
+  top: 12px;
   margin-left: 10px;
   margin-right: 10px;
   float: left;
   width: 300px;
+}
+
+#search .gsc-clear-button {
+  display: none !important;
+}
+
+#search .gsc-branding {
+  display: none !important;
 }
 
 #page {
