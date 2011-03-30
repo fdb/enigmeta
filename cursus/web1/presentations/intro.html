@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Web 1 - Intro</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20100928" />
+<meta name="author" content="Frederik De Bleser" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+<!-- SyntaxHiglighter -->
+<script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="syntaxhighlighter/scripts/shBrushXml.js"></script>
+<link href="syntaxhighlighter/styles/shCoreRDark.css" rel="stylesheet" type="text/css" />
+<link href="syntaxhighlighter/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web 1 - Intro</h1>
+<h2>Sint Lucas Antwerpen</h2>
+</div>
+</div> <!-- end .layout -->
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Web 1</h1>
+<h2>Introductie</h2>
+<h3>Frederik De Bleser</h3>
+<p>frederik@burocrazy.com</p>
+</div>
+
+
+<div class="slide">
+<h1>Overzicht</h1>
+<ul>
+<li>HTMLWTF</li>
+<li>Bottum-up aanpak</li>
+<li>Alternatieven: Flash</li>
+<li>Structuur van een webpagina</li>
+<li>Scheiden van inhoud en opmaak</li>
+<li>Website-project</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>HTMLWTF</h1>
+<img src="img/intro/internet.png" alt="The Internet.">
+<div class="handout">
+<p>Het internet is fantastisch. Het is de grootste bron aan informatie over van alles en nog wat.</p>
+<p>Door computers van heel de wereld aan elkaar te schakelen tot een netwerk van servers kan je een fantastische wereld aan informatie binnenkrijgen.</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Flickr</h1>
+<img src="img/intro/kittens-flickr.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>Amazon</h1>
+<img src="img/intro/kittens-amazon.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>deredactie.be</h1>
+<img src="img/intro/kittens-deredactie.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>Facebook</h1>
+<img src="img/intro/kittens-facebook.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>I Can Has Cheezburger?</h1>
+<img src="img/intro/kittens-cheezburger.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>HTMLWTF</h1>
+<img src="img/intro/view-source.png">
+<div class="handout">
+<p>Vandaag gaan we achter de schermen kijken van het web.</p>
+<p>Elk van die pagina's is opgemaakt in HTML en vormgegeven met CSS. Het gedrag wordt bepaald door JavaScript.</p>
+<p>Hier is de broncode van elk van die sites.</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Flickr</h1>
+<img src="img/intro/html-flickr.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>Amazon</h1>
+<img src="img/intro/html-amazon.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>deredactie.be</h1>
+<img src="img/intro/html-deredactie.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>Facebook</h1>
+<img src="img/intro/html-facebook.png" class="screenshot">
+</div>
+	
+<div class="slide">
+<h1>I Can Has Cheezburger?</h1>
+<img src="img/intro/html-cheezburger.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>HTMLWTF</h1>
+<pre class="brush: xml">
+&lt;html&gt;
+</pre>
+<div class="handout">
+<p>Je hebt gezien dat elk van deze pagina deze tekst bevat. HTML. Dit is een tag, en in deze cursus zal je er nog heel wat zien.</p>
+<p>Dit lijkt misschien beangstigend in het begin, maar we nemen rustig onze tijd om dit goed door te nemen.</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Bottom-up aanpak</h1>
+<ul>
+<li>Zelfredzaamheid</li>
+<li>Samenwerking</li>
+</ul>
+<div class="handout">
+<p>We hebben er speciaal voor gekozen om je HTML en CSS te leren zodat je echt weet hoe pagina's gemaakt worden, en wat de code erachter is. Dit is belangrijk om verschillende redenen.</p>
+<p>Je zou, in plaats van met HTML te werken, ook met een grafische editor werken. Die schrijft dan de HTML voor jou. Fantastisch!</p>
+<p>Tot er iets mis gaat. De editor vormt een dun laagje boven de HTML en CSS: hij abstraheert als het ware de HTML en CSS tot een grafische omgeving.</p>
+<p>Echter, door te doen alsof HTML en CSS niet bestaan loop je tegen problemen aan die je zelf niet kan oplossen. Een element staat niet op de juiste plaats? Als je nooit de HTML en CSS ziet weet je ook niet waar je moet beginnen zoeken.</p>
+<p>Daarom is het belangrijk om te begrijpen hoe webpagina's gemaakt worden, alvorens je visuele tools gebruikt om pagina's aan te maken.</p>
+<p>In de "echte" wereld zal je grote websites waarschijnlijk in team maken. Als je samenwerkt met een programmeur die de HTML en CSS voor jou doet is het nog steeds belangrijk om te begrijpen wat er mogelijk is. Dit laat de conversatie tussen jou en andere teamleden vlotter verlopen.</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Alternatieven</h1>
+<h2>Waarom niet Flash?</h2>
+<ul>
+<li>Toegankelijkheid</li>
+<li>Zoekmachines</li>
+</ul>
+<div class="handout">
+<p>Veel designer-sites zijn in Flash gemaakt. Flash is ideaal voor animatie, geluid, video, dus waarom doen we niet alles in Flash?</p>
+<p>Er zijn een aantal redenen waarom dit geen cursus Flash is.</p>
+<p>De hoofdreden is toegankelijkheid. Mensen die niet in staat zijn van visuele webpagina's te bekijken (zoals blinden) kunnen je flash-website niet bezoeken. Dit is misschien niet belangrijk als je een portfolio met grafisch werk maakt, maar wordt wel belangrijk als je websites ontwikkeld voor mensen die.</p>
+<p>Daarnaast zijn er de zoekmachines. Een site in Flash bevat bijna geen zinnige informatie voor zoekrobots, waardoor je website het erg povertjes zal doen in Google.</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Alternatieven</h1>
+<h2>Waarom niet Flash?</h2>
+<img src="img/intro/ipad.jpg" width="500">
+<div class="handout">
+<p>Tenslotte zijn er bezoekers die met een mobiele webbrowser de pagina bekijken, zoals de iPhone of iPad.</p>
+<p>Deze apparaten ondersteunen geen Flash, en het is duidelijk uit Apple's standpunt dat dit in hun ogen een verouderde technologie is die ze niet willen ondersteunen.</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Structuur van webpagina</h1>
+<ul>
+<li>Structuur</li>
+<li>Presentatie</li>
+<li>Gedrag</li>
+</ul>
+<div class="handout">
+De structuur bepaalt de verschillende onderdelen van de inhoud zijn, en hoe ze in relatie staan.
+De presentatie bepaalt hoe de inhoud visueel getoond moet worden.
+Het gedrag bepaalt hoe de inhoud reageert en verandert gebaseerd op interactie met de gebruiker.
+</div>
+</div>
+
+<div class="slide">
+<h1>Structuur van webpagina</h1>
+<ul>
+<li>Structuur: <strong>HTML</strong></li>
+<li>Presentatie: <strong>CSS</strong></li>
+<li>Gedrag: <strong>JavaScript</strong></li>
+</ul>
+<div class="handout">
+De structuur bepaalt de verschillende onderdelen van de inhoud zijn, en hoe ze in relatie staan.
+De presentatie bepaalt hoe de inhoud visueel getoond moet worden.
+Het gedrag bepaalt hoe de inhoud reageert en verandert gebaseerd op interactie met de gebruiker.
+Belangrijk is dat de drie elementen gescheiden blijven, en enkel worden gebruikt waarvoor ze dienen.
+</div>
+</div>
+
+<div class="slide">
+<h1>Spaghetticode</h1>
+<img src="img/intro/archive-yahoo.png" class="screenshot">
+<div class="handout">
+In vroegere tijden, dat wil zeggen, 1998, werden structuur & presentatie gemengd. Dit leidde tot een grote soep aan code. Tegenwoordig hoeft dat allemaal niet.
+</div>
+</div>
+
+
+<div class="slide">
+<h1>CSS Zen Garden</h1>
+<img src="img/intro/zengarden-1.png" class="screenshot">
+<div class="handout">
+CSS Zen Garden toont dat één enkele HTML-pagina op duizenden verschillende manieren kan getoond worden.
+De HTML-broncode is altijd hetzelfde. Enkel de opmaak, de CSS-code en de bijhorende beelden zijn verschillend.
+</div>
+</div>
+
+<div class="slide">
+<h1>CSS Zen Garden</h1>
+<img src="img/intro/html-zengarden.png" class="screenshot">
+<div class="handout">
+<p>Dit is de HTML broncode van CSS Zen Garden. De volgende screenshots tonen allemaal andere opmaak, maar de broncode blijft hetzelfde.</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>CSS Zen Garden</h1>
+<img src="img/intro/zengarden-2.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>CSS Zen Garden</h1>
+<img src="img/intro/zengarden-3.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>CSS Zen Garden</h1>
+<img src="img/intro/zengarden-4.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>Voordelen</h1>
+<ul>
+<li>Toegankelijkheid</li>
+<li>Overdraagbaarheid</li>
+<li>Onderhoudbaarheid</li>
+<li>Snelheid</li>
+</ul>
+<div class="handout">
+Door HTML/CSS/JavaScript te scheiden.
+1. Propere, semantische HTML heeft voordelen voor gebruikers die niet-visuele webbrowsers gebruiken, zoals blinden.
+Waarom die focus op blinden? Het web is een democratische tool. Maakt niet uit welke huidskleur je hebt, welke webbrowser je gebruikt of welke handicap je hebt.
+Daarnaast zijn er ook zoekrobotten die je website opzoeken, en die kunnen ook niet zien. Google leest je site en gebruikt vooral de structuur-informatie uit HTML om te bepalen wat belangrijk is.
+2. Je pagina wordt makkelijker overdraagbaar. Door HTML/CSS te scheiden kan je een nieuwe stylesheet implementeren en je hebt een mobiele versie van je pagina. We kunnen ook delen tussen verschillende projecten herbruiken.
+3. Je pagina's worden makkelijker te onderhouden. Een designer kan aanpassingen aan de CSS doen zonder de HTML te hoeven aan te passen of de JavaScript code te veranderen.
+4. Door HTML en CSS te scheiden moeten bezoekers van je website de CSS maar één keer downloaden, en gebruiken daarna de versie die ze in cache bewaren, wat de site sneller maakt.
+</div>
+</div>
+
+<div class="slide">
+<h1>Website project</h1>
+<div class="handout">
+<p>Vandaag gaan we werken aan een website voor een fictieve VZW. We beginnen vanaf een briefing waar één pagina wordt voorgesteld, werken aan de HTML, en misschien wat CSS.</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Buurtfeest VZW: Briefing</h1>
+<img src="img/intro/buurtfeest-briefing.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>Buurtfeest VZW: HTML</h1>
+<img src="img/intro/buurtfeest-unstyled.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>Buurtfeest VZW: CSS</h1>
+<img src="img/intro/buurtfeest-styled.png" class="screenshot">
+</div>
+
+<div class="slide">
+<h1>Plan Cursus</h1>
+<ul>
+<li>HTML overzicht</li>
+<li>HTML oefening</li>
+<li>CSS overzicht</li>
+<li>CSS oefening</li>
+<li>Project</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+</div>
+
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.all()
+</script>
+</body>
+</html>

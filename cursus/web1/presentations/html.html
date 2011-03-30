@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Web 1 - HTML</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20100928" />
+<meta name="author" content="Frederik De Bleser" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+<!-- SyntaxHiglighter -->
+<script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="syntaxhighlighter/scripts/shBrushXml.js"></script>
+<link href="syntaxhighlighter/styles/shCoreRDark.css" rel="stylesheet" type="text/css" />
+<link href="syntaxhighlighter/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web 1 - HTML</h1>
+<h2>Sint Lucas Antwerpen</h2>
+</div>
+</div> <!-- end .layout -->
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Web 1</h1>
+<h2>HTML</h2>
+<h3>Frederik De Bleser</h3>
+<p>frederik@burocrazy.com</p>
+</div>
+
+<div class="slide">
+<h1>HTML</h1>
+<h2>HyperText Markup Language</h2>
+<div class="handout">
+HTML is niet ingewikkeld, maar belangrijk om te begrijpen omdat het het fundament is van de hele webpagina.
+</div>
+</div>
+
+<div class="slide">
+<h1>HTML</h1>
+<h2>HTML bepaalt inhoud en structuur.</h2>
+<div class="handout">
+Het is het skelet van je webpagina, waarna je de "huid" van CSS erop legt, en het gedrag bepaalt door JavaScript.
+</div>
+</div>
+
+<div class="slide">
+<h1>HTML</h1>
+<h2>HTML is <strong>geen</strong> programmeertaal.</h2>
+<h2>Het is een <strong>opmaaktaal</strong>.</h2>
+<div class="handout">
+Er wordt nog wel eens gedacht dat HTML een programmeertaal is. Dat is het niet. Het is een opmaaktaal, of "markup language" in Engels. Het voegt structuur, betekenis toe aan je inhoud.
+</div>
+</div>
+
+<div class="slide">
+<h1>Hoe ziet HTML eruit?</h1>
+<pre class="brush: xml">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;utf-8&quot;&gt;
+	&lt;title&gt;Space Monkeys Inc.&lt;/title&gt;
+	&lt;meta name=&quot;description&quot; content=&quot;Space Monkeys Inc is the largest provider of monkeys in space.&quot;&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;media/style.css?v=1&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1&gt;Welcome to Space Monkeys Inc.&lt;/h1&gt;
+	&lt;p&gt;For years, we have been providing the best quality Space Monkeys known to man.&lt;/p&gt;
+
+	...
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<div class="handout">
+<p>Dit is een volledig HTML document.</p>
+<p>De kleuren hier maken niet deel uit van het document! Je past HTML aan met een gewone tekst-editor, dus niet Word, maar Notepad. Syntax coloring is enkel zodat je duidelijk onderscheid kan maken tussen de verschillende elementen van het document.</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Hoe ziet HTML eruit?</h1>
+<h2>Algemeen</h2>
+<pre class="brush: xml">
+&lt;tagname attribute="value"&gt;
+    content
+&lt;/tagname&gt;
+</pre>
+<h2>Voorbeeld</h2>
+<pre class="brush: xml">
+&lt;p id="footer" class="my-footer"&gt;
+    Copyright 2010.
+&lt;/p&gt;
+</pre>
+<div class="handout">
+HTML bestaat uit "elementen". Elk element bestaat uit een open-tag met attributen. Een element kan inhoud hebben, en ook een sluit-tag. De open- en sluit-tag hebben dezelfde naam, alleen gebruik je voor de sluit-tag een slash.
+De inhoud-regio van een element kan een ander element bevatten. Ze zitten dan in elkaar genesteld. Zo maak je een boom, of hierarchie van elementen.
+Het voorbeeld toont een paragraaf-element. Het heeft een ID-attribuut en een class-attribuut. Deze worden gebruikt in CSS om elementen uit elkaar te halen, zodat je bijvoorbeeld speciale opmaak kunt instellen voor enkel de footer.
+</div>
+</div>
+
+<div class="slide">
+<h1>Geneste elementen</h1>
+<pre class="brush: xml">
+&lt;div id="content"&gt;
+    &lt;h2&gt;My Blog Post&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum...&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+<div class="handout">
+Hier is een voorbeeld van een genest stuk HTML. Het division (div)-element bevat een header (h2) en een paragraaf (p). Het h2-element en p-element zitten dus <strong>in</strong> het div-element.
+</div>
+</div>
+
+<div class="slide">
+<h1>Hoe HTML gebruiken?</h1>
+<h2>De inhoud beschrijft de structuur.</h2>
+<div class="handout">
+De belangrijkste regel is dat de inhoud bepaalt hoe we de structuur van een HTML-document beschrijven.
+</div>
+</div>
+
+<div class="slide">
+<h1>Hoe HTML gebruiken?</h1>
+<h2>Aanpak:</h2>
+<ul>
+<li>Eerst <strong>HTML</strong>: semantische structuur.</li>
+<li>Dan <strong>CSS</strong>: opmaak.</li>
+</ul>
+<div class="handout">
+De aanpak is om eerst de HTML te schrijven. Focus enkel op het kiezen van structuur-elementen die de betekenis van de inhoud bepalen.
+Als je daarna de CSS maakt, kan je beginnen nadenken over hoe de semantische structuur wordt opgemaakt.
+We gebruiken de term "semantische structuur" (semantic markup) om aan te duiden dat we focussen op de betekenis van de inhoud, niet op hoe het eruit ziet.
+Als je deze aanpak volgt kom je tot een stevige HTML-fundament.
+</div>
+</div>
+
+<div class="slide">
+<h1>HTML-elementen</h1>
+<div class="handout">
+<p>Laten we eens kijken welke gereedschappen we hebben om de structuur te beschrijven.</p>
+<p>Je hoeft die niet van buiten te kennen! Ik toon een website waarop je dit allemaal kan terugvinden.</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Hoofdingen</h1>
+<h2>Code</h2>
+<pre class="brush: xml">
+&lt;h1&gt;Hoofding 1&lt;/h1&gt;
+&lt;h2&gt;Hoofding 2&lt;/h2&gt;
+...
+&lt;h6&gt;Hoofding 6&lt;/h6&gt;
+</pre>
+<h2>Resultaat</h2>
+<h2 style="font-size: 120%">Hoofding 1</h2>
+<h3 style="font-size: 110%">Hoofding 2</h3>
+...
+<h6 style="font-size: 80%">Hoofding 6</h6>
+<div class="handout">
+Eerst hoofdingen. Deze hebben niveaus, van h1 tot h6. 
+Denk aan hoofdingen alsof je een eindwerk schrijft. Je hebt de titel van je volledige eindwerk, dit is een h1.
+Dan heb je onderdelen, dat zijn h2's. Dan sub-onderdelen, dat zouden h3's worden, enzovoort.
+Hoofdingen bepalen een hierarchie van de verschillende onderdelen van je webpagina. Je zou geen h3 gebruiken zonder eerst een h2 en h1 te gebruiken, net zoals je geen sub-onderdeel hebt van een eindwerk zonder het onderdeel en de titel van het eindwerk.
+Denk niet aan hoe je hoofdingen wil in een groter of kleiner lettertype. Dat is opmaak en de taak van CSS. Denk nu enkel aan de structuur van het document.
+</div>
+</div>
+
+<div class="slide">
+<h1>Paragrafen</h1>
+<h2>Code</h2>
+<pre class="brush: xml">
+&lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+&lt;p&gt;Curabitur tristique, justo et semper...&lt;/p&gt;
+&lt;p&gt;Proin placerat nulla a risus...&lt;/p&gt;
+</pre>
+<h2>Resultaat</h2>
+<p>Lorem ipsum dolor sit amet...</p>
+<p>Curabitur tristique, justo et semper...</p>
+<p>Proin placerat nulla a risus...</p>
+<div class="handout">
+Er zijn ook paragrafen. Deze bevatten een paragraaf met tekst. Merk op dat je ook hier geen lege paragraaf laat om meer plaats te hebben tussen paragrafen: dit is iets dat je in CSS bepaalt.
+</div>
+</div>
+
+<div class="slide">
+<h1>Beelden</h1>
+<h2>Code</h2>
+<pre class="brush: xml">
+	&lt;img src=&quot;img/flower.jpg&quot; alt=&quot;Yellow flower&quot;&gt;
+</pre>
+<h2>Resultaat</h2>
+<img src="img/html/flower.jpg" alt="Yellow flower" width="400">
+<div class="handout">
+<p>Om beelden in te voegen gebruik je de image tag. Ook hier kan je met CSS heel wat stylen, zoals de rand rond het beeld, de grootte, of de tekst errond moet wrappen, enz.</p>
+<p>De "alt"-tekst, of beschrijving, is verplicht. Het staat voor "alternative", en bepaalt de tekst die in plaats van het beeld komt als het beeld niet kan worden getoond.</p>
+<p>Zoekmachines gebruiken o.a. deze tekst wanneer je een beeld zoekt met sleutelwoorden.</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Ongeordende lijsten</h1>
+<h2>Code</h2>
+<pre class="brush: xml">
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<h2>Resultaat</h2>
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+<div class="handout">
+Dan zijn er lijsten. Er zijn twee varianten: ongeordende lijsten, en geordende lijsten.
+Een ongeordende lijst bestaat uit een ul-element met daarin meerdere li-elementen.
+Ongeordende lijsten gebruik je wanneer de volgorde van de lijst niet belangrijk is. Een voorbeeld is een winkellijstje: je moet alle items van het lijstje meebrengen van de winkel, ze zijn dus allemaal even belangrijk.
+</div>
+</div>
+
+<div class="slide">
+<h1>Geordende lijsten</h1>
+<h2>Code</h2>
+<pre class="brush: xml">
+&lt;ol&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+<h2>Resultaat</h2>
+<ol>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ol>
+<div class="handout">
+Geordende lijsten gebruik je wanneer de volgorde <strong>wel</strong> belangrijk is. Het enigste verschil is dat we "ol" gebruiken, voor ordered list, en niet "ul", voor unordered list.
+Een voorbeeld van geordende lijsten kan een recept zijn, waarin de stappen van het recept in de juiste volgorde moeten gebeuren.
+</div>
+</div>
+
+<div class="slide">
+<h1>Links</h1>
+<h2>Code</h2>
+<pre class="brush: xml">
+&lt;a href="http://www.google.com/"&gt;Google&lt;/a&gt;
+</pre>
+<h2>Resultaat</h2>
+<a href="#" style="text-decoration: underline; color: #559">Google</a>
+<div class="handout">
+Links maken het web tot wat het is.
+Wanneer de gebruiker klikt op de inhoud van de a-tag, zal de browser navigeren naar de link die staat opgegeven in het href-attribuut. In dit geval wordt de gebruiker dus doorverwezen naar de Google homepage.
+</div>
+</div>
+
+<div class="slide">
+<h1>Benadrukken</h1>
+<h2>Code</h2>
+<pre class="brush: xml">
+Het eten is gewoonweg &lt;em&gt;verrukkelijk&lt;/em&gt;!
+Ik zou dit &lt;strong&gt;ten stelligste&lt;/strong&gt; afraden.
+</pre>
+<h2>Resultaat</h2>
+<p>Het eten is gewoonweg <em>verrukkelijk</em>!</p>
+<p>Ik zou dit <strong>ten stelligste</strong> afraden.</p>
+<div class="handout">
+Een benadruk-element, of "emphasis"-element, die bepaalt dat de inhoud meer moet benadrukt worden dan de omliggende inhoud.
+Standaard wordt de inhoud in een em-element schuin gezet. Als we een schermlezer gebruiken, een apparaat dat webpagina's luidoop voorleest (voor blinden of slechtzienden), zou de stem omhoog gaan in toon, wat dezelfde betekenis weergeeft.
+Een sterke nadruk-element, of "strong", bepaalt dat de inhoud nog sterker moet benadrukt worden dan een gewoon benadruk-element.
+</div>
+</div>
+
+<div class="slide">
+<h1>Benadrukken: zijsprong</h1>
+<p>Wat is het verschil tussen <code>&lt;em&gt;</code> en <code>&lt;i&gt;</code>?
+<p>Wat is het verschil tussen <code>&lt;strong&gt;</code> en <code>&lt;b&gt;</code>?
+<div class="handout">
+Wat is het verschil tussen een "italic" (i)-element en "emphasis" (em)-element?
+Of wat is het verschil tussen een "bold" (b)-element een "strong"-element?
+Zowel italic als emphasis worden op dezelfde manier weergegeven, en bold en strong worden ook op dezelfde manier weergegeven.
+Italic en bold verwijzen naar de <strong>opmaak</strong> van de inhoud. Emphasis en strong verwijzen naar de <strong>betekenis</strong> van de inhoud. Ze vertellen je <em>waarom</em> de inhoud moet getoond worden als italic of bold. 
+Emphasis en strong zijn nieuwere elementen die zijn toegevoegd aan de HTML-taal, eens we begrepen dat het scheiden van inhoud en opmaak een goed idee was.
+</div>
+</div>
+
+<div class="slide">
+<h1>Tabellen</h1>
+<h2>Code</h2>
+<pre class="brush: xml">
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Naam&lt;/th&gt;
+        &lt;th&gt;Leeftijd&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Danny&lt;/td&gt;
+        &lt;td&gt;54&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Lindsey&lt;/td&gt;
+        &lt;td&gt;37&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+<div class="handout">
+Een tabel bestaat uit een hele lijst van geneste elementen. 
+Eerst is er het table-element, dat rond de hele tabel staat. 
+Dan zijn er rijen, aangegeven door het table-row (tr)-element.
+In elke rij zitten tabel-cellen (td) of voor de eerste rij, tabel-headers (th).
+</div>
+</div>
+
+<div class="slide">
+<h1>Tabellen</h1>
+<h2>Resultaat</h2>
+<table>
+    <tr>
+        <th>Naam</th>
+        <th>Leeftijd</th>
+    </tr>
+    <tr>
+        <td>Danny</td>
+        <td>54</td>
+    </tr>
+    <tr>
+        <td>Lindsey</td>
+        <td>37</td>
+    </tr>
+</table>
+<div class="handout">
+Dit is een goede manier om een tabel te gebruiken: voor het tonen van tabulaire data. 
+Een duidelijk teken dat dit een goede manier is, omdat er meerdere rijen zijn, met hoofdingen.
+</div>
+</div>
+
+<div class="slide">
+<h1>Tabellen: niet voor layout</h1>
+<pre class="brush: xml">
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Linkerkolom&lt;/td&gt;
+        &lt;td&gt;Middenkolom&lt;td/&gt;
+        &lt;td&gt;Rechterkolom&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<div class="handout">
+Hier is een slechte manier om tabellen te gebruiken.
+Er zijn geen hoofdingen, en enkel één rij. 
+In plaats van tabellen te gebruiken voor tabulaire data, wordt hier een tabel gebruikt om een layout te maken met 3 kolommen. De maker van deze pagina misbruikt het feit dat cellen als vakken renderen van links naar rechts. 
+Maar de layout wordt bepaald door de opmaak, en hoort dus niet thuis in HTML.
+De layout is de taak van CSS.
+</div>
+</div>
+
+<div class="slide">
+<h1>Geneste elementen</h1>
+<h2 class="error">Slecht voorbeeld: doe dit niet!</h2>
+<pre class="brush: xml">
+&lt;p&gt;Bekijk de &lt;a href=&quot;...&quot;&gt;resultaten&lt;/p&gt;&lt;/a&gt;
+</pre>
+<div class="handout">
+<p>Kan je de fout vinden? De sluit-tags staan in de verkeerde volgorde. </p>
+<p>Je browser zal niet crashen, maar zal zijn best doen om dit juist te tonen.</p>
+<p>In ingewikkeldere structuren moet de browser soms "gokken" wat je bedoelt, en dat kan leiden tot onverwachte resultaten. Check altijd of je tags goed zijn afgesloten, en gebruik een validator om dit na te kijken.</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Regels rond nesten</h1>
+<h2 class="error">Slecht voorbeeld: doe dit niet!</h2>
+<pre class="brush: xml">
+&lt;ul&gt;
+    &lt;p&gt;Paragraaf&lt;/p&gt;
+    &lt;h1&gt;Hoofding&lt;/h1&gt;
+&lt;/ul&gt;
+</pre>
+<div class="handout">
+Je kan niet eender welk element binnen eender welk ander element zetten. Binnen een ul en ol kan je bijvoorbeeld enkel li-elementen gebruiken.
+De browser ontploft niet als je dit toch doet. Hij zal z'n best doen om alles weer te geven, maar het kan leiden tot onverwachte resultaten en problemen die moeilijk op te sporen zijn.
+</div>
+</div>
+
+<div class="slide">
+<h1>Hoofdletters / kleine letters</h1>
+<h2 class="error">Slecht voorbeeld: doe dit niet!</h2>
+<pre class="brush: xml">
+&lt;htML&gt;
+	&lt;dIV ClAss=&quot;hEAdeR&quot;&gt;AnSwErS&lt;/DIV&gt;
+	&lt;P&gt;wHaT tO dO If CaPS LoCK is BroKEN&lt;/p&gt;
+&lt;/HTml&gt;
+</pre>
+<div class="handout">
+<p>Het maakt niet uit of je hoofdletters of kleine letters gebruikt. Belangrijk is dat je consistent blijft, dus steeds dezelfde stijl gebruikt.</p>
+<p>Bijna iedereen op het web gebruikt kleine letters, dus dat gebruik ik hier ook. Ik raad aan dat je dat ook doet.</p>
+<p>De inhoud bepaal je natuurlijk zelf!</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Witruimte</h1>
+<h2 class="error">Slecht voorbeeld: doe dit niet!</h2>
+<pre class="brush: xml">
+&lt;  p  class =  "footer" &gt;Witruimte in de tags&lt;/p &gt;
+&lt;p&gt;Spatie     tussen      woorden&lt;/p&gt;
+</pre>
+<h2>Resultaat</h2>
+<p>Witruimte in de tags</p>
+<p>Spatie tussen woorden</p>
+<div class="handout">
+<p>Witruimte is niet belangrijk, en HTML-tags negeren het gewoon.</p>
+<p>Weeral, de stijl in de rest van de slides geniet de voorkeur.</p>
+<p>In teksten moet je oppassen met meerdere spaties.</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>HTML elementen</h1>
+<code style="font-size: 60%">
+&lt;!--&gt; &lt;!DOCTYPE&gt; &lt;a&gt; &lt;abbr&gt; &lt;acronym&gt; &lt;address&gt; &lt;applet&gt; &lt;area&gt; &lt;b&gt; &lt;base&gt; &lt;basefont&gt; &lt;bdo&gt; &lt;big&gt; &lt;blockquote&gt; &lt;body&gt; &lt;br&gt; &lt;button&gt; &lt;captio &gt; &lt;center&gt; &lt;cite&gt; &lt;code&gt; &lt;col&gt; &lt;colgroup&gt; &lt;dd&gt; &lt;del&gt; &lt;dfn&gt; &lt;dir&gt; &lt;div&gt; &lt;dl&gt; &lt;dt&gt; &lt;em&gt; &lt;fieldset&gt; &lt;font&gt; &lt;form&gt; &lt;frame&gt; &lt;frameset&gt; &lt; head&gt; &lt;h1&gt; - &lt;h6&gt; &lt;hr&gt; &lt;html&gt; &lt;i&gt; &lt;iframe&gt; &lt;img&gt; &lt;input&gt; &lt;ins&gt; &lt; kbd&gt; &lt;label&gt; &lt;legend&gt; &lt;li&gt; &lt;link&gt; &lt;map&gt; &lt;menu&gt; &lt;meta&gt; &lt;noframes&gt; &lt;noscript&gt; &lt;object&gt; &lt;ol&gt; &lt;optgroup&gt; &lt;option&gt; &lt;p&gt; &lt;param&gt; &lt;pre&gt; &lt;q&gt; &lt;s&gt; &lt;samp&gt; &lt;script&gt; &lt;select&gt; &lt;small&gt; &lt;span&gt; &lt;strike&gt; &lt;strong&gt; &lt;style&gt; &lt;sub&gt; &lt;sup&gt; &lt;table&gt; &lt;tbody&gt; &lt;td&gt; &lt;textarea&gt; &lt;tfoot&gt; &lt;th&gt; &lt;thead&gt; &lt;titl &gt; &lt;tr&gt; &lt;tt&gt; &lt;u&gt; &lt;ul&gt; &lt;var&gt;
+</code>
+<div class="handout">
+We hebben slechts een paar HTML-elementen gezien. Hier is een lijst van alle HTML-elementen uit HTML 4. 
+Je kan meer informatie vinden over deze elementen online.
+Zie je hier elementen tussenstaan die enkel gaan over opmaak en niet over inhoud?
+Bijvoorbeeld de font-tag: dit element gaat enkel over de presentatie , het kiezen van een lettertype. Dit betekent niet dat we geen verschillende lettertypes mogen gebruiken! Enkel dat de keuze van een bepaald lettertype gekoppeld moet zijn aan de betekenis van een bepaald HTML-element. (of een bepaalde "class" van elementen, iets dat we later zullen zien.)
+Dit soort tags zijn "deprecated", verouderd, en worden in HTML 5 (de laatste versie) niet meer gebruikt.
+Een regeleinde-element (line-break, br) wordt gebruikt om te zeggen dat er een regeleinde moet zijn in de tekst-inhoud op dit punt. Hier is het aan jou, de HTML-designer, om te bepalen wanneer je dit element goed gebruikt. De br-tag <em>kan</em> gebruikt worden om betekenis over te dragen. Bijvoorbeeld, als je poëzie zou opmaken in HTML, zijn de breaks in het gedicht belangrijk als deel van de inhoud. 
+Aan de andere kant, als je drie line breaks na elkaar gebruikt om wat meer ruimte tussen verschillende paragrafen te laten, gebruik je het element voor presentatie, niet voor inhoud.  In plaats kan je de verschillende paragrafen meer marge geven in CSS.
+</div>
+</div>
+
+<div class="slide">
+<h1>Eigen elementen?</h1>
+<h2>Kan ik zelf HTML elementen verzinnen?</h2>
+<pre class="brush: xml">
+&lt;pony&gt;
+	&lt;eyes&gt;adorable&lt;/eyes&gt;
+	&lt;tail&gt;cute&lt;/tail&gt;
+&lt;/pony&gt;
+</pre>
+<p>
+<div class="handout">
+	Je kan geen eigen HTML verzinnen. De browser zou immers niet weten wat hij ermee moet aanvangen. Als je een "smell"-element verzint, hoe moet de browser dan weten dat hij er geur aan moet koppelen?
+	Wat je wel kan doen is elementen een class of id meegeven.
+</div>
+</div>
+
+<div class="slide">
+<h1>Class Attribute</h1>
+<pre class="brush: xml">
+&lt;div class=&quot;nieuwsbericht&quot;&gt;
+	&lt;h2&gt;Nieuwe tienkoppige Elvis ontdekt&lt;/h2&gt;
+	&lt;p&gt;In de Amerikaanse staat Tennessee...&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+<h2>Resultaat</h2>
+	<div style="background: #666; color: #fff; border: 2px solid #eee; padding: 5px; margin: 5px">
+		<h2 style="border-bottom:1px solid #333">Nieuwe tienkoppige Elvis ontdekt</h2>
+		<p style="font-size: 12px">In de Amerikaanse staat Tennessee...</p>
+	</div>
+<div class="handout">
+Zo wordt dit normaal gedaan: je duidt aan dat een bepaald blok een "nieuwsbericht" is. In CSS kan je dan helemaal bepalen hoe zo'n nieuwsbericht eruit ziet.
+</div>
+</div>
+
+<div class="slide">
+<h1>ID vs Class</h1>
+<pre class="brush: xml">
+&lt;div id=&quot;header&quot;&gt;
+	&lt;h1&gt;Eenwielers Peeters&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&quot;content&quot;&gt;
+	&lt;div class=&quot;fiets&quot;&gt;
+		&lt;h2&gt;Model Alpha&lt;/h2&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;fiets&quot;&gt;
+		&lt;h2&gt;Model Omega&lt;/h2&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<div class="handout">
+	Wat is het verschil tussen een ID (identifier) en class?
+	Een ID bepaalt de identiteit van één enkel element op de pagina.
+	Een class, of klasse bepaalt een type van opmaak.
+	Van een ID kan er maar één zijn, bijvoorbeeld één pagina-hoofding, navigatie, footer.
+	Van een class kunnen er meerdere zijn, bv. verschillende fietsen, nieuwsberichten, ...
+</div>
+</div>
+
+<div class="slide">
+<h1>HTML versies</h1>
+<h2>Er zijn verschillende versies van HTML.</h2>
+<p>De doctype bepaalt de HTML-versie.</p>
+<div class="handout">
+Bovenaan het document kan je de browser zeggen welke versie van HTML je schrijft, en de browser kan die informatie gebruiken om een andere "renderer" te kiezen.
+Dit klinkt allemaal ingewikkeld, maar er is één regel:
+</div>
+</div>
+
+<div class="slide">
+<h1>HTML 5</h1>
+<pre class="brush: xml">
+&lt;!DOCTYPE html&gt;
+</pre>
+<div class="handout">
+Je hoeft enkel deze versie te onthouden. Dit is de minimale HTML 5 doctype.
+Het is belangrijk omdat de aanwezigheid van de doctype bovenaan je HTML-code tegen browsers zegt dat ze je pagina moeten renderen in "standaard"-modus. Deze modus is de meest recente, en volgt de CSS-specificatie zo juist mogelijk.
+Als je geen doctype hebt zullen sommige browser je pagina renderen in "quirks"-mode (eigenaardigheden-modus). Deze modus volgt de CSS-specificatie niet en kan dus voor heel wat frustaties zorgen.
+Als je problemen hebt met het renderen van de pagina, is het eerste wat je moet nakijken of je een doctype hebt.
+</div>
+</div>
+
+<div class="slide">
+<h1>Validator</h1>
+<img src="img/html/validator.png" class="screenshot">
+<div class="handout">
+<p>Als er nog problemen zijn met het document, kan je een validator gebruiken om te kijken of er problemen zijn met de HTML.</p>
+<p>Zijn tags goed gesloten?</p>
+<p>Gebruik je de juiste attributen?</p>
+<p>Zit er misschien een typfout in je tag?</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Links</h1>
+<ul>
+	<li>http://www.w3schools.com/html5/</li>
+	<li>http://fundisom.com/live_preview.html</li>
+	<li>http://validator.w3.org/</li>
+</ul>
+<div class="handout">
+	<p>Elke keer je over HTML iets opzoekt kom je op w3schools terecht. Goede referentie.</p>
+	<p>De live preview is handig: je kan code typen en onmiddellijk zien wat het resultaat is. Een goed editor (TextMate) kan dit ook.</p>
+</div>
+</div>
+
+<div class="slide">
+<h1>Oefening</h1>
+<h2>Buurtfeest VZW</h2>
+<img src="img/html/buurtfeest-styled.png" class="screenshot">
+<div class="handout">
+	Tijd voor zelf te oefenen!
+</div>
+</div>
+
+
+
+
+</div>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.all()
+</script>
+</body>
+</html>

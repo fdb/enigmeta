@@ -1,0 +1,115 @@
+body {
+	font-family: 'Reenie Beanie', arial, serif; 
+	font-size: 30px;
+	background: url(background.png);
+	margin-left:20px;
+}
+
+
+
+#container {
+	
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header {
+	padding: 45px;
+	padding-left:0px;
+	position:relative;
+	left:-30px;
+	height: 80px;
+	color:red;
+	z-index:1000;
+	
+}
+
+#header h1 {
+	font-family: 'Reenie Beanie', arial, serif; 
+	font-size: 115px;
+	color: red;
+	margin: 40px;
+	padding: 0px;
+	text-align:left;
+	
+}
+
+
+
+#nav {
+	padding: 10px;
+	padding-top: 0;
+}
+
+#nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+#nav li {
+	list-style: none;
+	display: inline;
+	text-decoration: none;
+}
+
+#nav a {
+	text-decoration: none;
+	color: red;
+	font-size: 10px;
+	padding: 2px;
+	font-family: 'Reenie Beanie', arial, serif; 
+	font-size: 40px;
+	background:white;
+	margin:7px;
+}
+
+#nav a:hover {
+	background: white;
+}
+
+#content {
+	padding: 10px;
+	color:white;
+	
+	
+}
+
+h2{
+	text-decoration: none;
+	color: red;
+	font-family: 'Reenie Beanie', arial, serif; 
+	font-size: 60px;
+	position:relative;
+	bottom:-60px;
+	}
+
+
+.gallery ul {
+	margin:0;
+	margin-top:60px;
+	margin-bottom:50px;
+	padding: 0;
+}
+
+
+.gallery li {
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+	list-style: none;
+	padding-right: 0px;
+}
+
+#footer {
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	font-family:arial; 
+	font-size:15px;
+	padding-top:130px;
+}
+
+#nav a:hover {
+	color:blue;
+	}

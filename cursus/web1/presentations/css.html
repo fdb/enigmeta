@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Web 1 - CSS</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20100928" />
+<meta name="author" content="Frederik De Bleser" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+<!-- SyntaxHiglighter -->
+<script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="syntaxhighlighter/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="syntaxhighlighter/scripts/shBrushCss.js"></script>
+<link href="syntaxhighlighter/styles/shCoreRDark.css" rel="stylesheet" type="text/css" />
+<link href="syntaxhighlighter/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
+<!-- Lobster web font -->
+<link href="http://fonts.googleapis.com/css?family=Lobster&amp;subset=latin" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Web 1 - CSS</h1>
+<h2>Sint Lucas Antwerpen</h2>
+</div>
+</div> <!-- end .layout -->
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Web 1</h1>
+<h2>CSS</h2>
+<h3>Frederik De Bleser</h3>
+<p>frederik@burocrazy.com</p>
+</div>
+
+<div class="slide">
+<h1>CSS?</h1>
+<h2>Cascading Style Sheets</h2>
+<div class="handout">
+CSS dient om de opmaak te bepalen van elementen die je in HTML hebt bepaalt. Alle webpagina's op het web gebruiken CSS om opmaak te doen, dus je hebt heel veel mogelijkheden.
+Net zoals HTML is CSS ook geen programmeertaal, maar een beschrijvingstaal.
+</div>
+</div>
+
+<div class="slide">
+<h1>Mogelijkheden</h1>
+<ul>
+	<li>Kleur</li>
+	<li>Lettertype</li>
+	<li>Grootte</li>
+	<li>Marges</li>
+	<li>Randen</li>
+	<li>Achtergronden</li>
+	<li>Layout</li>
+</ul>
+<div class="handout">
+	CSS kan gebruikt worden om de kleur van elementen te bepalen, het lettertype, de grootte van elementen, marges en randen, achtergronden en layout. En nog veel meer!
+</div>
+</div>
+
+<div class="slide">
+<h1>Voorbeeld</h1>
+<pre class="brush: css">
+h1 {
+	font-size: 18pt;
+	color: #f34466;
+}
+
+#footer a {
+	color: green;
+	border: 1px solid #553244;
+}
+</pre>
+<div class="handout">
+	Dit is een voorbeeld van CSS. 
+	Op deze pagina staan twee CSS-regels.
+	Elke CSS-regel bestaat uit drie delen.
+</div>
+</div>
+
+<div class="slide">
+<h1>Voorbeeld</h1>
+<h2>Selector (Keuzeschakelaar?)</h2>
+<p>1. Eerst <strong>selecteren</strong> we het element.</p>
+<pre>
+<span style="background: yellow; color: black">p</span> {
+	color: red;
+}
+</pre>
+</div>
+
+<div class="slide">
+<h1>Voorbeeld</h1>
+<h2>Properties (Eigenschappen)</h2>
+<p>2. Dan zeggen we <strong>wat</strong> we willen veranderen.</p>
+<pre>
+p {
+	<span style="background: yellow; color: black">color:</span> red;
+}
+</pre>
+</div>
+
+<div class="slide">
+<h1>Voorbeeld</h1>
+<h2>Values (Waarden)</h2>
+<p>3. Dan waar we het naar willen veranderen.</p>
+<pre>
+p {
+	color: <span style="background: yellow; color: black">red;</span>
+}
+</pre>
+<div class="handout">
+	De combinatie van een eigenschap en waarde heet een declaratie (declaration).
+	Je kan meerdere declaraties hebben per CSS-regel.
+	Hier maken we alle paragrafen op de pagina rood.
+</div>
+</div>
+
+<div class="slide">
+<h1>Opbouw: Anatomie van CSS</h1>
+<pre class="brush: css">
+p {
+	color: red;
+}
+</pre>
+<div class="handout">
+	Een aantal belangrijke andere elementen:
+	Eerst komt de selector. De eigenschappen en waarden van die selector staan tussen accolades.
+	Na elke waarde komt de eigenschap, gevolgd door een dubbele punt, en dan de waarde. 
+	Elk paar van eigenschap en waarde sluit je af met een puntkomma.
+</div>
+</div>
+
+<div class="slide">
+<h1>Opbouw: Meerdere eigenschappen</h1>
+<pre class="brush: css">
+p {
+	color: red;
+	font-size: 12px;
+}
+</pre>
+<div class="handout">
+	Meerdere eigenschappen zet je gewoon onder elkaar. Na elk ervan komt dus de puntkomma.
+</div>
+</div>
+
+<div class="slide">
+<h1>Opbouw: witruimte</h1>
+<h2>Witruimte is niet belangrijk.</h2>
+<pre class="brush: css">
+p { color: red; background: black; }
+</pre>
+<div class="handout">
+	Witruimte doet er niet toe, zolang je maar de juiste accolades, dubbele punten en puntkomma's toevoegt.
+</div>
+</div>
+
+<div class="slide">
+<h1>Volledig voorbeeld</h1>
+<pre class="brush: css">
+body { 
+	background: red; 
+	font: 10px Verdana, sans-serif; 
+}
+
+#container {
+	background: white; 
+	width: 900px; 
+	margin: 0 auto;
+}
+
+h1 { 
+	font: 15px Georgia, serif;
+}
+</pre>
+<div class="handout">
+	Hier is een volledig voorbeeld. Dit zou een volledig CSS document kunnen zijn. Drie CSS declaraties, met elke een aantal eigenschappen met waarden. 
+	Elke CSS document zal er zo uit zien.
+</div>
+</div>
+
+<div class="slide">
+<h1>Hoe linken?</h1>
+<h2>3 manieren om CSS aan HTML te linken</h2>
+<ul>
+	<li>In het element (Inline)</li>
+	<li>Ingebed (Embedded)</li>
+	<li>Extern (External)</li>
+</ul>
+<div class="handout">
+	Voor we dieper ingaan op CSS, gaan we eerst uitleggen hoe we CSS kunnen koppelen aan een HTML document.
+Er zijn 3 manieren om CSS aan HTML te linken, gaande van "makkelijker" naar "beter". 
+</div>
+</div>
+
+<div class="slide">
+<h1>Inline CSS (BAD)</h1>
+<pre class="brush: xml">
+	&lt;p style=&quot;color: red;&quot;&gt;Hello&lt;/p&gt;
+</pre>
+<h2>Resultaat</h2>
+<p style="color: red;">Hello</p>
+<div class="handout">
+	Dit is inline CSS. De CSS staat in het "style" attribuut van een HTML-element op de pagina. Dit wil zeggen dat de CSS enkel terugslaat op deze.
+	Denk eraan, we willen een scheiding tussen CSS en HTML. Deze vorm mengt CSS en HTML. Het betekent ook dat we stijlen niet kunnen herbruiken. Als we achteraf de stijl willen veranderen moeten we door alle pagina's om de kleur van de paragrafen aan te passen. 
+</div>
+</div>
+
+<div class="slide">
+<h1>Embedded CSS (OK)</h1>
+<pre class="brush: xml">
+&lt;head&gt;
+	&lt;style type=&quot;text/css&quot;&gt;
+		p { 
+			color: red; 
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;p&gt;Hello&lt;/p&gt;
+&lt;/body&gt;
+</pre>
+<h2>Resultaat</h2>
+<p style="color: red;">Hello</p>
+<div class="handout">
+	Hier gebruiken we het style element in de header. Daartussen kunnen we CSS plaatsen.
+	Dit is OK voor ontwikkeling en als je de CSS maar op één pagina gebruikt.
+</div>
+</div>
+
+<div class="slide">
+<h1>Externe CSS (Goed!)</h1>
+<h2>about.html</h2>
+<pre class="brush: xml">
+&lt;head&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+</pre>
+<h2>style.css</h2>
+<pre class="brush: css">
+p {
+	color: red;
+}
+</pre>
+<div class="handout">
+	Elk serieus gebruikt betekent dat we de CSS naar een extern bestand gaan verplaatsen. We gebruiken een link-element om naar het CSS-document te verwijzen.
+	Je browser kan dit bestand downloaden en "cachen", dus opslaan in het geheugen. Op andere pagina's hoeft je browser die zelfde stylesheet dan niet meer te downloaden.
+	Dit maakt je pagina's sneller, omdat je niet elke keer deze CSS-file van het Internet moet downloaden.
+	Daarnaast is het ook eenvoudig om de stijl aan te passen: je hoeft enkel die file aan te passen, en alle pagina's krijgen automatisch de nieuwe stijl.
+</div>
+</div>
+
+<div class="slide">
+<h1>Deel 1: CSS Anatomie</h1>
+<ol>
+	<li>Selector</li>
+	<li>Declaratie</li>
+	<li>Cascade</li>
+</ol>
+<div class="handout">
+	We gaan nu dieper in op items in de CSS anatomie, of "syntax", om ervoor te zorgen dat je het echt begrijpt.
+</div>
+</div>
+
+<div class="slide">
+<h1>Selector</h1>
+<h2>(Het ding voor de accolades)</h2>
+<pre>
+<span style="background: yellow; color: black">p</span> {
+	color: red;
+}
+</pre>
+<div class="handout">
+Eerst praten we over de selector. Dit staat voor de accolades en bepaalt op welke elementen in het HTML-document de regel toepassing heeft.
+Een selector selecteert. Het bepaalt welke elementen in het HTML-document we willen selecteren om er stijl-aanpassingen op toe te passen. Als we bijvoorbeeld alle hoofdingen in 18 punt willen zetten, moeten we eerst een manier hebben om die te selecteren. Daarvoor gebruiken we de selector.
+In dit voorbeeld slaat de CSS-regel op alle paragrafen, en worden dus alle paragrafen in het HTML-document rood.
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Manieren om te selecteren</h1>
+<ol>
+	<li>Element</li>
+	<li>Class</li>
+	<li>ID</li>
+	<li>Combinaties</li>
+</ol>
+<div class="handout">
+	Er zijn vier manieren om selecties te maken. 
+	<ol>
+	<li>Op basis van een element, de tag-naam dus. Het vorige voorbeeld met de "p" selector werkt op basis van het element.</li>
+	<li>Op basis van een class, de klasse van een element. Dit kan je zelf bepalen. Je kan meerdere elementen dezelfde klasse geven.</li>
+	<li>Op basis van een ID, identifier. Dit kan je ook zelf bepalen. De ID is uniek.</li>
+	<li>Op basis van de positie in het document, een combinatie van de bovenstaande.</li>
+	</ol>
+</div>
+</div>
+
+<div class="slide">
+<h1>1. Element</h1>
+<pre class="brush: css">
+p { }
+</pre>
+<p>Selecteer alle &lt;p&gt; elementen in het hele document.</p>
+<div class="handout">
+	Dit zegt: selecteer alle paragraaf-elementen in het hele document. Eender waar op de pagina.
+</div>
+</div>
+
+<div class="slide">
+<h1>2. Class</h1>
+<pre class="brush: css">
+.newsitem { }
+</pre>
+<pre class="brush: xml">
+	&lt;div class=&quot;newsitem&quot;&gt;
+		...
+	&lt;/div&gt;
+</pre>
+<p>Selecteer elk element met de klasse-naam "newsitem".</p>
+<p>Het punt "." betekent dat je op klasse-naam selecteert.</p>
+</div>
+
+<div class="slide">
+<h1>3. ID</h1>
+<pre class="brush: css">
+#footer { }
+</pre>
+<pre class="brush: xml">
+	&lt;div id=&quot;footer&quot;&gt;
+		...
+	&lt;/div&gt;
+</pre>
+<p>Selecteer elk element met de identifier "footer".</p>
+<p>ID's zijn uniek, dus dit zou maar één element mogen selecteren.</p>
+<p>Het hekje "#" betekent dat je op id-naam selecteert.</p>
+</div>
+
+<div class="slide">
+<h1>4. Combinaties (1)</h1>
+<h2>Selector</h2>
+<pre class="brush: css">
+#about p { }
+</pre>
+<h2>HTML</h2>
+<pre>
+&lt;div id=&quot;about&quot;&gt;
+	&lt;h2&gt;About this page&lt;/h2&gt;
+	<span style="background: yellow; color: black;">&lt;p&gt;Lorem ipsum...&lt;/p&gt;</span>
+	<span style="background: yellow; color: black;">&lt;p&gt;Dolor es sit...&lt;/p&gt;</span>
+&lt;/div&gt;
+&lt;p&gt;Nullam non risus lacinia&lt;/p&gt;
+</pre>
+<p>Selecteer elk <strong>p</strong> element dat een afstammeling is van elk element met een id-attribuut gelijk aan "about".
+<div class="handout">
+	Een afstammeling betekent dat het element binnen een ander element komt. Denk eraan: de elementen staan in hiërarchie, een boom die je definiëert in HTML. In dit geval staat het div-element met de "about" id bovenaan, en daarin zitten de twee p-elementen.
+	De laatste p-element wordt niet geselecteerd omdat hij niet een afstammeling is van een element met  "about" als id.
+</div>
+</div>
+
+<div class="slide">
+<h1>4. Combinaties (2)</h1>
+<h2>Selector</h2>
+<pre class="brush: css">
+#about p { }
+</pre>
+<h2>HTML</h2>
+<pre>
+&lt;div id=&quot;about&quot;&gt;
+	&lt;div class=&quot;something&quot;&gt;
+		<span style="background: yellow; color: black;">&lt;p&gt;Lorem ipsum...&lt;/p&gt;</span>
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<pre>
+div#about
+  |
+  +-- div.something
+        |
+        +-- p
+        +-- p
+</pre>
+<div class="handout">
+	In CSS is de betekenis van HTML dat het element er binnen moet zitten, maar niet <em>direct</em> erbinnen, je kan ook elementen er tussen hebben.
+</div>
+</div>
+
+<div class="slide">
+<h1>4. Combinaties (3)</h1>
+<h2>Selector</h2>
+<pre class="brush: css">
+p.intro { }
+</pre>
+<h2>HTML</h2>
+<pre>
+&lt;div id=&quot;about&quot;&gt;
+	<span style="background: yellow; color: black;">&lt;p class=&quot;help intro&quot;&gt;Lorem ipsum...&lt;/p&gt;</span>
+	&lt;p class=&quot;help&quot;&gt;Dolor es sit...&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+<p>Selecteer elk <strong>p</strong> element met een klasse die het woord "intro" bevat.</p>
+<div class="handout">
+	Let op: geen spatie tussen "p" en "intro". Dit gaat over één element met die twee eigenschappen: een p-tag en een klasse "intro". Dezelfde tag.
+</div>
+</div>
+
+<div class="slide">
+<h1>Subtiel verschil</h1>
+<p>Een klasse-attribuut <strong>bevat</strong>.</p>
+<p>vs.</p>
+<p>Een id-attribuut <strong>gelijk aan</strong>.</p>
+<div class="handout">
+	Hiervoor spraken we over een klasse-attribuut dat het woord <strong>bevat</strong>.
+	Tegenover een id-attribuut die <strong>gelijk is aan</strong> een bepaalde waarde.
+</div>
+</div>
+
+<div class="slide">
+<h1>Subtiel verschil</h1>
+<pre>
+<span style="background: yellow;">.intro</span> { background: green; }
+<span style="background: blue;">.help</span> { color: red; }
+</pre>
+<pre>
+&lt;p class=&quot;<span style="background: blue">help</span> <span style="background: yellow">intro</span>&quot;&gt;<span style="background: green; color: red">hi</span>&lt;/p&gt;
+&lt;p class=&quot;<span style="background: blue">help</span>&quot;&gt;<span style="color: red;">hi</span>&lt;/p&gt;
+</pre>
+<div class="handout">
+	Het HTML klasse-attribuut kan <strong>verschillende</strong> waarden hebben. Elke waarde is één woord.
+	De HTML-lijn "help intro" is interessant, omdat de twee CSS-regels deze lijn selecteren. 
+	De intro-regel bepaalt dat de achtegrond groen moet zijn.
+	De help-regel bepaalt dat de kleur rood moet zijn.
+	In de eerste "p" kunnen de twee regels "matchen", toegepast worden. Het eindresultaat is dat de inhoud een groene achtergrond krijgt, en een rode tekst-kleur.
+	In de tweede "p" matcht enkel de help-selector, dus enkel de tekst wordt rood
+	Ik toon later wat er gebeurd als je dezelfde eigenschap twee keer definieert, dus bijvoorbeeld eerst de kleur blauw maakt en dan de kleur rood.
+</div>
+</div>
+
+<div class="slide">
+<h1>Nog eentje!</h1>
+<h2>Pseudo klasses</h2>
+<pre class="brush: css">
+a:link { } /* onbezochte link */
+a:visited { } /* bezochte link */
+a:hover /* muis over link */
+a:active /* geselecteerde link */
+</pre>
+<div class="handout">
+	Pseudo klasses zijn een ander soort selectors, waar je de dubbelpunt gebruikt om te selecteren op "status"  (net zoals je de punt gebruikt om te selecteren op klasse).
+	Je gebruikt ze vooral op link-elementen (de "a", anchor-tag) om aan te duiden wat er gebeurt als je over een link gaat met de muis, de "hover"-status (state).
+</div>
+</div>
+
+<div class="slide">
+<h1>Declaration</h1>
+<h2>(Het ding <em>tussen</em> de accolades)</h2>
+<pre>
+p {
+	<span style="background: yellow; color: black">color: red;</span>
+}
+</pre>
+<div class="handout">
+Nu praten we over de declaratie. De verschillende declaraties staan tussen de accolades.
+De declaratie kan een onbeperkt aantal paren bevatten van een eigenschap en een waarde. Ze komen steeds met twee voor: eerst de eigenschap, dan de dubbele punt, dan de waarde.
+Na elke declaratie komt een puntkomma om aan te geven dat dit het einde is van de declaratie, en dat de volgende declaratie mag komen.
+</div>
+</div>
+
+<div class="slide">
+<h1>Declaration</h1>
+<p>Een declaratie is een combinatie van een <strong>eigenschap</strong> en een <strong>waarde</strong>.</p>
+<p>Je <em>declareert</em> wat je wil veranderen.</p>
+<div class="handout">
+Een declaratie is een combinatie van een eigenschap (property) en waarde (value).
+Je declareert, vertelt, wat je wil veranderen en in wat je het wil veranderen.
+</div>
+</div>
+
+<div class="slide">
+<h1>Eigenschappen</h1>
+<p>CSS bepaalt de dingen die je kan veranderen:</p>
+<ul>
+	<li>font</li>
+	<li>color</li>
+	<li>background-color</li>
+	<li>border</li>
+</ul>
+<div class="handout">
+CSS heeft een vaste lijst van dingen die je kan veranderen. Voorbeelden zijn het lettertype, de kleur van de tekst, achtergrond-kleur, rand enz.
+Dit zijn de eigenschappen, properties.
+</div>
+</div>
+
+<div class="slide">
+<h1>Waarden</h1>
+<p>Elke eigenschap heeft een lijst van waarden:</p>
+<pre class="brush: css">
+	font: 12px Verdana, sans-serif;
+	color: red;
+	background-color: #112233;
+	border: 1px solid rgb(193, 193, 193);
+</pre>
+<div class="handout">
+Elke eigenschap heeft mogelijke waarden die van toepassing zijn op die eigenschap.
+Voor een lettertype (font) kan je bijvoorbeeld de grootte en de naam van het lettertype kiezen.
+Voor de kleur van de tekst en de achtergrondkleur kan je een kleur-waarde ingeven. Er zijn verschillende manieren om kleuren aan te geven. Color gebruikt een "systeemkleur" met een vaste naam, zoals rood, of groen. Background-color gebruikt een hexadecimale waarde die bestaat uit een rood, groen en blauw component. En bij border zie je de kleur in RGB-waarden. 
+Als een eigenschap een kleur verwacht, kan je elk van die manieren gebruiken om kleuren te gebruiken. Color hoeft dus niet altijd met systeemkleuren, en background-color kan niet enkel hexadecimale waarden gebruiken.
+Border heeft ook nog de dikte van de boord (1 pixel) en het soort rand (solid).
+</div>
+</div>
+
+<div class="slide">
+<h1>De cascade</h1>
+<p>De cascade bepaalt welke declaraties van toepassing zijn op een element.</p>
+<div class="handout">
+	De "cascade" is de "C" in "CSS".
+</div>
+</div>
+
+<div class="slide">
+<h1>Cascade volgorde</h1>
+<p>Dingen worden toegepast in de volgorde waarin je ze definiëert.</p>
+<pre class="brush: css">
+	p { color: red; }
+	p { color: blue; }
+</pre>
+<p>De laatste declaratie wint.</p>
+<div class="handout">
+	De eerste regel die je moet onthouden is dat declaraties die later komen in het bestand "winnen" over declaraties die eerder komen.
+	In dit geval komt blue na red, dus alle paragrafen krijgen blauwe tekst.
+</div>
+</div>
+
+<div class="slide">
+<h1>Cascade: hoe specifieker hoe beter</h1>
+<p>Maar...</p>
+<p>Als een element <strong>specifieker</strong> is, wint het ook.</p>
+<p>Dus het laatste <strong>en</strong> meest specifieke element wint.</p>
+<div class="handout">
+	Zeggen dat het laatste element altijd wint is niet helemaal juist. Als een declaratie specifieker is, wint het. Dus het laatste en meest specifieke element wint.
+</div>
+</div>
+
+<div class="slide">
+<h1>Cascade: hoe specifieker hoe beter</h1>
+<pre class="brush: xml">
+	&lt;div id=&quot;alpha&quot;&gt;
+		&lt;div id=&quot;beta&quot;&gt;
+			&lt;h1&gt;Hello&lt;/h1&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+</pre>
+<pre class="brush: css">
+	#alpha #beta h1 { color: red; }
+	#alpha h1 { color: blue; }
+	h1 { color: green; }
+</pre>
+<p>Welke selector is specifieker?</p>
+<p>Welke kleur heeft de header?</p>
+<div class="handout">
+	De eerste selector wint, omdat het de meest specifieke is, zelfs als de tweede regel erna komt.
+	Omdat we verwijzen naar een div met id alpha, een div met id beta, en een header, zijn we specifieker dan als we verwijzen naar enkel een div met id alpha, of zelfs enkel een h1-element.
+</div>
+</div>
+
+<div class="slide">
+<h1>Cascade: regels rond specificiteit</h1>
+<p>Er zijn regels die bepalen welke declaratie wint.</p>
+<p>Deze regels werken met <strong>punten</strong>.</p>
+<div class="handout">
+	Dit is niet zomaar gokwerk om te bepalen welke declaratie gaat winnen. Gelukkig maar! Er zijn regels die bepalen welke declaratie wint.
+	De manier hoe dit werkt is met punten. Dit gaat vrij diep, dus even opletten!
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Cascade: regels rond specificiteit</h1>
+<ul>
+	<li>Element: 1 punt</li>
+	<li>Class: 10 punten</li>
+	<li>Id: 100 punten</li>
+</ul>
+<div class="handout">
+	Als er een element (p, h1) in de selector staat krijgt de regel 1 punt.
+	Staat er een class in, krijgt de regel 10 punten.
+	Staat er een id in, krijgt de regel 100 punten.
+	Deze punten worden opgeteld.
+</div>
+</div>
+
+<div class="slide">
+<h1>Cascade: regels rond specificiteit</h1>
+<pre class="brush: xml">
+	&lt;div id=&quot;container&quot;&gt;
+		&lt;div class=&quot;newsitem&quot;&gt;
+			&lt;h2&gt;Goed Nieuws!&lt;/h2&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+</pre>
+<pre class="brush: css">
+	#container h2 { color: red; } /* 100 + 1 = 101 */
+	.newsitem h2 { color: blue; } /* 10 + 1 = 11 */
+</pre>
+<div class="handout">
+	Hier is een voorbeeld. 
+	De eerste regel bevat een id-selector en een element, goed voor 100 + 1 = 101 punten.
+	De tweede regel bevat een class-selector en een element, goed voor 10 + 1 = 11 punten.
+</div>
+</div>
+
+<div class="slide">
+<h1>Cascade: regels rond specificiteit</h1>
+<h2>Geen paniek.</h2>
+<div class="handout">
+	Dit lijkt allemaal heel ingewikkeld, maar meestal hoeft dit geen probleem te zijn. In de voorbeelden die we tegenkomen ga je nooit hoeven te rekenen hoeveel punten je hebt.
+	Het systeem is zo gemaakt dat het "intuïtief" werkt, dus in bijna alle omstandigheden doet wat je verwacht. Het is wel goed om in het achterhoofd te houden dat id-selectors "krachtiger" zijn dan class-selectors, die op hun beurt weer krachtiger zijn dan gewone element-selectors.
+</div>
+</div>
+
+<div class="slide">
+<h1>Overerving (inheritance)</h1>
+<p>Elementen kunnen stijlen van bovenliggende elementen overerven.</p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Overerving</h1>
+<pre class="brush: css">
+	#blog { color: red; }
+</pre>
+<pre class="brush: xml">
+	&lt;div id=&quot;blog&quot;&gt;
+		&lt;p&gt;Hello&lt;/p&gt;
+	&lt;/div&gt;
+</pre>
+<div class="handout">
+	Hier is een voorbeeld. De blog-div krijgt de kleur "rood". Het onderliggende element "p" erft de waarde van het bovenliggende element blog, en krijgt dus de kleur rood.
+	Concreet betekent dit dat alle tekst in de blog-div de kleur krijgt van de blog-div tenzij je anders specifiëert.
+</div>
+</div>
+
+<div class="slide">
+<h1>Niet alles wordt overgeërfd.</h1>
+<p><strong>Tekst-gerelateerde </strong>eigenschappen worden overgeërfd.</p>
+<p><strong>Layout-gerelateerde</strong> eigenschappen worden niet overgeërfd.</p>
+<div class="handout">
+	Dit klinkt simpel, maar niet alles wordt overgeërfd. En maar goed ook. De regel is dat alle eigenschappen gerelateerd aan tekst, zoals kleur, font, uitlijning enz. wordt overgeërfd.
+	Layout-gerelateerde eigenschappen, zoals randen, marges, positie worden niet overgeërfd.
+	Dit heeft voordelen, maar net zoals bij de cascade is het systeem zo gemaakt dat het "intuïtief" werkt. Je hoeft hier niet bewust rekening mee te houden omdat het systeem doet wat je verwacht.
+</div>
+</div>
+
+<div class="slide">
+<h1>Deeper into the rabbit hole</h1>
+<ul>
+	<li>Granulariteit</li>
+	<li>Maateenheden</li>
+	<li>Fonts</li>
+</ul>
+<div class="handout">
+	Nu gaan we wat dieper in op een aantal eigenschappen van CSS die we voor de gemakkelijkheid hebben over geslagen.
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Eigenschappen: granulariteit</h1>
+<p>Eigenschappen kan je op verschillende manieren schrijven</p>
+<pre class="brush: css">
+	border: 1px solid rgb(193, 193, 193);
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(193, 193, 193)
+</pre>
+<div class="handout">
+	Eigenschappen kan je op verschillende manieren schrijven. Dit is de granulariteit van een property.
+	Border bv. bevat zowel de eigenschap border-width, border-style en border-color. Het is een kortere versie (shorthand) van de drie eigenschappen achter elkaar.
+	Belangrijk is dat je bij de kortere versie de eigenschappen in de juiste volgorde zet. Je kan niet zomaar eerst de style zetten en dan de width.
+</div>
+</div>
+
+<div class="slide">
+<h1>Eigenschappen: granulariteit</h1>
+<pre class="brush: css">
+	border-left: 1px solid rgb(193, 193, 193);
+	border-right: 2px dashed rgb(255, 0, 0);
+	
+	border-bottom-color: red;
+</pre>
+<div class="handout">
+	Je kan de border nog meer uit elkaar trekken, en het hebben over enkel de linker-rand, of de rechter-rand. Als je gewoon "border" zegt heb je het over de hele rand.
+</div>
+</div>
+
+<div class="slide">
+<h1>Eigenschappen: granulariteit</h1>
+<pre class="brush: css">
+	font: italic small-caps bold 10pt Verdana, sans-serif;
+	
+	font-style: italic;
+	font-variant: small-caps;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: Verdana, sans-serif;
+</pre>
+<div class="handout">
+	Hier zie je een voorbeeld met "font". Alle verschillende eigenschappen onderaan zitten in één declaratie bovenaan. De volgorde is belangrijk: eerst style, dan variant, dan weight, dan size, dan family.
+	Ik kan die ook niet onthouden, en meestal heb je ze ook niet allemaal nodig. Je kan dit opzoeken (bv. op w3schools) maar ik onthoud gewoon eerst de grootte en dan de familie. Dat is meestal genoeg. De rest kan je dan nog instellen met "lange" eigenschappen, zoals font-variant.
+</div>
+</div>
+
+<div class="slide">
+<h1>Eigenschappen: granulariteit</h1>
+<pre class="brush: css">
+	p { border: 1px solid red; }
+	p.intro { border-color: blue; }
+</pre>
+<div class="handout">
+	Het handige aan granulariteit is dat je specifieke eigenschappen kan veranderen.
+	Bijvoorbeeld hier: wat is de grootte van de rand van p-elementen? En wat is de randkleur van p.intro?
+	Als je dan besluit van alle randen 2 pixels dik te maken, volgt ook de rand van p.intro, omdat die de randdikte "overerft" (inherit) van p.
+</div>
+</div>
+
+<div class="slide">
+<h1>Maateenheden</h1>
+<p>Maateenheden (units) zijn de manieren waarop groottes worden uitgedrukt.</p>
+<ul>
+	<li>em (ems)</li>
+	<li>ex (x-height)</li>
+	<li>px (pixels)</li>
+	<li>% (percentages)</li>
+	<li>in (inches)</li>
+	<li>cm (centimeters)</li>
+	<li>mm (millimeters)</li>
+	<li>pt (points)</li>
+	<li>pc (picas)</li>
+</ul>
+<div class="handout">
+	Maateenheden zijn manieren waarop je grootte kan aanduiden.
+	CSS kent er verschillende: je herkent waarschijnlijk centimeters, pixels en percentages.
+</div>
+</div>
+
+<div class="slide">
+<h1>Maateenheden: absoluut vs relatief</h1>
+<pre>px vs %</pre>
+<div class="handout">
+	Je hebt twee types van maateenheden in CSS: absolute maateenheden en relatieve maateenheden.
+</div>
+</div>
+
+<div class="slide">
+<h1>Absolute Maateenheden</h1>
+<p>pixels (px) zijn absolute maateenheden.</p>
+<p>Ze hebben altijd dezelfde grootte.</p>
+<pre class="brush: css">
+	p { font-size: 12px; }
+</pre>
+<div class="handout">
+	Een voorbeeld van absolute maateenheden zijn pixels. Als je een maat, bijvoorbeeld font-size, in pixels specifieert, krijg je altijd hetzelfde resultaat.
+</div>
+</div>
+
+<div class="slide">
+<h1>Relatieve Maateenheden</h1>
+<p>Percentages (%) zijn relatieve maateenheden.</p>
+<p>Hun grootte hangt af van andere elementen.</p>
+<pre class="brush: css">
+	body { font-size: 12px; } /* 12 pixels */
+	h1 { font-size: 200%; } /* 24 pixels: 12 * 2 */
+	h1 a { font-size: 75%; } /* 18 pixels: 12 * 2 * 0.75 */
+</pre>
+<div class="handout">
+Een voorbeeld van relatieve maateenheden zijn percentages. Ze bepalen de grootte in relatie tot andere elementen.
+
+In dit voorbeeld geven we de body een font-grootte van 12px, een absolute maat. Dan definiëren we h1 met een font-grootte van 200%. De grootte van h1 is dus 24 pixels: de font-size van de body * 2. Links in een h1 zijn 18 pixels: de grootte van h1 (24 pixels) * 0.75.
+
+De grootte wordt dus berekend aan de hand van andere CSS-declaraties die er toepassing op hebben.
+Dit heeft voordelen. Als je de body declareert als absolute maat en al de rest als relatieve maten, kan je makkelijk alle elementen op de pagina groter of kleiner maken door één declaratie aan te passen, namelijk de body.
+</div>
+</div>
+
+<div class="slide">
+<h1>De font-family eigenschap</h1>
+<ul style="font-size: 24px">
+	<li><span style="font-family: 'Andale Mono'">Andale Mono</span></li>
+	<li><span style="font-family: Arial">Arial</span></li>
+	<li><span style="font-family: 'Comic Sans MS'">Comic Sans MS</span></li>
+	<li><span style="font-family: 'Courier New'">Courier New</span></li>
+	<li><span style="font-family: Georgia">Georgia</span></li>
+	<li><span style="font-family: Impact">Impact</span></li>
+	<li><span style="font-family: 'Times New Roman'">Times New Roman</span></li>
+	<li><span style="font-family: 'Trebuchet MS'">Trebuchet MS</span></li>
+	<li><span style="font-family: Verdana">Verdana</span></li>
+</ul>
+<div class="handout">
+	De mogelijke lettertypes hangen in eerste instantie af van welke lettertypes gebruikers op hun eigen computer hebben geïnstalleerd.
+	Dit betekent dat je enkel de grootste gemene deler van alle fonts kan gebruiken. Deze lijst is erg beperkt, daarom dat je op de meeste websites steeds dezelfde lettertypes ziet terugkomen.
+	Dit is de lijst van "core fonts". Hier kan je van uit gaan dat iedereen ze heeft geïnstalleerd.
+</div>
+</div>
+
+<div class="slide">
+<h1>De font-family fallback</h1>
+<pre class="brush: css">
+	p { font-family: "Lucida Grande", Arial, sans-serif; }
+</pre>
+<div class="handout">
+	CSS biedt de mogelijkheid om alternatieven te declareren als een lettertype niet kan worden gevonden ("fallback").
+	Hier zie je dat alle paragrafen in Lucida Grande moeten komen. Dit lettertype is standaard enkel op Mac beschikbaar, dus we definiëren het alternatief arial (dat normaal overal is geïnstalleerd). Bestaat dit ook niet, dan specifiëren we "sans-serif", een niet nader genoemd lettertype zonder schreven.
+</div>
+</div>
+
+<div class="slide">
+<h1>De font-family fallback</h1>
+<ul style="font-size: 48px">
+	<li><span style="font-family: sans-serif">sans-serif</span></li>
+	<li><span style="font-family: serif">serif</span></li>
+	<li><span style="font-family: monospace">monospace</span></li>
+</ul>
+<div class="handout">
+	De ultieme fallback-lettertypes zijn sans-serif, serif, en monospace.
+	 zien er niet overal hetzelfde uit, maar de stijl is wel consequent. 
+	Sans-serif is zonder schreven, 
+	Serif is met schreven,
+	Monospace is een blokletter waarbij elk teken dezelfde breedte heeft. Deze gebruik je voor code-voorbeelden, zoals in deze slides.
+</div>
+</div>
+
+<div class="slide">
+<h1>Web fonts</h1>
+
+<h2 style="font-family: 'Lobster', serif; font-size: 72px; color: orange; text-shadow: 0 -2px 0 rgba(0, 0, 0, 0.75)">Web fonts doorbreken de sleur!</h2>
+<div class="handout">
+	Sinds kort kan je echter ook web fonts specifiëren die, net zoals beelden, worden gedownload van de server en gebruikt. Dit is leuk omdat je dan eender welk lettertype kan gebruiken op je website zonder dat je je zorgen hoeft te maken of de gebruiker dit lettertype heeft geïnstalleerd. 
+	Vroeger moest je beeldjes genereren van hoofdingen om ze in een ander lettertype te zien. Web fonts zijn echte lettertypes: je kan de tekst selecteren, een ander lettertype gebruiken voor print, enz.
+</div>
+</div>
+
+<div class="slide">
+<h1>Google font directory</h1>
+<img src="img/css/google-font-directory.png" alt="Google font directory screenshot" style="height: 80%">
+<div class="handout">
+	Er zijn wel beperkingen naar gebruikersrechten. Net zoals je niet zomaar eender welk beeld in een werk mag gebruiken, mag je ook niet zomaar eender welk lettertype op je website gebruiken, enkel één waartoe jij de rechten hebt.
+	De fonts op Google font directory hebben allemaal heel vrije gebruiksrechten, en je mag ze dus op eender welke website gebruiken met eender welk doel.
+	Een webfont gebruiken is erg eenvoudig
+</div>
+</div>
+
+<div class="slide">
+<h1>Google font directory</h1>
+<pre class="brush: xml">
+&lt;link rel=&#x27;stylesheet&#x27; href=&#x27;http://fonts.googleapis.com/css?family=Lobster&amp;subset=latin&#x27;  type=&#x27;text/css&#x27;&gt;
+</pre>
+<pre class="brush: css">
+	h2 { font-family: "Lobster", serif; }
+</pre>
+<p style="font-family: 'Lobster', serif; font-size: 72px; text-shadow: 0 2px 2px rgba(0, 0, 0, 0.75)">Mmmm, Lobster...</p>
+<div class="handout">
+	Web fonts van de Google font directory gebruiken is redelijk eenvoudig. Je kan op "get the code" klikken om de juiste code te krijgen voor een bepaald lettertype. Je moet verwijzen naar een CSS-bestand bij Google, en dan kan je in je eigen CSS gewoon het lettertype gebruiken zoals elk ander lettertype.
+</div>
+</div>
+
+<div class="slide">
+<h1>Font-face generator</h1>
+<img src="img/css/font-squirrel-generator.png" alt="Font Squirrel Generator" style="height: 80%">
+<div class="handout">
+	Als je een eigen lettertype gemaakt hebt, of je hebt er één gedownload waar je de juiste rechten op hebt, kan je met de Font Squirrel font-face generator de juiste bestanden maken die je kan gebruiken in je CSS code.
+</div>
+</div>
+
+<div class="slide">
+<h1>Deel 2: Layout</h1>
+
+<div class="handout">
+	We hebben het nu vooral over het systeem van CSS gehad.
+	Laten we het over de layout hebben.
+	Dit is hoe de declaraties in CSS toepassing hebben op hoe ze in de browser worden getoond.
+</div>
+</div>	
+
+<div class="slide">
+<h1>Box Model</h1>
+<p>Het box model is een belangrijk concept in CSS.</p>
+<p>Het bepaalt de relatie tussen:</p>
+<ul>
+	<li>Inhoud (Content)</li>
+	<li>Vulling (Padding)</li>
+	<li>Rand (Border)</li>
+	<li>Marge (Margin)</li>
+</ul>
+<div class="handout">
+	Als je één ding moet weten over layout in CSS, is het het box model. 
+</div>
+</div>
+
+<div class="slide">
+<h1>Box Model</h1>
+<img src="img/css/box-model.png" alt="Box Model" style="width: 80%">
+
+<div class="handout">
+	Hier is het box model. 
+	Het middelste deel is de inhoud. Dit is de tekst van een paragraaf, net tot aan de randen van de tekst. Dit is de kleinste rechthoek waarbinnen je de tekst kan bevatten.
+	Daarrond staat de vulling, of padding. De padding geeft de content wat meer ruimte tussen zichzelf en de rand. De vulling is normaal transparent, maar dat kan je veranderen
+	De rand is hetgeen je tekent. Daarvan kan je de dikte, kleur en stijl bepalen.
+	Rond de rand staat de marge. Dit is de ruimte tussen dit element en het volgende element. De marge is altijd transparent.
+</div>
+</div>
+
+<div class="slide">
+<h1>Box Model Voorbeeld (1)</h1>
+<div style="float:left; background: #5BA1CF;">content</div>
+<div style="clear: both;"></div>
+<pre class="brush: css">
+div { 
+	background: #5BA1CF;
+}
+</pre>
+<div class="handout">
+	Hier is een voorbeeld van een element met enkel een achtegrond-kleur, zonder padding, border of margin.
+	Merk op dat de achtegrond net tot aan de randen van de tekst komt.
+</div>
+</div>
+
+<div class="slide">
+<h1>Box Model Voorbeeld (2)</h1>
+<div style="float:left; background: #5BA1CF; padding: 10px;">content</div>
+<div style="clear: both;"></div>
+<pre class="brush: css">
+div { 
+	background: #5BA1CF;
+	padding: 10px;
+}
+</pre>
+<div class="handout">
+	Hier hebben we vulling (padding) aangebracht. De achtergrond loopt dus mee met de padding, tot aan de rand.
+</div>
+</div>
+
+<div class="slide">
+<h1>Box Model Voorbeeld (3)</h1>
+<div style="float:left; background: #5BA1CF; padding: 10px; border: 2px solid red;">content</div>
+<div style="clear: both;"></div>
+<pre class="brush: css">
+div { 
+	background: #5BA1CF;
+	padding: 10px;
+	border: 2px solid red;
+}
+</pre>
+<div class="handout">
+	Rond de vulling komt de rand.
+</div>
+</div>
+
+<div class="slide">
+<h1>Box Model Voorbeeld (4)</h1>
+<div style="float:left; background: #5BA1CF; padding: 10px; border: 2px solid red; margin: 20px;">content</div>
+<div style="clear: both;"></div>
+<pre class="brush: css">
+div { 
+	background: #5BA1CF;
+	padding: 10px;
+	border: 2px solid red;
+	margin: 20px;
+}
+</pre>
+<div class="handout">
+	De marge bepaalt de afstand tot andere elementen. In dit geval, het afstand tot de rand van de slide.
+	Merk op dat de achtegrond niet buiten de rand komt tot in de marge. De marge is altijd transparent.
+</div>
+</div>
+
+<div class="slide">
+<h1>Individuele marges</h1>
+<div style="float:left; background: #5BA1CF; padding: 5px 10px 50px 0;">content</div>
+<div style="clear: both;"></div>
+<pre class="brush: css">
+div {
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 50px;
+	padding-left: 0;
+}
+
+/* of */
+
+div {
+	padding: 5px 10px 50px 0;
+}
+</pre>
+
+<div class="handout">
+	Je hoeft niet alle vulling, randen of marges dezelfde grootte te geven. Je kan specifieke waarden gebruiken voor de rechter-, linker-, boven- en ondermarge.
+</div>
+</div>
+
+<div class="slide">
+<h1>Display</h1>
+<p>Display is één van de belangrijkste eigenschappen van CSS.</p>
+<ul>
+  <li>display: inline;</li>
+  <li>display: block;</li>
+</ul>
+<div class="handout">
+  Display bepaalt de manier waarop elementen worden getoond.
+  Er zijn twee waarden voor de display: inline en block. Er zijn er nog een hele hoop meer, maar dit zijn de enige twee die je waarschijnlijk zal tegenkomen.
+</div>
+</div>
+
+<div class="slide">
+<h1>display: inline;</h1>
+<p><strong>Inline</strong> vakken gaan mee met de "flow" van je pagina.</p>
+<style type="text/css">
+  .demo-inline span { background: red; }
+</style>
+<div class="demo-inline">
+  <span>elk</span>
+  <span>element</span>
+  <span>is</span>
+  <span>een</span>
+  <span>inline</span>
+  <span>element</span>
+  <span>.</span>
+  <span>Inline</span>
+  <span>elements</span>
+  <span>gaan</span>
+  <span>mee</span>
+  <span>met</span>
+  <span>de </span>
+  <span>"flow"</span>
+  <span>van</span>
+  <span>je</span>
+  <span>pagina</span>
+  <span>.</span>
+</div>
+<h2>Voorbeelden</h2>
+<ul>
+  <li>&lt;a&gt;</li>
+  <li>&lt;span&gt;</li>
+  <li>&lt;img&gt;</li>
+  <li>&lt;input&gt;</li>
+</ul>
+<div class="handout">
+  Inline "vakken" (boxes) kunnen naast elkaar staan en vloeien standaard mee van links naar rechts.
+  Voorbeelden van elementen die standaard op inline staan zijn anchors, span-elementen, image-elementen of input-elementen.
+  De default stylesheet declareert dus aan die elementen als display: inline;.
+  Span is het generieke inline element. Elk van de elementen hierboven is omgeven door een span-tag.
+  Zoals je uit het voorbeeld wel merkt kan je het dus ook zien als tekst. Een paragraaf bevat een aantal woorden, en elk woord op zich wordt door je browser als een inline vak gerenderd. Daarom breekt tekst dus ook af na het einde van de lijn.
+</div>
+</div>
+
+<div class="slide">
+<h1>display: block;</h1>
+<p><strong>Block</strong> vakken nemen de hele regel in.</p>
+<style type="text/css">
+  .demo-block div { background: #0000aa; margin-bottom: 10px; }
+</style>
+<div class="demo-block">
+  <div>dit</div>
+  <div>zijn</div>
+  <div>divs</div>
+</div>
+<h2>Voorbeelden</h2>
+<ul>
+  <li>&lt;h1&gt;</li>
+  <li>&lt;p&gt;</li>
+  <li>&lt;div&gt;</li>
+</ul>
+<div class="handout">
+  Block "vakken" nemen alle ruimte van de lijn in. Elk element dat daarvoor of daarna komt moet dus beginnen op een nieuwe regel.
+  Voorbeelden zijn headers, paragrafen en div-elementen.
+  Het div is het generieke block element. Elk van de elementen hierboven is omgeven door een div-tag.
+</div>
+</div>
+
+<div class="slide">
+<h1>Display voorbeeld</h1>
+<pre class="brush: xml">
+  &lt;p&gt;
+    Gelieve te &lt;a href=&quot;...&quot;&gt;zoeken&lt;/a&gt;
+  &lt;/p&gt;
+</pre>
+<p>Gelieve te <a href="">zoeken</a></p>
+<div class="handout">
+  Hier is een voorbeeld. De anchor-tag is standaard een element met display: inline, en wordt dus binnen de paragraaf getoond.
+</div>
+</div>
+
+<div class="slide">
+<h1>Display voorbeeld</h1>
+<pre class="brush: xml">
+  &lt;p&gt;
+    Gelieve te &lt;a href=&quot;...&quot;&gt;zoeken&lt;/a&gt;
+  &lt;/p&gt;
+</pre>
+<pre class="brush: css">
+  a { display: block; }
+</pre>
+<p>Gelieve te <a href="" style="display: block">zoeken</a></p>
+<div class="handout">
+  Maar wat gebeurd er als we de anchor stylen met display: block? De anchor tag heeft nu z'n plaats nodig, en verplaatst dus naar de volgende regel. Weeral, block-elements kunnen niet samen met andere elementen op dezelfde regel staan.
+  Je zou dit ook met een break-element (br) kunnen doen, maar hier hoeven we niets aan de HTML te veranderen om hetzelfde effect te verkrijgen. We kunnen dus achteraf in CSS nog kiezen hoe we de elementen op de pagina tonen.
+</div>
+</div>
+
+<div class="slide">
+<h1>Position</h1>
+<ul>
+  <li>static</li>
+  <li>relative</li>
+  <li>absolute</li>
+  <li>fixed</li>
+</ul>
+<div class="handout">
+  Position bepaalt de positie van het element ten opzichte van andere elementen op de pagina.
+  Het laat ons toe om alles wat we net hebben geleerd overhoop te gooien!
+  Dit is moeilijk om in slides te tonen, dus we zullen dit zometeen zien in de browser.
+</div>
+</div>
+
+<div class="slide">
+<h1>Float</h1>
+<p>(het verwarrende deel)</p>
+<div class="handout">
+  Naast position hebben we ook float. In de oefening vorige week heb ik stiekem al floats gebruikt, en zometeen gaan we er dieper op in gaan.
+</div>
+</div>
+
+<div class="slide">
+<h1>Browser-ondersteuning</h1>
+<ul>
+  <li>CSS 1</li>
+  <li>CSS 2</li>
+  <li>CSS 3</li>
+</ul>
+<div class="handout">
+  Er zijn verschillende standaarden van CSS, en verschillende browsers ondersteunen maar een subset van CSS.
+  Tegenwoordig tonen de meeste browsers de CSS die ze ondersteunen op de juiste manier, maar vroeger was dit niet zo (kuch-IE6-kuch).
+</div>
+</div>
+
+<div class="slide">
+<h1>Gefeliciteerd!</h1>
+<div class="handout">
+  Gefeliciteerd! Jullie zijn nu allemaal CSS experts.
+</div>
+</div>
+
+</div>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.all()
+</script>
+</body>
+</html>

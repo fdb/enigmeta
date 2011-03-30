@@ -1,0 +1,102 @@
+body {
+	font-family: Helvetica Neue, sans-serif;
+	font-size: 25px;
+	color: white;
+	background: red;
+	margin: centre;
+	
+}
+
+#container {
+	background: red;
+	}
+
+#header {
+	padding: 10px;
+	background: red;
+	}
+
+#header h1 {
+	font-family: helvetica Neue, serif;
+	font-weight: 100;
+	font-size: 150px;
+	color: white;
+	margin: 0;
+	padding:0;
+	padding-bottom:15px;
+	background-image:url('swiss2.png'); 
+	background-repeat:no-repeat;
+	background-position:690px 40px;
+	
+	}
+#header h1 strong {
+	font-weight: 900;
+}
+
+#nav {
+	padding: 10px;
+	padding-top: 0;
+}
+
+#nav ul {
+	border-top-style:solid;
+	border-right-style:none;
+	border-bottom-style:solid;
+	border-left-style:none;
+	margin-top:25px;
+	width:215px;
+		padding:0;
+}
+
+#nav li {
+	list-style: none;
+	display: block;
+	text-decoration: none;
+}
+
+#nav a {
+	text-decoration: none;
+	color: white;
+	font-size: 50px;
+	padding: 5px;
+}
+
+#nav a:hover {
+	color:black;
+}
+
+#content {
+	padding: 10px;
+}
+
+.gallery {
+	position:absolute; 
+	top:670px; 
+	left:600px;
+	
+}
+
+.gallery ul {
+	margin: 0;
+	padding: 0;
+}
+
+.gallery li {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	list-style: none;
+	padding-right: 10px;
+}
+
+p {
+	width:500px;
+
+}
+
+
+#footer {
+	padding: 10px;
+	font-size: 12px;
+	color: #999999;
+}

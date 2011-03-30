@@ -1,0 +1,116 @@
+body {
+	font-family: Verdana, sans-serif;
+	font-size: 12px;
+	background: #8AA0B2;
+	margin-top: 20px;
+	background: url(achtergrond.jpg);
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+}
+
+h1 {
+	font-family: 'Droid Sans Mono', arial, serif;
+}
+
+h2 {
+	font-family: 'Droid Sans Mono', arial, serif;
+	size: 14px;
+	padding-left: 5px;
+}
+#container {
+	background: #F8FCFF;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 250px;
+}
+
+#header {
+	padding-bottom: 50px;
+	padding-top: 50px;
+	height: 80px;
+	text-align: center;
+}
+
+#header h1 {
+	font-family: 'Droid Sans Mono', arial, serif;
+	text-align: center;
+	font-size: 200%;
+	letter-spacing: 20px;
+	color: #8AA0B2;
+	margin: 0;
+}
+
+#nav {
+	text-align: right;
+	padding-top: 10px;
+	padding-right: 15px;
+	padding-bottom: 2px;
+}
+
+#nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+#nav li {
+	list-style: none;
+	display: inline;
+	text-decoration: none;
+	size: 10px;
+}
+
+#nav a {
+	text-decoration: none;
+	color: #333;
+	font-size: 18px;
+	padding: 5px;
+}
+
+#nav a:hover {
+	color: #8AA0B2;
+}
+
+#content {
+	padding: 10px;
+	padding-top: 0px;
+}
+
+#tekst {
+	text-align: left;
+	padding-left: 5px;
+}
+
+.gallery ul {
+	margin: 0;
+	padding: 0;
+}
+
+.gallery li {
+	margin: 0;
+	display: inline;
+	list-style: none;
+	padding: 5px;
+}
+
+#rij2 {
+	padding-top: 10px;
+}
+
+#pers {font-style: italic;
+}
+
+#footer {
+	text-align: right;
+	padding: 2px;
+	padding-right: 15px;
+	font-size: 10px;
+	color: #B2AA9C;
+	border-top: 1px solid #B2AA9C;
+}
+
+#about {
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
