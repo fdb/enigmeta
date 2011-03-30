@@ -193,11 +193,9 @@ h2 {
 
 #search {
   position: relative;
-  left: 310px;
   top: 12px;
-  margin-left: 10px;
-  margin-right: 10px;
-  float: left;
+  margin: 0;
+  float: right;
   width: 300px;
 }
 
