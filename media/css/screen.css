@@ -74,17 +74,18 @@ a, img, a img, form, fieldset, object, applet {
 }
 
 p {
-    margin-bottom: 0.6em;
-    line-height: 140%;
+    margin-bottom: 0.4em;
+    line-height: 20px;
 }
 
 
 ul {
     margin-bottom: 0.6em;
+    margin-left: 15px;
 }
 
 li {
-    list-style: disc inside;
+    list-style: disc;
     margin-bottom: 0.6em;
 }
 
@@ -97,7 +98,7 @@ h1 {
 h2 {
     font-size: 14px;
     font-weight: bold;
-    margin: 15px 0 10px 0;
+    margin: 15px 0 5px 0;
 }
 
 #wrap {
@@ -203,11 +204,13 @@ h2 {
 #page {
   position: relative;
   top: -50px;
+  margin-bottom: -50px;
 }
 
 #page > h2 {
   position: relative;
-  left: 164px;
+  left: 160px;
+  padding: 4px;
     font-size: 22px;
     color: #444;
   margin-left: 10px;
@@ -219,7 +222,7 @@ h2 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 612px;
+  width: 460px;
   position: relative;
 }
 
@@ -229,16 +232,24 @@ h2 {
 
 #content h1, 
 #content h2,
-#content li,
+#content h3,
+#content ul,
+#content img,
 #content table,
 #content pre,
 #content p {
   position: relative;
-  left: 164px;
+  left: 160px;
+  padding: 4px;
+}
+
+#content .hanging {
+  width: 620px;
+  left: 0;
 }
 
 #content p {
-    margin-bottom: 1em;
+    margin-bottom: 0.6em;
 }
 
 #content li pre {
@@ -251,6 +262,18 @@ h2 {
   text-decoration: none;
 }
 
+#content img {
+  padding: 0;
+  margin: 0;
+}
+
+#content .caption {
+  color: #666;
+  font-size: 11px;
+  padding: 2px 0;
+  margin: 0;
+}
+
 #content a:hover {
   border-bottom: 1px solid #600;
 }
@@ -258,6 +281,11 @@ h2 {
 #content table {
     margin-bottom: 1em;
     border: 1px solid #ddd;
+}
+
+#content table img {
+  left: 0;
+  padding: 0;
 }
 
 #content th {
@@ -314,8 +342,12 @@ h2 {
 }
 
 .clear {
-    height: 0;
     clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    widht: 0;
+    height: 0;
 }
 
 /* Posts */
