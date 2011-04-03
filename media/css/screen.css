@@ -264,8 +264,12 @@ h2 {
 }
 
 #content a {
-  color: #800; 
+  color: #b00; 
   text-decoration: none;
+}
+
+#content a:hover {
+  border-bottom: 1px solid #ccc;
 }
 
 #content img {
@@ -278,10 +282,6 @@ h2 {
   font-size: 11px;
   padding: 2px 0;
   margin: 0;
-}
-
-#content a:hover {
-  border-bottom: 1px solid #600;
 }
 
 #content table {
