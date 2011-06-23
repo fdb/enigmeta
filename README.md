@@ -29,11 +29,10 @@ To build the website:
 To run the built-in server:
 
     rake server
-  
 
 License
 -------
-Content under the directories _posts/ and images/ is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License][cc].
+Text & images on this blog are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License][cc].
 
 [Jekyll]: http://github.com/mojombo/jekyll
 [Linode]: http://www.linode.com/?r=4be4bc35d12677cff12e393c9f4dd167d9eb6dfb
