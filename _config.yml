@@ -3,5 +3,5 @@ server: false
 pygments: true
 permalink: /:title/
 exclude:
-  - README.textile
+  - README.md
   - Rakefile
