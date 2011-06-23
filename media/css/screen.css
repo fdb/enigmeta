@@ -217,8 +217,8 @@ h2 {
   position: relative;
   left: 160px;
   padding: 4px;
-    font-size: 22px;
-    color: #444;
+  font-size: 22px;
+  color: #444;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -236,22 +236,16 @@ h2 {
     margin-top: 5px;
 }
 
-#content h1, 
-#content h2,
-#content h3,
-#content ul,
-#content img,
-#content table,
-#content pre,
-#content p {
+#home, #post, .meta {
   position: relative;
   left: 160px;
   padding: 4px;
 }
 
 #content .hanging {
+  position: relative;
+  left:-160px;
   width: 620px;
-  left: 0;
 }
 
 #content p {
