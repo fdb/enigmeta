@@ -374,3 +374,21 @@ h2 {
 #content pre code {
     border: none;
 }
+
+.doodles {
+  margin: 0;
+  padding: 0;
+}
+
+.doodles li {
+  float: left;
+  width: 200px;
+  list-style: none;
+  margin: 0 20px 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.doodles a img {
+  border: 0;
+}

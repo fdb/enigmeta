@@ -1,0 +1,75 @@
+---
+layout: default
+title: Faceblender
+---
+<div id="home">
+  <p>Choose a face and draw below:</p>
+  <div id="faces" class="buttons">
+    <button data-face-index="0" title="Change Face [Key: 1]"><img src="face1.jpg" width="50" alt="Face 1"><im</button>
+    <button data-face-index="1" title="Change Face [Key: 2]"><img src="face2.jpg" width="50" alt="Face 2"></button>
+    <button data-face-index="2" title="Change Face [Key: 3]"><img src="face3.jpg" width="50" alt="Face 3"></button>
+    <button data-face-index="3" title="Change Face [Key: 4]"><img src="face4.jpg" width="50" alt="Face 4"></button>
+  </div>
+
+  <canvas id="doodle" width="400" height="600"></canvas>
+
+  <p>Hi! Welcome to my first Daily Doodle. What I'm trying to do with the doodles is to <strong>create something new, every day</strong>.</p>
+  <p>I love to create simple drawing tools that are very specific. Instead of trying to solve every drawing problem for everyone, they might solve a very narrow problem just for you.</p>
+  <p>So my first sketch is a face drawing tool. It evolved from somewhat, from drawing with simple lines to drawing with images, and in the end, faces.</p>
+  <p>Initially, the tool used only simple geometric lines and colors to draw with. This was nice but a bit too abstract for what I was going for.</p>
+  <p>When I made the faces align and black and white the final composition became stronger and more coherent.</p>
+  <p><em>So what's going on?</em> After drawing a block, it slowly snaps to its position in the grid. However, the original mouse coordinates are stored and used for determining the image offset. This is why you see these glitchy images appear.</p>
+  <h2>Tools</h2>
+  <ul>
+    <li><a href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a>: a nicer JavaScript.</li>
+    <li><a href="http://jquery.com/">jQuery</a>: The base for all JavaScript work.</li>
+    <li><a href="http://baselinecss.com/">Baseline</a>: CSS grid for designers.</li>
+    <li><a href="http://www.pixelmator.com/">Pixelmator</a>: sexy image editor for Mac.</li>
+    <li><a href="http://macromates.com/">TextMate</a>: I can't really decide between TextMate and VIM.</li>
+  </ul>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+  <script src="faceblender.js"></script>
+
+</div> <!-- #home -->
+
+<style>
+#doodle {
+  border-top: 1px solid #ccc;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.current {
+  background: red;
+}
+
+.buttons {
+  position: relative;
+}
+
+.buttons button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin-right: 15px;
+  border: 2px solid #ccc;
+  background: transparent;
+  border-radius: 5px;
+  color: #888;
+}
+
+.buttons button.checked {
+  background: #ffe;
+}
+
+.buttons button.current {
+  border-color: #aaf;
+  box-shadow: 0 1px 5px rgba(180, 180, 200, 1);
+  color: #333;
+}
+
+#faces {
+  margin: 10px 0;
+}
+</style>
