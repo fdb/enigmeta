@@ -1,6 +1,7 @@
 /* Following are the presentation styles -- edit away! */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 
-body {background: #222; color: #eee; font-size: 2em; font-family: "Lucida Grande",Helvetica, sans-serif}
+body {background: #eee; color: #334; font-size: 2em; font-family: 'Open Sans',Helvetica, sans-serif}
 :link, :visited {text-decoration: none; color: #00C;}
 #controls :active {color: #88A !important;}
 #controls :focus {outline: 1px dotted #227;}
@@ -19,11 +20,11 @@ kbd {font-weight: bold; font-size: 1em;}
 sup {font-size: smaller; line-height: 1px;}
 
 .slide .error { color: red; }
-.slide h2 {font-weight: bold; color: #fff; }
+.slide h2 {font-weight: bold; color: #224; }
 .slide code {padding: 2px 0.25em; font-weight: bold; color: #f88;}
 .slide code.bad, code del {color: red;}
 .slide code.old {color: silver;}
-.slide pre {padding: 0; margin: 0.25em 0 0.5em 0.5em; color: #B9BDB6 !important; font-size: 90%; background: #1B2426 !important}
+.slide pre {padding: 0; margin: 0.25em 0 0.5em 0.5em; color: #115 !important; font-size: 90%; background: white !important }
 .slide pre code {display: block;}
 .slide ul {margin-left: 5%; margin-right: 7%; list-style: disc;}
 .slide li {margin-top: 0.75em; margin-right: 0;}
@@ -40,25 +41,36 @@ sup {font-size: smaller; line-height: 1px;}
 .slide .syntaxhighlighter { overflow: hidden !important; }
 .slide .syntaxhighlighter .toolbar { visibility: hidden !important; }
 
-div#header, div#footer {background: #000; color: #444;
-  font-family: "Lucida Grande", Helvetica, sans-serif;}
+
 div#header {
-  line-height: 1px;}
-div#footer {font-size: 0.5em; font-weight: bold; padding: 1em 0;}
+    background: #ccccd4;
+    color: #444;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.8); 
+}
+
+div#footer {
+    font-size: 0.5em;
+    font-weight: bold;
+    padding: 1em 0;
+    background: #334;
+    color: #888;
+    box-shadow: 0 5px 2px rgba(0, 0, 0, 0.8);
+}
+
 #footer h1, #footer h2 {display: block; padding: 0 1em;}
 #footer h2 {font-style: italic;}
 
 div.long {font-size: 0.75em;}
 .slide h1 {position: absolute; top: 0.7em; left: 87px; z-index: 1;
   margin: 0; padding: 0.3em 0 0 50px; white-space: nowrap;
-  font: bold 150%/1em Helvetica, sans-serif; text-transform: capitalize;
-  color: #eee;}
+  font: bold 150%/1em; text-transform: capitalize;
+  color: #334;}
 .slide h3 {font-size: 130%;}
 h1 abbr {font-variant: small-caps;}
 
 div#controls {position: absolute; left: 50%; bottom: 0;
   width: 50%;
-  text-align: right; font: bold 0.9em Verdana, Helvetica, sans-serif;}
+  text-align: right; font: bold 0.9em}
 html>body div#controls {position: fixed; padding: 0 0 1em 0;
   top: auto;}
 div#controls form {position: absolute; bottom: 0; right: 0; width: 100%;
@@ -69,13 +81,13 @@ div#controls form {position: absolute; bottom: 0; right: 0; width: 100%;
 #controls #navList {height: 1em;}
 #controls #navList #jumplist {position: absolute; bottom: 0; right: 0; color: #222;}
 
-#currentSlide {text-align: center; font-size: 0.5em; color: #444;}
+#currentSlide {text-align: center; font-size: 0.5em; color: #888;}
 
 #slide0 {padding-top: 3.5em; font-size: 90%;}
 #slide0 h1 {position: static; margin: 1em 0 0; padding: 0;
-   font: bold 2em Helvetica, sans-serif; white-space: normal;
-   color: #eee; background: transparent;}
-#slide0 h2 {font: bold italic 1em Helvetica, sans-serif; margin: 0.25em;}
+   font: bold 2em; white-space: normal;
+   color: #333; background: transparent;}
+#slide0 h2 {font: bold italic 1em; margin: 0.25em;}
 #slide0 h3 {margin-top: 1.5em; font-size: 1.5em;}
 #slide0 h4 {margin-top: 0; font-size: 1em;}
 
