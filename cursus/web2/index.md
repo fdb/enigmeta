@@ -17,6 +17,15 @@ Tools
 * [Dropbox](http://www.dropbox.com/): Houdt files tussen verschillende computers in sync.
 * [Espresso](http://macrabbit.com/espresso/): Visuele HTML/CSS editor met live voorvertoning.
 * [TopStyle](http://svanas.dynip.com/topstyle/): Commerciële CSS-editor op Windows met visuele editor en live voorvertoning.
+* [Coda](http://www.panic.com/coda/): Geïntegreerde tekst editor + FTP client. Voor Mac.
+* [CyberDuck](http://cyberduck.ch/): Gratis Mac FTP-client.
+
+WordPress
+=========
+* [WordPress Theme Development](http://codex.wordpress.org/Theme_Development): De officiële documentatie over thema's maken in WordPress.
+* [How to Code a WordPress 3.0 Theme from Scratch](http://www.onextrapixel.com/2011/03/08/how-to-code-a-wordpress-3-0-theme-from-scratch/): Prima tutorial om je eigen thema uit de grond te stampen.
+* [How to Build a Basic Portfolio WordPress Theme](http://line25.com/tutorials/how-to-build-a-basic-portfolio-wordpress-theme): Mooie tutorial voor een portfolio-website.
+* [The anatomy of a WordPress theme](http://yoast.com/wordpress-theme-anatomy/): Een visuele gids in hoe een WordPress thema werkt.
 
 Contactinformatie
 ==================
