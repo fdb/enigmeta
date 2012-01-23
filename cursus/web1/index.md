@@ -31,6 +31,7 @@ Links
 * [Google Web Fonts](http://www.google.com/webfonts): Vrij beschikbare lettertypes voor op het
     web.
 * [@font-face generator](http://www.fontsquirrel.com/fontface/generator): Converteert eigen fonts naar de juiste formaten voor op het web.
+* [HTML 5 Boilerplate](http://html5boilerplate.com/): Een goed start-document om nieuwe pagina's mee te beginnen.
 
 Gratis beelden
 ==============
