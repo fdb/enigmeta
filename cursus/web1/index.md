@@ -32,6 +32,7 @@ Links
     web.
 * [@font-face generator](http://www.fontsquirrel.com/fontface/generator): Converteert eigen fonts naar de juiste formaten voor op het web.
 * [HTML 5 Boilerplate](http://html5boilerplate.com/): Een goed start-document om nieuwe pagina's mee te beginnen.
+* [Gecko Reflow Visualization](http://www.youtube.com/watch?v=dndeRnzkJDU): Een video van hoe een browser Wikipedia rendert.
 
 Gratis beelden
 ==============
