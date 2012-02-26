@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+
+<div class="project">
+{{ content }}
+</div>
+
+<div class="project-images">
+{% for image in page.images %}
+    <img src="/images/{{ image }}" alt="{{ image }}">
+{% endfor %}
+</div>

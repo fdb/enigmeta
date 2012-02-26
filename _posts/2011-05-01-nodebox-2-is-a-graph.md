@@ -1,4 +1,5 @@
 ---
+category: post
 layout: post
 title: NodeBox 2 is a Graph
 ---

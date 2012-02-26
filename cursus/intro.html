@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HTML / CSS Cursus: Intro</title>
+    <meta name="description" content="HTML/CSS Cursus">
+    <meta name="author" content="Frederik De Bleser">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/prettify.css">
+    <link rel="stylesheet" href="css/cursus.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Cursus HTML / CSS</h1>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- HTMLWTF
+=============================== -->
+<section id="HTMLWTF">
+  <div class="page-header"><h1>HTMLWTF <small>Korte historiek van het internet</small></h1></div>
+  <div class="row">
+    <div class="span8">
+      <p>Het internet is fantastisch. Het is de grootste bron aan informatie over van alles en nog wat. Door computers van heel de wereld aan elkaar te schakelen tot een netwerk van servers kan je een fantastische wereld aan informatie binnenkrijgen.</p>
+      <p>Vandaag gaan we achter de schermen kijken van het web. Elke webpagina is opgemaakt in <strong>HTML</strong> en vormgegeven met <strong>CSS</strong>. Het gedrag wordt bepaald door <strong>JavaScript</strong>.</p>
+      <p>Hier zie je wat HTML code:</p>
+<pre class="prettyprint">&lt;div&gt;
+  &lt;h1&gt;Hoofding&lt;/h1&gt;
+  &lt;p&gt;Hier komt wat tekst...&lt;/p&gt;
+&lt;/div&gt;</pre>
+      <p>HTML bestaat uit gewone tekst inclusief tags. Dit is een tag: <code>&lt;html&gt;</code>. Je zal er in de cursus nog heel wat zien. Dit lijkt misschien beangstigend in het begin, maar we nemen rustig onze tijd om dit goed door te nemen.</p>
+    </div>
+    <div class="span8" style="text-align: center; opacity:0.2">
+      <img src="img/intro/World.svg" width="200">
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="span4">
+      <h2>View Source</h2>
+      De broncode van elke website is publiek zichtbaar.
+      Klik op elk van de website thumbnails om de broncode te zien.
+      Je kan dit zelf doen door bv. in Safari <em>View &gt; View Source</em> te selecteren
+    </div>
+    <div class="span12">
+      <ul class="media-grid">
+        <li><a href="img/intro/html-flickr.png"><img class="thumbnail" src="img/intro/kittens-flickr.png" width="210"></a></li>
+        <li><a href="img/intro/html-amazon.png"><img class="thumbnail" src="img/intro/kittens-amazon.png" width="210"></a></li>
+        <li><a href="img/intro/html-deredactie.png"><img class="thumbnail" src="img/intro/kittens-deredactie.png" width="210"></a></li>
+        <li><a href="img/intro/html-facebook.png"><img class="thumbnail" src="img/intro/kittens-facebook.png" width="210"></a></li>
+        <li><a href="img/intro/html-cheezburger.png"><img class="thumbnail" src="img/intro/kittens-cheezburger.png" width="210"></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom-Up Aanpak
+=============================== -->
+<section id="bottom-up">
+  <div class="page-header"><h1>Bottom-up <small>Over de aanpak van de cursus</small></h1></div>
+  <div class="row">
+    <div class="span8">
+      <p>We hebben er speciaal voor gekozen om je HTML en CSS te leren zodat je echt weet hoe pagina's gemaakt worden, en wat de code erachter is. Dit is belangrijk om verschillende redenen.</p>
+      <h2>Zelfredzaamheid</h2>
+      <p>Je zou, in plaats van met HTML te werken, ook met een grafische editor werken. Die schrijft dan de HTML voor jou. Fantastisch!</p>
+      <p>Tot er iets mis gaat. De editor vormt een dun laagje boven de HTML en CSS: hij abstraheert als het ware de HTML en CSS tot een grafische omgeving.</p>
+      <p>Echter, door te doen alsof HTML en CSS niet bestaan loop je tegen problemen aan die je zelf niet kan oplossen. Een element staat niet op de juiste plaats? Als je nooit de HTML en CSS ziet weet je ook niet waar je moet beginnen zoeken.</p>
+      <p>Daarom is het belangrijk om te begrijpen hoe webpagina's gemaakt worden, alvorens je visuele tools gebruikt om pagina's aan te maken.</p>
+      <h2>Samenwerking</h2>
+      <p>In de "echte" wereld zal je grote websites waarschijnlijk in team maken. Als je samenwerkt met een programmeur die de HTML en CSS voor jou doet is het nog steeds belangrijk om te begrijpen wat er mogelijk is. Dit laat de conversatie tussen jou en andere teamleden vlotter verlopen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Alternatieven
+=============================== -->
+<section id="alternatieven">
+  <div class="page-header"><h1>Alternatieven <small>Waarom leren we niet gewoon Flash?</small></h1></div>
+  <div class="row">
+    <div class="span8">
+      <p>Veel designer-sites zijn in Flash gemaakt. Flash is ideaal voor animatie, geluid, video, dus waarom doen we niet alles in Flash?</p>
+      <h2>Toegankelijkheid</h2>
+      <p>De hoofdreden is toegankelijkheid. Mensen die niet in staat zijn van visuele webpagina's te bekijken (zoals blinden) kunnen je Flash-website niet bezoeken. Dit is misschien niet belangrijk als je een portfolio met grafisch werk maakt, maar wordt wel belangrijk als je websites ontwikkeld in de "echte" wereld, waar je er niet kan van uitgaan dat mensen kunnen horen, zien, of ruiken.</p>      
+      <h2>Zoekmachines</h2>
+      <p>Daarnaast zijn er de zoekmachines. Een site in Flash bevat bijna geen zinnige informatie voor zoekrobots, waardoor je website het erg povertjes zal doen in Google.</p>
+      <p>Een zoekmachine is eigenlijk ook "blind". Het kan niet kijken naar de pixels, maar enkel tekst lezen.</p>
+      <h2>Mobiel</h2>
+      <p>Tenslotte zijn er bezoekers die met een mobiele webbrowser de pagina bekijken, zoals de iPhone of iPad.</p>
+      <p>Deze apparaten ondersteunen geen Flash, en het is duidelijk uit Apple's standpunt dat dit in hun ogen een verouderde technologie is die ze niet willen ondersteunen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Structuur van een Webpagina
+================================ -->
+<section id="structuur">
+  <div class="page-header"><h1>Structuur van een webpagina</h1></div>
+  <p>Een webpagina bestaat uit drie verschillende onderdelen:</p>
+  <div class="row">
+    <div class="span-one-third">
+      <h2>Structuur: HTML</h2>
+      <p>De structuur bepaalt de verschillende onderdelen van de inhoud zijn, en hoe ze in relatie staan. Dit is de taak van HTML. Het bevat de inhoud van je pagina en wat extra informatie om aan te duiden welke delen de hoofdingen zijn, welke paragrafen, welke tekst er moet benadrukt worden, enz.</p>
+    </div>
+    <div class="span-one-third">
+      <h2>Presentatie: CSS</h2>
+      <p>De presentatie bepaalt hoe de inhoud visueel getoond moet worden. Dit is de taak van CSS. CSS selecteert onderdelen op de pagina en beschrijft de kleur, lettertype en spatiëring waarmee de elementen moeten worden getoond.</p>
+    </div>
+    <div class="span-one-third">
+      <h2>Gedrag: JavaScript</h2>
+      <p>Het gedrag bepaalt hoe de inhoud reageert en verandert gebaseerd op interactie met de gebruiker. Dit is de taak van JavaScript. JavaScript is een volledige programmeertaal waarmee je het gedrag van een pagina volledig kan sturen. Het is krachtig en complex.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Waarom inhoud en opmaak scheiden?
+====================================== -->
+<section id="scheiden-inhoud-opmaak">
+  <div class="page-header"><h1>Waarom inhoud en opmaak scheiden?</h1></div>
+  <div class="row">
+    <div class="span8">
+      <p>In vroegere tijden, dat wil zeggen, 1998, werden structuur & presentatie gemengd. Dit leidde tot een grote soep aan code. Tegenwoordig hoeft dat allemaal niet. Daar zijn goede redenen voor:</p>
+      <h2>Toegankelijker</h2>
+      <p>Propere, semantische HTML heeft voordelen voor gebruikers die niet-visuele webbrowsers gebruiken, zoals blinden. Daarnaast zijn er ook zoekrobotten die je website opzoeken, en die kunnen ook niet zien. Google leest je site en gebruikt vooral de structuur-informatie uit HTML om te bepalen wat belangrijk is.</p>
+      <h2>Onderhoudbaarder</h2>
+      <p>Door HTML/CSS te scheiden kan je een nieuwe stylesheet implementeren en je hebt een mobiele versie van je pagina. We kunnen ook delen tussen verschillende projecten herbruiken. Een designer kan aanpassingen aan de CSS doen zonder de HTML te hoeven aan te passen of de JavaScript code te veranderen.</p>
+      <h2>Sneller</h2>
+      <p>De meeste websites bestaan uit meerdere pagina's. Door de opmaak te scheiden hoef je die maar één keer te downloaden voor alle pagina's. De browser bewaart daarna de opmaak lokaal, in een cache.</p>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="span4">
+      <h2>CSS Zen Garden</h2>
+      <p>CSS Zen Garden toont dat één enkele HTML-pagina op duizenden verschillende manieren kan getoond worden. De HTML-broncode is altijd hetzelfde. Enkel de opmaak, de CSS-code en de bijhorende beelden zijn verschillend.</p>
+    </div>
+    <div class="span12">
+      <ul class="media-grid">
+        <li><a href="img/intro/zengarden-1.png"><img class="thumbnail" src="img/intro/zengarden-1.png" width="330"></a></li>
+        <li><a href="img/intro/zengarden-2.png"><img class="thumbnail" src="img/intro/zengarden-2.png" width="330"></a></li>
+        <li><a href="img/intro/zengarden-3.png"><img class="thumbnail" src="img/intro/zengarden-3.png" width="330"></a></li>
+        <li><a href="img/intro/zengarden-4.png"><img class="thumbnail" src="img/intro/zengarden-4.png" width="330"></a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Website project
+====================================== -->
+<section id="website-project">
+  <div class="page-header"><h1>Website project</h1></div>
+  <div class="row">
+    <div class="span8">
+      <p>Vandaag gaan we werken aan een website voor een fictieve VZW. We beginnen aan een briefing waar één pagina wordt voorgesteld, werken aan de HTML, en misschien wat CSS.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span-one-third media-grid">
+      <h2>Briefing</h2>
+      <a href="img/intro/buurtfeest-briefing.png"><img class="thumbnail" src="img/intro/buurtfeest-briefing.png" width="100%"></a>
+    </div>
+    <div class="span-one-third media-grid">
+      <h2>HTML</h2>
+      <a href="img/intro/buurtfeest-unstyled.png"><img class="thumbnail" src="img/intro/buurtfeest-unstyled.png" width="100%"></a>
+    </div>
+    <div class="span-one-third media-grid">
+      <h2>CSS</h2>
+      <a href="img/intro/buurtfeest-styled.png"><img class="thumbnail" src="img/intro/buurtfeest-styled.png" width="100%"></a>
+    </div>
+</div>
+</section>
+
+</div><!-- .container -->
+
+<footer class="footer">
+  <div class="container">
+  <p>Door Frederik De Bleser <a href="http://twitter.com/enigmeta" target="_blank">@enigmeta</a>. Layout door <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.</p>
+</footer>
+
+<script src="js/jquery-1.7.min.js"></script>
+<script src="js/prettify.js"></script>
+<script>$(function () { prettyPrint() })</script>
+</body>
+</html>
