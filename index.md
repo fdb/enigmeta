@@ -2,9 +2,7 @@
 layout: default
 title: Frederik De Bleser
 ---
-I'm a PhD student at [Sint Lucas Antwerpen][sla], studying the link between computers and art.
-
-I also do graphic design commercially. My company is called [Burocrazy][].
+I'm a PhD student at [Sint Lucas Antwerpen][sla], studying the link between computers and art. I also do graphic design commercially. My company is called [Burocrazy][].
 
 Latest Projects
 ===============
@@ -18,7 +16,7 @@ Latest Posts
 ============
 <ul class="posts">
   {% for post in site.categories.post %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><time>{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
 
