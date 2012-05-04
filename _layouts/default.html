@@ -7,36 +7,64 @@ description: Personal weblog of Frederik De Bleser
     <meta charset="utf-8">
     <title>{{ page.title }} | Enigmeta</title>
     <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="Frederik De Bleser">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/media/css/syntax.css">
     <link rel="stylesheet" href="/media/css/screen.css">
-    <meta name="author" content="Frederik De Bleser">
+
+    <link rel="alternate" href="/atom.xml" title="Enigmeta" type="application/atom+xml">
 </head>
 <body>
 
-<header>
-    <nav><ul>
+<header role="banner"><hgroup>
+    <h1><a href="/">Enigmeta</a></h1>
+    <h2>Personal weblog of Frederik De Bleser</h2>
+</hgroup></header>
+
+<nav role="navigation"><ul>
         <li><a href="/">Home</a></li>
         <li><a href="/projects/">Projects</a></li>
         <li><a href="/doodles/">Doodles</a></li>
         <li><a href="/cursus/">Cursus</a></li>
         <li><a href="/contact/">Contact</a></li>
-    </ul></nav>
-    <h1><a href="/">Enigmeta</a></h1>
-</header>
+</ul></nav>
 
-<div class="container"> 
-<h2>{{ page.title }}</h2>
+<div id="main">
 
-<div class="content">
-  {{ content }}
-</div>
+<div id="content">
+  <article>
+    <header>
+      <h1 class="entry-title">{{ page.title }}</h1>
+      <p class="meta"></p>
+    </header>
 
-</div> <!-- .container -->
+    <div class="entry-content">
+      {{ content }}
+    </div>
+  </article>
+</div> <!-- #content -->
+
+<aside class="sidebar">
+    <section>
+      <img src="/media/img/frederik-de-bleser.jpg" alt="Frederik De Bleser">
+      <h1>Contact Info</h1>
+      <p>Frederik De Bleser</p>
+      <p>frederik (at) burocrazy (dot) com</p>
+    </section>
+    <section>
+      <h1>Other Places</h1>
+      <p><a href="https://twitter.com/enigmeta/">twitter.com/enigmeta</a></p>
+      <p><a href="https://github.com/fdb/">github.com/fdb</a></p>
+    </section>
+</aside>
+
+</div> <!-- #main -->
 
 <footer>
-  <p><a href="http://www.enigmeta.com/">www.enigmeta.com</a></p>
-  <p><a href="http://twitter.com/enigmeta/">twitter.com/enigmeta</a></p>
-  <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">work</span> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.</p>
+  <p><a href="http://www.enigmeta.com/">enigmeta.com</a> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs License</a>.</p>
 </footer>
 
 <script type="text/javascript">
