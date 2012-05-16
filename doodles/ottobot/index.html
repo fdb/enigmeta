@@ -119,11 +119,29 @@
     };
 
     ob.randFloatValue = function (min, max) {
-        return "ob.randFloat(" + min + ", " + max + ")";
+        // The random generation doesn't need to create over the whole range.
+        var rMin, rMax, rSwap;
+        rMin = ob.randFloat(min, max);
+        rMax = ob.randFloat(min, max);
+        if (rMin > rMax) {
+            rSwap = rMin;
+            rMin = rMax;
+            rMax = rSwap;
+        }
+        return "ob.randFloat(" + rMin + ", " + rMax + ")";
     };
 
     ob.randIntValue = function (min, max) {
-        return "ob.randInt(" + min + ", " + max + ")";
+        // The random generation doesn't need to create over the whole range.
+        var rMin, rMax, rSwap;
+        rMin = ob.randInt(min, max);
+        rMax = ob.randInt(min, max);
+        if (rMin > rMax) {
+            rSwap = rMin;
+            rMin = rMax;
+            rMax = rSwap;
+        }
+        return "ob.randInt(" + rMin + ", " + rMax + ")";
     };
 
     ob.textValue = function () {
