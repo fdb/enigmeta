@@ -44,7 +44,7 @@
     ob.height = 500;
     ob.maxSize = 100;
     // Number of levels to nest loops.
-    ob.maxLevel = 1;
+    ob.maxLevel = 3;
 
     //// Utility methods ////
 
@@ -226,7 +226,7 @@
         if (level >= ob.maxLevel) return '';
         var s, loopName = ob.randomName();
         s = "for (var " + loopName + "=0; " + loopName + " < " + ob.loopValue() + "; " + loopName + "++) {\n";
-        s += ob.makeScript(100, level + 1);
+        s += ob.makeSpaces(level) + ob.makeStatement(100, level + 1);
         s += "}\n";
         return s;
     };
