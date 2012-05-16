@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <style>
+        pre { float: right; width: 600px; overflow:auto; }
+        canvas { border: 1px solid #333; }
+    </style>
+<script>
+(function () {
+    "use strict";
+
+    var ob = window.ob = {};
+
+    ob.width = 500;
+    ob.height = 500;
+
+    //// Utility methods ////
+
+    ob.randFloat = function (min, max) {
+        return min + Math.random() * (max - min);
+    };
+
+    ob.randInt = function (min, max) {
+        return Math.floor(ob.randFloat(min, max));
+    };
+
+    ob.choice = function (l) {
+        return l[ob.randInt(0, l.length)];
+    };
+
+    ob.makeSpaces = function (level) {
+        var s = "", i = 0;
+        for (i = 0; i < level; i += 1) {
+            s += "  ";
+        }
+        return s;
+    };
+
+    //// Value types ////
+
+    ob.colorValue = function () {
+        return ob.choice([ob.intValue, ob.randIntValue])(0, 255);
+    };
+
+    ob.hueValue = function () {
+        return ob.choice([ob.intValue, ob.randIntValue])(0, 360);
+    };
+
+    ob.saturationValue = function () {
+        return ob.choice([ob.intValue, ob.randIntValue])(0, 100);
+    };
+
+    ob.lightnessValue = ob.saturationValue;
+
+    ob.alphaValue = function () {
+        return ob.choice([ob.floatValue, ob.randFloatValue])(0, 1);
+    };
+
+    ob.positionValue = function () {
+        return ob.choice([ob.intValue, ob.randIntValue])(-ob.width, ob.width);
+    };
+
+    ob.sizeValue = function () {
+        return ob.choice([ob.intValue, ob.randIntValue])(0, ob.width);
+    };
+    
+    ob.transformValue = function () {
+        return ob.choice([ob.intValue, ob.randIntValue])(-100, 100);
+    }
+
+    ob.rotateValue = function () {
+        return ob.choice([ob.floatValue, ob.randFloatValue])(-Math.PI, Math.PI);
+    }
+
+    ob.floatValue = function (min, max) {
+        return ob.randFloat(min, max);
+    };
+
+    ob.intValue = function (min, max) {
+        return ob.randInt(min, max);
+    };
+
+    ob.randFloatValue = function (min, max) {
+        return "ob.randFloat(" + min + ", " + max + ")";
+    };
+
+    ob.randIntValue = function (min, max) {
+        return "ob.randInt(" + min + ", " + max + ")";
+    };
+
+    ob.textValue = function () {
+        return "'" + ob.choice("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789") + "'";
+    };
+
+    ob.fontSizeValue = function () {
+        return ob.choice([ob.intValue, ob.randIntValue])(4, 300);
+    };
+
+    ob.loopValue = function () {
+        return ob.intValue(1, 500);
+    };
+
+    //// Statement making methods ////
+
+    ob.makeScript = function (maxSize, level) {
+        var s = '', i = 0;
+        s += ob.makeSpaces(level) + ob.makeFill() + "\n";
+        for (i = 0; i < ob.randInt(0, maxSize); i += 1) {
+            s += ob.makeSpaces(level) + ob.makeStatement(level) + "\n";
+        }
+        return s;
+    };
+
+    ob.makeStatement = function (level) {
+        var fn = ob.choice(ob.statements);
+        return fn(level);
+    };
+
+    ob.makeRect = function (level) {
+        return "ctx.fillRect(" +
+            ob.positionValue() + ", " +
+            ob.positionValue() + ", " +
+            ob.sizeValue() + ", " +
+            ob.sizeValue() + ");";
+    };
+
+    ob.makeText = function (level) {
+        return "ctx.fillText(" +
+            ob.textValue() + ", " +
+            ob.positionValue() + ", " +
+            ob.positionValue() + ");";
+    };
+
+    ob.makeFill = function (level) {
+        return "ctx.fillStyle = 'hsla(' + " +
+            ob.hueValue() + " + ',' + " +
+            ob.saturationValue() + " + '%,' + " +
+            ob.lightnessValue() + " + '%,' + " +
+            ob.alphaValue() + " + ')';";
+    };
+    
+    ob.makeFont = function (level) {
+        return "ctx.font = " + ob.fontSizeValue() + " + 'px arial'";
+    };
+
+    ob.randomName = function () {
+        var s = 'i', i = 0;
+        for (i = 0; i < 4; i += 1) {
+            s += Math.floor(Math.random() * 10);
+        }
+        return s;
+    };
+
+    ob.makeLoop = function (level) {
+        var s, loopName = ob.randomName();
+        s = "for (var " + loopName + "=0; " + loopName + " < " + ob.loopValue() + "; " + loopName + "++) {\n";
+        s += ob.makeScript(2, level + 1);
+        s += "};\n";
+        return s;
+    };
+
+    ob.makeTransformState = function (level) {
+        return "ctx." + ob.choice(["save", "restore"]) + "()";
+    };
+
+    ob.makeTransform = function (level) {
+        return ob.choice([ob.makeTranslate, ob.makeRotate])();
+    };
+    
+    ob.makeTranslate = function () {
+        return "ctx.translate(" + ob.transformValue() + ", " + ob.transformValue()  + ");"
+    };
+    
+    ob.makeRotate = function () {
+        return "ctx.rotate(" + ob.rotateValue() + ");"
+    };
+
+    ob.statements = [
+        ob.makeTransform,
+        ob.makeTransformState,
+        ob.makeLoop,
+        ob.makeFill,
+        ob.makeFont,
+        ob.makeRect,
+        ob.makeText];
+
+    ob.evalScript = function () {
+        var canvas = document.getElementById("canvas");
+        canvas.width = canvas.width;
+        window.ctx = canvas.getContext("2d");
+        eval(ob.currentScript);
+    };
+
+    ob.createScript = function () {
+        ob.currentScript = ob.makeScript(50, 0);
+        document.getElementById("code").innerHTML = ob.currentScript;
+    };
+
+})();
+
+</script>
+</head>
+<body>
+
+<canvas id="canvas" width="500" height="500"></canvas>
+
+<pre id="code">
+</pre>
+<br>
+
+
+<button onclick="ob.createScript(); ob.evalScript();">create</button>
+<button onclick="ob.evalScript();">eval</button>
+
+<script>
+ob.createScript();
+ob.evalScript();
+</script>
+</body>
+</html>
