@@ -67,11 +67,13 @@
     
     ob.transformValue = function () {
         return ob.choice([ob.intValue, ob.randIntValue])(-100, 100);
-    }
+    };
 
-    ob.rotateValue = function () {
-        return ob.choice([ob.floatValue, ob.randFloatValue])(-Math.PI, Math.PI);
-    }
+    ob.angleValue = function () {
+        return ob.choice([ob.floatValue, ob.randFloatValue])(-Math.PI * 2, Math.PI * 2);
+    };
+    
+    ob.rotateValue = ob.angleValue;
 
     ob.floatValue = function (min, max) {
         return ob.randFloat(min, max);
@@ -100,6 +102,14 @@
     ob.loopValue = function () {
         return ob.intValue(1, 500);
     };
+    
+    ob.pathCommandsValue = function () {
+        return ob.intValue(1, 10);
+    };
+    
+    ob.booleanValue = function () {
+        return ob.choice(["true", "false"]);
+    }
 
     //// Statement making methods ////
 
@@ -156,12 +166,12 @@
         var s, loopName = ob.randomName();
         s = "for (var " + loopName + "=0; " + loopName + " < " + ob.loopValue() + "; " + loopName + "++) {\n";
         s += ob.makeScript(2, level + 1);
-        s += "};\n";
+        s += "}\n";
         return s;
     };
 
     ob.makeTransformState = function (level) {
-        return "ctx." + ob.choice(["save", "restore"]) + "()";
+        return "ctx." + ob.choice(["save", "restore"]) + "();";
     };
 
     ob.makeTransform = function (level) {
@@ -175,6 +185,25 @@
     ob.makeRotate = function () {
         return "ctx.rotate(" + ob.rotateValue() + ");"
     };
+    
+    ob.makePath = function () {
+        var s = "ctx.beginPath();\n", i = 0;
+        for (i = 0; i < ob.pathCommandsValue(); i += 1) {
+            s += ob.choice([ob.makeArc])() + "\n";
+        }
+        s += "ctx.fill();"
+        return s;
+    };
+    
+    ob.makeArc = function () {
+        return "ctx.arc(" +
+          ob.positionValue() + ", " +
+          ob.positionValue() + ", " +
+          ob.sizeValue() + ", " +
+          ob.angleValue() + ", " +
+          ob.angleValue() + ", " +
+          ob.booleanValue() + ");"
+    };
 
     ob.statements = [
         ob.makeTransform,
@@ -183,12 +212,14 @@
         ob.makeFill,
         ob.makeFont,
         ob.makeRect,
-        ob.makeText];
+        ob.makeText,
+        ob.makePath];
 
     ob.evalScript = function () {
-        var canvas = document.getElementById("canvas");
-        canvas.width = canvas.width;
-        window.ctx = canvas.getContext("2d");
+        var canvas, ctx;
+        canvas = document.getElementById("canvas");
+        ctx = window.ctx = canvas.getContext("2d");
+        canvas.width = canvas.width; // Trick to clear the canvas
         eval(ob.currentScript);
     };
 
