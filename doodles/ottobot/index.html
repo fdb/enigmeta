@@ -89,14 +89,14 @@
     };
 
     ob.positionValue = function () {
-        return ob.choice([ob.intValue, ob.randIntValue])(-ob.width, ob.width);
+        return ob.choice([ob.intValue, ob.randIntValue])(-ob.width/2, ob.width/2);
     };
 
     ob.sizeValue = function () {
         return ob.choice([ob.intValue, ob.randIntValue])(0, ob.maxSize);
     };
     
-    ob.transformValue = function () {
+    ob.translateValue = function () {
         return ob.choice([ob.intValue, ob.randIntValue])(-100, 100);
     };
 
@@ -222,7 +222,7 @@
     };
     
     ob.makeTranslate = function () {
-        return "ctx.translate(" + ob.transformValue() + ", " + ob.transformValue()  + ");"
+        return "ctx.translate(" + ob.translateValue() + ", " + ob.translateValue()  + ");"
     };
     
     ob.makeRotate = function () {
