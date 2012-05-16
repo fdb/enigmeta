@@ -3,8 +3,36 @@
 <head>
     <title>Test</title>
     <style>
+        * { font-family: arial, sans-serif; font-size: 12px; }
+        body { background: #222; }
         pre { float: right; width: 600px; overflow:auto; }
-        canvas { border: 1px solid #333; }
+        canvas { display: block; border: 1px solid #333; margin: 0 auto; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+        textarea#code { display: block; width: 500px; height: 100px; margin: 5px auto; background: #222; color: #666; font-family: monospace;  font-size: 4px; border: 1px solid #333; }
+        #controls {
+            display: block;
+            width: 500px;
+            margin: 10px auto;
+            color: #999;
+        }
+        #controls:after {
+            content: " ";
+            display: block;
+            clear: both;
+            
+        }
+        #controls button {
+            border: 1px solid #333;
+            background: #222;
+            color: #999;
+        }
+        #controls #actions {
+            float: left;
+            width: 45%;
+        }
+        #controls #drawtypes {
+            float: right;
+            width: 45%;
+        }
     </style>
 <script>
 (function () {
@@ -253,19 +281,57 @@
 </head>
 <body>
 
+<div id="controls">
+    <div id="actions">
+        <button onclick="ob.createScript(); ob.evalScript();">Create new script</button>
+        <button onclick="ob.evalScript();">Run current script</button>
+    </div>
+    <div id="drawtypes">
+        <p><input type="checkbox" class="drawtype" value="text" checked>Text</p>
+        <p><input type="checkbox" class="drawtype" value="rect" checked>Rectangles</p>
+        <p><input type="checkbox" class="drawtype" value="arc" checked>Arcs</p>
+    </div>
+</div>
+
 <canvas id="canvas" width="500" height="500"></canvas>
 
-<pre id="code">
-</pre>
+<textarea id="code">
+</textarea>
 <br>
 
 
-<button onclick="ob.createScript(); ob.evalScript();">create</button>
-<button onclick="ob.evalScript();">eval</button>
 
 <script>
+var inputs, i;
 ob.createScript();
 ob.evalScript();
+
+var selectDrawtype = function (e) {
+    var drawtype;
+    drawTypes = document.querySelectorAll('input.drawtype:checked');
+    ob.statements = [ ob.makeTransform, ob.makeTransformState, ob.makeLoop, ob.makeFill];
+    for (i = 0 ; i < drawTypes.length; i += 1) {
+        drawtype = drawTypes[i].value;
+        if (drawtype === 'text') {
+            ob.statements.push(ob.makeFont);
+            ob.statements.push(ob.makeText);
+        } else if (drawtype == 'rect') {
+            ob.statements.push(ob.makeRect);
+        } else if (drawtype == 'arc') {
+            ob.statements.push(ob.makePath);
+        }
+    }
+    ob.createScript();
+    ob.evalScript();
+}
+
+
+drawTypes = document.querySelectorAll('input.drawtype');
+for (i = 0 ; i < drawTypes.length; i += 1) {
+    drawTypes[i].addEventListener('click', selectDrawtype);
+}
+
+
 </script>
 </body>
 </html>
