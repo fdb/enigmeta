@@ -14,6 +14,9 @@
 
     ob.width = 500;
     ob.height = 500;
+    ob.maxSize = 100;
+    // Number of levels to nest loops.
+    ob.maxLevel = 1;
 
     //// Utility methods ////
 
@@ -62,7 +65,7 @@
     };
 
     ob.sizeValue = function () {
-        return ob.choice([ob.intValue, ob.randIntValue])(0, ob.width);
+        return ob.choice([ob.intValue, ob.randIntValue])(0, ob.maxSize);
     };
     
     ob.transformValue = function () {
@@ -74,6 +77,10 @@
     };
     
     ob.rotateValue = ob.angleValue;
+    
+    ob.scaleValue = function () {
+        return ob.choice([ob.floatValue, ob.randFloatValue])(-2, 2);
+    }
 
     ob.floatValue = function (min, max) {
         return ob.randFloat(min, max);
@@ -115,6 +122,13 @@
 
     ob.makeScript = function (maxSize, level) {
         var s = '', i = 0;
+        // Move the canvas to the center
+        s += ob.makeSpaces(level) + "ctx.setTransform(1, 0, 0, 1, 0, 0);\n";
+        s += ob.makeSpaces(level) + "ctx.translate(250, 250);\n";
+        // Fill the background
+        s += ob.makeSpaces(level) + ob.makeFill() + "\n";
+        s += ob.makeSpaces(level) + "ctx.fillRect(-250, -250, 500, 500);\n";
+        // Set a starting fill color
         s += ob.makeSpaces(level) + ob.makeFill() + "\n";
         for (i = 0; i < ob.randInt(0, maxSize); i += 1) {
             s += ob.makeSpaces(level) + ob.makeStatement(level) + "\n";
@@ -163,9 +177,10 @@
     };
 
     ob.makeLoop = function (level) {
+        if (level >= ob.maxLevel) return '';
         var s, loopName = ob.randomName();
         s = "for (var " + loopName + "=0; " + loopName + " < " + ob.loopValue() + "; " + loopName + "++) {\n";
-        s += ob.makeScript(2, level + 1);
+        s += ob.makeScript(100, level + 1);
         s += "}\n";
         return s;
     };
@@ -175,7 +190,7 @@
     };
 
     ob.makeTransform = function (level) {
-        return ob.choice([ob.makeTranslate, ob.makeRotate])();
+        return ob.choice([ob.makeTranslate, ob.makeRotate, ob.makeScale])();
     };
     
     ob.makeTranslate = function () {
@@ -185,7 +200,11 @@
     ob.makeRotate = function () {
         return "ctx.rotate(" + ob.rotateValue() + ");"
     };
-    
+
+    ob.makeScale = function () {
+        return "ctx.scale(" + ob.scaleValue() + ", " + ob.scaleValue() + ");"
+    };
+
     ob.makePath = function () {
         var s = "ctx.beginPath();\n", i = 0;
         for (i = 0; i < ob.pathCommandsValue(); i += 1) {
@@ -202,7 +221,7 @@
           ob.sizeValue() + ", " +
           ob.angleValue() + ", " +
           ob.angleValue() + ", " +
-          ob.booleanValue() + ");"
+          ob.booleanValue() + "); ctx.closePath();"
     };
 
     ob.statements = [
@@ -220,11 +239,11 @@
         canvas = document.getElementById("canvas");
         ctx = window.ctx = canvas.getContext("2d");
         canvas.width = canvas.width; // Trick to clear the canvas
-        eval(ob.currentScript);
+        window.setTimeout('eval(ob.currentScript)', 0);
     };
 
     ob.createScript = function () {
-        ob.currentScript = ob.makeScript(50, 0);
+        ob.currentScript = ob.makeScript(500, 0);
         document.getElementById("code").innerHTML = ob.currentScript;
     };
 
