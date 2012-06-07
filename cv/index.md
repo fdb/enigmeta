@@ -4,6 +4,9 @@ title: Curriculum Vitae of Frederik De Bleser
 ---
 <time>°1978-11-15</time>
 
+## Current Employment
+PhD student / Research Assistant at the <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerp</a> school of design, Belgium (2004-present)
+
 ## Schooling
 * Bachelor Applied Informatics (1997-2000)
 * Master graphic design, summa cum laude (2000-2004)

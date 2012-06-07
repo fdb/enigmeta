@@ -4,6 +4,9 @@ title: Curriculum Vitae van Frederik De Bleser
 ---
 <time>°1978-11-15</time>
 
+## Huidige Werkgever
+PhD student / Onderzoeksmedewerker bij de <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerpen</a>, België (2004-nu)
+
 ## Opleiding
 * Bachelor Toegepaste Informatica (1997-2000)
 * Master grafische vormgeving, grootste onderscheiding (2000-2004)
