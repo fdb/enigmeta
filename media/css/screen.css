@@ -262,3 +262,7 @@ ul.posts time {
 .print-only {
   display: none;
 }
+
+hr.page-break {
+  display: none;
+}
