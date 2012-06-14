@@ -17,7 +17,7 @@ PhD student / Research Assistant at the <a href="http://www.kdg.be/">Karel de Gr
 
 ## Professional Experience
 
-### Schooling
+### Education
 * Bachelor in Applied Informatics (1997-2000)
 * Master in Graphic Design, summa cum laude (2000-2004)
 
@@ -31,11 +31,10 @@ PhD student / Research Assistant at the <a href="http://www.kdg.be/">Karel de Gr
 * Clojure: Proficient (2 years)
 
 ### Code
-* Main developer of <a href="http://nodebox.net/">NodeBox</a>
-* Developer of <a href="http://www.cityinabottle.org/">City in a Bottle</a>
+* Main developer of <a href="http://nodebox.net/">NodeBox</a> <span class="print-only">(www.nodebox.net)</span>
+* Developer of <a href="http://www.cityinabottle.org/">City in a Bottle</a> <span class="print-only">(www.cityinabottle.org)</span>
 * GitHub account: <a href="https://github.com/fdb">github.com/fdb</a>
 
-<hr class="page-break">
 ## Academic Experience
 
 ### Exhibitions
@@ -53,6 +52,7 @@ PhD student / Research Assistant at the <a href="http://www.kdg.be/">Karel de Gr
 * Add!ct-magazine #28, 2007 
 * ADD-magazine #6, 2007
 
+<hr class="page-break">
 ### Conferences 
 * ATypI, Prague, 2004 
 * ATypI, Helsinki, 2005 

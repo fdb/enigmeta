@@ -31,11 +31,10 @@ PhD student / Onderzoeksmedewerker bij de <a href="http://www.kdg.be/">Karel de 
 * Clojure: Proficient (2 jaar)
 
 ### Code
-* Hoofd-ontwikkerlaar van <a href="http://nodebox.net/">NodeBox</a>
-* Ontwikkelaar van <a href="http://www.cityinabottle.org/">City in a Bottle</a>
+* Hoofd-ontwikkerlaar van <a href="http://nodebox.net/">NodeBox</a> <span class="print-only">(www.nodebox.net)</span>
+* Ontwikkelaar van <a href="http://www.cityinabottle.org/">City in a Bottle</a> <span class="print-only">(www.cityinabottle.org)</span>
 * GitHub account: <a href="https://github.com/fdb">github.com/fdb</a>
 
-<hr class="page-break">
 ## Academische Ervaring
 
 ### Tentoonstellingen
@@ -53,7 +52,8 @@ PhD student / Onderzoeksmedewerker bij de <a href="http://www.kdg.be/">Karel de 
 * Add!ct-magazine #28, 2007 
 * ADD-magazine #6, 2007
 
-## Conferenties 
+<hr class="page-break">
+## Conferenties
 * ATypI, Praag, 2004 
 * ATypI, Helsinki, 2005 
 * ELIA, Gent, 2006 
