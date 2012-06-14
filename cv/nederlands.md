@@ -2,16 +2,43 @@
 layout: default
 title: Curriculum Vitae van Frederik De Bleser
 ---
+<h1 class="print-only">Frederik De Bleser</h1>
+<div class="mugshot print-only"><img src="/media/img/frederik-de-bleser.jpg" alt="Frederik De Bleser"></div>
+
 <time>°1978-11-15</time>
+<address>
+frederik (at) burocrazy (dot) com<br>
+<a href="http://www.enigmeta.com/">www.enigmeta.com</a><br>
++32 498 120 060<br>
+</address>
 
 ## Huidige Werkgever
 PhD student / Onderzoeksmedewerker bij de <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerpen</a>, België (2004-nu)
 
-## Opleiding
+## Professionele Ervaring
+
+### Opleiding
 * Bachelor Toegepaste Informatica (1997-2000)
 * Master grafische vormgeving, grootste onderscheiding (2000-2004)
 
-## Tentoonstellingen
+### Bedrijf
+* Burocrazy: <a href="http://www.burocrazy.com/">www.burocrazy.com</a>
+
+### Programmeertalen
+* Java: Expert (10+ jaar)
+* Python: Expert (8+ jaar)
+* HTML / CSS / JavaScript: Expert (10+ jaar)
+* Clojure: Proficient (2 jaar)
+
+### Code
+* Hoofd-ontwikkerlaar van <a href="http://nodebox.net/">NodeBox</a>
+* Ontwikkelaar van <a href="http://www.cityinabottle.org/">City in a Bottle</a>
+* GitHub account: <a href="https://github.com/fdb">github.com/fdb</a>
+
+<hr class="page-break">
+## Academische Ervaring
+
+### Tentoonstellingen
 * Blotter, Time Canvas, MuHKA, 2005 
 * Blotter, ELIA, Gent, 2006 
 * Evolution, C.STEM, Turijn, Italië 2007 

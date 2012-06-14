@@ -2,16 +2,43 @@
 layout: default
 title: Curriculum Vitae of Frederik De Bleser
 ---
+<h1 class="print-only">Frederik De Bleser</h1>
+<div class="mugshot print-only"><img src="/media/img/frederik-de-bleser.jpg" alt="Frederik De Bleser"></div>
+
 <time>°1978-11-15</time>
+<address>
+frederik (at) burocrazy (dot) com<br>
+<a href="http://www.enigmeta.com/">www.enigmeta.com</a><br>
++32 498 120 060<br>
+</address>
 
 ## Current Employment
 PhD student / Research Assistant at the <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerp</a> school of design, Belgium (2004-present)
 
-## Schooling
-* Bachelor Applied Informatics (1997-2000)
-* Master graphic design, summa cum laude (2000-2004)
+## Professional Experience
 
-## Exhibitions
+### Schooling
+* Bachelor in Applied Informatics (1997-2000)
+* Master in Graphic Design, summa cum laude (2000-2004)
+
+### Company
+* Burocrazy: <a href="http://www.burocrazy.com/">www.burocrazy.com</a>
+
+### Programming Languages
+* Java: Expert (10+ years)
+* Python: Expert (8+ years)
+* HTML / CSS / JavaScript: Expert (10+ years)
+* Clojure: Proficient (2 years)
+
+### Code
+* Main developer of <a href="http://nodebox.net/">NodeBox</a>
+* Developer of <a href="http://www.cityinabottle.org/">City in a Bottle</a>
+* GitHub account: <a href="https://github.com/fdb">github.com/fdb</a>
+
+<hr class="page-break">
+## Academic Experience
+
+### Exhibitions
 * Blotter, Time Canvas, MuHKA, 2005 
 * Blotter, ELIA, Ghent, 2006 
 * Evolution, C.STEM, Turin, Italy 2007 
@@ -19,14 +46,14 @@ PhD student / Research Assistant at the <a href="http://www.kdg.be/">Karel de Gr
 * Travelling Letters, Vilnius, Lithuania, 2011
 * Generator.x 3.0, Brussels, 2012
 
-## Publications
+### Publications
 * De Standaard, 2005 
 * Counterform in Motion, 2006 
 * ADD-magazine #2, 2006 
 * Add!ct-magazine #28, 2007 
 * ADD-magazine #6, 2007
 
-## Conferences 
+### Conferences 
 * ATypI, Prague, 2004 
 * ATypI, Helsinki, 2005 
 * ELIA, Ghent, 2006 
@@ -54,7 +81,7 @@ PhD student / Research Assistant at the <a href="http://www.kdg.be/">Karel de Gr
 * Data Visualization Masterclass, Antwerp, 2012
 
 
-## Research Projects
+### Research Projects
 * Academic project “Design Automation”. 1/9/2004-31/12/2006. Development of a programming language based design tool: NodeBox. EUR 160,000
 * IWT-project “Gravital” (IWT/TETRA 60121, KdG departement Sint Lucas together with University of Antwerp, departement Computer linguistics, 2007-2009, EUR 267,612)
 * IWT-project “NodeBox/DATA” (IWT/TETRA 100188, KdG departement Sint Lucas together with Universiteit of Antwerp departement Computer linguistics and departement Math and Informatics, 2011-2013, EUR 304,345)

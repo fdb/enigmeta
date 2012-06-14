@@ -259,3 +259,6 @@ ul.posts time {
   color: #888;
 }
 
+.print-only {
+  display: none;
+}
