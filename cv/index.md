@@ -13,16 +13,14 @@ frederik (at) burocrazy (dot) com<br>
 Civil state: legal cohabitant, 1 daughter
 </address>
 
-## Current Employment
-PhD student / Research Assistant at the <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerp</a> school of design, Belgium (2004-present)
-
-## Professional Experience
-Owner of a design and consultancy firm: <a href="http://www.burocrazy.com/">www.burocrazy.com</a>
-
-### Education
+## Education
 * Master in Graphic Design, summa cum laude (2000-2004)
 * Bachelor in Applied Informatics (1997-2000)
 * College diploma, Informatics-accountancy (Sint-Lodewijk, Antwerp)
+
+## Professional Experience
+* PhD student / Research Assistant at the <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerp</a> school of design, Belgium (2004-present)
+* Owner of a design and consultancy firm: <a href="http://www.burocrazy.com/">www.burocrazy.com</a>
 
 ### Projects
 * <time>2012</time>
@@ -86,6 +84,12 @@ Owner of a design and consultancy firm: <a href="http://www.burocrazy.com/">www.
   * Newsletter design and setup.
   * Continuing support.
 
+### Educational Conferences
+* Fosdem, Brussel, 2012
+* Libre Graphics Meeting, Brussel, 2010
+* PyCon, Chicago, 2009
+* Fosdem, Brussel, 2009
+
 ## Academic Experience
 
 ### Exhibitions
@@ -116,7 +120,7 @@ Owner of a design and consultancy firm: <a href="http://www.burocrazy.com/">www.
 * ISEA2010, Dortmund, 2010
 * Integrated, Antwerpen, 2011
 
-## Workshops
+### Workshops
 * Design Automation, Lahti, 2004, Finland 
 * Intelligence, Lahti, 2005, Finland 
 * Memetics, Lahti, 2007 
@@ -129,7 +133,6 @@ Owner of a design and consultancy firm: <a href="http://www.burocrazy.com/">www.
 * Faces of data, Vilnius, 2011
 * Visual Repesentation of Complex Phenomena, Turin, 2011
 * Data Visualization Masterclass, Antwerp, 2012
-
 
 ### Research Projects
 * Academic project “Design Automation”. 1/9/2004-31/12/2006. Development of a programming language based design tool: NodeBox. EUR 160,000
@@ -155,14 +158,16 @@ Owner of a design and consultancy firm: <a href="http://www.burocrazy.com/">www.
 * Ruby: Competent (2+ years)
 * C / C++: Competent (3+ years)
 
-### Interests
+### Programming Interests
 * Development using web standards (HTML5, CSS3, JavaScript)
 * Procedural programming (Clojure, Lisp)
 * Data visualisation (NodeBox, D3, VVVV)
 * Generative design (NodeBox, Processing)
 * Concurrency, multi-core and GPU programming (OpenCL)
 
-### Personal
+### Personal Interests
 * Volunteer for Kris Kras Akabe (1998-2008), scouting movement for children with mental and physical disabilities.
 * Amateur runner and participant in the Antwerp 10 Miles.
+* World traveller (South America, US, South-east Asia).
+* Frequent bike traveller across Europe .
 * Legally living together with my partner and father of our little daughter.

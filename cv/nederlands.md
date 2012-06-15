@@ -13,16 +13,14 @@ frederik (at) burocrazy (dot) com<br>
 Burgerlijke staat: wettelijk samenwonend, 1 dochter
 </address>
 
-## Huidige Werkgever
-PhD student / Onderzoeksmedewerker bij de <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerpen</a>, België (2004-nu)
-
-## Professionele Ervaring
-Eigen consultancy-bedrijf: <a href="http://www.burocrazy.com/">www.burocrazy.com</a>
-
-### Opleiding
+## Opleiding
 * Master grafische vormgeving, grootste onderscheiding (2000-2004)
 * Bachelor Toegepaste Informatica (1997-2000)
 * Hogeschooldiploma boekhouden-informatica (Sint-Lodewijk, Antwerpen)
+
+## Professionele Ervaring
+* PhD student / Onderzoeksmedewerker bij de <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerpen</a>, België (2004-nu)
+* Eigen consultancy-bedrijf: <a href="http://www.burocrazy.com/">www.burocrazy.com</a>
 
 ### Projects
 * <time>2012</time>
@@ -86,6 +84,11 @@ Eigen consultancy-bedrijf: <a href="http://www.burocrazy.com/">www.burocrazy.com
   * Ontwerp en installatie van de nieuwsbrief. (Campaign Monitor)
   * Ondersteuning.
 
+### Opleidingen & Conferenties
+* Fosdem, Brussel, 2012
+* Libre Graphics Meeting, Brussel, 2010
+* PyCon, Chicago, 2009
+* Fosdem, Brussel, 2009
 
 ## Academische Ervaring
 
@@ -97,14 +100,14 @@ Eigen consultancy-bedrijf: <a href="http://www.burocrazy.com/">www.burocrazy.com
 * Travelling Letters, Vilnius, Litouwen, 2011
 * Generator.x 3.0, Brussel, 2012
 
-## Publicaties
+### Publicaties
 * De Standaard, 2005 
 * Counterform in Motion, 2006 
 * ADD-magazine #2, 2006 
 * Add!ct-magazine #28, 2007 
 * ADD-magazine #6, 2007
 
-## Conferenties
+### Conferenties
 * ATypI, Praag, 2004 
 * ATypI, Helsinki, 2005 
 * ELIA, Gent, 2006 
@@ -117,7 +120,7 @@ Eigen consultancy-bedrijf: <a href="http://www.burocrazy.com/">www.burocrazy.com
 * ISEA2010, Dortmund, 2010
 * Integrated, Antwerpen, 2011
 
-## Workshops
+### Workshops
 * Design Automation, Lahti, 2004, Finland 
 * Intelligence, Lahti, 2005, Finland 
 * Memetics, Lahti, 2007 
@@ -132,7 +135,7 @@ Eigen consultancy-bedrijf: <a href="http://www.burocrazy.com/">www.burocrazy.com
 * Data Visualization Masterclass, Antwerpen, 2012
 
 
-## Onderzoeksprojecten
+### Onderzoeksprojecten
 * Academiseringsproject “Design Automation”. 1/9/2004-31/12/2006. Development of a programming language based design tool: NodeBox. EUR 160,000
 * IWT-project “Gravital” (IWT/TETRA 60121, KdG departement Sint Lucas i.s.m. de Universiteit Antwerpen departement Computerlinguïstiek, 2007-2009, EUR 267,612)
 * IWT-project “NodeBox/DATA” (IWT/TETRA 100188, KdG departement Sint Lucas i.s.m. de Universiteit Antwerpen departement Computerlinguïstiek en departement Wiskunde en Informatica, 2011-2013, EUR 304,345)
@@ -155,14 +158,16 @@ Eigen consultancy-bedrijf: <a href="http://www.burocrazy.com/">www.burocrazy.com
 * Ruby: Bekwaam (2+ years)
 * C / C++: Bekwaam (3+ years)
 
-### Interests
+### Programmeer-interesses
 * Ontwikkelen met webstandaarden (HTML5, CSS3, JavaScript)
 * Procedurele ontwikkeling (Clojure, Lisp)
 * Data-visualisatie (NodeBox, D3, VVVV)
 * Generatief ontwerp (NodeBox, Processing)
 * Concurrency, multi-core en GPU-programmatie (OpenCL)
 
-### Persoonlijk
+### Persoonlijke interesses
 * Scoutsleider bij Kris Kras Akabe (1998-2008), scouts-vereniging voor kinderen met mentale en fysieke beperkingen.
 * Amateur-loper en deelnemer aan de Antwerp 10 Miles.
+* Wereldreiziger (Zuid-Amerika, US, Zuid-oost Azië).
+* Frequent fietsreiziger door Europa.
 * Wettelijk samenwonend met mijn partner en vader van onze kleine dochter.
