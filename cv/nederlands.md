@@ -20,7 +20,7 @@ Burgerlijke staat: wettelijk samenwonend, 1 dochter
 
 ## Professionele Ervaring
 * PhD student / Onderzoeksmedewerker bij de <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerpen</a>, België (2004-nu)
-* Eigen consultancy-bedrijf: <a href="http://www.burocrazy.com/">www.burocrazy.com</a>
+* Zelfstandige in bijberoep: <a href="http://www.burocrazy.com/">www.burocrazy.com</a>
 
 ### Projects
 * <time>2012</time>

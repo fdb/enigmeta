@@ -20,7 +20,7 @@ Civil state: legal cohabitant, 1 daughter
 
 ## Professional Experience
 * PhD student / Research Assistant at the <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerp</a> school of design, Belgium (2004-present)
-* Owner of a design and consultancy firm: <a href="http://www.burocrazy.com/">www.burocrazy.com</a>
+* Freelance designer and consultant: <a href="http://www.burocrazy.com/">www.burocrazy.com</a>
 
 ### Projects
 * <time>2012</time>
