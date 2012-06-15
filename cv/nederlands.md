@@ -62,6 +62,7 @@ Eigen consultancy-bedrijf: <a href="http://www.burocrazy.com/">www.burocrazy.com
   * Op maat gemaakte boom die foto's van alle participanten van de conferentie bevat.
   * Strikte deadlines (vanwege de timing van de conferentie).
 
+  <hr class="page-break">
 * <time>2005-2006</time>
   **Takeout Web App** - Video-verhuur application voor de grootste videotheek in Antwerpen.
   <div class="meta">Ontwikkelaar in team van 2 – Ruby on Rails, HTML/CSS/JS</div>
