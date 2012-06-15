@@ -267,3 +267,19 @@ hr.page-break {
   display: none;
 }
 
+/* CV */
+
+
+li p {
+	margin: 0 0 0.2em 0;
+	padding: 0;
+}
+
+li time {
+	font-weight: bold;
+}
+
+.meta {
+	font-style: oblique;
+	font-size: 80%;
+}

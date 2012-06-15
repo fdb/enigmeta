@@ -10,30 +10,81 @@ title: Curriculum Vitae van Frederik De Bleser
 frederik (at) burocrazy (dot) com<br>
 <a href="http://www.enigmeta.com/">www.enigmeta.com</a><br>
 +32 498 120 060<br>
+Burgerlijke staat: wettelijk samenwonend, 1 dochter
 </address>
 
 ## Huidige Werkgever
 PhD student / Onderzoeksmedewerker bij de <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerpen</a>, België (2004-nu)
 
 ## Professionele Ervaring
+Eigen consultancy-bedrijf: <a href="http://www.burocrazy.com/">www.burocrazy.com</a>
 
 ### Opleiding
-* Bachelor Toegepaste Informatica (1997-2000)
 * Master grafische vormgeving, grootste onderscheiding (2000-2004)
+* Bachelor Toegepaste Informatica (1997-2000)
+* Hogeschooldiploma boekhouden-informatica (Sint-Lodewijk, Antwerpen)
 
-### Bedrijf
-* Burocrazy: <a href="http://www.burocrazy.com/">www.burocrazy.com</a>
+### Projects
+* <time>2012</time>
+  **Buro Aktief** - Adminstratieve web applicatie voor de <a href="http://www.free-clinic.be/">Free Clinic</a> (vrijwilligerswerk)
+  <div class="meta">Ontwikkelaar, designer – Python, Flask, MongoDB, jQuery, Bootstrap, Heroku</div>
+  * Volledige applicatie met snelle in-productie tijd (3 dagen).
+  * Excel-export functionaliteit.
+  * Lage-kost hosting via <a href="http://www.heroku.com/">Heroku</a>.
 
-### Programmeertalen
-* Java: Expert (10+ jaar)
-* Python: Expert (8+ jaar)
-* HTML / CSS / JavaScript: Expert (10+ jaar)
-* Clojure: Proficient (2 jaar)
+* <time>2012-nu</time>
+  **<a href="http://www.commsquare.com/">Commsquare</a>** - Design en ontwikkeling-consultancy voor hun centrale producten.
+  <div class="meta">Ontwikkelaar in teams van 2-5 – Django, HTML5, jQuery, d3.js, Backbone.js</div>
+  * Lessen Python en Django gegeven.
+  * Grafisch ontwerp van initiële prototypes.
+  * Samengewerkt rond de ontwikkeling (pair programming) van hun producten.
+  * Design en implementatie van op maat gemaakte data-visualizations met web-standaarden.
 
-### Code
-* Hoofd-ontwikkerlaar van <a href="http://nodebox.net/">NodeBox</a> <span class="print-only">(www.nodebox.net)</span>
-* Ontwikkelaar van <a href="http://www.cityinabottle.org/">City in a Bottle</a> <span class="print-only">(www.cityinabottle.org)</span>
-* GitHub account: <a href="https://github.com/fdb">github.com/fdb</a>
+* <time>2007-2009</time>
+  **<a href="http://www.cityinabottle.org/">City in a Bottle</a>** - Volledig procedural spel met auto-gegenereerde landschappen en beesten.
+  <div class="meta">Ontwikkelaar in team van 4 – Python, OpenGL</div>
+  * Meegewerkt aan een eigen 2D / 3D engine in OpenGL.
+  * Ontwerp van auto-gegenereerde landschappen via Perlin-ruis generatie.
+  * Dynamisch laden van het landschap van een oneindige wereld.
+  * Onderzoek en optimalisatie van performantie-problemen.
+
+* <time>2007</time>
+  **<a href="http://www.chicolatino.be/">Chico Latino</a> website** (vrijwilligerswerk)
+  <div class="meta">Ontwikkelaar, designer – Drupal, HTML/CSS</div>
+  * Website design voor een vrijwilligersorganisatie.
+  * Drupal-CMS met taal-ondersteuning, gallerij.
+  * SEO optimalisatie.
+
+* <time>2007</time>
+  **<a href="http://www.burocrazy.com/fortis-growing-tree/">Fortis boom-visualisatie</a>** - "Groei"-visualisatie op maat
+  <div class="meta">Ontwikkelaar in team van 2 – Python, OpenGL</div>
+  * Visualisatie voor grote private banking conferentie onder Het Louvre (Parijs).
+  * Op maat gemaakte boom die foto's van alle participanten van de conferentie bevat.
+  * Strikte deadlines (vanwege de timing van de conferentie).
+
+* <time>2005-2006</time>
+  **Takeout Web App** - Video-verhuur application voor de grootste videotheek in Antwerpen.
+  <div class="meta">Ontwikkelaar in team van 2 – Ruby on Rails, HTML/CSS/JS</div>
+  * Eén-pagina web ontwikkeling met Ajax.
+  * Volledig proces van initiële analyse tot finale aflevering en installatie.
+  * Sterke test-procedures van de business-logica.
+  * Opzetten van hardware, backups en ondersteuning.
+
+* <time>2004-present</time>
+  **<a href="http://www.nodebox.net/">NodeBox</a> ** - Open-source applicatie voor generatief ontwerp.
+  <div class="meta">Hoofd-ontwikkelaar, technische lead in team van 4 – Java, Clojure, Python</div>
+  * Applicatie voor het maken van 2D ontwerpen via code.
+  * Frequent gevraagd om NodeBox-workshops te geven in het buitenland (Helsinki, Vilnius, Turin).
+  * Actieve gemeenschap.
+
+* <time>2004</time>
+  **<a href="http://www.champdaction.be/">ChampdAction</a> website** - CMS op maat met ondersteuning voor meerdere talen.
+  <div class="meta">Ontwikkelaar, designer in team van 2 – Python, Django</div>
+  * Website design voor een experimenteel muziek-gezelschap.
+  * CMS op maat in Django met taal-ondersteuning, kalender-module, audio-module etc.
+  * Ontwerp en installatie van de nieuwsbrief. (Campaign Monitor)
+  * Ondersteuning.
+
 
 ## Academische Ervaring
 
@@ -52,7 +103,6 @@ PhD student / Onderzoeksmedewerker bij de <a href="http://www.kdg.be/">Karel de 
 * Add!ct-magazine #28, 2007 
 * ADD-magazine #6, 2007
 
-<hr class="page-break">
 ## Conferenties
 * ATypI, Praag, 2004 
 * ATypI, Helsinki, 2005 
@@ -87,3 +137,31 @@ PhD student / Onderzoeksmedewerker bij de <a href="http://www.kdg.be/">Karel de 
 * IWT-project “NodeBox/DATA” (IWT/TETRA 100188, KdG departement Sint Lucas i.s.m. de Universiteit Antwerpen departement Computerlinguïstiek en departement Wiskunde en Informatica, 2011-2013, EUR 304,345)
 * Doctoraatsproject "De impact van generatieve software op grafisch ontwerp." (KdG departement Sint Lucas i.s.m. de Universiteit Antwerpen departement Informatica, 2011-2015)
 * Conduit, KdG departement Sint Lucas i.s.m. de Universiteit Antwerpen departement Computerlinguïstiek en departement Wiskunde en Informatica, 2012-2014
+
+## Competenties
+
+### Talen
+* Dutch: Expert, moedertaal
+* English: Bedreven, regelmatige leerkracht van engelstalige workshops
+* French: Competente spreker, beginnend schrijver
+* Spanish: Competente spreker, beginnend schrijver
+
+### Programmeertalen
+* Java: Expert (10+ jaar)
+* Python: Expert (8+ jaar)
+* HTML / CSS / JavaScript: Expert (10+ jaar)
+* Clojure: Bedreven (2 jaar)
+* Ruby: Bekwaam (2+ years)
+* C / C++: Bekwaam (3+ years)
+
+### Interests
+* Ontwikkelen met webstandaarden (HTML5, CSS3, JavaScript)
+* Procedurele ontwikkeling (Clojure, Lisp)
+* Data-visualisatie (NodeBox, D3, VVVV)
+* Generatief ontwerp (NodeBox, Processing)
+* Concurrency, multi-core en GPU-programmatie (OpenCL)
+
+### Persoonlijk
+* Scoutsleider bij Kris Kras Akabe (1998-2008), scouts-vereniging voor kinderen met mentale en fysieke beperkingen.
+* Amateur-loper en deelnemer aan de Antwerp 10 Miles.
+* Wettelijk samenwonend met mijn partner en vader van onze kleine dochter.
