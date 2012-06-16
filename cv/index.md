@@ -166,10 +166,10 @@ Civil state: legal cohabitant, 1 daughter
 * Concurrency, multi-core and GPU programming (OpenCL)
 
 ### Programming Beliefs
-* I believe understanding the tools and abstractions you work with make you a more efficient programmer.
-* I believe that being an expert programmer is not an end product, but a process that requires constant learning through practice, articles, books, conferences and personal interactions.
 * I believe software is not an end to itself, but a solution to a problem. Therefore, programming doesn't just require an understanding of the code, but also of the problem domain.
+* I believe understanding the tools and abstractions you work with make you a more efficient programmer.
 * I believe code is better if it collectively owned. Therefore, programmers work better if they work together through pair programming, code reviews and open discussions.
+* I believe that being an expert programmer is not an end product, but a process that requires constant learning through practice, articles, books, conferences and personal interactions.
 * Above all I believe programming is a creative craft, not just a job where you type code into an IDE.
 
 ### Personal Interests

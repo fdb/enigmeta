@@ -166,10 +166,10 @@ Burgerlijke staat: wettelijk samenwonend, 1 dochter
 * Concurrency, multi-core en GPU-programmatie (OpenCL)
 
 ### Programmeer-overtuigingen
-* Ik geloof dat je een efficiënter programmeur wordt als je de tools en abstracties waar je mee werkt grondig begrijpt.
-* Ik geloof dat een expert programmeur zijn geen eindproduct is, maar een proces dat vereist dat je constant leert door beoefening, technische artikels en boeken, conferenties en persoonlijke interacties.
 * Ik geloof dat software geen doel is op zichzelf, maar een oplossing voor een probleem. Daarom vereist programmeren niet enkel een begrip van de code, maar ook van het probleemdomein.
+* Ik geloof dat je een efficiënter programmeur wordt als je de tools en abstracties waar je mee werkt grondig begrijpt.
 * Ik geloof dat code beter is als het collectief bezit is. Programmeurs werken beter als ze samenwerken door pair programming, code-reviews en open discussies.
+* Ik geloof dat een expert programmeur zijn geen eindproduct is, maar een proces dat vereist dat je constant leert door beoefening, technische artikels en boeken, conferenties en persoonlijke interacties.
 * Bovenal geloof ik dat programmeren een creatief vak is, niet gewoon een job waar je code in een IDE typt.
 
 ### Persoonlijke interesses
