@@ -1,0 +1,74 @@
+body, #main {
+  width: 100%; 
+  margin: 1cm 1.5cm 2cm 1cm;
+  float: none;
+  font-size: 9pt;
+}
+
+#main {
+  border: 0;
+}
+
+header, nav {
+  display: none;
+}
+
+h1, h2, h3 {
+  page-break-after: avoid;
+}
+
+p { 
+  page-break-inside: avoid;
+}
+
+#content {
+  width: 50em;
+}
+
+.sidebar {
+  display: none;
+}
+
+.mugshot {
+  float: right;
+  margin-left: 20px;
+}
+
+.print-only {
+  display: block;
+}
+
+span.print-only {
+  display: inline;
+}
+
+hr.page-break {
+  page-break-before: always;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+h3 {
+  margin: 1em 0 0.2em 0;
+}
+
+ul {
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+li {
+  margin: 0;
+  padding: 0;
+  list-style: square;
+}
+
+h1.print-only {
+  padding: 0 0 0.2em 0;
+  border-bottom: 3px solid #0645ad;
+  margin: 0 0 0.5em 0;
+}
+
+footer {
+  display: none;
+}
