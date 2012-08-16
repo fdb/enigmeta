@@ -5,7 +5,7 @@ title: Starting web projects using Flask, virtualenv, pip
 ---
 [Flask](http://flask.pocoo.org) is an awesome framework for building lightweight Python web-apps using a minimal amount of boilerplate. This tutorial discusses how to start a new Flask project and how to deploy it on a server.
 
-These instructions are tested on Mac OS X 10.8.
+These instructions are tested on Mac OS X 10.8. All code is available under the [GitHub helloflask project](https://github.com/fdb/helloflask).
 
 # Bootstrapping your project
 
