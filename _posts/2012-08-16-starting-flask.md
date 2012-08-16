@@ -179,7 +179,7 @@ To set up this directory structure:
 
 Here's a complete template Apache site configuration that can go in /etc/apache2/sites-available/helloflask.example.org (change the last part to reflect your domain):
 
-    <VirtualHost *>
+    <VirtualHost *:80>
       ServerName helloflask.enigmeta.com
 
       WSGIDaemonProcess helloflask user=www-data group=www-data threads=5
