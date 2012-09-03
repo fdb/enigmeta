@@ -17,6 +17,7 @@ Here are some details of the work:
 
 The work is made in [NodeBox 1](http://nodebox.net/) using a tweaked [Boids algorithm](http://nodebox.net/code/index.php/Boids) (created by Tom De Smedt).
 
+Here is a timelapse video of the creation:
 
 Here are some other sketches I made:
 
@@ -30,3 +31,5 @@ Here are some other sketches I made:
 ![Other experiment](/media/deconstructing-nature/day1-experiment8.png)
 
 The source is available in the [Deconstructing Nature GitHub repository](https://github.com/fdb/deconstructing-nature).
+
+And finally, you can watch a [timelapse of the construction](http://youtu.be/X4qqghkyIJI).
