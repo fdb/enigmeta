@@ -3,7 +3,15 @@ category: post
 layout: post
 title: Deconstructing Nature - Day 1
 ---
-My colleague Werner and I are holding a challenge this week to produce **one work each day**. I've given myself the theme of "Deconstructing Nature", which you can interpret as wide as you want.
+My colleague Werner and I are holding a challenge this week to produce **one visual work each day**. I've given myself the theme of **"Deconstructing Nature"**, which you can interpret as wide as you want.
+
+For the first day I wanted to design the layout of a space – specifically a *garden*  – according to patterns occurring in nature. I thought about:
+
+- The spread of forest fires
+- The intricate nerve pattern of plants
+- Patterns of underground movement: worms, ants, tree roots, ...
+
+I liked the idea of constructing something above ground that followed movement patterns below ground. I stumbled a lot trying to model the movement of worms, but in the end used a tweaked boids algorithm to produce strange natural/artifical hybrids.
 
 Here's the result from day 1:
 
