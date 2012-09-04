@@ -25,8 +25,6 @@ Here are some details of the work:
 
 The work is made in [NodeBox 1](http://nodebox.net/) using a tweaked [Boids algorithm](http://nodebox.net/code/index.php/Boids) (created by Tom De Smedt).
 
-Here is a timelapse video of the creation:
-
 Here are some other sketches I made:
 
 ![Other experiment](/media/deconstructing-nature/day1-experiment1.png)
