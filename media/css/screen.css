@@ -283,3 +283,26 @@ li time {
 	font-style: oblique;
 	font-size: 80%;
 }
+
+/* Doodles */
+
+.doodles {
+  margin: 0;
+  padding: 0;
+}
+.doodles::after {
+  content: "";
+  display: block;
+}
+
+.doodles li {
+  float: left;
+  width: 200px;
+  margin: 0 20px 0 0;
+  text-align: center;
+  list-style: none;
+}
+
+.doodles img {
+  display: block;
+}
