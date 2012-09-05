@@ -17,3 +17,5 @@ Here's the result from day 3. **Click the image to view it live (Chrome / Firefo
 - *C*: Clear the screen.
 
 [ ![Deconstructing Nature: Final Work Day #3](/media/deconstructing-nature/day3-final.png)](http://enigmeta.com/doodles/metaspace/)
+
+The source is available in the [Deconstructing Nature GitHub repository](https://github.com/fdb/deconstructing-nature).
