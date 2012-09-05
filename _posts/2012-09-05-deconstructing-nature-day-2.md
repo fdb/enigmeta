@@ -11,7 +11,7 @@ For the second day I wanted to do something *physical*. I was thinking about the
 
 This brought me to the idea of microscopy. I discovered that you can do extreme macro-photography by installing the lens *backwards* on a camera.
 
-I did some experiments with my aging DSLR, but results were not as sharp as I hoped. However, I discovered that I can "attach" a regular lens to my smartphone, producing very detailed images. This is what I finaly picked.
+I did some experiments with my aging DSLR, but results were not as sharp as I hoped. However, I discovered that I can "attach" a regular lens to my smartphone, producing very detailed images. I used this technique to create the final image.
 
 Here's the result from day 2:
 
