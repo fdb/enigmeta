@@ -5,6 +5,8 @@ title: Deconstructing Nature - Day 3
 ---
 *My colleague Werner and I are holding a challenge this week to produce one visual work each day. I'm working around the theme of "Deconstructing Nature".*
 
+[Day 1](/deconstructing-nature-day-1) | [Day 2](/deconstructing-nature-day-2) | [Day 3](/deconstructing-nature-day-3) 
+
 Inspired by Werner's work I wanted to do something with swarms. For another project we're talking about creating a *living wallpaper* which I also wanted to integrate here. And I wanted to make something that was animated and a little bit interactive.
 
 I decided to create an animated swarm in a browser, using trails to create a wallpaper. I used the excellent [three.js](http://mrdoob.github.com/three.js/) library to access WebGL.

@@ -5,7 +5,7 @@ title: Deconstructing Nature - Day 2
 ---
 *My colleague Werner and I are holding a challenge this week to produce one visual work each day. I'm working around the theme of "Deconstructing Nature".*
 
-
+[Day 1](/deconstructing-nature-day-1) | [Day 2](/deconstructing-nature-day-2) | [Day 3](/deconstructing-nature-day-3) 
 
 For the second day I wanted to do something *physical*. I was thinking about the act of deconstructing – breaking something down to its simplest components. "Simpling".
 

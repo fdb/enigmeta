@@ -5,6 +5,8 @@ title: Deconstructing Nature - Day 1
 ---
 My colleague Werner and I are holding a challenge this week to produce **one visual work each day**. I've given myself the theme of **"Deconstructing Nature"**, which you can interpret as wide as you want.
 
+[Day 1](/deconstructing-nature-day-1) | [Day 2](/deconstructing-nature-day-2) | [Day 3](/deconstructing-nature-day-3) 
+
 For the first day I wanted to design the layout of a space – specifically a *garden*  – according to patterns occurring in nature. I thought about:
 
 - The spread of forest fires
