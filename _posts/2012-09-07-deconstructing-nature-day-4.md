@@ -5,7 +5,7 @@ title: Deconstructing Nature - Day 4
 ---
 *My colleague Werner and I are holding a challenge this week to produce one visual work each day. I'm working around the theme of "Deconstructing Nature".*
 
-[Day 1](/deconstructing-nature-day-1) | [Day 2](/deconstructing-nature-day-2) | [Day 3](/deconstructing-nature-day-3) | [Day 4](/deconstructing-nature-day-4)
+[Day 1](/deconstructing-nature-day-1) | [Day 2](/deconstructing-nature-day-2) | [Day 3](/deconstructing-nature-day-3) | [Day 4](/deconstructing-nature-day-4) | [Day 5](/deconstructing-nature-day-5)
 
 I focused on using the [Superformula](http://en.wikipedia.org/wiki/Superformula), a formula that can be used to describe many complex shapes and curves found in nature.
 
