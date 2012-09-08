@@ -29,5 +29,6 @@ Again, this is a visualization of the random image board. It would be interestin
 Other sketches:
 ![Other experiment](/media/deconstructing-nature/day5-experiment1.jpg)
 ![Other experiment](/media/deconstructing-nature/day5-experiment2.jpg)
+![Other experiment](/media/deconstructing-nature/day5-experiment3.jpg)
 
 The source is available in the [Deconstructing Nature GitHub repository](https://github.com/fdb/deconstructing-nature).
