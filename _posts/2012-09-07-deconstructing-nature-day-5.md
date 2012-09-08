@@ -22,7 +22,7 @@ I use a veritable *potpourri* of Python libraries to bring everything together:
 
 In the end, it was very hard to do something with images that are often gross, sometimes shocking and mostly bizarre. So I decided to abstract the representation:
 
-![Deconstructing Nature: Final Work Day #5](/media/deconstructing-nature/day5-final.png)
+![Deconstructing Nature: Final Work Day #5](/media/deconstructing-nature/day5-final.jpg)
 
 Again, this is a visualization of the random image board. It would be interesting to see visualizations of the other thematic boars to see if they show different patterns.
 
