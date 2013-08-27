@@ -5,13 +5,10 @@ description: Personal weblog of Frederik De Bleser
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{{ page.title }} | Enigmeta</title>
+    <title>{{ page.title }} | enigmeta</title>
     <meta name="description" content="{{ page.description }}">
     <meta name="author" content="Frederik De Bleser">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/media/css/syntax.css">
     <link rel="stylesheet" href="/media/css/screen.css">
     <link rel="stylesheet" href="/media/css/print.css" media="print">
@@ -31,21 +28,21 @@ description: Personal weblog of Frederik De Bleser
 </head>
 <body>
 
-<header role="banner"><hgroup>
-    <h1><a href="/">Enigmeta</a></h1>
-    <h2>Personal weblog of Frederik De Bleser</h2>
-</hgroup></header>
+<nav>
+  <ul>
+    <li class="logo"><a href="/">enigmeta</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+  </ul>
+</nav>
 
-<nav role="navigation"><ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/projects/">Projects</a></li>
-        <li><a href="/doodles/">Doodles</a></li>
-        <li><a href="/cursus/">Cursus</a></li>
-</ul></nav>
+{% if page.bigshot %}
+<div class="bigshot" style="background-image: url('{{ page.bigshot }}')"></div>
+{% endif %}
 
-<div id="main">
 
-<div id="content">
+<div class="wrap">
+
   <article>
     <header>
       <h1 class="entry-title">{{ page.title }}</h1>
@@ -56,30 +53,15 @@ description: Personal weblog of Frederik De Bleser
       {{ content }}
     </div>
   </article>
-</div> <!-- #content -->
 
-<aside class="sidebar">
-    <section>
-      <img src="/media/img/frederik-de-bleser.jpg" alt="Frederik De Bleser">
-      <h1>Contact Info</h1>
-      <p>Frederik De Bleser</p>
-      <p>frederik (at) burocrazy (dot) com</p>
-    </section>
-    <section>
-      <h1>Curriculum Vitae</h1>
-      <p><a href="/cv/">English</a> | <a href="/cv/nederlands.html">Nederlands</a></p>
-    </section>
-    <section>
-      <h1>Other Places</h1>
-      <p><a href="https://twitter.com/enigmeta/">twitter.com/enigmeta</a></p>
-      <p><a href="https://github.com/fdb/">github.com/fdb</a></p>
-    </section>
-</aside>
 
-</div> <!-- #main -->
+
+</div> <!-- .wrap -->
+
 
 <footer>
-  <p><a href="http://www.enigmeta.com/">enigmeta.com</a> is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs License</a>.</p>
+  <p><a href="http://www.enigmeta.com/">enigmeta.com</a> is the personal blog of <a href="/about/">Frederik De Bleser</a>. Contact me by <a href="mailto:frederik@burocrazy.com">Email</a>, <a href="https://twitter.com/enigmeta/">Twitter</a> or <a href="https://github.com/fdb">GitHub</a>. <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Some Rights Reserved</a>.</p>
 </footer>
+
 </body>
 </html>

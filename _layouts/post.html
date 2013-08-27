@@ -2,6 +2,9 @@
 layout: default
 ---
 <p class="meta">{{ page.date | date_to_string }}</p>
+{% if page.copyright %}
+<p class="copyright">{{ page.copyright }}</p>
+{% endif %}
 <div class="post">
 {{ content }}
 </div>

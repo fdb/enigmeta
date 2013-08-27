@@ -1,11 +1,11 @@
 ---
-category: post
 layout: post
 title: Deconstructing Nature - Day 1
+bigshot: /media/deconstructing-nature/day1-bigshot.png
 ---
 My colleague Werner and I are holding a challenge this week to produce **one visual work each day**. I've given myself the theme of **"Deconstructing Nature"**, which you can interpret as wide as you want.
 
-[Day 1](/deconstructing-nature-day-1) | [Day 2](/deconstructing-nature-day-2) | [Day 3](/deconstructing-nature-day-3) | [Day 4](/deconstructing-nature-day-4) | [Day 5](/deconstructing-nature-day-5)
+[Day 1](/2012/09/04/deconstructing-nature-day-1) | [Day 2](/2012/09/05/deconstructing-nature-day-2) | [Day 3](/2012/09/06/deconstructing-nature-day-3) | [Day 4](/2012/09/07/deconstructing-nature-day-4) | [Day 5](/2012/09/08/deconstructing-nature-day-5)
 
 For the first day I wanted to design the layout of a space – specifically a *garden*  – according to patterns occurring in nature. I thought about:
 

@@ -1,7 +1,7 @@
 ---
-category: post
 layout: post
 title: My Favourite Python hack
+bigshot: /media/my-favourite-python-hack/bigshot.jpg
 ---
 In [NodeBox](http://nodebox.net/) we have this cool feature that we call "the throttle". It allows you to interactively drag any number in the (Python) script and see the results immediately. Whether it's and X/Y coordinate, the number in "for i in range(10)", or a number in a complicated formula, just dragging the number helps you visualize the effect of it on the overall composition. Here's a movie that demonstrates how this works:
 

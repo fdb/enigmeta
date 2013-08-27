@@ -1,11 +1,11 @@
 ---
-category: post
 layout: post
 title: Deconstructing Nature - Day 3
+bigshot: /media/deconstructing-nature/day3-bigshot.png
 ---
 *My colleague Werner and I are holding a challenge this week to produce one visual work each day. I'm working around the theme of "Deconstructing Nature".*
 
-[Day 1](/deconstructing-nature-day-1) | [Day 2](/deconstructing-nature-day-2) | [Day 3](/deconstructing-nature-day-3) | [Day 4](/deconstructing-nature-day-4) | [Day 5](/deconstructing-nature-day-5)
+[Day 1](/2012/09/04/deconstructing-nature-day-1) | [Day 2](/2012/09/05/deconstructing-nature-day-2) | [Day 3](/2012/09/06/deconstructing-nature-day-3) | [Day 4](/2012/09/07/deconstructing-nature-day-4) | [Day 5](/2012/09/08/deconstructing-nature-day-5)
 
 Inspired by Werner's work I wanted to do something with swarms. For another project we're talking about creating a *living wallpaper* which I also wanted to integrate here. And I wanted to make something that was animated and a little bit interactive.
 

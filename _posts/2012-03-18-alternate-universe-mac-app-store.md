@@ -1,7 +1,7 @@
 ---
-category: post
 layout: post
 title: The Alternate Universe of the Mac App Store
+bigshot: /media/mac-app-store/bigshot.jpg
 ---
 When trying to reinstall my MacBook Air, I tried going through the Mac App Store to download my applications. It seems like the store operates in an alternate universe:
 
