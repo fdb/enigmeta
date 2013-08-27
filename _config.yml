@@ -1,7 +1,5 @@
-auto: false
-server: false
 pygments: true
-permalink: /:title/
+permalink: /:year/:month/:day/:title/
 exclude:
   - README.md
   - Rakefile

@@ -3,7 +3,7 @@ task :default => [:rebuild]
 desc 'Remove old _site and rebuild'
 task :rebuild do
   sh 'rm -rf _site'
-  sh 'time jekyll'
+  sh 'time jekyll build'
 end
 
 desc 'Deploy to the live server'
@@ -13,5 +13,5 @@ end
 
 desc 'Run Jekyll in server mode'
 task :server do
-  sh 'jekyll --auto --server'
+  sh 'jekyll serve --watch'
 end
