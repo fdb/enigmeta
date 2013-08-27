@@ -8,7 +8,7 @@ bigshot: /media/home/bigshot.jpg
 <ul class="posts">
   {% for post in site.posts %}
     <li>
-    	<a href="{{ post.url }}"><img src="{{post.bigshot}}">
+    	<a href="{{ post.url }}"><img src="{{post.bigshot}}" title="{{ post.title }}">
     	<p>{{ post.title }}</p>
     	<time>{{ post.date | date_to_string }}</time></a>
 	</li>
