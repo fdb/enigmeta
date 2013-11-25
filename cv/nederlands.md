@@ -133,6 +133,10 @@ Burgerlijke staat: wettelijk samenwonend, 1 dochter
 * Faces of data, Vilnius, 2011
 * Visual Repesentation of Complex Phenomena, Turijn, 2011
 * Data Visualization Masterclass, Antwerpen, 2012
+* Data Visualization Workshop, Den Haag, 2012
+* Data Visualization Workshop, Vilnius, 2013
+* Data Visualization Workshop, Montréal, 2013
+* Data Visualization Workshop, Valence, 2013
 
 
 ### Onderzoeksprojecten

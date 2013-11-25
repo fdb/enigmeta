@@ -133,6 +133,10 @@ Civil state: legal cohabitant, 1 daughter
 * Faces of data, Vilnius, 2011
 * Visual Repesentation of Complex Phenomena, Turin, 2011
 * Data Visualization Masterclass, Antwerp, 2012
+* Data Visualization Workshop, The Hague, 2012
+* Data Visualization Workshop, Vilnius, 2013
+* Data Visualization Workshop, Montréal, 2013
+* Data Visualization Workshop, Valence, 2013
 
 ### Research Projects
 * Academic project “Design Automation”. 1/9/2004-31/12/2006. Development of a programming language based design tool: NodeBox. EUR 160,000
