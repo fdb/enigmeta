@@ -89,6 +89,7 @@ Civil state: legal cohabitant, 1 daughter
 * Libre Graphics Meeting, Brussel, 2010
 * PyCon, Chicago, 2009
 * Fosdem, Brussel, 2009
+* EuroClojure, Berlin, 2013
 
 ## Academic Experience
 
@@ -99,6 +100,8 @@ Civil state: legal cohabitant, 1 daughter
 * Travelling Letters, Lahti, Finland, 2010
 * Travelling Letters, Vilnius, Lithuania, 2011
 * Generator.x 3.0, Brussels, 2012
+* Incubate, Tilburg, 2013
+* Travelling Letters, Helsinki, Finland, 2013
 
 ### Publications
 * De Standaard, 2005 
