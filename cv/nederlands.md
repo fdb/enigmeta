@@ -160,7 +160,7 @@ Burgerlijke staat: wettelijk samenwonend, 1 dochter
 
 ### Programmeer-interesses
 * Ontwikkelen met webstandaarden (HTML5, CSS3, JavaScript)
-* Procedurele ontwikkeling (Clojure, Lisp)
+* Functioneel programmeren (Clojure, Lisp)
 * Data-visualisatie (NodeBox, D3, VVVV)
 * Generatief ontwerp (NodeBox, Processing)
 * Concurrency, multi-core en GPU-programmatie (OpenCL)

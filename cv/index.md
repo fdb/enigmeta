@@ -160,7 +160,7 @@ Civil state: legal cohabitant, 1 daughter
 
 ### Programming Interests
 * Development using web standards (HTML5, CSS3, JavaScript)
-* Procedural programming (Clojure, Lisp)
+* Functional programming (Clojure, Lisp)
 * Data visualisation (NodeBox, D3, VVVV)
 * Generative design (NodeBox, Processing)
 * Concurrency, multi-core and GPU programming (OpenCL)
