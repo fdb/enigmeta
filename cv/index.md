@@ -122,6 +122,8 @@ Civil state: legal cohabitant, one daughter and one son.
 * Libre Graphics Meeting 2010, Brussels, 2010 
 * ISEA2010, Dortmund, 2010
 * Integrated, Antwerpen, 2011
+* Design Interational Week, UQAM, Montréal, 2013
+* Integrated, Antwerpen, 2013
 
 ### Workshops
 * Design Automation, Lahti, 2004, Finland 
