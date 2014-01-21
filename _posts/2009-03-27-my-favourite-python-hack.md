@@ -29,7 +29,7 @@ The difficulty was in finding the difference between the first case and the thir
 
 When Python parses the code, it builds an abstract syntax tree (AST), a tree-like representation of the code. Different nodes are represented by classes in the compiler.ast module. The use cases above are represented by instance of Sub (a two-part subtraction), UnarySub (a negative number), and Addition (a two-part addition).
 
-Note that we replaced the original number with the name <code>__magic_var__</code> in our original source code, and compiled that. After compilation succeeds and returns an AST, a function called <code>_checkSigns</code> recursively checks the AST for special sign cases. First, it tries to find the magic variable. Once it has found that, it checks the parent node to see if it encounters any of the special cases, and basically prepares the object for string replacement afterwards.
+Note that we replaced the original number with the name <code>__magic_var__</code> in our original source code, and compiled that. After compilation succeeds and returns an AST, a function called <code>checkSigns</code> recursively checks the AST for special sign cases. First, it tries to find the magic variable. Once it has found that, it checks the parent node to see if it encounters any of the special cases, and basically prepares the object for string replacement afterwards.
 
 What I like about this hack is that if it works correctly, you don't even notice it's there.
 
