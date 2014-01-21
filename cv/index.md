@@ -10,7 +10,7 @@ title: Curriculum Vitae of Frederik De Bleser
 frederik (at) burocrazy (dot) com<br>
 <a href="http://www.enigmeta.com/">www.enigmeta.com</a><br>
 +32 498 120 060<br>
-Civil state: legal cohabitant, 1 daughter
+Civil state: legal cohabitant, one daughter and one son.
 </address>
 
 ## Education

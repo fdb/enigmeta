@@ -10,7 +10,7 @@ title: Curriculum Vitae van Frederik De Bleser
 frederik (at) burocrazy (dot) com<br>
 <a href="http://www.enigmeta.com/">www.enigmeta.com</a><br>
 +32 498 120 060<br>
-Burgerlijke staat: wettelijk samenwonend, 1 dochter
+Burgerlijke staat: wettelijk samenwonend, één dochter en één zoon
 </address>
 
 ## Opleiding
