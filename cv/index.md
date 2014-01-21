@@ -7,7 +7,7 @@ title: Curriculum Vitae of Frederik De Bleser
 
 <time>°1978-11-15</time>
 <address>
-frederik (at) burocrazy (dot) com<br>
+frederik (at) debleser (dot) be<br>
 <a href="http://www.enigmeta.com/">www.enigmeta.com</a><br>
 +32 498 120 060<br>
 Civil state: legal cohabitant, one daughter and one son.

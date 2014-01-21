@@ -11,7 +11,7 @@ layout: nil
  <id>http://www.enigmeta.com/</id>
  <author>
    <name>Frederik De Bleser</name>
-   <email>frederik@burocrazy.com</email>
+   <email>frederik@debleser.be</email>
  </author>
 
  {% for post in site.posts %}
