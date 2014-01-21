@@ -63,6 +63,7 @@ nav ul {
 nav li {
   list-style: none;
   display: inline-block;
+  padding: 5px 10px 5px 0;
 }
 
 nav a, nav a:visited {
@@ -70,7 +71,6 @@ nav a, nav a:visited {
   text-decoration: none;
   font-weight: bold;
   color: #aaa;
-  padding: 5px 10px 5px 0;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
 }
 
