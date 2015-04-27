@@ -185,4 +185,4 @@ Civil state: legal cohabitant, one daughter and one son.
 * Amateur runner and participant in the Antwerp 10 Miles.
 * World traveller (South America, US, South-east Asia).
 * Frequent bike traveller across Europe .
-* Legally living together with my partner and father of our little daughter.
+* Legally living together with my partner and father of two kids.

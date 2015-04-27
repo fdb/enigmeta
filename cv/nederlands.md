@@ -185,4 +185,4 @@ Burgerlijke staat: wettelijk samenwonend, één dochter en één zoon
 * Amateur-loper en deelnemer aan de Antwerp 10 Miles.
 * Wereldreiziger (Zuid-Amerika, US, Zuid-oost Azië).
 * Frequent fietsreiziger door Europa.
-* Wettelijk samenwonend met mijn partner en vader van onze kleine dochter.
+* Wettelijk samenwonend met mijn partner en vader van twee kinderen.
