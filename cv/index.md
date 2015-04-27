@@ -20,7 +20,6 @@ Civil state: legal cohabitant, one daughter and one son.
 
 ## Professional Experience
 * PhD student / Research Assistant at the <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerp</a> school of design, Belgium (2004-present)
-* Freelance designer and consultant: <a href="http://www.burocrazy.com/">www.burocrazy.com</a>
 
 ### Projects
 * <time>2012</time>
@@ -94,9 +93,9 @@ Civil state: legal cohabitant, one daughter and one son.
 ## Academic Experience
 
 ### Exhibitions
-* Blotter, Time Canvas, MuHKA, 2005 
-* Blotter, ELIA, Ghent, 2006 
-* Evolution, C.STEM, Turin, Italy 2007 
+* Blotter, Time Canvas, MuHKA, 2005
+* Blotter, ELIA, Ghent, 2006
+* Evolution, C.STEM, Turin, Italy 2007
 * Travelling Letters, Lahti, Finland, 2010
 * Travelling Letters, Vilnius, Lithuania, 2011
 * Generator.x 3.0, Brussels, 2012
@@ -104,34 +103,34 @@ Civil state: legal cohabitant, one daughter and one son.
 * Travelling Letters, Helsinki, Finland, 2013
 
 ### Publications
-* De Standaard, 2005 
-* Counterform in Motion, 2006 
-* ADD-magazine #2, 2006 
-* Add!ct-magazine #28, 2007 
+* De Standaard, 2005
+* Counterform in Motion, 2006
+* ADD-magazine #2, 2006
+* Add!ct-magazine #28, 2007
 * ADD-magazine #6, 2007
 
-### Conferences 
-* ATypI, Prague, 2004 
-* ATypI, Helsinki, 2005 
-* ELIA, Ghent, 2006 
-* DorkBot, Ghent, 2006 
-* Integrated2007, Antwerp, 2007 
-* C.STEM, Turin, 2007 
-* The Agile Mind, Brussels, 2008 
-* Integrated 2009, Antwerp, 2009 
-* Libre Graphics Meeting 2010, Brussels, 2010 
+### Conferences
+* ATypI, Prague, 2004
+* ATypI, Helsinki, 2005
+* ELIA, Ghent, 2006
+* DorkBot, Ghent, 2006
+* Integrated2007, Antwerp, 2007
+* C.STEM, Turin, 2007
+* The Agile Mind, Brussels, 2008
+* Integrated 2009, Antwerp, 2009
+* Libre Graphics Meeting 2010, Brussels, 2010
 * ISEA2010, Dortmund, 2010
 * Integrated, Antwerpen, 2011
 * Design Interational Week, UQAM, Montréal, 2013
 * Integrated, Antwerpen, 2013
 
 ### Workshops
-* Design Automation, Lahti, 2004, Finland 
-* Intelligence, Lahti, 2005, Finland 
-* Memetics, Lahti, 2007 
+* Design Automation, Lahti, 2004, Finland
+* Intelligence, Lahti, 2005, Finland
+* Memetics, Lahti, 2007
 * Semantics, Helsinki, 2008
-* Generative Art, Lahti, 2009 
-* NodeBox, Lahti, 2010 
+* Generative Art, Lahti, 2009
+* NodeBox, Lahti, 2010
 * Patterns of data, Antwerp, 2010
 * Patterns of data, Helsinki, 2011
 * Data Visualization, Lahti, 2011
