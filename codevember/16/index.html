@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codevember Day 16 - Font editor</title>
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+    /*
+    accent: rgb(26, 70, 102);
+    */
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    body {
+        font: 13px helvetica, arial, sans-serif;
+        display: flex;
+        flex-direction: column ;
+        background: rgb(24, 29, 32);
+        margin: 0;
+        padding:0;
+        color: #77c;
+    }
+
+    header {
+        /*background: #88f;*/
+        /*background-image: linear-gradient(#88f, #7f7fdf);*/
+        border-bottom: 1px solid #333366;
+        height: 30px;
+        width: 100%;
+    }
+
+    header h1 {
+        margin: 0;
+        padding: 0 10px;
+        line-height: 30px;
+        font-size: 18px;
+    }
+
+    header h1 small {
+        font-size: inherit;
+        opacity: 0.7;
+    }
+    header h1 a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid #88d;
+    }
+
+    header #download-font {
+        float: right;
+        margin: 4px;
+        border: 1px solid #88d;
+        color: #88d;
+        background: inherit;
+        border-radius: 2px;
+        font-size: 12px;
+        padding: 2px 5px;
+        outline: none;
+    }
+
+    header #download-font:hover {
+        background: #336;
+        color: #ccc;
+    }
+
+    #wrap {
+        flex: 1;
+        display: flex;
+    }
+
+    #glyph-list {
+        width: 220px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    #glyph-list svg {
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+    }
+
+    #glyph-list svg.active {
+        background: rgb(26, 70, 102);
+    }
+
+    #editor {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    #editor #c {
+        flex: 1;
+        border-bottom: 1px solid #333366;
+    }
+
+    #buttons {
+        position: absolute;
+        top: 35px;
+        left: 225px;
+    }
+
+    #buttons button {
+        width: 30px;
+        border: 1px solid #558;
+        height: 30px;
+        font-weight: bold;
+        background: rgb(24, 29, 32);
+        color: #558;
+        font-size: 18px;
+        outline: none;
+        border-radius: 2px;
+    }
+
+    #editor #preview-text-field {
+        height: 30px;
+        line-height: 30px;
+        background: inherit;
+        border: none;
+        border-bottom: 1px solid #333366;
+        padding: 0 10px;
+        color: #88f;
+        outline: none;     
+    }
+
+    #editor #preview {
+        height: 100px;
+    }
+
+    #code {
+        position:absolute;
+        bottom: 0;
+        right: 0;
+        height: 100px;
+        overflow: hidden;
+        background: inherit;
+        border: none;
+        border-left: 1px solid #336;
+        color: #88f;
+        outline: none;
+    }
+  </style>
+</head>
+<body>
+<header>
+    <button id="download-font">Download font (.OTF)</button>
+    <h1>Codevember Day 16 <small>&mdash; experimental font editor by <a href="http://www.enigmeta.com/">Frederik De Bleser</a></small></h1>
+</header>
+<div id="wrap">
+    <div id="glyph-list"></div>
+    <div id="editor">
+        <canvas id="c"></canvas>
+        <input type="text" id="preview-text-field" value="HAMBURGEVONS">
+        <canvas id="preview"></div>
+    </div>    
+</div>
+        <div id="buttons">
+            <button id="add-point" title="Add a point to the end of the path">+</button>
+            <button id="remove-point" title="Remove the last point of the path">-</button>
+        </div>
+
+<textarea id="code" onclick="select()"></textarea>
+<script src="opentype.min.js"></script>
+<script src="day16.js"></script>
+</body>
+</html>
