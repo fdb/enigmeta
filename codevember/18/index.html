@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Codevember Day 18</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: helvetica, arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        border-top: 3px solid #33a;
+        font-size: 13px;
+        text-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.8);
+    }
+
+    #intro {
+        background: #88f;
+        background-image: linear-gradient(#88f, #7f7fdf);
+        margin: 0;
+        padding: 10px 20px;
+        color: white;
+    }
+
+    #intro h1 {
+        margin: 0 0 0.5em 0;
+        padding: 0;
+    }
+
+    #intro p {
+        margin: 0 0 0.5em 0;
+        padding: 0;
+    }
+
+    #controls {
+        background: #eee;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        height: 60px;
+    }
+
+    #controls input[type="text"] {
+        position: absolute;
+        left: 0;
+        padding: 0 5px;
+        margin: 0 20px;
+        line-height: 40px;
+        vertical-align: middle;
+        font-size: 18px;
+
+        line-height: 30px;
+        font-size: 30px;
+    }
+
+    #controls #slider-wrap {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 7px;
+        height: 30px;
+        text-align: center;
+        font-size: 11px;
+        font-weight: bold;
+        color: #88f;
+    }
+
+    #controls input[type="range"] {
+        width: 500px;
+    }
+
+    #controls select {
+        position: absolute;
+        right: 0;
+        padding: 0 5px;
+        margin: 0 20px;
+        line-height: 40px;
+        vertical-align: middle;
+        font-size: 18px;
+
+    }
+
+    #input-paths {
+        width: 100%;
+        overflow: hidden;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #input-paths .input-box {
+        width: 50%;
+        float: left;
+    }
+
+    #input-paths .input-box:first-child {
+        border-right: 1px solid #ddd;
+    }
+
+    #input-paths .input-box p {
+        background: #eee;
+        background-image: linear-gradient(#fcfcfc, #eee);
+        margin : 0;
+        padding: 5px 10px;
+    }
+
+    #input-paths .input-box svg {
+        width: 100%;
+    }
+
+    #output-path {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        position: relative;
+    }
+
+    #output-path svg {
+        width: 100%;
+        height: 300px;
+    }
+
+    #output-path #download-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 40px;
+        line-height: 50px;
+        vertical-align: middle;
+        font-weight: bold;
+        width: 50px;
+        height: 50px;
+        color: #aaa;
+        text-decoration: none;
+        border: none;
+        border-left: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        background: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    #arrows {
+        width: 100%;
+        height: 150px;
+    }
+
+    #footer {
+        font-size: 90%;
+        opacity: 0.7;
+        padding: 20px;
+        text-align: center;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="intro">
+        <h1>Codevember Day 18</h1>
+        <p>Generate a new font out of two existing fonts &mdash; move the slider in the middle to interpolate between the shapes.</p>
+        
+        <p>Not all fonts work equally well &mdash; sometimes the results are "interesting".</p>
+        <p>Download the result as SVG by clicking the "&#x21e9;" button on the bottom-right.</p>
+    </div>
+    <div id="controls">
+        <div id="slider-wrap">
+            Interpolate!<br>
+            <input type="range" min="-5.0" max="5.0" step="0.01" default="0.5" id="t-slider">
+        </div>
+        <input type="text" id="text-field" value="hamburgevons">
+        <select id="font-select">
+            <option>Fira Sans</option>
+            <option>Roboto</option>
+            <option>Roboto Slab</option>
+            <option>Open Sans</option>
+            <option>Bebas Neue</option>
+            <option>Quicksand</option>
+        </select>
+    </div>
+
+    <div id="input-paths">
+        <div class="input-box">
+            <p>Font A: Fira Sans Regular</p>
+            <svg id="path-a"></svg>
+        </div>
+        <div class="input-box">
+            <p>Font B: Fira Sans Bold</p>
+            <svg id="path-b"></svg>
+        </div>
+    </div>
+
+    <svg id="arrows"></svg>
+
+
+    <div id="output-path">
+        <button id="download-button" href="#" title="Download SVG file.">&#x21e9;</button>
+        <svg id="path-out"></svg>
+    </div>
+
+    <div id="footer">
+        <p>Generated using <a href="http://opentype.js.org/">opentype.js</a>. Made for Codevember 2015.</p>
+    </div>
+    
+    <script type="text/javascript" src="opentype.min.js"></script>
+    <script type="text/javascript" src="day18.js"></script>
+</body>
+</html>
