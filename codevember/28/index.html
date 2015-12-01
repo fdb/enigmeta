@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codevember 28</title>
+  <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font: 14px sans-serif;
+    background: peru;
+  }
+  </style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+
+function rand(min, max) {
+  return min + Math.random() * (max - min);
+}
+
+function randInt(min, max) {
+  return Math.floor(rand(min, max));
+}
+
+function choice(l) {
+  return l[Math.floor(Math.random() * l.length)];
+}
+
+
+function clipRect(x, y, w, h) {
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  ctx.lineTo(x + w, y);
+  ctx.lineTo(x + w, y + h);
+  ctx.lineTo(x, y + h);
+  ctx.clip();
+}
+
+var gText = 'CODEVEMBER';
+var gLetterIndex = 0;
+var gLetter = gText[gLetterIndex];
+var gIsAnimating = true;
+
+var CLIP_SIZE = Math.min(window.innerWidth, window.innerHeight);
+var CLIP_GRID_COUNT = 20;
+var CLIP_GRID_SIZE = Math.ceil(CLIP_SIZE / CLIP_GRID_COUNT);
+
+var canvas = document.getElementById('c');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+var ctx = canvas.getContext('2d');
+var clipCells = [];
+var activeCells = [];
+
+function prepare() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  ctx.font = 'bold ' + CLIP_SIZE + 'px serif';
+  ctx.textAlign = 'center';
+  ctx.fillStyle = 'white';
+  ctx.fillText(gLetter, CLIP_SIZE / 2, CLIP_SIZE * 0.75);
+
+  clipCells.length = CLIP_GRID_SIZE;
+  for (var y = 0; y < CLIP_GRID_COUNT; y += 1) {
+    var clipColumn = [];
+    clipColumn.length = CLIP_GRID_SIZE;
+    for (var x = 0; x < CLIP_GRID_COUNT; x += 1) {
+      var data = ctx.getImageData(x * CLIP_GRID_SIZE, y * CLIP_GRID_SIZE, CLIP_GRID_SIZE, CLIP_GRID_SIZE);
+      // middle pixel
+      var v = data.data[(CLIP_GRID_SIZE / 2 * CLIP_GRID_SIZE + (CLIP_GRID_SIZE / 2)) * 4 + 3];
+      if (v > 0) {
+        activeCells.push(data);
+        clipColumn[x] = activeCells.length - 1;
+      } else {
+        clipColumn[x] = false;
+      }
+    }
+    clipCells[y] = clipColumn;
+  }
+}
+
+function draw() {
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  var tx = 0;
+  var ty = 0;
+  if (canvas.width > canvas.height) {
+    tx = (canvas.width - CLIP_SIZE) / 2;
+  } else {
+    ty = (canvas.height - CLIP_SIZE) / 2;
+  }
+  console.log(tx, ty);
+
+  for (var y = 0; y < CLIP_GRID_COUNT; y += 1) {
+    for (var x = 0; x < CLIP_GRID_COUNT; x += 1) {
+
+      // Check if original cell had data in it.
+      var cellData = clipCells[y][x];
+      if (cellData !== false) {
+        var imgData = choice(activeCells);
+        ctx.putImageData(imgData, tx + x * CLIP_GRID_SIZE, ty + y * CLIP_GRID_SIZE);
+      }
+    }
+  }
+
+  ctx.restore();
+}
+
+window.addEventListener('keypress', function (e) {
+  gIsAnimating = false;
+  console.log(e.keyCode);
+  var c = String.fromCharCode(e.keyCode);
+  gLetter = c;
+  prepare();
+  draw();
+});
+
+function nextLetter() {
+  if (gIsAnimating) {
+    gLetterIndex = (gLetterIndex + 1) % gText.length;
+    gLetter = gText[gLetterIndex];
+    prepare();
+    draw();
+  }
+}
+
+window.setInterval(nextLetter, 700);
+
+
+  prepare();
+  draw();
+</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codevember 21</title>
+  <style>
+  html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font: 13px sans-serif;
+  background: #222;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+
+footer span {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+}
+  </style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<footer><span>Type to add your own letters!</span></footer>
+<script>
+var canvas = document.getElementById('c');
+var r = canvas.getBoundingClientRect();
+canvas.width = r.width;
+canvas.height = r.height;
+var ctx = canvas.getContext('2d');
+
+ctx.font = '72px sans-serif';
+ctx.lineWidth = 2;
+
+var gLetters = [];
+addLetter('C');
+addLetter('O');
+addLetter('D');
+addLetter('E');
+
+function animate() {
+  for (var i = 0; i < gLetters.length; i++) {
+    var letter = gLetters[i];
+    var alpha = Math.sin(letter.phase);
+    ctx.fillStyle = 'rgba(0, 0, 0, ' + alpha + ')';
+    ctx.strokeStyle = 'hsl(' + letter.hue + ', 30%, ' + letter.lightness + '%)';
+
+    ctx.strokeText(letter.letter, letter.x, letter.y);
+    ctx.fillText(letter.letter, letter.x, letter.y);
+    letter.x += letter.dx;
+    letter.y += letter.dy;
+    if (letter.x < 0 || letter.x > canvas.width) {
+      letter.dx = -letter.dx;
+    }
+    if (letter.y < 0 || letter.y > canvas.height) {
+      letter.dy = -letter.dy;
+    }
+    letter.phase += 0.02;
+  }
+
+  window.requestAnimationFrame(animate);
+}
+
+function choice(l) {
+  return arguments[Math.floor(Math.random() * arguments.length)];
+}
+
+function addLetter(e) {
+  var c = typeof e === 'string' ? e : String.fromCharCode(e.keyCode);
+  gLetters.push({
+    letter: c,
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    dx: choice(-2, 2),
+    dy: choice(-2, 2),
+    hue: Math.random() * 360,
+    phase: 0,
+    lightness: 50 + Math.random() * 50
+  });
+  gLetters = gLetters.slice(-100);
+}
+
+window.requestAnimationFrame(animate);
+window.addEventListener('keydown', addLetter);
+</script>
+</body>
+</html>

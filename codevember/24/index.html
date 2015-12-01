@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codevember 24</title>
+  <style>
+    html,
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #222;
+    text-align: center;
+    color: #eee;
+    font-family: arial, sans-serif;
+  }
+
+  #loading {
+    font-size: 48px;
+  }
+
+  #instructions {
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 5px 7px;
+    border-radius: 5px;
+  }
+
+  #container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  #container div {
+    position: absolute;
+    font: 10px arial;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  </style>
+</head>
+<body>
+<div id="loading">Loading sound files...</div>
+<div id="instructions">Hit letters on the keyboard to make sounds.</div>
+<div id="container"></div>
+<script>
+  var gTempo = 135;
+  var gNote8 = (60 / gTempo) / 2;
+
+  var gAudio = new AudioContext();
+  var gBufferMap = {};
+
+  function onError(e) {
+    console.error(e);
+  }
+
+  function scheduleSound(buffer, time) {
+    console.log('Scheduling', time, gAudio.currentTime);
+    var source = gAudio.createBufferSource();
+    source.buffer = buffer;
+    source.connect(gAudio.destination);
+    source.start(time);
+  }
+
+  function start() {
+    scheduleSound(window.soundBuffer, 0);
+    scheduleSound(window.soundBuffer, 3 * gNote8);
+    scheduleSound(window.soundBuffer, 7 * gNote8);
+    scheduleSound(window.soundBuffer, 11 * gNote8);
+  }
+
+function snap(v, distance) {
+  return Math.round(v / distance) * distance;
+}
+
+
+
+  function showLetter(c) {
+    var div = document.createElement('div');
+    div.style.left = snap(Math.random() * window.innerWidth, 25) + 'px';
+    div.style.top = snap(Math.random() * window.innerHeight - 10, 25) + 'px';
+    var hue = (c.charCodeAt(0) - 65) / 26 * 360;
+    div.style.color = 'hsl(' + hue + ', 60%, 60%)';
+    div.animate([{
+      transform: 'scale(0.1)'
+    }, {
+      transform: 'scale(10.0)'
+    }, {
+      transform: 'scale(1.0)'
+    }], {
+      direction: 'alternate',
+      duration: 200,
+      iterations: 1
+    });
+    document.getElementById('container').appendChild(div);
+    div.innerHTML = c;
+  }
+
+  function onKeyDown(e) {
+    console.log('e', e.keyCode);
+    if (e.keyCode >= 65 && e.keyCode <= 90) {
+      var c = String.fromCharCode(e.keyCode);
+      console.log('Pressed', c);
+      var buffer = gBufferMap[c];
+      console.log(buffer);
+      var nextNote = Math.floor(gAudio.currentTime * gTempo);
+      for (var i = 0; i < 8; i++) {
+        var time = (nextNote / gTempo) + gNote8 * i * 4;
+        scheduleSound(buffer, time);
+        setTimeout(showLetter, (time - gAudio.currentTime) * 1000, c);
+      }
+    }
+  }
+
+  function loadSound(url, index, callback) {
+    var request = new XMLHttpRequest();
+    request.open('GET', url, true);
+    request.responseType = 'arraybuffer';
+
+    // Decode asynchronously
+    request.onload = function() {
+      gAudio.decodeAudioData(request.response, function(buffer) {
+        callback(null, buffer, index);
+      }, function(err) {
+        callback(err);
+      });
+    };
+    request.send();
+  }
+
+  function loadSounds(urls, callback) {
+    var counter = urls.length;
+    var buffers = [];
+    var errorState = false;
+    buffers.length = urls.length;
+    for (var i = 0; i < urls.length; i++) {
+      loadSound(urls[i], i, function(err, buffer, index) {
+        console.log('Loaded', index, counter, buffer);
+
+        if (errorState) return;
+        if (err) {
+          console.log(err);
+          errorState = true;
+          callback(err);
+        } else {
+          buffers[index] = buffer;
+          counter--;
+          if (counter === 0) {
+            console.log('done loading', buffers);
+            document.getElementById('loading').outerHTML = '';
+            callback(null, buffers);
+          }
+        }
+      });
+    }
+  }
+
+  var letters = 'abcdefghijklmnopqrstuvwxyz';
+  var files = letters.split('').map(function(c) {
+    return c + '.ogg'
+  });
+
+  loadSounds(files, function(err, buffers) {
+    if (err) {
+      console.log(err);
+    } else {
+      for (var i = 0; i < letters.length; i++) {
+        gBufferMap[letters[i].toUpperCase()] = buffers[i];
+      }
+      window.addEventListener('keydown', onKeyDown);
+
+    }
+
+  });
+</script>
+</body>
+</html>

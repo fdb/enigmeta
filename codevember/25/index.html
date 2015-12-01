@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codevember 25</title>
+  <style>
+    html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: orange;
+  }
+  </style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+function clipRect(x, y, w, h) {
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  ctx.lineTo(x + w, y);
+  ctx.lineTo(x + w, y + h);
+  ctx.lineTo(x, y + h);
+  ctx.clip();
+}
+
+var canvas = document.getElementById('c');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+var ctx = canvas.getContext('2d');
+
+var gTime = 0;
+
+function drawLetter(c, x, y) {
+  ctx.save();
+
+  var dy = 40;
+
+  clipRect(x, y - 500, 500, 500);
+  ctx.translate(x, y - dy);
+  ctx.rotate(gTime);
+  ctx.fillText(c, 0, dy);
+  ctx.restore();
+
+  ctx.save();
+  clipRect(x - 500, y - 500, 500, 500);
+  ctx.translate(x, y - dy);
+  ctx.scale(-1, 1);
+  ctx.rotate(gTime);
+  ctx.fillText(c, 0, dy);
+  ctx.restore();
+}
+
+var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#fff';
+  ctx.font = 'bold 100px sans-serif';
+  ctx.textAlign = 'center';
+
+  var GRID_WIDTH = 150;
+  var x = GRID_WIDTH;
+  var y = GRID_WIDTH;
+  for (var i = 0; i < letters.length; i++) {
+    drawLetter(letters[i], x, y);
+    x += GRID_WIDTH;
+    if (x > canvas.width - GRID_WIDTH) {
+      x = GRID_WIDTH;
+      y += GRID_WIDTH;
+    }
+
+  }
+  //drawLetter('B', 200, 100);
+
+  gTime += 0.01;
+  window.requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+</body>
+</html>

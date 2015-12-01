@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codevember 29</title>
+  <style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #112;
+    color: #eee;
+  }
+  </style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script type="text/javascript">
+   navigator.getUserMedia = navigator.getUserMedia ||
+                          navigator.webkitGetUserMedia ||
+                          navigator.mozGetUserMedia ||
+                          navigator.msGetUserMedia;
+
+var video;
+var canvas = document.getElementById('c');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+var ctx = canvas.getContext('2d');
+
+function animate() {
+  var vx = (canvas.width - video.videoWidth) / 2;
+  var vy = (canvas.height - video.videoHeight) / 2;
+  ctx.drawImage(video, vx, vy);
+  var data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+  ctx.clearRect(vx, vy, video.videoWidth, video.videoHeight);
+  ctx.fillStyle = '#eee';
+  var img = document.getElementById('img');
+  var CELL_SIZE = 10;
+  var GRADIENT = ' .:;+=xX$';
+  for (var y = 0; y < canvas.height; y += CELL_SIZE) {
+    for (var x = 0; x < canvas.width; x += CELL_SIZE) {
+      var i = (y * canvas.width + x) * 4 + 1;
+      var v = data[i];
+      ctx.font = 'bold 12px sans-serif';
+      var ci = Math.floor(v / 255 * (GRADIENT.length - 1));
+      if (ci < 0 || ci >= GRADIENT.length) {
+        console.log(ci, v);
+      }
+      var c = GRADIENT[ci];
+      ctx.fillText(c, x, y + 8);
+    }
+  }
+  window.requestAnimationFrame(animate);
+}
+if (navigator.getUserMedia) {
+  navigator.getUserMedia({
+    video: true
+  }, onVideo, onError);
+} else {
+    window.alert('This demo requires access to the webcam.');
+}
+
+function onError() {
+  document.body.innerHTML = 'Please enable video.';
+}
+
+function onVideo(stream) {
+  video = document.createElement('video');
+  video.src = window.URL.createObjectURL(stream);
+  video.onloadedmetadata = function(e) {
+    video.play();
+  };
+  animate();
+}
+</script>
+
+</body>
+</html>

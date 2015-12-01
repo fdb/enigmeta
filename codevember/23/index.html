@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codevember 23</title>
+  <style>
+      body,
+    html {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #223;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+  var SCALE = 10;
+  var GLYPH_MAP = {
+    'A': [
+      [0, 0],
+      [4, 10],
+      [8, 0]
+    ],
+    'B': [
+      [0, 0],
+      [0, 10],
+      [5, 10],
+      [5, 5],
+      [7, 5],
+      [7, 0]
+    ],
+    'C': [
+      [0, 0],
+      [0, 10],
+      [8, 10],
+      [8, 6],
+      [3, 6],
+      [3, 4],
+      [8, 4],
+      [8, 0]
+    ],
+    'D': [
+      [0, 0],
+      [0, 3],
+      [2, 3],
+      [2, 7],
+      [0, 7],
+      [0, 10],
+      [8, 10],
+      [8, 0]
+    ],
+    'E': [
+      [0, 0],
+      [0, 3],
+      [0, 10],
+      [8, 10],
+      [8, 7],
+      [3, 7],
+      [3, 6],
+      [5, 6],
+      [5, 4],
+      [3, 4],
+      [3, 3],
+      [8, 3],
+      [8, 0]
+    ],
+    'F': [
+      [0, 0],
+      [0, 3],
+      [0, 10],
+      [8, 10],
+      [8, 7],
+      [3, 7],
+      [3, 6],
+      [5, 6],
+      [5, 3],
+      [3, 3],
+      [3, 0]
+    ],
+    'G': [
+      [0, 0],
+      [0, 3],
+      [0, 10],
+      [8, 10],
+      [8, 7],
+      [3, 7],
+      [3, 3],
+      [5, 3],
+      [5, 5],
+      [8, 5],
+      [8, 0]
+    ],
+    'H': [
+      [0, 0],
+      [0, 3],
+      [0, 7],
+      [0, 10],
+      [3, 10],
+      [3, 7],
+      [5, 7],
+      [5, 10],
+      [8, 10],
+      [8, 0],
+      [5, 0],
+      [5, 3],
+      [3, 3],
+      [3, 0]
+    ],
+    'I': [
+      [0, 0],
+      [0, 10],
+      [3, 10],
+      [3, 0]
+    ],
+    'J': [
+      [0, 0],
+      [0, 3],
+      [4, 3],
+      [4, 10],
+      [7, 10],
+      [7, 0]
+    ],
+    'K': [
+      [0, 0],
+      [0, 10],
+      [3, 10],
+      [3, 7],
+      [5, 10],
+      [8, 10],
+      [5, 5],
+      [8, 0],
+      [5, 0],
+      [3, 3],
+      [3, 0]
+    ],
+    'L': [
+      [0, 0],
+      [0, 10],
+      [3, 10],
+      [3, 3],
+      [7, 3],
+      [7, 0]
+    ],
+    'M': [
+      [0, 0],
+      [0, 10],
+      [3, 10],
+      [4, 8],
+      [5, 10],
+      [8, 10],
+      [8, 0],
+      [5, 0],
+      [5, 4],
+      [4, 3],
+      [3, 4],
+      [3, 0]
+    ],
+    'N': [
+      [0, 0],
+      [0, 10],
+      [3, 10],
+      [3, 9],
+      [5, 7],
+      [5, 10],
+      [8, 10],
+      [8, 0],
+      [5, 0],
+      [5, 3],
+      [3, 5],
+      [3, 0]
+    ],
+    'O': [
+      [0, 0],
+      [0, 10],
+      [7, 10],
+      [7, 0]
+    ],
+    'P': [
+      [0, 0],
+      [0, 10],
+      [7, 10],
+      [7, 4],
+      [3, 4],
+      [3, 0]
+    ],
+    'Q': [
+      [0, 0],
+      [0, 10],
+      [7, 10],
+      [7, 0],
+      [6, 0],
+      [7, -1],
+      [4, -1],
+      [3, 0]
+    ],
+    'R': [
+      [0, 0],
+      [0, 10],
+      [7, 10],
+      [7, 4],
+      [5, 4],
+      [7, 0],
+      [4, 0],
+      [3, 2],
+      [3, 0]
+    ],
+    'S': [
+      [7, 10],
+      [7, 7],
+      [3, 7],
+      [3, 6],
+      [7, 6],
+      [7, 0],
+      [0, 0],
+      [0, 3],
+      [4, 3],
+      [4, 4],
+      [0, 4],
+      [0, 10]
+    ],
+    'T': [
+      [2, 0],
+      [2, 7],
+      [0, 7],
+      [0, 10],
+      [7, 10],
+      [7, 7],
+      [5, 7],
+      [5, 0]
+    ],
+    'U': [
+      [0, 0],
+      [0, 10],
+      [3, 10],
+      [3, 3],
+      [5, 3],
+      [5, 10],
+      [8, 10],
+      [8, 0]
+    ],
+    'V': [
+      [0, 10],
+      [3, 10],
+      [4, 6],
+      [5, 10],
+      [8, 10],
+      [5, 0],
+      [3, 0]
+    ],
+    'W': [
+      [0, 10],
+      [3, 10],
+      [4, 6],
+      [5, 8],
+      [6, 6],
+      [7, 10],
+      [10, 10],
+      [8, 0],
+      [6, 0],
+      [5, 3],
+      [4, 0],
+      [2, 0]
+    ],
+    'X': [
+      [0, 10],
+      [3, 10],
+      [4, 8],
+      [5, 10],
+      [8, 10],
+      [5, 5],
+      [8, 0],
+      [5, 0],
+      [4, 2],
+      [3, 0],
+      [0, 0],
+      [3, 5]
+    ],
+    'Y': [
+      [0, 10],
+      [3, 10],
+      [4, 8],
+      [5, 10],
+      [8, 10],
+      [5, 5],
+      [5, 0],
+      [3, 0],
+      [3, 5]
+    ],
+    'Z': [
+      [0, 10],
+      [7, 10],
+      [7, 7],
+      [3, 3],
+      [7, 3],
+      [7, 0],
+      [0, 0],
+      [0, 3],
+      [4, 7],
+      [0, 7]
+    ],
+    '_': [
+      [0, 0],
+      [0, 1],
+      [8, 1],
+      [8, 0]
+    ],
+  }
+  var STATE_ENTERING = 'e';
+  var STATE_LEAVING = 'l';
+  var MESSAGES = [
+    'CODEVEMBER',
+    'TWENTYTHREE',
+    'TRIANGULAR',
+    'TYPE',
+    'MADE_BY',
+    'FREDERIK',
+    'DE_BLESER'
+  ]
+
+  var gMessageIndex = -1; // this will be set to 0 with newText function.
+  var gText;
+  var gTextIndex;
+  var gTextX;
+  var gTextY;
+  var gState = STATE_LEAVING;
+
+  // Per letter we keep a list of triangles.
+  // Level 0: data structure with clipping path, position, t
+  // Level 1: list of triangle points with animated properties
+  var gLetters = [];
+
+  var canvas = document.getElementById('c');
+  var ctx = canvas.getContext('2d');
+  var r = canvas.getBoundingClientRect();
+  canvas.width = r.width;
+  canvas.height = r.height;
+  ctx.scale(1.0, -1.0);
+  ctx.translate(0, -canvas.height);
+
+var gTriangleCount = Math.floor(canvas.width / 30);
+
+  function linePoint(t, x1, y1, x2, y2) {
+    return [x1 + t * (x2 - x1),
+      y1 + t * (y2 - y1)
+    ];
+  }
+
+  function uniform(min, max) {
+    return min + Math.random() * (max - min);
+  }
+
+  function randomWidth() {
+    return (Math.random() - 0.5) * canvas.width * 3;
+  }
+
+  function randomHeight() {
+    return (Math.random() - 0.5) * canvas.height * 3;
+  }
+
+  function letterWidth(c) {
+    var lines = GLYPH_MAP[c];
+    var maxWidth = lines.reduce(function(w, pt) {
+      return Math.max(w, pt[0])
+    }, 0);
+    return maxWidth;
+  }
+
+  function textWidth(s) {
+    var w = 0;
+    for (var i = 0; i < s.length; i++) {
+      w += letterWidth(s[i]);
+      if (i < s.length) {
+        w += 1;
+      }
+    }
+    return w;
+  }
+
+  function cubicEaseOut(p) {
+    var f = (p - 1);
+    return f * f * f + 1;
+  }
+
+  function cubicEaseInOut(p) {
+    if (p < 0.5) {
+      return 4 * p * p * p;
+    } else {
+      var f = ((2 * p) - 2);
+      return 0.5 * f * f * f + 1;
+    }
+  }
+
+  function choice() {
+    return arguments[Math.floor(Math.random() * arguments.length)];
+  }
+
+  function newLetter(e) {
+    if (gTextIndex >= gText.length) {
+      return;
+    }
+    //console.assert(gTextIndex < gText.length);
+    var c = gText[gTextIndex];
+
+    var triangles = [];
+    for (var i = 0; i < gTriangleCount; i++) {
+      // TODO initial point outside of bounds?
+      var startX = choice(0, canvas.width);
+      var startY = choice(0, canvas.height);
+      var tri = {
+        hue: Math.random() * 360,
+        x1a: startX,
+        x1b: randomWidth(),
+        y1a: startY,
+        y1b: randomHeight(),
+        x2a: startX,
+        x2b: randomWidth(),
+        y2a: startY,
+        y2b: randomHeight(),
+        x3a: startX,
+        x3b: randomWidth(),
+        y3a: startY,
+        y3b: randomHeight()
+      };
+      triangles.push(tri);
+    }
+
+    var newLetter = {
+      letter: c,
+      x: gTextX,
+      y: gTextY,
+      t: 0.0,
+      triangles: triangles
+    };
+
+    gTextIndex++;
+    gTextX += (letterWidth(c) + 1) * SCALE;
+
+    gLetters.push(newLetter);
+  }
+
+  function newText() {
+    if (gState === STATE_ENTERING) {
+      gState = STATE_LEAVING;
+      for (var i = 0; i < gLetters.length; i++) {
+        var letter = gLetters[i];
+        letter.t = 0;
+        for (var j = 0; j < letter.triangles.length; j++) {
+          var triangle = letter.triangles[j];
+          triangle.x1a = triangle.x1b;
+          triangle.x1b = randomWidth();
+          triangle.y1a = triangle.y1b;
+          triangle.y1b = 0;
+          triangle.x2a = triangle.x2b;
+          triangle.x2b = randomWidth();
+          triangle.y2a = triangle.y2b;
+          triangle.y2b = 0;
+          triangle.x3a = triangle.x3b;
+          triangle.x3b = randomWidth();
+          triangle.y3a = triangle.y3b;
+          triangle.y3b = 0;
+        }
+      }
+    } else if (gState === STATE_LEAVING) {
+      gMessageIndex = (gMessageIndex + 1) % MESSAGES.length;
+      gText = MESSAGES[gMessageIndex];
+      gTextIndex = 0;
+      var tw = textWidth(gText);
+      SCALE = Math.floor(canvas.width / (tw + 2));
+
+      gTextX = (canvas.width - textWidth(gText) * SCALE) / 2;
+      gTextY = (canvas.height - 10 * SCALE) / 2;
+      gState = STATE_ENTERING;
+      gLetters = [];
+      newLetter();
+    } else {
+      console.assert(false);
+    }
+  }
+
+  function init() {
+    newText();
+    newLetter();
+  }
+
+  function lerp(t, a, b) {
+    return (1 - t) * a + t * b;
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (var i = 0; i < gLetters.length; i++) {
+      var letter = gLetters[i];
+
+      var lines = GLYPH_MAP[letter.letter];
+      ctx.save();
+      ctx.beginPath();
+      for (var j = 0; j < lines.length; j++) {
+        var px = letter.x + lines[j][0] * SCALE;
+        var py = letter.y + lines[j][1] * SCALE;
+        if (j === 0) {
+          ctx.moveTo(px, py);
+        } else {
+          ctx.lineTo(px, py);
+        }
+      }
+      ctx.clip();
+
+      var qt = cubicEaseInOut(letter.t);
+
+      for (var j = 0; j < letter.triangles.length; j++) {
+        var triangle = letter.triangles[j];
+        ctx.fillStyle = 'hsla(' + triangle.hue + ', 80%, 50%, 0.5)';
+        var x1 = lerp(qt, triangle.x1a, triangle.x1b);
+        var y1 = lerp(qt, triangle.y1a, triangle.y1b);
+        var x2 = lerp(qt, triangle.x2a, triangle.x2b);
+        var y2 = lerp(qt, triangle.y2a, triangle.y2b);
+        var x3 = lerp(qt, triangle.x3a, triangle.x3b);
+        var y3 = lerp(qt, triangle.y3a, triangle.y3b);
+
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.lineTo(x3, y3);
+        ctx.fill();
+      }
+      // Bit of a hack: newLetter should initialize all letters at once.
+      newLetter();
+      // This can go over lerping distance.
+      letter.t += 0.005;
+
+      ctx.restore();
+    }
+
+    var minT = gLetters.reduce(function(t, l) {
+      return Math.min(t, l.t)
+    }, 1);
+    if (minT >= 1.0) {
+      newText();
+    }
+
+    window.requestAnimationFrame(animate);
+  }
+
+  init();
+  //window.addEventListener('keydown', newText);
+  animate();
+</script>
+</body>
+</html>

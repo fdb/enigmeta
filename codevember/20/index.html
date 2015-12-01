@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codevember 20</title>
+  <style>
+    html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font: 13px sans-serif;
+    background: #556270;
+  }
+
+  h1 {
+    margin: 10px 0;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+    color: #FF6B6B;
+    ext-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    color: #FF6B6B;
+    opacity: 0.6;
+  }
+
+  footer a {
+    color: #FF6B6B;
+  }
+  </style>
+</head>
+<body>
+<h1>CODEVEMBER DAY 20 // MIRRORTYPE</h1>
+<canvas id="c"></canvas>
+<footer>By <a href="http://www.enigmeta.com/">Frederik De Bleser</a></footer>
+<script>
+function choice(l) {
+  return l[Math.floor(Math.random() * l.length)];
+}
+
+function clipRect(x, y, w, h) {
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  ctx.lineTo(x + w, y);
+  ctx.lineTo(x + w, y + h);
+  ctx.lineTo(x, y + h);
+  ctx.clip();
+}
+
+var canvas = document.getElementById('c');
+var r = canvas.getBoundingClientRect();
+canvas.width = r.width;
+canvas.height = r.height;
+var ctx = canvas.getContext('2d');
+var HALF_WIDTH = canvas.width / 2;
+
+var ratio = window.devicePixelRatio || 1,
+  width = canvas.width,
+  height = canvas.height;
+
+if (ratio > 1) {
+  canvas.width = width * ratio;
+  canvas.height = height * ratio;
+  canvas.style.width = width + "px";
+  canvas.style.height = height + "px";
+  ctx.scale(ratio, ratio);
+}
+
+var fontSize = Math.floor(canvas.width / 2);
+ctx.font = fontSize + 'px serif';
+var gY = fontSize / 1.3;
+
+function sineEaseInOut(p) {
+  return 0.5 * (1 - Math.cos(p * Math.PI));
+}
+
+var LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890';
+
+var gLetter, gLetterWidth, gAlpha, gBeginX, gEndX, gT;
+
+function newLetter() {
+  gLetter = choice(LETTERS);
+  gLetterWidth = ctx.measureText(gLetter).width;
+  gAlpha = 1.0;
+  gBeginX = HALF_WIDTH - gLetterWidth;
+  gEndX = HALF_WIDTH;
+  gT = 0.0;
+}
+
+function convert(v, inMin, inMax, outMin, outMax) {
+  return outMin + (outMax - outMin) * ((v - inMin) / (inMax - inMin));
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = 'rgba(199,244,100, ' + gAlpha + ')';
+
+  var t = sineEaseInOut(gT);
+  var x = convert(t, 0.0, 1.0, gBeginX, gEndX);
+  var y = gY;
+
+  ctx.save();
+  clipRect(HALF_WIDTH, 0, HALF_WIDTH, canvas.height);
+  ctx.fillText(gLetter, x, y);
+  ctx.restore();
+
+  ctx.save();
+  clipRect(0, 0, HALF_WIDTH, canvas.height);
+  ctx.scale(-1, 1);
+  ctx.translate(-HALF_WIDTH * 2, 0);
+  ctx.fillText(gLetter, x, y);
+  ctx.restore();
+
+  gT += 0.002;
+  if (gT > 0.95) {
+    gAlpha -= 0.01;
+  }
+  if (gAlpha < 0.0) {
+    newLetter();
+  }
+
+  window.requestAnimationFrame(animate);
+}
+
+newLetter();
+animate();
+</script>
+</body>
+</html>
