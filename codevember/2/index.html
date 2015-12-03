@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codevember Day 2</title>
+  <style>
+    * { box-sizing: border-box;}
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        font: 14px sans-serif;
+        display: flex;
+        flex-direction: column;
+    }
+    #toolbar {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      font-weight: bold;
+      font-size: 12px;
+      padding: 0 10px;
+    }
+
+    canvas {
+      flex: 1;
+    }
+
+    #selected-point-controls {
+      display: none;
+      margin-right: 20px;
+    }
+
+    #code {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 50px;
+      width: 100px;
+      border: 1px solid #ddd;
+      outline: none;
+      font: 11px monospace;
+      overflow: hidden;
+      resize: none;
+    }
+  </style>
+</head>
+<body>
+<div id="toolbar">
+  <span id="status"></span>
+  <span id="selected-point-controls">
+    <!-- <input type="checkbox" id="round">&nbsp;<label for="round">Round</label> -->
+    <button id="delete">Delete</button>
+    <button id="add-point">Add Point</button>
+    <input type="checkbox" id="closed">&nbsp;<label for="closed">Closed</label>
+  </span>
+  <span id="icon-controls">
+    <button id="add-contour">Add Contour</button>
+  </span>
+</div>
+<canvas id="c"></canvas>
+<textarea id="code"  onclick="select()"></textarea>
+<script>
+var GRID_SIZE = 16;
+var GRID_OFFSET_X = 5;
+var GRID_OFFSET_Y = 10;
+var STATE_NORMAL = 'normal';
+var STATE_DRAGGING = 'dragging';
+var ICON_PATH = {
+  contours: [{
+    points: [
+      {x: 0, y: 10},
+      {x: 16, y: 10},
+      {x: 16, y: 0},
+      {x: 8, y: 0},
+      {x: 5, y: -3},
+      {x: 5, y: 0},
+      {x: 0, y: 0}],
+    closed: true}]
+};
+
+var gState = STATE_NORMAL;
+var gActivePointIndex = null;
+var gSelectedPointIndex = null;
+
+var canvas = document.getElementById('c');
+var r = canvas.getBoundingClientRect();
+var ratio = window.devicePixelRatio || 1;
+canvas.width = r.width * ratio;
+canvas.height = r.height * ratio;
+canvas.style.width = r.width + 'px';
+canvas.style.height = r.height + 'px';
+var ctx = canvas.getContext('2d');
+ctx.scale(1.0, -1.0);
+ctx.translate(0, -canvas.height);
+ctx.scale(ratio, ratio);
+
+function getActivePoint() {
+  if (gActivePointIndex) {
+    var contour = ICON_PATH.contours[gActivePointIndex[0]];
+    var pt = contour.points[gActivePointIndex[1]];
+    return pt;
+  } else {
+    return false;
+  }
+}
+
+function getSelectedPoint() {
+  if (gSelectedPointIndex) {
+    var contour = ICON_PATH.contours[gSelectedPointIndex[0]];
+    var pt = contour.points[gSelectedPointIndex[1]];
+    return pt;
+  } else {
+    return false;
+  }
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Draw grid
+  ctx.beginPath();
+  ctx.strokeStyle = '#ddd';
+  for (var x = 0; x < canvas.width; x += GRID_SIZE) {
+      ctx.moveTo(x - 0.5, 0);
+      ctx.lineTo(x - 0.5, canvas.height);
+  }
+  for (var y = 0; y < canvas.height; y += GRID_SIZE) {
+      ctx.moveTo(0, y - 0.5);
+      ctx.lineTo(canvas.width, y - 0.5);
+  }
+  ctx.stroke();
+
+  // Draw grid bounds
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = '#aaa';
+  ctx.beginPath();
+  ctx.moveTo(GRID_OFFSET_X * GRID_SIZE, 0);
+  ctx.lineTo(GRID_OFFSET_X * GRID_SIZE, canvas.height);
+  ctx.moveTo(0, GRID_OFFSET_Y  * GRID_SIZE);
+  ctx.lineTo(canvas.width, GRID_OFFSET_Y  * GRID_SIZE);
+  ctx.stroke();
+
+
+  ctx.lineWidth = 1;
+  ctx.strokeStyle = '#00d2ea';
+  ctx.save();
+  ctx.scale(GRID_SIZE, GRID_SIZE);
+  ctx.translate(0.5, 0.5);
+  ctx.translate(GRID_OFFSET_X, GRID_OFFSET_Y);
+  ctx.beginPath();
+  for (var i = 0; i < ICON_PATH.contours.length; i++) {
+    var contour = ICON_PATH.contours[i];
+    for (var j = 0; j < contour.points.length; j++) {
+      var pt = contour.points[j];
+      if (pt.round) {
+        var prevIndex = j - 1;
+        prevIndex = prevIndex >= 0 ? prevIndex : contour.points.length + prevIndex;
+        prevPt = contour.points[prevIndex];
+        nextPt = contour.points[(j + 1) % contour.points.length];
+        var cx1, cy1, cx2, cy2, x1, y1, x2, y2;
+        if (prevPt.x !== pt.x) {
+          // Direction: horizontal
+          var prevDelta = pt.x - prevPt.x;
+          var nextDelta = nextPt.y - pt.y;
+          var prevSign = prevDelta > 0 ? 1 : -1;
+          var nextSign = nextDelta > 0 ? 1 : -1;
+          x1 = pt.x - prevSign;
+          y1 = pt.y;
+          x2 = pt.x;
+          y2 = pt.y + nextSign;
+          cx1 = pt.x - prevSign * 0.5;
+          cy1 = pt.y;
+          cx2 = pt.x;
+          cy2 = pt.y + nextSign * 0.5;
+        } else {
+          // Direction: vertical
+          var prevDelta = pt.y - prevPt.y;
+          var nextDelta = nextPt.x - pt.x;
+          var prevSign = prevDelta > 0 ? 1 : -1;
+          var nextSign = nextDelta > 0 ? 1 : -1;
+          x1 = pt.x;
+          y1 = pt.y - prevSign;
+          x2 = pt.x + nextSign;
+          y2 = pt.y;
+          cx1 = pt.x;
+          cy1 = pt.y - prevSign * 0.5;
+          cx2 = pt.x + nextSign * 0.5;
+          cy2 = pt.y;
+        }
+        if (j === 0) {
+          ctx.moveTo(x1, y1);
+        } else {
+          ctx.lineTo(x1, y1);
+        }
+        ctx.lineTo(x2, y2);
+        //ctx.bezierCurveTo(cx1, cy1, cx2, cy2, x2, y2);
+
+      } else {
+        if (j === 0) {
+          ctx.moveTo(pt.x, pt.y);
+        } else {
+          ctx.lineTo(pt.x, pt.y);
+        }
+      }
+    }
+    if (contour.closed) {
+      ctx.closePath();
+    }
+  }
+
+  ctx.stroke();
+
+  ctx.fillStyle = '#ccc';
+  var pt = getActivePoint();
+  if (pt) {
+    ctx.fillRect(pt.x - 0.2, pt.y - 0.2, 0.4, 0.4);
+  }
+
+  ctx.fillStyle = '#33d';
+  var pt = getSelectedPoint();
+  if (pt) {
+    ctx.fillRect(pt.x - 0.2, pt.y - 0.2, 0.4, 0.4);
+  }
+
+  ctx.restore();
+
+  var selectedContour = gSelectedPointIndex ? ICON_PATH.contours[gSelectedPointIndex[0]] : false;
+  var selectedPoint = getSelectedPoint();
+
+  var status = '';
+  if (gSelectedPointIndex) {
+    status += 'Contour: ' + gSelectedPointIndex[0] + '&nbsp; Point: ' + gSelectedPointIndex[1];
+    status += '&nbsp; X: ' + selectedPoint.x + '&nbsp; Y: ' + selectedPoint.y;
+
+  }
+  document.getElementById('status').innerHTML = status;
+
+  document.getElementById('selected-point-controls').style.display = gSelectedPointIndex ? 'inline' : 'none';
+  if (gSelectedPointIndex) {
+    // document.getElementById('round').checked = selectedPoint.round;
+    document.getElementById('closed').checked = selectedContour.closed;
+  }
+
+  writeIconCode();
+}
+
+function writeIconCode() {
+  var code = document.getElementById('code');
+  json = 'var ICON_PATH = ' + JSON.stringify(ICON_PATH);
+  code.value = json;
+}
+
+function findPointIndex(mx, my) {
+  var gx = Math.round(mx / GRID_SIZE);
+  var gy = Math.round(my / GRID_SIZE);
+
+  for (var j = ICON_PATH.contours.length - 1; j >= 0; j--) {
+    var contour = ICON_PATH.contours[j];
+    for (var i = contour.points.length - 1; i >= 0; i--) {
+      var pt = contour.points[i];
+      var dx = pt.x - gx;
+      var dy = pt.y - gy;
+      if (Math.abs(dx) < 2 && Math.abs(dy) < 2) {
+        return [j, i];
+      }
+    }
+  }
+  return false;
+}
+
+function getMousePosition(e) {
+  var r = canvas.getBoundingClientRect();
+  return {
+    x: e.clientX - r.left,
+    y: e.clientY - r.top
+  };
+}
+
+function onMouseMove(e) {
+  var pos = getMousePosition(e);
+  var mx = pos.x - GRID_OFFSET_X * GRID_SIZE;
+  var my = ((canvas.height / window.devicePixelRatio) - pos.y) - GRID_OFFSET_Y * GRID_SIZE;
+  console.log(mx, my, pos.y, canvas.style.height / window.devicePixelRatio);
+  if (gState == STATE_NORMAL) {
+    gActivePointIndex = findPointIndex(mx, my);
+  } else if (gState === STATE_DRAGGING) {
+    var gx = Math.round(mx / GRID_SIZE);
+    var gy = Math.round(my / GRID_SIZE);
+    var contour = ICON_PATH.contours[gSelectedPointIndex[0]];
+    var point = contour.points[gSelectedPointIndex[1]];
+    point.x = gx;
+    point.y = gy;
+  } else {
+    console.assert(false);
+  }
+
+  draw();
+}
+
+function onMouseDown(e) {
+  gSelectedPointIndex = gActivePointIndex;
+  if (gSelectedPointIndex) {
+    gState = STATE_DRAGGING;
+  }
+  draw();
+//if (e.shiftKey) {
+//gPoints.splice(gPointIndex, 1);
+//gPointIndex = -1;
+//draw();
+//} else {
+//gState = STATE_DRAGGING;
+//}
+//}
+}
+
+function onMouseUp(e) {
+  gState = STATE_NORMAL;
+  draw();
+}
+
+function onClickRound(e) {
+  var pt = getSelectedPoint();
+  pt.round = !pt.round;
+  draw();
+}
+
+function onDelete() {
+  console.assert(gSelectedPointIndex);
+  var contour = ICON_PATH.contours[gSelectedPointIndex[0]];
+  contour.points.splice(gSelectedPointIndex[1], 1);
+  gSelectedPointIndex = false;
+  draw();
+}
+
+function randInt(min, max) {
+  return Math.floor(min + Math.random() * (max - min));
+}
+
+function onAddContour() {
+  ICON_PATH.contours.push({
+    points: [{x: randInt(0, 10), y: randInt(0, 10)}, {x: randInt(0, 10), y: randInt(0, 10)}],
+    closed: false});
+  draw();
+}
+
+function onAddPoint() {
+  console.assert(gSelectedPointIndex);
+  var selectedPoint = getSelectedPoint();
+  var contour = ICON_PATH.contours[gSelectedPointIndex[0]];
+  var newPoint = {x: selectedPoint.x + randInt(-2, 2), y: selectedPoint.y + randInt(-2, 2)};
+  contour.points.splice(gSelectedPointIndex[1], 0, newPoint);
+  draw();
+}
+
+function onClickClosed() {
+  console.assert(gSelectedPointIndex);
+  var contour = ICON_PATH.contours[gSelectedPointIndex[0]];
+  contour.closed = !contour.closed;
+  draw();
+}
+
+
+canvas.addEventListener('mousemove', onMouseMove);
+canvas.addEventListener('mousedown', onMouseDown);
+canvas.addEventListener('mouseup', onMouseUp);
+// document.getElementById('round').addEventListener('change', onClickRound);
+document.getElementById('closed').addEventListener('change', onClickClosed);
+document.getElementById('delete').addEventListener('click', onDelete);
+document.getElementById('add-point').addEventListener('click', onAddPoint);
+document.getElementById('add-contour').addEventListener('click', onAddContour);
+
+draw();
+
+</script>
+</body>
+</html>
