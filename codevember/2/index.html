@@ -110,9 +110,11 @@
 var GRID_SIZE = 16;
 var GRID_OFFSET_X = 6;
 var GRID_OFFSET_Y = 6;
+var GRID_END_X = GRID_OFFSET_X + 17;
+var GRID_END_Y = GRID_OFFSET_Y + 11;
 var STATE_NORMAL = 'normal';
 var STATE_DRAGGING = 'dragging';
-var GLYPH_MAP = {"A":{"contours":[{"points":[{"x":0,"y":10},{"x":16,"y":10},{"x":16,"y":0},{"x":8,"y":0},{"x":5,"y":-3},{"x":5,"y":0},{"x":0,"y":0}],"closed":true}]},"B":{"contours":[{"points":[{"x":2,"y":0},{"x":0,"y":0},{"x":0,"y":5},{"x":14,"y":5},{"x":14,"y":0},{"x":12,"y":0}],"closed":false},{"points":[{"x":11,"y":6},{"x":11,"y":8},{"x":9,"y":10},{"x":3,"y":10},{"x":3,"y":6}],"closed":false},{"points":[{"x":3,"y":1},{"x":3,"y":-4},{"x":11,"y":-4},{"x":11,"y":1}],"closed":true}]}};
+var GLYPH_MAP = {"A":{"contours":[{"points":[{"x":0,"y":10},{"x":16,"y":10},{"x":16,"y":0},{"x":8,"y":0},{"x":5,"y":-3},{"x":5,"y":0},{"x":0,"y":0}],"closed":true}]},"B":{"contours":[{"points":[{"x":3,"y":0},{"x":0,"y":0},{"x":0,"y":5},{"x":16,"y":5},{"x":16,"y":0},{"x":13,"y":0}],"closed":false},{"points":[{"x":12,"y":6},{"x":12,"y":8},{"x":10,"y":10},{"x":4,"y":10},{"x":4,"y":6}],"closed":false},{"points":[{"x":4,"y":1},{"x":4,"y":-4},{"x":12,"y":-4},{"x":12,"y":1}],"closed":true}]}};
 var gCurrentCharacter = 'A';
 var gCurrentGlyph = GLYPH_MAP[gCurrentCharacter];
 var gState = STATE_NORMAL;
@@ -223,6 +225,10 @@ function draw() {
   ctx.lineTo(GRID_OFFSET_X * GRID_SIZE, canvas.height);
   ctx.moveTo(0, GRID_OFFSET_Y  * GRID_SIZE);
   ctx.lineTo(canvas.width, GRID_OFFSET_Y  * GRID_SIZE);
+  ctx.moveTo(GRID_END_X * GRID_SIZE, 0);
+  ctx.lineTo(GRID_END_X * GRID_SIZE, canvas.height);
+  ctx.moveTo(0, GRID_END_Y  * GRID_SIZE);
+  ctx.lineTo(canvas.width, GRID_END_Y  * GRID_SIZE);
   ctx.stroke();
 
 
