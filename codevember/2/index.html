@@ -49,6 +49,40 @@
       overflow: hidden;
       resize: none;
     }
+
+    #glyph-strip {
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+      background: white;
+    }
+
+    .glyph-thumb {
+      margin: 10px 5px;
+      border: 1px solid #ddb;
+      border-radius: 3px;
+      background: #ffc;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+      display: inline-block;
+    }
+
+    .glyph-thumb.active {
+      border-color: #00d2ea;
+    }
+
+    .glyph-thumb svg {
+      background: white;
+      border-bottom: 1px solid #ddb;
+      width: 40px;
+      height: 40px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+
+    .glyph-thumb label {
+      display: block;
+      text-align: center;
+      font-size: 9px;
+      color: #999;
+    }
   </style>
 </head>
 <body>
@@ -65,26 +99,23 @@
   </span>
 </div>
 <canvas id="c"></canvas>
+<div id="glyph-strip">
+  <div class="glyph-thumb">
+    <svg><path d="M0,0L20,30L50,60"></svg>
+    <label>A</label>
+  </div>
+</div>
 <textarea id="code"  onclick="select()"></textarea>
 <script>
 var GRID_SIZE = 16;
-var GRID_OFFSET_X = 5;
-var GRID_OFFSET_Y = 10;
+var GRID_OFFSET_X = 6;
+var GRID_OFFSET_Y = 6;
 var STATE_NORMAL = 'normal';
 var STATE_DRAGGING = 'dragging';
-var ICON_PATH = {
-  contours: [{
-    points: [
-      {x: 0, y: 10},
-      {x: 16, y: 10},
-      {x: 16, y: 0},
-      {x: 8, y: 0},
-      {x: 5, y: -3},
-      {x: 5, y: 0},
-      {x: 0, y: 0}],
-    closed: true}]
-};
+var GLYPH_MAP = {"A":{"contours":[{"points":[{"x":0,"y":10},{"x":16,"y":10},{"x":16,"y":0},{"x":8,"y":0},{"x":5,"y":-3},{"x":5,"y":0},{"x":0,"y":0}],"closed":true}]},"B":{"contours":[{"points":[{"x":0,"y":0},{"x":5,"y":5}],"closed":false}]}};
 
+var gCurrentCharacter = 'A';
+var gCurrentGlyph = GLYPH_MAP[gCurrentCharacter];
 var gState = STATE_NORMAL;
 var gActivePointIndex = null;
 var gSelectedPointIndex = null;
@@ -103,7 +134,7 @@ ctx.scale(ratio, ratio);
 
 function getActivePoint() {
   if (gActivePointIndex) {
-    var contour = ICON_PATH.contours[gActivePointIndex[0]];
+    var contour = gCurrentGlyph.contours[gActivePointIndex[0]];
     var pt = contour.points[gActivePointIndex[1]];
     return pt;
   } else {
@@ -113,11 +144,59 @@ function getActivePoint() {
 
 function getSelectedPoint() {
   if (gSelectedPointIndex) {
-    var contour = ICON_PATH.contours[gSelectedPointIndex[0]];
+    var contour = gCurrentGlyph.contours[gSelectedPointIndex[0]];
     var pt = contour.points[gSelectedPointIndex[1]];
     return pt;
   } else {
     return false;
+  }
+}
+
+function toPathData(glyph, scale) {
+  var d = '';
+  for (var i = 0; i < glyph.contours.length; i++) {
+    var contour = glyph.contours[i];
+    for (var j = 0; j < contour.points.length; j++) {
+      var pt = contour.points[j];
+      if (j === 0) {
+        d += 'M';
+      } else {
+        d += 'L';
+      }
+      d += pt.x * scale;
+      d += ' ';
+      d += (10 - pt.y) * scale;
+    }
+    if (contour.closed) {
+      d += 'Z';
+    }
+  }
+  return d;
+}
+
+function drawGlyphStrip() {
+  var container = document.getElementById('glyph-strip');
+  container.innerHTML = '';
+  var characters = Object.keys(GLYPH_MAP);
+  for (var i = 0; i < characters.length; i++) {
+    var c = characters[i];
+    var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    var d = toPathData(GLYPH_MAP[c], 2);
+    svg.innerHTML = '<path transform="translate(5, 5)" fill="none" stroke-width="2" stroke="#00d2ea" d="' + d + '"/>';
+
+    var glyphThumb = document.createElement('div');
+    glyphThumb.setAttribute('data-character', c);
+    glyphThumb.classList.add('glyph-thumb')
+    if (gCurrentCharacter === c) {
+        glyphThumb.classList.add('active');
+    }
+    var label = document.createElement('label');
+    label.innerHTML = c;
+    glyphThumb.appendChild(svg);
+    glyphThumb.appendChild(label);
+    container.appendChild(glyphThumb);
+
+    glyphThumb.addEventListener('click', onSelectGlyph);
   }
 }
 
@@ -155,8 +234,8 @@ function draw() {
   ctx.translate(0.5, 0.5);
   ctx.translate(GRID_OFFSET_X, GRID_OFFSET_Y);
   ctx.beginPath();
-  for (var i = 0; i < ICON_PATH.contours.length; i++) {
-    var contour = ICON_PATH.contours[i];
+  for (var i = 0; i < gCurrentGlyph.contours.length; i++) {
+    var contour = gCurrentGlyph.contours[i];
     for (var j = 0; j < contour.points.length; j++) {
       var pt = contour.points[j];
       if (pt.round) {
@@ -231,7 +310,7 @@ function draw() {
 
   ctx.restore();
 
-  var selectedContour = gSelectedPointIndex ? ICON_PATH.contours[gSelectedPointIndex[0]] : false;
+  var selectedContour = gSelectedPointIndex ? gCurrentGlyph.contours[gSelectedPointIndex[0]] : false;
   var selectedPoint = getSelectedPoint();
 
   var status = '';
@@ -248,12 +327,13 @@ function draw() {
     document.getElementById('closed').checked = selectedContour.closed;
   }
 
-  writeIconCode();
+drawGlyphStrip();
+  writeGlyphMap();
 }
 
-function writeIconCode() {
+function writeGlyphMap() {
   var code = document.getElementById('code');
-  json = 'var ICON_PATH = ' + JSON.stringify(ICON_PATH);
+  json = 'var GLYPH_MAP = ' + JSON.stringify(GLYPH_MAP) + ';';
   code.value = json;
 }
 
@@ -261,8 +341,8 @@ function findPointIndex(mx, my) {
   var gx = Math.round(mx / GRID_SIZE);
   var gy = Math.round(my / GRID_SIZE);
 
-  for (var j = ICON_PATH.contours.length - 1; j >= 0; j--) {
-    var contour = ICON_PATH.contours[j];
+  for (var j = gCurrentGlyph.contours.length - 1; j >= 0; j--) {
+    var contour = gCurrentGlyph.contours[j];
     for (var i = contour.points.length - 1; i >= 0; i--) {
       var pt = contour.points[i];
       var dx = pt.x - gx;
@@ -293,7 +373,7 @@ function onMouseMove(e) {
   } else if (gState === STATE_DRAGGING) {
     var gx = Math.round(mx / GRID_SIZE);
     var gy = Math.round(my / GRID_SIZE);
-    var contour = ICON_PATH.contours[gSelectedPointIndex[0]];
+    var contour = gCurrentGlyph.contours[gSelectedPointIndex[0]];
     var point = contour.points[gSelectedPointIndex[1]];
     point.x = gx;
     point.y = gy;
@@ -333,7 +413,7 @@ function onClickRound(e) {
 
 function onDelete() {
   console.assert(gSelectedPointIndex);
-  var contour = ICON_PATH.contours[gSelectedPointIndex[0]];
+  var contour = gCurrentGlyph.contours[gSelectedPointIndex[0]];
   contour.points.splice(gSelectedPointIndex[1], 1);
   gSelectedPointIndex = false;
   draw();
@@ -344,7 +424,7 @@ function randInt(min, max) {
 }
 
 function onAddContour() {
-  ICON_PATH.contours.push({
+  gCurrentGlyph.contours.push({
     points: [{x: randInt(0, 10), y: randInt(0, 10)}, {x: randInt(0, 10), y: randInt(0, 10)}],
     closed: false});
   draw();
@@ -353,7 +433,7 @@ function onAddContour() {
 function onAddPoint() {
   console.assert(gSelectedPointIndex);
   var selectedPoint = getSelectedPoint();
-  var contour = ICON_PATH.contours[gSelectedPointIndex[0]];
+  var contour = gCurrentGlyph.contours[gSelectedPointIndex[0]];
   var newPoint = {x: selectedPoint.x + randInt(-2, 2), y: selectedPoint.y + randInt(-2, 2)};
   contour.points.splice(gSelectedPointIndex[1], 0, newPoint);
   draw();
@@ -361,8 +441,18 @@ function onAddPoint() {
 
 function onClickClosed() {
   console.assert(gSelectedPointIndex);
-  var contour = ICON_PATH.contours[gSelectedPointIndex[0]];
+  var contour = gCurrentGlyph.contours[gSelectedPointIndex[0]];
   contour.closed = !contour.closed;
+  draw();
+}
+
+function onSelectGlyph(e) {
+  var target = e.target;
+  while (!target.getAttribute('data-character')) {
+    target = target.parentNode;
+  }
+  gCurrentCharacter = target.getAttribute('data-character');
+  gCurrentGlyph= GLYPH_MAP[gCurrentCharacter];
   draw();
 }
 
