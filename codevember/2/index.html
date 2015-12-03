@@ -112,8 +112,7 @@ var GRID_OFFSET_X = 6;
 var GRID_OFFSET_Y = 6;
 var STATE_NORMAL = 'normal';
 var STATE_DRAGGING = 'dragging';
-var GLYPH_MAP = {"A":{"contours":[{"points":[{"x":0,"y":10},{"x":16,"y":10},{"x":16,"y":0},{"x":8,"y":0},{"x":5,"y":-3},{"x":5,"y":0},{"x":0,"y":0}],"closed":true}]},"B":{"contours":[{"points":[{"x":0,"y":0},{"x":5,"y":5}],"closed":false}]}};
-
+var GLYPH_MAP = {"A":{"contours":[{"points":[{"x":0,"y":10},{"x":16,"y":10},{"x":16,"y":0},{"x":8,"y":0},{"x":5,"y":-3},{"x":5,"y":0},{"x":0,"y":0}],"closed":true}]},"B":{"contours":[{"points":[{"x":2,"y":0},{"x":0,"y":0},{"x":0,"y":5},{"x":14,"y":5},{"x":14,"y":0},{"x":12,"y":0}],"closed":false},{"points":[{"x":11,"y":6},{"x":11,"y":8},{"x":9,"y":10},{"x":3,"y":10},{"x":3,"y":6}],"closed":false},{"points":[{"x":3,"y":1},{"x":3,"y":-4},{"x":11,"y":-4},{"x":11,"y":1}],"closed":true}]}};
 var gCurrentCharacter = 'A';
 var gCurrentGlyph = GLYPH_MAP[gCurrentCharacter];
 var gState = STATE_NORMAL;
@@ -367,7 +366,6 @@ function onMouseMove(e) {
   var pos = getMousePosition(e);
   var mx = pos.x - GRID_OFFSET_X * GRID_SIZE;
   var my = ((canvas.height / window.devicePixelRatio) - pos.y) - GRID_OFFSET_Y * GRID_SIZE;
-  console.log(mx, my, pos.y, canvas.style.height / window.devicePixelRatio);
   if (gState == STATE_NORMAL) {
     gActivePointIndex = findPointIndex(mx, my);
   } else if (gState === STATE_DRAGGING) {
@@ -390,14 +388,6 @@ function onMouseDown(e) {
     gState = STATE_DRAGGING;
   }
   draw();
-//if (e.shiftKey) {
-//gPoints.splice(gPointIndex, 1);
-//gPointIndex = -1;
-//draw();
-//} else {
-//gState = STATE_DRAGGING;
-//}
-//}
 }
 
 function onMouseUp(e) {
@@ -435,7 +425,8 @@ function onAddPoint() {
   var selectedPoint = getSelectedPoint();
   var contour = gCurrentGlyph.contours[gSelectedPointIndex[0]];
   var newPoint = {x: selectedPoint.x + randInt(-2, 2), y: selectedPoint.y + randInt(-2, 2)};
-  contour.points.splice(gSelectedPointIndex[1], 0, newPoint);
+  contour.points.splice(gSelectedPointIndex[1] + 1, 0, newPoint);
+  gSelectedPointIndex[1]++;
   draw();
 }
 
@@ -452,7 +443,9 @@ function onSelectGlyph(e) {
     target = target.parentNode;
   }
   gCurrentCharacter = target.getAttribute('data-character');
-  gCurrentGlyph= GLYPH_MAP[gCurrentCharacter];
+  gCurrentGlyph = GLYPH_MAP[gCurrentCharacter];
+  gSelectedPointIndex = null;
+  gState = STATE_NORMAL;
   draw();
 }
 
