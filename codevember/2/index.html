@@ -100,22 +100,23 @@
     //console.assert(endPtsOfContours.length - 1 === numContours);
     var nPoints = endPtsOfContours[endPtsOfContours.length - 1] + 1;
     var points = [];
-    while (points.length < nPoints) {
+    points.length = nPoints;
+    for (var i = 0; i < nPoints; i++) {
       var flags = p.byte();
-      var repeat = 1;
+      points[i] = {flags: flags};
       if (flags & 0x08) {
-        repeat = p.byte();
-        console.log('Repeat', repeat);
-      }
-      while (repeat > 0) {
-        points.push({flags: flags});
-        repeat--;
+        var repeat = p.byte();
+        for (var j = 0; j < repeat; j++) {
+          i++;
+          points[i] = {flags: flags};
+          console.assert(i <= nPoints);
+        }
       }
     }
     console.assert(nPoints === points.length);
-    var x = 0;
-    var y = 0;
+
     // Parse X coordinates
+    var x = 0;
     for (var i = 0; i < nPoints; i++) {
       var xFlags = points[i].flags;
       if (xFlags & 0x02) {
@@ -133,6 +134,8 @@
       points[i].x = x;
     }
 
+    // Parse Y coordinates
+    var y = 0;
     for (var i = 0; i < nPoints; i++) {
       var yFlags = points[i].flags;
       if (yFlags & 0x04) {
@@ -154,40 +157,69 @@
     var startIndex = 0;
     for (var i = 0; i < numContours; i++) {
       var endIndex = endPtsOfContours[i];
-      var points = glyph.points.slice(startIndex, endIndex + 1);
-      if (points[0].flags & 1) {
+      var startPt = points[startIndex];
+      var endPt = points[endIndex];
+      var curvePt = startPt;
+      var hasCurvePt = true;
+      // Remember if first point is synthesized.
+      var realFirstPt = false;
+      //var points = glyph.points.slice(startIndex, endIndex + 1);
+      if (startPt.flags & 1) {
         // Start point is on-curve, use it at the end as well.
-        points.push(points[0]);
-      } else if (points[points.length - 1].flags & 1) {
-        // Start point is off-curve, add one from the end.
-        points.unshift(points[points.length - 1]);
+        realFirstPt = true;
+        hasCurvePt = false;
+      } else if (endPt.flags & 1) {
+        // If start point is off-curve and end point is on-curve, start at end point.
+        startPt = endPt;
       } else {
-        // Start and end are off-curve, create implicit one.
-        var pt = {
+        // If both start and end points are off-curve, start at their middle.
+        startPt = {
           flags: 1,
-          x: (points[0].x + points[points.length - 1].x) / 2,
-          y: (points[0].y + points[points.length - 1].y) / 2
+          x: (startPt.x + endPt.x) / 2,
+          y: (startPt.y + endPt.y) / 2
         };
-        points.unshift(pt);
-        points.push(pt);
       }
-      moveTo(points[0].x, points[0].y);
-      for (var j = 0; j < points.length; j++) {
+
+      moveTo(startPt.x, startPt.y);
+      for (var j = realFirstPt ? startIndex + 1 : startIndex; j <= endIndex; j++) {
         var pt = points[j];
-        if (pt.flags & 1) {
-          lineTo(points[j].x, points[j].y);
-        } else if (points[j + 1].flags & 1) {
-          quadTo(points[j].x, points[j].y, points[j + 1].x, points[j + 1].y);
-          j++;
+        var prevPt = j === startIndex ? startPt : points[j - 1];
+        if (prevPt.flags & 1) {
+          if (pt.flags & 1) {
+            // This is a straight line.
+            lineTo(points[j].x, points[j].y);
+          } else {
+            curvePt = pt;
+            hasCurvePt = true;
+          }
         } else {
-          quadTo(
-            points[j].x, points[j].y,
-            (points[j].x + points[j + 1].x) / 2,
-            (points[j].y + points[j + 1].y) / 2);
+          if (pt.flags & 1) {
+           // Previous point off-curve, this point on-curve.
+            quadTo(curvePt.x, curvePt.y, pt.x, pt.y);
+            hasCurvePt = false;
+          } else {
+            var midPt = {x: (prevPt.x + pt.x) / 2, y: (prevPt.y + pt.y) / 2};
+            quadTo(prevPt.x, prevPt.y, midPt.x, midPt.y);
+            curvePt = pt;
+            hasCurvePt = true;
+          }
         }
       }
+
+      if (startPt.x !== endPt.x || startPt.y !== endPt.y) {
+        // Connect the last and first points
+        if (hasCurvePt) {
+          quadTo(curvePt.x, curvePt.y, startPt.x, startPt.y);
+        } else {
+          lineTo(startPt.x, startPt.y);
+        }
+      }
+
       startIndex = endIndex + 1;
     }
+
+    //glyph.commands.push({type: 'Z'});
+
     return points;
   }
 
@@ -251,13 +283,10 @@
   p.reset(offsets.glyf);
   for (var i = 0; i < numGlyphs; i++) {
     var glyph = glyphs[i];
-    if (i === 220) {
-      debugger;
-    }
     parseGlyph(p, offsets.glyf, glyph);
   }
 
-  var gIndex = 220;
+  var gIndex = 22;
   var gCounter = 0;
 
   ctx.fillStyle = 'rgb(10, 20, 30)';
@@ -265,8 +294,6 @@
 
   function animate() {
     ctx.fillStyle = 'rgba(10, 20, 30, 0.2)';
-    ctx.lineWidth = 10;
-    ctx.strokeStyle = '#eee';
 
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.save();
@@ -276,7 +303,11 @@
 
     ctx.beginPath();
     var glyph = glyphs[gIndex];
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = '#eee';
     ctx.strokeRect(glyph.xMin, glyph.yMin, glyph.xMax - glyph.xMin, glyph.yMax - glyph.yMin);
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = '#eee';
     for (var j = 0; j < glyph.commands.length; j++) {
       var cmd = glyph.commands[j];
       if (cmd.type === 'M') {
@@ -289,10 +320,9 @@
     }
     ctx.stroke();
     ctx.restore();
-    //gCounter++;
-    if (gCounter > 20) {
+    gCounter++;
+    if (gCounter > 5) {
       gIndex++;
-      console.log(gIndex);
       gCounter = 0;
     }
     if (gIndex >= numGlyphs) {
