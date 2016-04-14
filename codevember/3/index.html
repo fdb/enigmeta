@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image browser</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      font: 12px sans-serif;
+      background: rgb(10, 20, 30);
+      color: #ddd;
+      z-index: 999;
+    }
+
+    header {
+      padding: 10px 20px;
+      background: rgb(20, 30, 40);
+      width: 100%;
+      position: absolute;
+      z-index: 999;
+    }
+
+    header h1 {
+      font-size: 18px;
+      line-height: 18px;
+      margin: 0;
+    }
+
+    header h1 small {
+      line-height: 18px;
+      vertical-align: 1px;
+      opacity: 0.5;
+      font-size: 14px;
+
+    }
+
+    #address-bar {
+      display: -webkit-flex;
+      display: flex;
+    }
+
+    #address-bar form {
+      flex: 1;
+    }
+
+    #address-bar input[type="url"] {
+      padding: 5px 10px;
+      width: 80%;
+      font: 14px sans-serif;
+      border-radius: 5px;
+      border: 1px solid black;
+      line-height: 18px;
+      color: #444;
+      background: rgba(255, 255, 255, 0.2);
+      color: #ddd;
+      outline: none;
+    }
+
+    #address-bar input[type="url"]:focus {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    #address-bar input[type="submit"] {
+      border: none;
+      line-height: 18px;
+      background: transparent;
+      color: #aaa;
+      font: 14px sans-serif;
+      position: relative;
+      left: -25px;
+      outline: none;
+    }
+
+    #address-bar button {
+      border: none;
+      line-height: 18px;
+      background: transparent;
+      color: #aaa;
+      font: 14px sans-serif;
+      outline: none;
+      border: 1px solid transparent;
+      border-radius: 3px;
+    }
+
+    #address-bar form {
+      display: inline-block;
+    }
+
+    #address-bar button:hover {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    a {
+      color: #ddd;
+    }
+
+    #page img {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Codevember Day 3 <small>Image Browser — Web browser that only shows images of a page.</small></h1>
+  <p></p>
+  <div id="address-bar">
+    <button id="back">←</button>
+    <button id="forward">→︎</button>
+    <form id="address-bar-form" novalidate>
+      <input type="url" id="url" onclick="select()"></input><input type="submit" value="➡">
+    </form>
+  </div>
+</header>
+<div id="page"></div>
+
+<script>
+
+var gBackStack = [];
+var gForwardStack = [];
+var gUrl;
+
+function request(url, callback) {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = function() {
+    if (req.readyState === 4 && req.status === 200) {
+      callback(null, req.responseText);
+    } else {
+      //callback('Error ' + req.status);
+    }
+  };
+  req.open('GET', url, true);
+  req.send();
+}
+
+function fixUrl(url, baseUrl) {
+  if (url[0] === '/') {
+    url = url.substring(1);
+  }
+  if (url.indexOf('http://') === 0 || url.indexOf('https://') === 0) {
+    return url;
+  } else if (url.indexOf('//') === 0) {
+    return 'http:' + url
+  } else if (url.indexOf('data:') === 0) {
+    return url;
+  } else {
+    return baseUrl + url;
+  }
+}
+
+function findLink(el, baseUrl) {
+  if (el.nodeName === 'A') {
+    var href = el.getAttribute('href');
+    return fixUrl(href, baseUrl);
+  }
+  if (el.parentNode) {
+    return findLink(el.parentNode, baseUrl);
+  } else {
+    return baseUrl;
+  }
+}
+
+function onClickImage(e) {
+  e.preventDefault();
+  goToPage(e.target.parentNode.href);
+  return false;
+}
+
+function onSubmit(e) {
+  e.preventDefault();
+  var url = document.getElementById('url').value;
+  url = fixUrl(url, 'http://');
+  goToPage(url);
+}
+
+function goToPage(url) {
+  if (url !== gUrl) {
+      gBackStack.push(gUrl);
+      gForwardStack = [];
+  }
+  navigateToPage(url);
+}
+
+function goBack() {
+  if (gBackStack.length === 0) return;
+  gForwardStack.push(gUrl);
+  navigateToPage(gBackStack.pop());
+}
+
+function goForward() {
+  if (gForwardStack.length === 0) return;
+  gBackStack.push(gUrl);
+  navigateToPage(gForwardStack.pop());
+}
+
+function rand(min, max) {
+  return min + Math.random() * (max - min);
+}
+
+function navigateToPage(url) {
+  gUrl = url;
+  document.getElementById('url').value = url;
+  document.getElementById('page').innerHTML = '';
+  var top = document.querySelector('header').getBoundingClientRect().height;
+  request('http://corset.herokuapp.com/?url=' + encodeURI(url), function(err, html) {
+    if (err) {
+      console.error(err);
+    }
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(html, 'text/html');
+    var imgs = doc.getElementsByTagName('img');
+    for (var i = 0; i < imgs.length; i++) {
+      var img = imgs[i];
+      var imgUrl = img.getAttribute('src');
+      img.setAttribute('src', fixUrl(imgUrl, url));
+      var linkUrl = findLink(img, url);
+      var a = document.createElement('a');
+      a.setAttribute('href', linkUrl);
+      a.style.position = 'absolute';
+      a.style.left = rand(0, window.innerWidth - img.width) + 'px';
+      a.style.top = rand(top, window.innerHeight - img.height) + 'px';
+      a.addEventListener('click', onClickImage);
+      a.appendChild(img);
+      document.getElementById('page').appendChild(a);
+    }
+  });
+}
+
+
+var url = 'http://dailymail.co.uk/';
+navigateToPage(url);
+document.getElementById('address-bar-form').addEventListener('submit', onSubmit);
+document.getElementById('back').addEventListener('click', goBack);
+document.getElementById('forward').addEventListener('click', goForward);
+
+
+</script>
+
+</body>
+</html>
