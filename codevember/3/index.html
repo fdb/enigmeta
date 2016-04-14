@@ -45,6 +45,7 @@
     #address-bar {
       display: -webkit-flex;
       display: flex;
+      margin-bottom: 5px;
     }
 
     #address-bar form {
@@ -103,8 +104,20 @@
     }
 
     #page img {
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
+      /*-webkit-filter: grayscale(100%);*/
+      /*filter: grayscale(100%);*/
+    }
+
+    #favorites a {
+      display: inline-block;
+      padding: 5px 10px;
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-radius: 3px;
+    }
+
+    #favorites a:hover {
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
   </style>
 </head>
@@ -118,6 +131,11 @@
     <form id="address-bar-form" novalidate>
       <input type="url" id="url" onclick="select()"></input><input type="submit" value="➡">
     </form>
+  </div>
+  <div id="favorites">
+    <a href="http://www.dailymail.co.uk/">Daily Mail</a>
+    <a href="http://espn.go.com/">ESPN</a>
+    <a href="http://imgur.com/">Imgur</a>
   </div>
 </header>
 <div id="page"></div>
@@ -142,9 +160,6 @@ function request(url, callback) {
 }
 
 function fixUrl(url, baseUrl) {
-  if (url[0] === '/') {
-    url = url.substring(1);
-  }
   if (url.indexOf('http://') === 0 || url.indexOf('https://') === 0) {
     return url;
   } else if (url.indexOf('//') === 0) {
@@ -152,6 +167,9 @@ function fixUrl(url, baseUrl) {
   } else if (url.indexOf('data:') === 0) {
     return url;
   } else {
+    if (url[0] === '/') {
+      url = url.substring(1);
+    }
     return baseUrl + url;
   }
 }
@@ -201,6 +219,12 @@ function goForward() {
   navigateToPage(gForwardStack.pop());
 }
 
+function goFavorite(e) {
+  e.preventDefault();
+  goToPage(e.target.href);
+  return false;
+}
+
 function rand(min, max) {
   return min + Math.random() * (max - min);
 }
@@ -240,8 +264,10 @@ navigateToPage(url);
 document.getElementById('address-bar-form').addEventListener('submit', onSubmit);
 document.getElementById('back').addEventListener('click', goBack);
 document.getElementById('forward').addEventListener('click', goForward);
-
-
+var favorites = document.querySelectorAll('#favorites a');
+for (var i = 0; i < favorites.length; i++) {
+  favorites[i].addEventListener('click', goFavorite);
+}
 </script>
 
 </body>
