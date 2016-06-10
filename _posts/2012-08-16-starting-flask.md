@@ -33,7 +33,7 @@ Each time you work on this project, you need to *activate* the virtual environme
     cd helloflask
     source bin/activate
 
-You can check that your environment is active because virtualenv puts the name of the app before the 
+You can check that your environment is active because virtualenv puts the name of the app before the
 
 Any packages you install now using pip or easy_install get installed into helloflask/lib/python2.7/site-packages.
 
@@ -52,11 +52,11 @@ Create a file helloflask.py that contains the following application:
 
     from flask import Flask
     app = Flask(__name__)
-    
+
     @app.route("/")
     def hello():
         return "Hello World!"
-    
+
     if __name__ == "__main__":
         app.run()
 
@@ -120,6 +120,7 @@ An initial .gitignore file should look like this:
     bin
     lib
     include
+    *.py[cod]
 
     # Mac OS X custom attribute files
     .DS_Store
@@ -139,7 +140,7 @@ In this example we'll use [GitHub](http://github.com) to store our project. This
 
 Create a GitHub account if you don't have one yet. Then [create a new project](https://github.com/new). Call it "helloflask". Then, to push to this application, setup GitHub as the origin:
 
-    git remote add origin git@github.com:USERNAME/helloflask.git
+    git remote add origin https://github.com/USERNAME/helloflask.git
     git push -u origin master
 
 This is all we need to do on the client side. Let's look at the server for now.
@@ -171,7 +172,7 @@ To set up this directory structure:
     mkdir logs
 
     # Clone the project
-    git clone git@github.com:USERNAME/helloflask.git
+    git clone https://github.com/USERNAME/helloflask.git
 
     # Initialize virtualenv and install dependencies
     virtualenv helloflask
@@ -229,8 +230,7 @@ Here's an example Fabric script (change the relevant variables at the top of the
     def deploy():
         with cd(PROJECT_DIR):
             run('git pull')
-            run('bin source/activate')
-            run('pip install -r requirements.txt')
+            run('source bin/activate; pip install -r requirements.txt')
             run('touch %s' % WSGI_SCRIPT)
 
 
@@ -261,5 +261,5 @@ Now that you have a fully working install, you can keep updating the application
 * If you're happy with the results you can commit the changes and push them to GitHub.
 * Run `fab deploy` to update the application on the server.
 
-In a next post, I'll discuss creating REST API's using Flask.
-
+<!-- In a next post, I'll discuss creating REST API's using Flask. -->
+<!-- I'll get to it eventually I promise :-)  -->
