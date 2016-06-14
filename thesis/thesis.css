@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px sans-serif;
+  width: 800px;
+  margin: 0 auto;
+  background: #f7f7f7;
+  padding: 0;
+}
+
+header {
+ border-bottom: 1px solid #ddd;
+ padding: 10px 0;
+ margin-bottom: 10px;
+}
+
+h1 {
+  display: inline-block;
+  width: 60%;
+  font-weight: 200;
+  color: #444;
+  margin: 0;
+}
+
+h2 {
+  display: inline-block;
+  text-align: right;
+  width: 39%;
+  font-weight: 200;
+  color: #666;
+  margin: 0;
+}
+
+.controls {
+  margin: 40px 0;
+}
+
+.styles {
+  display: flex;
+  margin-top: 10px;
+}
+
+.style {
+  color: #888;
+  text-transform: uppercase;
+  font-size: 80%;
+  flex: 1;
+  width: 50%;
+}
+
+.style.right {
+  flex: 1;
+  text-align: right;
+}
+
+/* https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+input[type=range] {
+  width: 100%;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: #eee;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 0.5px solid #666;
+  height: 18px;
+  width: 18px;
+  border-radius: 16px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -6px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  background: radial-gradient(#fff, #ddd);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  transition: background 100ms;
+}
+
+input[type=range]:active::-webkit-slider-thumb {
+  background: radial-gradient(#ddd, #ccc);
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+#loader {
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 72px;
+  text-align: center;
+  padding-top: 100px;
+  transition: opacity 500ms;
+  color: #666;
+  opacity: 1;
+  pointer-events: none;
+}
+
+iframe {
+  border: 1px solid #ddd;
+  width: 800px;
+  height: 600px;
+}
+
+footer {
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.4;
+  margin: 20px 0;
+}
+
