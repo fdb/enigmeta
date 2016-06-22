@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Curriculum Vitae van Frederik De Bleser
 ---
 <h1 class="print-only">Frederik De Bleser</h1>

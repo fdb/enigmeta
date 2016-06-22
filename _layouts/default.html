@@ -1,68 +1,38 @@
 ---
-description: Personal weblog of Frederik De Bleser
+layout: base
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>{{ page.title }} | enigmeta</title>
-    <meta name="description" content="{{ page.description }}">
-    <meta name="author" content="Frederik De Bleser">
+<header class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Frederik De Bleser</a> </div>
+    <nav class="collapse navbar-collapse" id="navbar-links">
+      <ul class="nav navbar-nav">
+        <li><a href="/#about">Home</a></li>
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/#exhibitions">Exhibitions</a></li>
+        <li><a href="/#blog">Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-    <link rel="stylesheet" href="/media/css/syntax.css">
-    <link rel="stylesheet" href="/media/css/screen.css">
-    <link rel="stylesheet" href="/media/css/print.css" media="print">
+<main>
+{{ content }}
+</main>
 
-    <link rel="alternate" href="/atom.xml" title="Enigmeta" type="application/atom+xml">
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-22399433-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-</head>
-<body>
-
-<nav>
-  <ul>
-    <li class="logo"><a href="/">enigmeta</a></li>
-    <li><a href="/">Home</a></li>
-    <li><a href="/about/">About</a></li>
-    <li><a href="/cv/">CV</a> (<a href="/cv/">EN</a> | <a href="/cv/nederlands.html">NL</a>)</li>
-  </ul>
-</nav>
-
-{% if page.bigshot %}
-<div class="bigshot" style="background-image: url('{{ page.bigshot }}')"></div>
-{% endif %}
-
-
-<div class="wrap">
-
-  <article>
-    <header>
-      <h1 class="entry-title">{{ page.title }}</h1>
-      <p class="meta"></p>
-    </header>
-
-    <div class="entry-content">
-      {{ content }}
-    </div>
-  </article>
-
-
-
-</div> <!-- .wrap -->
-
-
-<footer>
-  <p><a href="http://www.enigmeta.com/">enigmeta.com</a> is the personal blog of <a href="/about/">Frederik De Bleser</a>. Contact me by <a href="mailto:frederik@debleser.be">Email</a>, <a href="https://twitter.com/enigmeta/">Twitter</a> or <a href="https://github.com/fdb">GitHub</a>. <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Some Rights Reserved</a>.</p>
-</footer>
-
+<div id="copyright">
+  <div class="container-fluid">
+    <p class="text-center">
+      <a href="http://www.enigmeta.com/">enigmeta.com</a> is the personal blog of <a href="/about/">Frederik De Bleser</a>. Contact me by <a href="mailto:frederik@debleser.be">Email</a>, <a href="https://twitter.com/enigmeta/">Twitter</a> or <a href="https://github.com/fdb">GitHub</a>. <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Some Rights Reserved</a>.
+    </p>
+  </div>
+</div>
 </body>
 </html>

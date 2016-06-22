@@ -1,0 +1,139 @@
+---
+id: home
+title: Frederik De Bleser
+layout: base
+---
+<header class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Frederik De Bleser</a> </div>
+    <nav class="collapse navbar-collapse" id="navbar-links">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#about">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#exhibitions">Exhibitions</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-xs-8">
+      <p><strong>Hi, I'm Frederik.</strong> I'm a PhD researcher in interactive media at <a href="https://www.emrg.be/" target="_blank">EMRG</a>.</p>
+      <br>
+      <p class="small">Read my curriculum vitae in <a href="/cv/">English</a> or <a href="/cv/nederlands/">Dutch</a>.</p>
+    </div>
+    <div class="col-xs-4 ">
+      <img src="/media/home/mugshot.jpg" alt="" class="img img-responsive mugshot pull-right" />
+    </div>
+  </div>
+</div>
+
+<div id="projects" class="container-fluid">
+  <h2>Projects</h2>
+  <div class="row">
+    <div class="col-md-4 project">
+      <a href="/projects/nodebox/">
+        <img src="/media/home/nodebox-live-screenshot.png" alt="NodeBox Live Screenshot" class="img img-responsive">
+        <p>NodeBox</p>
+      </a>
+    </div>
+    <div class="col-md-4 project">
+      <a href="/projects/opentype-js/">
+        <img src="/media/home/opentype-js-screenshot.png" alt="OpenType.js Screenshot" class="img img-responsive">
+        <p>OpenType.js</p>
+      </a>
+    </div>
+    <div class="col-md-4 project">
+      <a href="/projects/logic-layout/">
+        <img src="/media/home/logic-layout-screenshot.png" alt="Logic Layout Screenshot" class="img img-responsive">
+        <p>Logic Layout</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div id="exhibitions" class="container-fluid">
+  <h2>Exhibitions</h2>
+  <div class="row">
+    <div class="col-md-4 exhibition">
+      <img src="/media/home/wandering-ants.jpg" alt="" class="img img-responsive exhibition" />
+      <p>Wandering Ants — <time>2016</time></p>
+    </div>
+    <div class="col-md-4 exhibition">
+      <img src="/media/home/frequensea.jpg" alt="" class="img img-responsive exhibition" />
+      <p>Frequensea — <time>2015</time></p>
+    </div>
+    <div class="col-md-4 exhibition">
+      <img src="/media/home/arialwtf.jpg" alt="" class="img img-responsive exhibition" />
+      <p>Arial.wtf — <time>2013</time></p>
+    </div>
+    <div class="col-md-4 exhibition">
+      <img src="/media/home/metashape.jpg" alt="" class="img img-responsive exhibition" />
+      <p>Metashape — <time>2013</time></p>
+    </div>
+    <div class="col-md-4 exhibition">
+      <img src="/media/home/traveling-letters.jpg" alt="" class="img img-responsive exhibition" />
+      <p>Traveling Letters — <time>2013</time></p>
+    </div>
+    <div class="col-md-4 exhibition">
+      <img src="/media/home/word-maze.jpg" alt="" class="img img-responsive exhibition" />
+      <p>Word Maze — <time>2011</time></p>
+    </div>
+  </div>
+</div>
+
+<div id="blog" class="container-fluid">
+  <h2>Blog Posts</h2>
+  <div class="row">
+    {% for post in site.posts %}
+    <div class="col-md-4 post">
+      <a href="{{ post.url }}">
+        <img src="{{post.bigshot}}" title="{{ post.title }}" class="img-responsive">
+        <p>{{ post.title }} — <time>{{ post.date | date_to_string }}</time></p>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div id="contact" class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Contact Me</h2>
+      <p id="big-email"><a href="mailto:frederik@debleser.be">frederik@debleser.be</a></p>
+    </div>
+    <div class="col-md-6" id="social">
+      <h2>Around the web</h2>
+      <a href="https://twitter.com/enigmeta"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/fdb"><i class="fa fa-github"></i></a>
+      <a href="https://www.youtube.com/channel/UCSkvnnKIDaA9vF-sTJ1KWkw"><i class="fa fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+</main>
+
+<div id="copyright">
+  <div class="container-fluid">
+    <p class="text-center">
+      <a href="http://www.enigmeta.com/">enigmeta.com</a> is the personal blog of <a href="/about/">Frederik De Bleser</a>. Contact me by <a href="mailto:frederik@debleser.be">Email</a>, <a href="https://twitter.com/enigmeta/">Twitter</a> or <a href="https://github.com/fdb">GitHub</a>. <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Some Rights Reserved</a>.
+    </p>
+  </div>
+</div>
+<script>
+$('body').scrollspy({ target: '#navbar-links', offset: 50 });
+</script>
+</body>
+</html>
+
