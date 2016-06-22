@@ -5,7 +5,7 @@ bigshot: /media/about/bigshot.jpg
 ---
 <img src="/media/img/frederik-de-bleser.jpg" alt="Frederik De Bleser" class="float-right" style="padding-bottom: 20px; position: relative; top: -44px;" />
 
-I'm Frederik De Bleser. I work as a PhD student at <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerpen</a>. I develop <a href="http://nodebox.net/">NodeBox</a>, an application for creating generative design.
+I'm Frederik De Bleser. I'm a PhD researcher at <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerpen</a>. I develop <a href="http://nodebox.net/">NodeBox</a>, an application for creating generative design.
 
 You can read my Curriculum Vitae in <a href="/cv/">English</a> or <a href="/cv/nederlands.html">Dutch</a>.
 
