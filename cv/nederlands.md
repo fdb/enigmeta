@@ -14,12 +14,13 @@ Burgerlijke staat: wettelijk samenwonend, één dochter en één zoon
 </address>
 
 ## Opleiding
+* Doctoraat in de kunsten (2016)
 * Master grafische vormgeving, grootste onderscheiding (2000-2004)
 * Bachelor Toegepaste Informatica (1997-2000)
 * Hogeschooldiploma boekhouden-informatica (Sint-Lodewijk, Antwerpen)
 
 ## Professionele Ervaring
-* PhD student / Onderzoeksmedewerker bij de <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerpen</a>, België (2004-nu)
+* Onderzoeksmedewerker bij de <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerpen</a>, België (2004-nu)
 
 ### Projects
 * <time>2012</time>

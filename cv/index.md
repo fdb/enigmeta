@@ -14,12 +14,13 @@ Civil state: legal cohabitant, one daughter and one son.
 </address>
 
 ## Education
+* PhD in the Arts (2016)
 * Master in Graphic Design, summa cum laude (2000-2004)
 * Bachelor in Applied Informatics (1997-2000)
 * College diploma, Informatics-accountancy (Sint-Lodewijk, Antwerp)
 
 ## Professional Experience
-* PhD student / Research Assistant at the <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerp</a> school of design, Belgium (2004-present)
+* PhD Researcher at the <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerp</a> school of design, Belgium (2004-present)
 
 ### Projects
 * <time>2012</time>
