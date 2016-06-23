@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: post
 title: City in a Bottle
 bigshot: /media/city-in-a-bottle/bigshot.jpg
 ---
