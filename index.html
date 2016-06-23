@@ -26,7 +26,8 @@ layout: base
 </header>
 
 <main>
-<div id="about" class="container-fluid">
+<a id="about" class="anchor"></a>
+<div class="about container-fluid">
   <div class="row">
     <div class="col-xs-8">
       <p><strong>Hi, I'm Frederik.</strong> I'm a PhD researcher in interactive media at <a href="https://www.emrg.be/" target="_blank">EMRG</a>.</p>
@@ -39,7 +40,8 @@ layout: base
   </div>
 </div>
 
-<div id="projects" class="container-fluid">
+<a id="projects" class="anchor"></a>
+<div class="projects container-fluid">
   <h2>Projects</h2>
   <div class="row">
     <div class="col-md-4 thumb project">
@@ -63,8 +65,8 @@ layout: base
   </div>
 </div>
 
-
-<div id="exhibitions" class="container-fluid">
+<a id="exhibitions" class="anchor"></a>
+<div class="exhibitions container-fluid">
   <h2>Exhibitions</h2>
   <div class="row">
     <div class="col-md-4 thumb exhibition">
@@ -106,7 +108,8 @@ layout: base
   </div>
 </div>
 
-<div id="blog" class="container-fluid">
+<a id="blog" class="anchor"></a>
+<div class="blog container-fluid">
   <h2>Blog</h2>
   <div class="row">
     {% for post in site.posts %}
@@ -120,7 +123,8 @@ layout: base
   </div>
 </div>
 
-<div id="contact" class="container-fluid">
+<a id="contact" class="anchor"></a>
+<div class="contact container-fluid">
   <div class="row">
     <div class="col-md-6">
       <h2>Contact Me</h2>
@@ -144,7 +148,7 @@ layout: base
   </div>
 </footer>
 <script>
-$('body').scrollspy({ target: '#navbar-links', offset: 50 });
+$('body').scrollspy({ target: '#navbar-links' });
 </script>
 </body>
 </html>

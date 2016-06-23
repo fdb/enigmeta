@@ -14,9 +14,6 @@ h2 {
   margin-bottom: 15px;
 }
 
-
-
-
 .navbar {
   margin-bottom:0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
@@ -57,31 +54,31 @@ main {
 
 /* Homepage */
 
-#home #about {
+#home .about {
   background: #345;
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-#home #about p {
+#home .about p {
   font-size: 3rem;
   font-family: 'Roboto Mono', monospace;
   color: #eee;
 }
 
-#home #about p.small {
+#home .about p.small {
   font-family: Roboto, sans-serif;
   font-size: 1.2rem;
   opacity: 0.8;
 }
 
-#home #about a {
+#home .about a {
   color: #eee;
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-#home #about p strong {
+#home .about p strong {
   color: white;
 }
 
@@ -123,41 +120,41 @@ main {
   font-size: 1.2rem;
 }
 
-#home #projects {
+#home .projects {
   background: #789;
   padding-top: 10px;
   padding-bottom: 20px;
   color: #ddd;
 }
 
-#home #exhibitions {
+#home .exhibitions {
   padding-top: 10px;
   padding-bottom: 20px;
   color: #ddd;
   background: #123;
 }
 
-#home #blog {
+#home .blog {
   background: #345;
   color: #eee;
   padding-top: 10px;
   padding-bottom: 20px;
 }
 
-#home #contact {
+#home .contact {
   padding-top: 20px;
   padding-bottom: 20px;
   background: #789;
   color: #eee;
 }
 
-#home #contact #big-email {
+#home .contact #big-email {
   font-family: 'Roboto Mono', monospace;
   font-size: 2rem;
   opacity: 0.8;
 }
 
-#home #contact #big-email a {
+#home .contact #big-email a {
   color: inherit;
 }
 
@@ -165,7 +162,7 @@ main {
   font-size: 2rem;
 }
 
-#home #contact .fa {
+#home .contact .fa {
   color: #eee;
   font-size: 2.5rem;
   border: 2px solid #eee;
@@ -175,7 +172,7 @@ main {
   margin-right: 20px;
 }
 
-#home #contact .fa:hover {
+#home .contact .fa:hover {
   background: #eee;
   color: #333;
 }
@@ -237,3 +234,9 @@ footer a {
   opacity: 0.4;
 }
 
+a.anchor {
+  display: block;
+  position: relative;
+  top: -50px;
+  visibility: hidden;
+}
