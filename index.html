@@ -42,22 +42,22 @@ layout: base
 <div id="projects" class="container-fluid">
   <h2>Projects</h2>
   <div class="row">
-    <div class="col-md-4 project">
+    <div class="col-md-4 thumb project">
       <a href="/projects/nodebox/">
         <img src="/media/home/nodebox-live-screenshot.png" alt="NodeBox Live Screenshot" class="img img-responsive">
-        <p>NodeBox</p>
+        <p class="caption">NodeBox</p>
       </a>
     </div>
-    <div class="col-md-4 project">
+    <div class="col-md-4 thumb project">
       <a href="/projects/opentype-js/">
         <img src="/media/home/opentype-js-screenshot.png" alt="OpenType.js Screenshot" class="img img-responsive">
-        <p>OpenType.js</p>
+        <p class="caption">OpenType.js</p>
       </a>
     </div>
-    <div class="col-md-4 project">
+    <div class="col-md-4 thumb project">
       <a href="/projects/logic-layout/">
         <img src="/media/home/logic-layout-screenshot.png" alt="Logic Layout Screenshot" class="img img-responsive">
-        <p>Logic Layout</p>
+        <p class="caption">Logic Layout</p>
       </a>
     </div>
   </div>
@@ -67,29 +67,41 @@ layout: base
 <div id="exhibitions" class="container-fluid">
   <h2>Exhibitions</h2>
   <div class="row">
-    <div class="col-md-4 exhibition">
-      <img src="/media/home/wandering-ants.jpg" alt="" class="img img-responsive exhibition" />
-      <p>Wandering Ants — <time>2016</time></p>
+    <div class="col-md-4 thumb exhibition">
+      <a href="/exhibitions/wandering-ants/">
+        <img src="/media/home/wandering-ants.jpg" alt="" class="img img-responsive">
+        <p class="caption">Wandering Ants — <time>2016</time></p>
+      </a>
     </div>
-    <div class="col-md-4 exhibition">
-      <img src="/media/home/frequensea.jpg" alt="" class="img img-responsive exhibition" />
-      <p>Frequensea — <time>2015</time></p>
+    <div class="col-md-4 thumb exhibition">
+      <a href="/exhibitions/frequensea/">
+        <img src="/media/home/frequensea.jpg" alt="" class="img img-responsive">
+        <p class="caption">Frequensea — <time>2015</time></p>
+      </a>
     </div>
-    <div class="col-md-4 exhibition">
-      <img src="/media/home/arialwtf.jpg" alt="" class="img img-responsive exhibition" />
-      <p>Arial.wtf — <time>2013</time></p>
+    <div class="col-md-4 thumb exhibition">
+      <a href="/exhibitions/arial-wtf/">
+        <img src="/media/home/arialwtf.jpg" alt="" class="img img-responsive">
+        <p class="caption">Arial.wtf — <time>2013</time></p>
+      </a>
     </div>
-    <div class="col-md-4 exhibition">
-      <img src="/media/home/metashape.jpg" alt="" class="img img-responsive exhibition" />
-      <p>Metashape — <time>2013</time></p>
+    <div class="col-md-4 thumb exhibition">
+      <a href="/exhibitions/metashape/">
+        <img src="/media/home/metashape.jpg" alt="" class="img img-responsive">
+        <p class="caption">Metashape — <time>2013</time></p>
+      </a>
     </div>
-    <div class="col-md-4 exhibition">
-      <img src="/media/home/traveling-letters.jpg" alt="" class="img img-responsive exhibition" />
-      <p>Traveling Letters — <time>2013</time></p>
+    <div class="col-md-4 thumb exhibition">
+      <a href="/exhibitions/traveling-letters/">
+        <img src="/media/home/traveling-letters.jpg" alt="" class="img img-responsive">
+        <p class="caption">Traveling Letters — <time>2013</time></p>
+      </a>
     </div>
-    <div class="col-md-4 exhibition">
-      <img src="/media/home/word-maze.jpg" alt="" class="img img-responsive exhibition" />
-      <p>Word Maze — <time>2011</time></p>
+    <div class="col-md-4 thumb exhibition">
+      <a href="/exhibitions/word-maze/">
+        <img src="/media/home/word-maze.jpg" alt="" class="img img-responsive">
+        <p class="caption">Word Maze — <time>2011</time></p>
+      </a>
     </div>
   </div>
 </div>
@@ -98,10 +110,10 @@ layout: base
   <h2>Blog Posts</h2>
   <div class="row">
     {% for post in site.posts %}
-    <div class="col-md-4 post">
+    <div class="col-md-4 thumb post">
       <a href="{{ post.url }}">
-        <img src="{{post.bigshot}}" title="{{ post.title }}" class="img-responsive">
-        <p>{{ post.title }} — <time>{{ post.date | date_to_string }}</time></p>
+        <img src="{{post.bigshot}}" title="{{ post.title }}" class="img img-responsive">
+        <p class="caption">{{ post.title }} — <time>{{ post.date | date_to_string }}</time></p>
       </a>
     </div>
     {% endfor %}
