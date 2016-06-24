@@ -44,14 +44,14 @@
     var tag = String.fromCharCode(this.d[this.offset], this.d[this.offset + 1], this.d[this.offset + 2], this.d[this.offset + 3]);
     this.offset += 4;
     return tag;
-  }
+  };
 
   Parser.prototype.byte = function() {
     var v = this.d[this.offset];
     console.assert(v >= 0);
     this.offset++;
     return v;
-  }
+  };
 
   Parser.prototype.ushort = function() {
     var v = (this.d[this.offset] << 8) + this.d[this.offset + 1];
