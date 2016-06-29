@@ -10,7 +10,7 @@ One day you'll be performing A/B tests on users, the other days you're knee-deep
 
 I've opted to created **"the slider"**: an interactive element that allows you to choose for yourself whether you want an artistic or scientific thesis. The design is adapted to match, and every design will be unique.
 
-[Go generate your own thesis](http://www.engimeta.com/thesis/)
+[Go generate your own thesis](http://www.enigmeta.com/thesis/)
 
 ![PhD thesis generator screenshot](/media/blog/phd-thesis-generator/screenshot.png)
 
@@ -43,4 +43,4 @@ The text of the thesis was written in <a href="https://workflowy.com/">Workflowy
 
  The low-level PDF handling and layout and typesetting calculations might be interesting as a library to release in the future. In addition, higher-level concepts like style interpolation might be interesting as well; currently they are connected to the thesis.
 
-[Go generate your own thesis](http://www.engimeta.com/thesis/)
+[Go generate your own thesis](http://www.enigmeta.com/thesis/)
