@@ -10,7 +10,7 @@ One day you'll be performing A/B tests on users, the other days you're knee-deep
 
 I've opted to created **"the slider"**: an interactive element that allows you to choose for yourself whether you want an artistic or scientific thesis. The design is adapted to match, and every design will be unique.
 
-[Go generate your own thesis](http://www.enigmeta.com/thesis/)
+[Go generate your own thesis](/thesis/)
 
 ![PhD thesis generator screenshot](/media/blog/phd-thesis-generator/screenshot.png)
 

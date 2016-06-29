@@ -118,7 +118,7 @@ input[type=range]:focus {
 #loader {
   position: absolute;
   width: 800px;
-  height: 600px;
+  height: 50%;
   background: rgba(255, 255, 255, 0.9);
   font-size: 72px;
   text-align: center;
@@ -132,7 +132,7 @@ input[type=range]:focus {
 iframe {
   border: 1px solid #ddd;
   width: 800px;
-  height: 600px;
+  height: 50%;
   margin-bottom: 50px;
 }
 
