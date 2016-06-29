@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Starting web projects using Flask, virtualenv, pip
-bigshot: /media/starting-flask/bigshot.jpg
+bigshot: bigshot.jpg
 copyright: Flask Image &copy; 2011 <a href="http://www.flickr.com/photos/codonaug/">Joseph Elsbernd</a>
 ---
 [Flask](http://flask.pocoo.org) is an awesome framework for building lightweight Python web-apps using a minimal amount of boilerplate. This tutorial discusses how to start a new Flask project and how to deploy it on a server.

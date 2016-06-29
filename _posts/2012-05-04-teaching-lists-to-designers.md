@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Teaching lists to designers
-bigshot: /media/teaching-lists-to-designers/bigshot.jpg
+bigshot: bigshot.jpg
 copyright: Photo &copy; 2010 <a href="http://www.flickr.com/photos/paloetic/">Palo</a>.
 ---
 I've been teaching generative design using [NodeBox 1](http://nodebox.net/) since 2004. NodeBox 1 is a [Python](http://www.python.org) IDE for making generative graphics. With my team at [EMRG](http://www.emrg.be/) I've been teaching one- or two-week workshops for graphic designers, resulting in a poster or animation at the end. You can see some of the process / results at the [Workshop Blog](http://workshops.nodebox.net/).

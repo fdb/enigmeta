@@ -1,7 +1,7 @@
 ---
 layout: post
 title: City in a Bottle
-bigshot: /media/city-in-a-bottle/bigshot.jpg
+bigshot: bigshot.jpg
 ---
 "City in a Bottle" is an interactive, generative forest with computer-generated trees, plants and animals.
 

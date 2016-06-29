@@ -130,7 +130,7 @@ layout: base
       {% for post in site.posts %}
       <div class="col-md-4 thumb post">
         <a href="{{ post.url }}">
-          <img src="{{post.bigshot}}" title="{{ post.title }}" class="img img-responsive">
+          <img src="/media{{ post.id }}/{{post.bigshot}}" title="{{ post.title }}" class="img img-responsive">
           <p class="caption">{{ post.title }} —
             <time>{{ post.date | date_to_string }}</time>
           </p>
@@ -168,6 +168,7 @@ layout: base
   </div>
 </footer>
 <script>
+document.addEventListener('DOMContentLoaded', function() {
   $('body').scrollspy({target: '#navbar-links'});
   $('a').on('click', function (e) {
     if (this.hash === '') {
@@ -181,6 +182,5 @@ layout: base
       window.location.hash = hash;
     });
   });
-
+});
 </script>
-

@@ -1,11 +1,13 @@
 ---
 layout: post
 title: My Favourite Python hack
-bigshot: /media/my-favourite-python-hack/bigshot.jpg
+bigshot: bigshot.jpg
 ---
-In [NodeBox](http://nodebox.net/) we have this cool feature that we call "the throttle". It allows you to interactively drag any number in the (Python) script and see the results immediately. Whether it's and X/Y coordinate, the number in "for i in range(10)", or a number in a complicated formula, just dragging the number helps you visualize the effect of it on the overall composition. Here's a movie that demonstrates how this works:
+In [NodeBox 1](https://nodebox.net/code/) we have this cool feature that we call "the throttle". It allows you to interactively drag any number in the (Python) script and see the results immediately. Whether it's and X/Y coordinate, the number in "for i in range(10)", or a number in a complicated formula, just dragging the number helps you visualize the effect of it on the overall composition. Here's a movie that demonstrates how this works:
 
-<object width="400" height="300"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=3907211&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=3907211&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="300"></embed></object>
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sCPjlnTcopg"></iframe>
+</div>
 
 Today I'd like to talk about the implementation, which works like this:
 

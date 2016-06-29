@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Deconstructing Nature - Day 5
-bigshot: /media/deconstructing-nature/day5-bigshot.jpg
+bigshot: bigshot.jpg
 ---
 *My colleague Werner and I are holding a challenge this week to produce one visual work each day. I'm working around the theme of "Deconstructing Nature".*
 
-[Day 1](/2012/09/04/deconstructing-nature-day-1) | [Day 2](/2012/09/05/deconstructing-nature-day-2) | [Day 3](/2012/09/06/deconstructing-nature-day-3) | [Day 4](/2012/09/07/deconstructing-nature-day-4) | [Day 5](/2012/09/08/deconstructing-nature-day-5)
+[Day 1](/blog/deconstructing-nature-day1) — [Day 2](/blog/deconstructing-nature-day2) — [Day 3](/blog/deconstructing-nature-day3) — [Day 4](/blog/deconstructing-nature-day4) — [Day 5](/blog/deconstructing-nature-day5)
 
 For the last day I wanted to do something with *human* nature. And there is no better place on the internet to watch human nature decompose than [4chan](http://www.4chan.org/) (Warning: Not Safe For Work!). The website is a huge image board on a large number of topics ranging from Anime to Politics.
 
@@ -17,18 +17,19 @@ I use a veritable *potpourri* of Python libraries to bring everything together:
 * [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
 * [Python Imaging Library](http://www.pythonware.com/products/pil/)
 * [pymongo](http://api.mongodb.org/python/current/)
-* [virtualenv](http://www.virtualenv.org/en/latest/index.html) | [pip](http://www.pip-installer.org/en/latest/index.html)
+* [virtualenv](http://www.virtualenv.org/en/latest/index.html)
+* [pip](http://www.pip-installer.org/en/latest/index.html)
 * [NodeBox](http://nodebox.net/code/index.php/Home)
 
 In the end, it was very hard to do something with images that are often gross, sometimes shocking and mostly bizarre. So I decided to abstract the representation:
 
-![Deconstructing Nature: Final Work Day #5](/media/deconstructing-nature/day5-final.jpg)
+![Deconstructing Nature: Final Work Day #5](/media/blog/deconstructing-nature-day5/final.jpg)
 
 Again, this is a visualization of the random image board. It would be interesting to see visualizations of the other thematic boars to see if they show different patterns.
 
 Other sketches:
-![Other experiment](/media/deconstructing-nature/day5-experiment1.jpg)
-![Other experiment](/media/deconstructing-nature/day5-experiment2.jpg)
-![Other experiment](/media/deconstructing-nature/day5-experiment3.jpg)
+![Other experiment](/media/blog/deconstructing-nature-day5/experiment1.jpg)
+![Other experiment](/media/blog/deconstructing-nature-day5/experiment2.jpg)
+![Other experiment](/media/blog/deconstructing-nature-day5/experiment3.jpg)
 
 The source is available in the [Deconstructing Nature GitHub repository](https://github.com/fdb/deconstructing-nature).

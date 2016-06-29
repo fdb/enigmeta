@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Random Compositions using Overtone
-bigshot: /media/random-compositions-overtone/bigshot.png
+bigshot: bigshot.png
 ---
 While learning [Overtone](http://overtone.github.io/) I've created a composition that randomly downloads sounds from [freesounds.org](http://www.freesound.org/) and makes beat-like soundscapes with them. (First composition starts at 1"20.)
 

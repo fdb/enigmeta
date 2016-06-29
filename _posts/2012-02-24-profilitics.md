@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Profilitics
-bigshot: /media/profilitics/bigshot.png
+bigshot: bigshot.png
 ---
 The 2012 American elections promise to be exciting. Candidates throwing mud at eachother, and attacks becoming increasingly more personal. But how different are the candidates really?
 

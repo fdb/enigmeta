@@ -210,9 +210,12 @@ footer a {
 }
 
 /* Post */
+
 .post-header {
   background-size: cover;
-  background: no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
   height: 150px;
   margin-bottom: 20px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -224,6 +227,20 @@ footer a {
   vertical-align: middle;
   color: #f7f7f7;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+}
+
+.post p img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+.post {
+  padding-bottom: 50px;
 }
 
 .meta {
