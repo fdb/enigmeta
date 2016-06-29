@@ -3,15 +3,14 @@ layout: post
 title: Making of my PhD Thesis Generator
 bigshot: bigshot.png
 ---
-On June 15, I promoted as PhD in the Arts from the University of Antwerp / ARIA. My research was about the impact of generative design tools. I researched how generative design tools affect the quality and creativity of designers using the tools, and whether they were more efficient and self-reliant.
+On June 15, I received my PhD in the Arts from the University of Antwerp / ARIA. My research was about the impact of generative design tools. I researched how generative design tools (specifically <a href="https://www.nodebox.net/">NodeBox</a>) affect the quality and creativity of designers, and whether they were more efficient and self-reliant.
 
-A PhD in the arts lies somewhere between scientific research and artistic practice. It is at times both, and at other times neither. It requires you to create art as well as perform research.
-
-This battle between two sides is represented in the thesis as well. In the spirit of the research I didn't simply want to create a thesis, but a thesis *generator*: a system that could generate endless variations of the thesis (keeping the content intact but playing with the design).
-
-[Go generate your own thesis](http://www.engimeta.com/thesis/)
+A PhD in the arts lies somewhere between scientific research and artistic practice. It is at times both, and at other times neither.
+One day you'll be performing A/B tests on users, the other days you're knee-deep in artistic projects. I wanted to represent this battle between two sides in the thesis as well. In line with the message of the PhD I didn't simply want to create a thesis, but a thesis *generator*: a system that could generate endless variations of the thesis (keeping the content intact but dynamically generating the design).
 
 I've opted to created **"the slider"**: an interactive element that allows you to choose for yourself whether you want an artistic or scientific thesis. The design is adapted to match, and every design will be unique.
+
+[Go generate your own thesis](http://www.engimeta.com/thesis/)
 
 ![PhD thesis generator screenshot](/media/blog/phd-thesis-generator/screenshot.png)
 
@@ -21,7 +20,7 @@ Some designs evolve over multiple pages, gradually changing background elements 
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VZCYH8Fy2sk"></iframe>
 </div>
 
-I had a selection of these thesises printed. Each design used different font sizes and margins, meaning layouts had to be recalculated, talking typical typesetting issues like [widows and orphans](https://en.wikipedia.org/wiki/Widows_and_orphans) into account. The total number of pages varied between 140 and 180, meaning that the thickness of the book varied as well. I added routines to calculate the width of the spine and generate different-sized book covers based on those calculations.
+I had a selection of these theses printed. Each design used different font sizes and margins, meaning layouts had to be recalculated, taking typesetting issues like [widows and orphans](https://en.wikipedia.org/wiki/Widows_and_orphans) into account. The total number of pages varied between 140 and 180, meaning that the thickness of the book varied as well. I added routines to calculate the width of the spine and generate different-sized book covers based on those calculations.
 
 ![A number of printed variations](/media/blog/phd-thesis-generator/variations.jpg)
 
@@ -36,6 +35,7 @@ The text of the thesis was written in <a href="https://workflowy.com/">Workflowy
 * Layout calculation
 * Dynamic background generation
 * Automatic TOC and bibliography generation
+* Separate cover / body generation
 * Font parsing (to determine widths, taking kerning into account)
 * Color handling (HSL / RGB calculations)
 * PDF object generation (pages, outlines, font and image embedding)
