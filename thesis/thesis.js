@@ -1,4 +1,4 @@
-var URL = 'http://gopub.enigmeta.com:3000/render';
+var URL = 'http://lin.debleser.be:3000/render';
 
 function onChangeStyle(e) {
   loader.style.opacity = 1;
