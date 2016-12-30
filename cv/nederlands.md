@@ -22,6 +22,9 @@ Burgerlijke staat: wettelijk samenwonend, één dochter en één zoon
 ## Professionele Ervaring
 * Onderzoeksmedewerker bij de <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerpen</a>, België (2004-nu)
 
+## Professionele Ontwikkeling
+* Machine Learning van de Stanford University via Coursera. [Certificaat behaald op 28 december 2016](https://www.coursera.org/account/accomplishments/records/6BDSFE5X2MKW).
+
 ### Projects
 * <time>2012</time>
   **Buro Aktief** - Adminstratieve web applicatie voor de <a href="http://www.free-clinic.be/">Free Clinic</a> (vrijwilligerswerk)

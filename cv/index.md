@@ -22,6 +22,9 @@ Civil state: legal cohabitant, one daughter and one son.
 ## Professional Experience
 * PhD Researcher at the <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerp</a> school of design, Belgium (2004-present)
 
+## Professional Certification
+* Machine Learning by Stanford University on Coursera. [Certificate earned on December 28, 2016](https://www.coursera.org/account/accomplishments/records/6BDSFE5X2MKW).
+
 ### Projects
 * <time>2012</time>
   **Buro Aktief** - Administrative web backend for <a href="http://www.free-clinic.be/">Free Clinic</a> (volunteer work)
