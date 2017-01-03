@@ -1,4 +1,4 @@
-var URL = 'http://lin.debleser.be:3000/the-impact-of-generative-design';
+var URL = 'http://d.debleser.be:3000/the-impact-of-generative-design';
 
 function onChangeStyle(e) {
   loader.style.opacity = 1;
