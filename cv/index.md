@@ -73,7 +73,7 @@ Civil state: legal cohabitant, one daughter and one son.
   * Hardware setup, backup strategy, support.
 
 * <time>2004-present</time>
-  **<a href="http://www.nodebox.net/">NodeBox</a> ** - Open-source application for generative design.
+  **<a href="http://www.nodebox.net/">NodeBox</a>** - Open-source application for generative design.
   <div class="meta">Main developer, technical lead in team of 4 – Java, Clojure, Python</div>
   * Application for creating 2D visuals using code.
   * Frequently asked to give international NodeBox workshops (Helsinki, Vilnius, Turin).
@@ -88,11 +88,10 @@ Civil state: legal cohabitant, one daughter and one son.
   * Continuing support.
 
 ### Educational Conferences
-* Fosdem, Brussel, 2012
+* Fosdem, Brussel (2017 - 2009)
+* EuroClojure, Berlin, 2013
 * Libre Graphics Meeting, Brussel, 2010
 * PyCon, Chicago, 2009
-* Fosdem, Brussel, 2009
-* EuroClojure, Berlin, 2013
 
 ## Academic Experience
 
@@ -127,6 +126,7 @@ Civil state: legal cohabitant, one daughter and one son.
 * Integrated, Antwerpen, 2011
 * Design Interational Week, UQAM, Montréal, 2013
 * Integrated, Antwerpen, 2013
+* ATypI, Warsaw, 2016
 
 ### Workshops
 * Design Automation, Lahti, 2004, Finland

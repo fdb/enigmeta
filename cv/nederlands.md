@@ -73,7 +73,7 @@ Burgerlijke staat: wettelijk samenwonend, één dochter en één zoon
   * Opzetten van hardware, backups en ondersteuning.
 
 * <time>2004-present</time>
-  **<a href="http://www.nodebox.net/">NodeBox</a> ** - Open-source applicatie voor generatief ontwerp.
+  **<a href="http://www.nodebox.net/">NodeBox</a>** - Open-source applicatie voor generatief ontwerp.
   <div class="meta">Hoofd-ontwikkelaar, technische lead in team van 4 – Java, Clojure, Python</div>
   * Applicatie voor het maken van 2D ontwerpen via code.
   * Frequent gevraagd om NodeBox-workshops te geven in het buitenland (Helsinki, Vilnius, Turin).
@@ -88,11 +88,10 @@ Burgerlijke staat: wettelijk samenwonend, één dochter en één zoon
   * Ondersteuning.
 
 ### Opleidingen & Conferenties
-* Fosdem, Brussel, 2012
+* Fosdem, Brussel (2017 - 2009)
+* EuroClojure, Berlijn, 2013
 * Libre Graphics Meeting, Brussel, 2010
 * PyCon, Chicago, 2009
-* Fosdem, Brussel, 2009
-* EuroClojure, Berlijn, 2013
 
 ## Academische Ervaring
 
@@ -127,6 +126,7 @@ Burgerlijke staat: wettelijk samenwonend, één dochter en één zoon
 * Integrated, Antwerpen, 2011
 * Design Interational Week, UQAM, Montréal, 2013
 * Integrated, Antwerpen, 2013
+* ATypI, Warsaw, 2016
 
 ### Workshops
 * Design Automation, Lahti, 2004, Finland
