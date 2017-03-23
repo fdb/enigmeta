@@ -26,6 +26,32 @@ Civil state: legal cohabitant, one daughter and one son.
 * Machine Learning by Stanford University on Coursera. [Certificate earned on December 28, 2016](https://www.coursera.org/account/accomplishments/records/6BDSFE5X2MKW).
 
 ### Projects
+* <time>2017</time>
+  **<a href="https://nodebox.live/">NodeBox Live</a>** - Online node-based visualisation tool
+  <div class="meta">Developer, designer – JavaScript, React, node.js</div>
+  * Node-based environment for data visualization and generative design.
+  * Powerful bottom up data processing and visualization primitives.
+  * Integration with web API's (Twitter, GitHub, ...)
+  * In active development
+
+* <time>2015</time>
+  **<a href="https://github.com/fdb/frequensea">Frequensea</a>** - Visualization tool for the eletromagnetic spectrum (open source project)
+  <div class="meta">Developer – C/C++, Lua</div>
+  * Rapid development environment for 3D visualizations.
+  * Integrated live-reload functionality for Lua code.
+  * Cross-platform (macOS, Linux, Raspberry Pi).
+  * Virtual reality support (Oculus Rift)
+  * <a href="https://github.com/fdb/frequensea">Open source.</a>
+
+* <time>2014-now</time>
+  **<a href="http://opentype.js.org/">OpenType.js</a>** - Font parsing and writing library in JavaScript.
+  <div class="meta">Developer – JavaScript</div>
+  * Binary font parser and writer for TTF, OTF and WOFF files.
+  * Used in range of open-source and commercial applications (<a href="https://p5js.org/">p5.js</a>, <a href="https://www.prototypo.io/">Prototypo</a>, <a href="http://microsoft.github.io/maker.js/">Microsoft maker.js</a>).
+  * Contributions from industry partners (Adobe, Microsoft, Google).
+  * Presented at ATypI font conference in 2016.
+  * <a href="https://github.com/nodebox/opentype.js">1K+ stars on GitHub.</a>
+
 * <time>2012</time>
   **Buro Aktief** - Administrative web backend for <a href="http://www.free-clinic.be/">Free Clinic</a> (volunteer work)
   <div class="meta">Developer, designer – Python, Flask, MongoDB, jQuery, Bootstrap, Heroku</div>
@@ -33,7 +59,7 @@ Civil state: legal cohabitant, one daughter and one son.
   * Custom export functionality.
   * Low-cost deployment using <a href="http://www.heroku.com/">Heroku</a>.
 
-* <time>2012-present</time>
+* <time>2012-2015</time>
   **<a href="http://www.commsquare.com/">Commsquare</a>** - Design and development consultancy for their core products.
   <div class="meta">Developer in teams of 2-5 – Django, HTML5, jQuery, d3.js, Backbone.js</div>
   * Teaching Python and Django.

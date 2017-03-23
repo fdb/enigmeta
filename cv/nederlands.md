@@ -26,6 +26,33 @@ Burgerlijke staat: wettelijk samenwonend, één dochter en één zoon
 * Machine Learning van de Stanford University via Coursera. [Certificaat behaald op 28 december 2016](https://www.coursera.org/account/accomplishments/records/6BDSFE5X2MKW).
 
 ### Projects
+* <time>2017</time>
+  **NodeBox Live** - Online node-gebaseerde visualisatie tool
+  <div class="meta">Ontwikkelaar, ontwerper – JavaScript, React, node.js</div>
+  * Node-gebaseerde omgeving voor data-visualisatie en generatief ontwerp.
+  * Krachtige bottom-up operaties voor data verwerking en visualisatie.
+  * Integratie met web API's (Twitter, GitHub, ...)
+  * In ontwikkeling
+
+* <time>2015</time>
+  **Frequensea** - Visualizatie-tool voor het eletromagnetisch spectrum (open source)
+  <div class="meta">Ontwikkelaar – C/C++, Lua</div>
+  * Real-time omgeving voor 3D visualisaties.
+  * Ingebouwde live-reload functionaliteit voor Lua code.
+  * Cross-platform (macOS, Linux, Raspberry Pi).
+  * Ondersteuning voor virtual reality (Oculus Rift)
+  * Custom export functionality.
+  * <a href="https://github.com/fdb/frequensea">Open source.</a>
+
+* <time>2014-now</time>
+  **<a href="http://opentype.js.org/">OpenType.js</a>** - JavaScript library voor font import/export.
+  <div class="meta">Ontwikkelaar – JavaScript</div>
+  * Parser en writer voor binaire font-formaten TTF, OTF en WOFF.
+  * Gebruikt in open-source en commerciëele applicaties (<a href="https://p5js.org/">p5.js</a>, <a href="https://www.prototypo.io/">Prototypo</a>, <a href="http://microsoft.github.io/maker.js/">Microsoft maker.js</a>).
+  * Contributies van partners uit de industrie (Adobe, Microsoft, Google).
+  * Voorgesteld op de ATypI font conferentie in 2016.
+  * <a href="https://github.com/nodebox/opentype.js">1K+ sterren op GitHub.</a>
+
 * <time>2012</time>
   **Buro Aktief** - Adminstratieve web applicatie voor de <a href="http://www.free-clinic.be/">Free Clinic</a> (vrijwilligerswerk)
   <div class="meta">Ontwikkelaar, designer – Python, Flask, MongoDB, jQuery, Bootstrap, Heroku</div>
@@ -33,7 +60,7 @@ Burgerlijke staat: wettelijk samenwonend, één dochter en één zoon
   * Excel-export functionaliteit.
   * Lage-kost hosting via <a href="http://www.heroku.com/">Heroku</a>.
 
-* <time>2012-nu</time>
+* <time>2012-2015</time>
   **<a href="http://www.commsquare.com/">Commsquare</a>** - Design en ontwikkeling-consultancy voor hun centrale producten.
   <div class="meta">Ontwikkelaar in teams van 2-5 – Django, HTML5, jQuery, d3.js, Backbone.js</div>
   * Lessen Python en Django gegeven.
