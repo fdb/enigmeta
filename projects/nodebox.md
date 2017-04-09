@@ -12,16 +12,16 @@ NodeBox is a set of applications for generative design and data visualization. I
 ## NodeBox 3
 NodeBox 3 is a <strong>cross-platform</strong>, node-based graphical design tool for data visualization and generative design. NodeBox 3 runs on Windows, macOS and Linux.
 
-<https://www.nodebox.net/>
+https://www.nodebox.net/
 
 
 ## NodeBox Live
 NodeBox Live is a <strong>web application</strong> for data visualization and generative design. It integrates seamlessly with the web, transforming data from multiple services into interactive visualizations.
 
-<https://nodebox.live/>
+https://nodebox.live/
 
 ## NodeBox 1
 NodeBox 1 is a macOS-only application for generative design using Python code.
 
-<https://www.nodebox.net/>
+https://www.nodebox.net/
 

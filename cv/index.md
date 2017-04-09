@@ -9,14 +9,12 @@ title: Curriculum Vitae of Frederik De Bleser
 <address>
 frederik (at) debleser (dot) be<br>
 <a href="http://www.enigmeta.com/">www.enigmeta.com</a><br>
-+32 498 120 060<br>
-Civil state: legal cohabitant, one daughter and one son.
 </address>
 
 ## Education
 * PhD in the Arts (2016)
 * Master in Graphic Design, summa cum laude (2000-2004)
-* Bachelor in Applied Informatics (1997-2000)
+* Bachelor in Computer Science (1997-2000)
 * College diploma, Informatics-accountancy (Sint-Lodewijk, Antwerp)
 
 ## Professional Experience
@@ -191,28 +189,13 @@ Civil state: legal cohabitant, one daughter and one son.
 * Java: Expert (10+ years)
 * Python: Expert (8+ years)
 * HTML / CSS / JavaScript: Expert (10+ years)
+* C / C++: Proficient (5+ years)
 * Clojure: Proficient (2 years)
 * Scala: Competent (1 year)
 * Ruby: Competent (2+ years)
-* C / C++: Competent (3+ years)
 
-### Programming Interests
-* Development using web standards (HTML5, CSS3, JavaScript)
-* Functional programming (Clojure, Lisp)
-* Data visualisation (NodeBox, D3, VVVV)
-* Generative design (NodeBox, Processing)
-* Concurrency, multi-core and GPU programming (OpenCL)
-
-### Programming Beliefs
-* I believe software is not an end to itself, but a solution to a problem. Therefore, programming doesn't just require an understanding of the code, but also of the problem domain.
-* I believe understanding the tools and abstractions you work with make you a more efficient programmer.
-* I believe code is better if it collectively owned. Therefore, programmers work better if they work together through pair programming, code reviews and open discussions.
-* I believe that being an expert programmer is not an end product, but a process that requires constant learning through practice, articles, books, conferences and personal interactions.
-* Above all I believe programming is a creative craft, not just a job where you type code into an IDE.
-
-### Personal Interests
+### Hobbies / Personal Interests
 * Volunteer for Kris Kras Akabe (1998-2008), scouting movement for children with mental and physical disabilities.
 * Amateur runner and participant in the Antwerp 10 Miles.
 * World traveller (South America, US, South-east Asia).
-* Frequent bike traveller across Europe .
-* Legally living together with my partner and father of two kids.
+* Frequent bike traveller across Europe.
