@@ -10,6 +10,7 @@ title: Curriculum Vitae of Frederik De Bleser
 frederik (at) debleser (dot) be<br>
 <a href="http://www.enigmeta.com/">www.enigmeta.com</a><br>
 </address>
+Civil state: engaged, one daughter and one son.
 
 ## Education
 * PhD in the Arts (2016)
