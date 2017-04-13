@@ -14,7 +14,7 @@ Civil state: engaged, one daughter and one son.
 </address>
 
 ## Education
-* PhD in the Arts (2016)
+* PhD in the Arts (2012-2016)
 * Master in Graphic Design, summa cum laude (2000-2004)
 * Bachelor in Computer Science (1997-2000)
 * College diploma, Informatics-accountancy (Sint-Lodewijk, Antwerp)
