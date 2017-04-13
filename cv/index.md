@@ -120,62 +120,70 @@ frederik (at) debleser (dot) be<br>
 ## Academic Experience
 
 ### Exhibitions
-* Blotter, Time Canvas, MuHKA, 2005
-* Blotter, ELIA, Ghent, 2006
-* Evolution, C.STEM, Turin, Italy 2007
-* Travelling Letters, Lahti, Finland, 2010
-* Travelling Letters, Vilnius, Lithuania, 2011
-* Generator.x 3.0, Brussels, 2012
-* Incubate, Tilburg, 2013
+* Wandering Ants, Wolverhampton Art Gallery, 2016
+* Frequensea, Antwerp, 2015
 * Travelling Letters, Helsinki, Finland, 2013
+* Incubate, Tilburg, 2013
+* Generator.x 3.0, Brussels, 2012
+* Travelling Letters, Vilnius, Lithuania, 2011
+* Travelling Letters, Lahti, Finland, 2010
+* Evolution, C.STEM, Turin, Italy 2007
+* Blotter, ELIA, Ghent, 2006
+* Blotter, Time Canvas, MuHKA, 2005
 
 ### Publications
-* De Standaard, 2005
-* Counterform in Motion, 2006
-* ADD-magazine #2, 2006
-* Add!ct-magazine #28, 2007
 * ADD-magazine #6, 2007
+* Add!ct-magazine #28, 2007
+* ADD-magazine #2, 2006
+* Counterform in Motion, 2006
+* De Standaard, 2005
 
-### Conferences
-* ATypI, Prague, 2004
-* ATypI, Helsinki, 2005
-* ELIA, Ghent, 2006
-* DorkBot, Ghent, 2006
-* Integrated2007, Antwerp, 2007
-* C.STEM, Turin, 2007
-* The Agile Mind, Brussels, 2008
-* Integrated 2009, Antwerp, 2009
-* Libre Graphics Meeting 2010, Brussels, 2010
-* ISEA2010, Dortmund, 2010
-* Integrated, Antwerpen, 2011
-* Design Interational Week, UQAM, Montréal, 2013
-* Integrated, Antwerpen, 2013
+### Conference Talks
 * ATypI, Warsaw, 2016
+* Integrated, Antwerpen, 2013
+* Design Interational Week, UQAM, Montréal, 2013
+* Integrated, Antwerpen, 2011
+* ISEA2010, Dortmund, 2010
+* Libre Graphics Meeting 2010, Brussels, 2010
+* Integrated 2009, Antwerp, 2009
+* The Agile Mind, Brussels, 2008
+* C.STEM, Turin, 2007
+* Integrated2007, Antwerp, 2007
+* DorkBot, Ghent, 2006
+* ELIA, Ghent, 2006
+* ATypI, Helsinki, 2005
+* ATypI, Prague, 2004
 
-### Workshops
-* Design Automation, Lahti, 2004, Finland
-* Intelligence, Lahti, 2005, Finland
-* Memetics, Lahti, 2007
-* Semantics, Helsinki, 2008
-* Generative Art, Lahti, 2009
-* NodeBox, Lahti, 2010
-* Patterns of data, Antwerp, 2010
-* Patterns of data, Helsinki, 2011
-* Data Visualization, Lahti, 2011
-* Faces of data, Vilnius, 2011
-* Visual Repesentation of Complex Phenomena, Turin, 2011
-* Data Visualization Masterclass, Antwerp, 2012
-* Data Visualization Workshop, The Hague, 2012
-* Data Visualization Workshop, Vilnius, 2013
-* Data Visualization Workshop, Montréal, 2013
+### Workshops Taught
+* NodeBox Live Workshop, Vilnius, 2016
+* Actually Useful, Antwerp, 2016
+* NodeBox Live Workshop, Warsaw, 2015
+* NodeBox Live Workshop, Artesis/KdG, Antwerp, 2015
+* NodeBox Live Workshop, Vilnius, 2015
+* Actually Useful, Antwerp, 2015
 * Data Visualization Workshop, Valence, 2013
+* Data Visualization Workshop, Montréal, 2013
+* Data Visualization Workshop, Vilnius, 2013
+* Data Visualization Workshop, The Hague, 2012
+* Data Visualization Masterclass, Antwerp, 2012
+* Visual Repesentation of Complex Phenomena, Turin, 2011
+* Faces of data, Vilnius, 2011
+* Data Visualization, Lahti, 2011
+* Patterns of data, Helsinki, 2011
+* Patterns of data, Antwerp, 2010
+* NodeBox, Lahti, 2010
+* Generative Art, Lahti, 2009
+* Semantics, Helsinki, 2008
+* Memetics, Lahti, 2007
+* Intelligence, Lahti, 2005, Finland
+* Design Automation, Lahti, 2004, Finland
 
 ### Research Projects
-* Academic project “Design Automation”. 1/9/2004-31/12/2006. Development of a programming language based design tool: NodeBox. EUR 160,000
-* IWT-project “Gravital” (IWT/TETRA 60121, KdG departement Sint Lucas together with University of Antwerp, departement Computer linguistics, 2007-2009, EUR 267,612)
-* IWT-project “NodeBox/DATA” (IWT/TETRA 100188, KdG departement Sint Lucas together with Universiteit of Antwerp departement Computer linguistics and departement Math and Informatics, 2011-2013, EUR 304,345)
-* Phd Project "The impact of generative software on graphic design." (KdG departement Sint Lucas together with the University of Antwerp departement Informatics, 2011-2015)
 * Conduit (KdG departement Sint Lucas together with the University of Antwerp departement Computer linguistics and departement Math and Informatics, 2012-2014)
+* Phd Project "The impact of generative software on graphic design." (KdG departement Sint Lucas together with the University of Antwerp departement Informatics, 2011-2015)
+* IWT-project “NodeBox/DATA” (IWT/TETRA 100188, KdG departement Sint Lucas together with Universiteit of Antwerp departement Computer linguistics and departement Math and Informatics, 2011-2013, EUR 304,345)
+* IWT-project “Gravital” (IWT/TETRA 60121, KdG departement Sint Lucas together with University of Antwerp, departement Computer linguistics, 2007-2009, EUR 267,612)
+* Academic project “Design Automation”. 1/9/2004-31/12/2006. Development of a programming language based design tool: NodeBox. EUR 160,000
 
 ## Competences
 
@@ -195,6 +203,7 @@ frederik (at) debleser (dot) be<br>
 * Ruby: Competent (2+ years)
 
 ### Hobbies / Personal Interests
+* Amateur Radio Hobbyist (`ON3FRE`)
 * Volunteer for Kris Kras Akabe (1998-2008), scouting movement for children with mental and physical disabilities.
 * Amateur runner and participant in the Antwerp 10 Miles.
 * World traveller (South America, US, South-east Asia).
