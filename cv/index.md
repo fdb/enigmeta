@@ -9,8 +9,8 @@ title: Curriculum Vitae of Frederik De Bleser
 <address>
 frederik (at) debleser (dot) be<br>
 <a href="http://www.enigmeta.com/">www.enigmeta.com</a><br>
-</address>
 Civil state: engaged, one daughter and one son.
+</address>
 
 ## Education
 * PhD in the Arts (2016)
@@ -30,6 +30,12 @@ Civil state: engaged, one daughter and one son.
   * Powerful bottom up data processing and visualization primitives.
   * Integration with web API's (Twitter, GitHub, ...)
   * In active development
+
+* <time>2016</time>
+  **<a href="https://www.enigmeta.com/blog/phd-thesis-generator/">PhD "The Impact of Generative Design"</a>**
+  * Research project about the impact of generative design tools.
+  * Graduated in June 2016.
+  * Custom <a href="https://www.enigmeta.com/blog/phd-thesis-generator/">PhD thesis generator</a> outputting print-ready PDF files (written in Go).
 
 * <time>2015</time>
   **<a href="https://github.com/fdb/frequensea">Frequensea</a>** - Visualization tool for the eletromagnetic spectrum (open source project)
@@ -112,12 +118,6 @@ Civil state: engaged, one daughter and one son.
 
 ### Professional Certification
 * Machine Learning by Stanford University on Coursera. [Certificate earned on December 28, 2016](https://www.coursera.org/account/accomplishments/records/6BDSFE5X2MKW).
-
-### Educational Conferences
-* Fosdem, Brussel (2017 - 2009)
-* EuroClojure, Berlin, 2013
-* Libre Graphics Meeting, Brussel, 2010
-* PyCon, Chicago, 2009
 
 ### Exhibitions
 * Wandering Ants, Wolverhampton Art Gallery, 2016
