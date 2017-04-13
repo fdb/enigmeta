@@ -250,6 +250,8 @@ footer a {
 .meta {
   font-size: 1.6rem;
   opacity: 0.4;
+  margin-top: -1.1rem;
+  margin-bottom: 0.2rem;
 }
 
 a.anchor {
