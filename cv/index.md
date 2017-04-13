@@ -92,7 +92,6 @@ Civil state: engaged, one daughter and one son.
   * Custom tree containing pictures of all conference participants.
   * Tight deadlines (because of the conference timing).
 
-  <hr class="page-break">
 * <time>2005-2006</time>
   **Takeout Web App** - Full-stack video rental application for the biggest video store in Antwerp.
   <div class="meta">Developer in team of 2 – Ruby on Rails, HTML/CSS/JS</div>
