@@ -20,6 +20,8 @@ Civil state: engaged, one daughter and one son.
 
 ## Professional Experience
 * PhD Researcher at the <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerp</a> school of design, Belgium (2004-present)
+* Freelance Developer / Graphic Designer (2007-2015)
+
 
 ## Professional Certification
 * Machine Learning by Stanford University on Coursera. [Certificate earned on December 28, 2016](https://www.coursera.org/account/accomplishments/records/6BDSFE5X2MKW).
