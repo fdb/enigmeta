@@ -9,6 +9,7 @@ title: Curriculum Vitae of Frederik De Bleser
 <address>
 frederik (at) debleser (dot) be<br>
 <a href="http://www.enigmeta.com/">www.enigmeta.com</a><br>
+Nationality: Belgian<br>
 Civil state: engaged, one daughter and one son.
 </address>
 
@@ -33,6 +34,7 @@ Civil state: engaged, one daughter and one son.
 
 * <time>2016</time>
   **<a href="https://www.enigmeta.com/blog/phd-thesis-generator/">PhD "The Impact of Generative Design"</a>**
+  <div class="meta">Researcher, developer – English, Go</div>
   * Research project about the impact of generative design tools.
   * Graduated in June 2016.
   * Custom <a href="https://www.enigmeta.com/blog/phd-thesis-generator/">PhD thesis generator</a> outputting print-ready PDF files (written in Go).
