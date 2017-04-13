@@ -22,11 +22,7 @@ Civil state: engaged, one daughter and one son.
 * PhD Researcher at the <a href="http://www.kdg.be/">Karel de Grote-Hogeschool</a>, <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerp</a> school of design, Belgium (2004-present)
 * Freelance Developer / Graphic Designer (2007-2015)
 
-
-## Professional Certification
-* Machine Learning by Stanford University on Coursera. [Certificate earned on December 28, 2016](https://www.coursera.org/account/accomplishments/records/6BDSFE5X2MKW).
-
-### Projects
+## Projects
 * <time>2017</time>
   **<a href="https://nodebox.live/">NodeBox Live</a>** - Online node-based visualisation tool
   <div class="meta">Developer, designer – JavaScript, React, node.js</div>
@@ -114,13 +110,14 @@ Civil state: engaged, one daughter and one son.
   * Newsletter design and setup.
   * Continuing support.
 
+### Professional Certification
+* Machine Learning by Stanford University on Coursera. [Certificate earned on December 28, 2016](https://www.coursera.org/account/accomplishments/records/6BDSFE5X2MKW).
+
 ### Educational Conferences
 * Fosdem, Brussel (2017 - 2009)
 * EuroClojure, Berlin, 2013
 * Libre Graphics Meeting, Brussel, 2010
 * PyCon, Chicago, 2009
-
-## Academic Experience
 
 ### Exhibitions
 * Wandering Ants, Wolverhampton Art Gallery, 2016
