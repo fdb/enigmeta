@@ -50,8 +50,8 @@ p {
 }
 
 .controls {
-  max-width: 800px;
-  margin: 40px 0;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .styles {
@@ -72,53 +72,20 @@ p {
   text-align: right;
 }
 
-/* https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
-input[type=range] {
+.loader-wrap {
+  position: relative;
   width: 100%;
-  -webkit-appearance: none;
-  background: transparent;
 }
 
-input[type=range]:focus {
-  outline: none;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 8px;
-  cursor: pointer;
-  background: #eee;
-  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: 0.5px solid #666;
-  height: 18px;
-  width: 18px;
-  border-radius: 16px;
-  background: #ffffff;
-  cursor: pointer;
-  margin-top: -6px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  background: radial-gradient(#fff, #ddd);
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-  transition: background 100ms;
-}
-
-input[type=range]:active::-webkit-slider-thumb {
-  background: radial-gradient(#ddd, #ccc);
-}
-
-input[type=range]:focus {
-  outline: none;
+.embed-responsive {
+  height: 75vh;
 }
 
 #loader {
+  z-index: 999;
   position: absolute;
-  width: 800px;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   background: rgba(255, 255, 255, 0.9);
   font-size: 72px;
   text-align: center;
@@ -131,8 +98,8 @@ input[type=range]:focus {
 
 iframe {
   border: 1px solid #ddd;
-  width: 800px;
-  height: 50%;
+  width: 100%;
+  height: 75vh;
   margin-bottom: 50px;
 }
 
