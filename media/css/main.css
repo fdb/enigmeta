@@ -213,6 +213,10 @@ footer a {
   padding-bottom: 10rem;
 }
 
+.page time {
+  font-weight: bold;
+}
+
 /* Post */
 
 .post-header {
@@ -259,4 +263,59 @@ a.anchor {
   position: relative;
   top: -50px;
   visibility: hidden;
+}
+
+/* CV */
+
+#cv .project {
+  display: flex;
+  padding-bottom: 4rem;
+  page-break-inside: avoid;
+}
+
+#cv .project__meta {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.8rem;
+  width: 12rem;
+  padding-right: 2rem;
+  color: #888;
+  text-align: right;
+}
+
+#cv .project__desc {
+  border-left: 1px solid #999;
+  padding-left: 4rem;
+}
+
+#cv .project__title {
+  margin: 0 0 0.3rem 0;
+}
+
+#cv .project__title small {
+  vertical-align: middle;
+  margin-left: 0.2rem;
+  font-size: 1.3rem;
+}
+
+#cv .project__role {
+  color: #666;
+  font-size: 1.3rem;
+}
+
+#cv .project__accomplishments {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  list-style-type: square;
+}
+
+#cv .project__accomplishments li {
+  margin: 0;
+  padding: 0;
+}
+
+@media print {
+  #cv a[href]:after {
+    content: "";
+  }
 }
