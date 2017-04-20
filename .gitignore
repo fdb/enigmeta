@@ -13,3 +13,6 @@ Thumbs.db
 # IntelliJ project files
 *.i[mpw][lrs]
 .idea
+
+# Ruby cruft
+Gemfile.lock
