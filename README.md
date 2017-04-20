@@ -22,7 +22,7 @@ Installing on Ubuntu
 Installing on Termux
 --------------------
 
-    sudo apt install ruby ruby-dev make libxslt-dev pkg-config libxml2-dev libffi-dev
+    apt install ruby ruby-dev make libxslt-dev pkg-config libxml2-dev libffi-dev nodejs
     bundle config build.nokogiri --use-system-libraries
     bundle install
 
