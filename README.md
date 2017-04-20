@@ -8,8 +8,8 @@ Installing on Mac
 Install [Xcode][] first.
 
     sudo gem update --system
-    sudo gem install rake jekyll RedCloth
-    sudo easy_install pygments
+    sudo gem install bundler
+    bundle
 
 Installing on Ubuntu
 --------------------

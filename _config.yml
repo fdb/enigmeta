@@ -2,3 +2,5 @@ permalink: /blog/:title/
 exclude:
   - README.md
   - Rakefile
+gems:
+    - jekyll-redirect-from

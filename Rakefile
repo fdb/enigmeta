@@ -1,17 +1,12 @@
-task :default => [:rebuild]
+task :default => [:server]
 
-desc 'Remove old _site and rebuild'
-task :rebuild do
+desc 'Build the entire site and store the result in _site.'
+task :build do
   sh 'rm -rf _site'
-  sh 'time jekyll build'
-end
-
-desc 'Deploy to the live server'
-task :deploy => [:rebuild] do
-  sh 'rsync -rtz -e \'ssh -p 2242\' --delete _site/ enigmeta.com:/www/enigmeta.com/public_html/'
+  sh 'time bundle exec jekyll build'
 end
 
 desc 'Run Jekyll in server mode'
 task :server do
-  sh 'jekyll serve --watch'
+  sh 'bundle exec jekyll serve'
 end
