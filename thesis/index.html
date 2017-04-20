@@ -3,33 +3,26 @@ layout: page
 title: The Impact of Generative Design Thesis Generator
 ---
 <link rel="stylesheet" href="/thesis/thesis.css">
-<!--   <header>
-    <h1>The Impact of Generative Design</h1>
-    <h2>Thesis Generator</h2>
-  </header> -->
 
   <div id="explain">
-    <p>This is my PhD dissertation on the impact of generative design. This PhD in the arts lies between the domains of science and art. Feel free to generate a unique version based on your expectations.</p>
+    <p>This is my PhD dissertation on the impact of generative design. This PhD in the arts lies between the domains of science and art. Feel free to generate a unique version based on your preference. Read more about the <a href="/blog/phd-thesis-generator/">making of the thesis generator</a>.</p>
     <p class="warning"><strong>Warning: </strong> every change generates a new print-quality PDF, which can take a while to download. Works best in desktop Chrome.</p>
   </div>
 
   <main>
-    <div class="controls">
-      <input type="range" id="styleSlider" name="style" min="0" max="100" value="50">
-      <div class="styles">
-        <span class="style left">Science</span>
-        <span class="style right">Art</span>
+      <div class="controls">
+        <input type="range" id="styleSlider" name="style" min="0" max="100" value="50" step="1">
+        <div class="styles">
+          <span class="style left">Science</span>
+          <span class="style right">Art</span>
+        </div>
       </div>
-    </div>
-
-    <div id="loader">Loading...</div>
 
     <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" src="http://d.debleser.be:3000/the-impact-of-generative-design" ></iframe>
+      <div id="loader">Loading...</div>
+      <iframe class="embed-responsive-item" src="https://enigmeta.s3.amazonaws.com/thesis/pdf/thesis-the-impact-of-generative-design.50.pdf" ></iframe>
     </div>
 
   </main>
-
-
 
   <script src="/thesis/thesis.js"></script>

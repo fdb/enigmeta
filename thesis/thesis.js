@@ -1,8 +1,14 @@
-var URL = 'http://d.debleser.be:3000/the-impact-of-generative-design';
-
 function onChangeStyle(e) {
   loader.style.opacity = 1;
-  iframe.src = URL + '?style=' + e.target.value;
+  var style = parseInt(e.target.value);
+  if (style < 0) {
+    style = 0;
+  }
+  if (style > 100) {
+    style = 100;
+  }
+  style = Math.floor(style);
+  iframe.src = 'https://enigmeta.s3.amazonaws.com/thesis/pdf/thesis-the-impact-of-generative-design.' + style + '.pdf';
 }
 
 var loader = document.getElementById('loader');
