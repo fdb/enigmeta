@@ -19,6 +19,13 @@ Installing on Ubuntu
     sudo gem install rake jekyll RedCloth
     sudo easy_install pygments
 
+Installing on Termux
+--------------------
+
+    sudo apt install ruby ruby-dev make libxslt-dev pkg-config libxml2-dev libffi-dev
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+
 Running
 -------
 
