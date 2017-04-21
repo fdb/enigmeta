@@ -35,6 +35,10 @@ p {
   display: block;
 }
 
+.screen-only {
+  display: none;
+}
+
 span.print-only {
   display: inline;
 }
@@ -51,5 +55,3 @@ h1.print-only {
   border-bottom: 3px solid #0645ad;
   margin: 0 0 0.5em 0;
 }
-
-footer {

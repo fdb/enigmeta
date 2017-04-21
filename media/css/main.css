@@ -47,6 +47,7 @@ img {
 .embed-responsive-16by9 {
   padding-bottom: 56.25%;
 }
+
 .embed-responsive-item {
   position: absolute;
   top: 0;
@@ -196,17 +197,20 @@ main {
 
 #home .about {
   height: 100vh;
+  padding-top: 0;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: #ccc url(/media/home/about-background.jpg) no-repeat center center scroll;
   background-size: cover;
+  position: relative;
 }
 
 #home .about p {
   font-size: 1.5rem;
   font-family: 'Roboto Mono', monospace;
-  text-shadow: 0 1px 2px rgba(0, 0, 0 ,0.5);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   color: #fff;
 }
 
@@ -228,6 +232,33 @@ main {
 #home .about .mugshot {
   border-radius: 5%;
   max-height: 200px;
+}
+
+#home .about__scroll {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 3rem;
+  text-align: center;
+  width: 100%;
+}
+
+#home .about__scroll span {
+  display: block;
+  text-align: center;
+  transform: rotate(90deg);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 3rem;
+  animation: about-arrow 3s infinite;
+}
+
+@keyframes about-arrow {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 #home .thumb {
@@ -354,7 +385,6 @@ main {
   }
 }
 
-
 /* Footer */
 
 footer {
@@ -376,9 +406,11 @@ footer {
   .footer__links {
     display: flex;
   }
+
   .footer__left, .footer__right {
     flex: 1;
   }
+
   .footer__right {
     text-align: right;
   }
@@ -577,14 +609,17 @@ a.anchor {
   #cv .project {
     display: flex;
   }
+
   #cv .project__meta {
     width: 8rem;
   }
+
   #cv .project__desc {
     border-left: 1px solid #ddd;
     padding-left: 1.3rem;
     flex: 1;
   }
+
   #cv .project__title small {
     display: inline;
     margin-top: 0;
