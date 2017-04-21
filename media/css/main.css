@@ -558,37 +558,37 @@ a.anchor {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-#cv .mugshot {
+#cv .page .mugshot {
   float: right;
   margin-left: 20px;
 }
 
-#cv address {
+#cv .page address {
   font-style: normal;
   line-height: 1.5rem;
   margin-bottom: 1em;
 }
 
-#cv .email {
+#cv .page .email {
   font-style: normal;
   color: inherit;
   font-weight: bold;
 }
 
-#cv ul {
+#cv .page ul {
   margin: 0 0 1em 0;
   padding: 0;
   list-style-position: inside;
   list-style-type: none;
 }
 
-#cv li:before {
+#cv .page li:before {
   content: "-";
   margin-right: 0.8em;
   color: rgba(0, 0, 0, 0.4);
 }
 
-#cv li {
+#cv .page li {
   font-size: 0.85rem;
   margin-bottom: 0.3em;
 }
@@ -640,7 +640,7 @@ a.anchor {
 }
 
 @media screen and (min-width: 768px), print {
-  #cv ul.long {
+  #cv .page ul.long {
     column-count: 2;
   }
 
