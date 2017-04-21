@@ -1,7 +1,7 @@
 ---
 title: Frequensea
 layout: page
-background: af0000
+background: 111
 ---
 **What if we could see all the electromagnetic radiation that's around us? That's the question the Frequensea project asks. Through custom software, the exhibition shows the electromagnetic spectrum in print and realtime and in virtual reality.**
 
