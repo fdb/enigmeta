@@ -530,9 +530,9 @@ a.anchor {
 
 #cv .project__meta {
   font-family: 'Roboto Mono', monospace;
-  font-size: 1.6rem;
+  font-size: 1.0rem;
   padding-right: 2rem;
-  color: #666;
+  color: #999;
   margin-bottom: 0.5rem;
 }
 
@@ -582,7 +582,7 @@ a.anchor {
   }
   #cv .project__desc {
     border-left: 1px solid #ddd;
-    padding-left: 2rem;
+    padding-left: 1.3rem;
     flex: 1;
   }
   #cv .project__title small {
