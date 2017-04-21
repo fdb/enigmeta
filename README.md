@@ -18,6 +18,29 @@ Installing on Ubuntu
     sudo gem install rubygems-update
     sudo gem install rake jekyll RedCloth
     sudo easy_install pygments
+    
+Installing on Windows
+---------------------
+* Download and install [Ruby](http://rubyinstaller.org/downloads/).
+* Download [Ruby Development Kit](http://rubyinstaller.org/downloads/). Extract it at `C:\RubyDevKit`.
+
+Then open a command prompt and run:
+
+    cd C:\RubyDevKit
+    ruby dk.rb init # This will generate the config.yml file. It should note the installed Ruby.
+    ruby dk.rb review # Check that the Ruby you just installed is actually there.
+    ruby dk.rb install
+
+Fix the [certificate issues](https://gist.github.com/fnichol/867550):
+* Download a recent [certificate file](https://curl.haxx.se/ca/cacert.pem).
+* Save this file to the Ruby install directory (`C:\tools\ruby23` by default). Make sure you don't add the `.txt` extension.
+
+Install the project dependencies from the `Gemfile`. Open a command prompt, then run:
+
+    cd C:\YourProjectDirectory
+    gem install bundler
+    bundle
+
 
 Installing on Termux
 --------------------
@@ -28,7 +51,10 @@ Installing on Termux
 
 Running
 -------
+On Windows, make sure Ruby can find the certificates. In every new command prompt, write:
 
+    set SSL_CERT_FILE=C:\tools\ruby23\cacert.pem
+    
 To build the website:
 
     rake

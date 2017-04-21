@@ -1,6 +1,7 @@
 ---
 layout: project
 title: OpenType.js
+background: 649664;
 images:
   - /media/projects/opentype-js-screenshot.png
 ---
@@ -8,4 +9,4 @@ Font creation technologies have so far largely been written in C or Python and o
 
 OpenType.js is used in a number of popular open-source and commercial tools such as <a href="https://p5js.org/">p5.js</a>, <a href="https://www.prototypo.io/">Prototypo</a>, <a href="https://www.fontself.com/">FontSelf</a> and <a href="http://metapolator.com/home/">Metapolator</a>.
 
-<http://opentype.js.org/>
+<https://opentype.js.org/>

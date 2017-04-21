@@ -1,78 +1,45 @@
 ---
 id: home
 title: Frederik De Bleser
-layout: base
+layout: default
 ---
-<header class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links"
-              aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="http://www.enigmeta.com/" class="navbar-brand">Frederik De Bleser</a></div>
-    <nav class="collapse navbar-collapse" id="navbar-links">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#about">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#exhibitions">Exhibitions</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="/cv/">Resume</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main>
   <a id="about" class="anchor"></a>
-  <div class="about container-fluid">
-    <div class="row">
-      <div class="col-xs-8">
-        <p><strong>Hi, I'm Frederik.</strong> I'm a PhD researcher in interactive media at <a
-          href="https://www.emrg.be/" target="_blank">EMRG</a>.</p>
-        <br>
-        <p class="small"><a href="/cv/">Resume</a>.</p>
-      </div>
-      <div class="col-xs-4 ">
-        <img src="/media/home/mugshot.jpg" alt="" class="img img-responsive mugshot pull-right"/>
-      </div>
-    </div>
-  </div>
+  <section class="about">
+    <p><strong>Hi, I'm Frederik.</strong> I'm a PhD researcher in interactive media at <a href="https://www.emrg.be/" target="_blank">EMRG</a>.</p>
+    <br>
+    <p class="small"><a href="/cv/">Read my resume</a>.</p>
+  </section>
 
   <a id="projects" class="anchor"></a>
-  <div class="projects container-fluid">
-    <h2>Projects</h2>
-    <div class="row">
-      <div class="col-md-4 thumb project">
+  <section class="projects">
+    <h1>Projects</h1>
+    <div class="thumb-list">
+      <div class="thumb project">
         <a href="/projects/nodebox/">
           <img src="/media/home/nodebox-live-screenshot.png" alt="NodeBox Live Screenshot" class="img img-responsive">
           <p class="caption">NodeBox</p>
         </a>
       </div>
-      <div class="col-md-4 thumb project">
+      <div class="thumb project">
         <a href="/projects/opentype-js/">
           <img src="/media/home/opentype-js-screenshot.png" alt="OpenType.js Screenshot" class="img img-responsive">
           <p class="caption">OpenType.js</p>
         </a>
       </div>
-      <div class="col-md-4 thumb project">
+      <div class="thumb project">
         <a href="/projects/logic-layout/">
           <img src="/media/home/logic-layout-screenshot.png" alt="Logic Layout Screenshot" class="img img-responsive">
           <p class="caption">Logic Layout</p>
         </a>
       </div>
     </div>
-  </div>
+  </section>
 
   <a id="exhibitions" class="anchor"></a>
-  <div class="exhibitions container-fluid">
-    <h2>Exhibitions</h2>
-    <div class="row">
-      <div class="col-md-4 thumb exhibition">
+  <section class="exhibitions">
+    <h1>Exhibitions</h1>
+    <div class="thumb-list">
+      <div class="thumb exhibition">
         <a href="/exhibitions/wandering-ants/">
           <img src="/media/home/wandering-ants.jpg" alt="" class="img img-responsive">
           <p class="caption">Wandering Ants —
@@ -80,7 +47,7 @@ layout: base
           </p>
         </a>
       </div>
-      <div class="col-md-4 thumb exhibition">
+      <div class="thumb exhibition">
         <a href="/exhibitions/frequensea/">
           <img src="/media/home/frequensea.jpg" alt="" class="img img-responsive">
           <p class="caption">Frequensea —
@@ -88,7 +55,7 @@ layout: base
           </p>
         </a>
       </div>
-      <div class="col-md-4 thumb exhibition">
+      <div class="thumb exhibition">
         <a href="/exhibitions/arial-wtf/">
           <img src="/media/home/arialwtf.jpg" alt="" class="img img-responsive">
           <p class="caption">Arial.wtf —
@@ -96,7 +63,7 @@ layout: base
           </p>
         </a>
       </div>
-      <div class="col-md-4 thumb exhibition">
+      <div class="thumb exhibition">
         <a href="/exhibitions/metashape/">
           <img src="/media/home/metashape.jpg" alt="" class="img img-responsive">
           <p class="caption">Metashape —
@@ -104,7 +71,7 @@ layout: base
           </p>
         </a>
       </div>
-      <div class="col-md-4 thumb exhibition">
+      <div class="thumb exhibition">
         <a href="/exhibitions/traveling-letters/">
           <img src="/media/home/traveling-letters.jpg" alt="" class="img img-responsive">
           <p class="caption">Traveling Letters —
@@ -112,7 +79,7 @@ layout: base
           </p>
         </a>
       </div>
-      <div class="col-md-4 thumb exhibition">
+      <div class="thumb exhibition">
         <a href="/exhibitions/word-maze/">
           <img src="/media/home/word-maze.jpg" alt="" class="img img-responsive">
           <p class="caption">Word Maze —
@@ -121,14 +88,14 @@ layout: base
         </a>
       </div>
     </div>
-  </div>
+  </section>
 
   <a id="blog" class="anchor"></a>
-  <div class="blog container-fluid">
-    <h2>Blog</h2>
-    <div class="row">
+  <section class="blog">
+    <h1>Blog</h1>
+    <div class="thumb-list">
       {% for post in site.posts %}
-      <div class="col-md-4 thumb post">
+      <div class="thumb post">
         <a href="{{ post.url }}">
           <img src="/media{{ post.id }}/{{post.bigshot}}" title="{{ post.title }}" class="img img-responsive">
           <p class="caption">{{ post.title }} —
@@ -138,49 +105,11 @@ layout: base
       </div>
       {% endfor %}
     </div>
-  </div>
+  </section>
 
   <a id="contact" class="anchor"></a>
-  <div class="contact container-fluid">
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Contact Me</h2>
-        <p id="big-email"><a href="mailto:frederik@debleser.be">frederik@debleser.be</a></p>
-      </div>
-      <div class="col-md-6" id="social">
-        <h2>Around the web</h2>
-        <a href="https://twitter.com/enigmeta"><i class="fa fa-twitter"></i></a>
-        <a href="https://github.com/fdb"><i class="fa fa-github"></i></a>
-        <a href="https://www.youtube.com/channel/UCSkvnnKIDaA9vF-sTJ1KWkw"><i class="fa fa-youtube"></i></a>
-      </div>
-    </div>
-  </div>
-</main>
-
-<footer>
-  <div class="container-fluid">
-    <p class="text-center">
-      <a href="http://www.enigmeta.com/">enigmeta.com</a> is the personal blog of <a href="/about/">Frederik De
-      Bleser</a>. Contact me by <a href="mailto:frederik@debleser.be">Email</a>, <a
-      href="https://twitter.com/enigmeta/">Twitter</a> or <a href="https://github.com/fdb">GitHub</a>. <a
-      href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Some Rights Reserved</a>.
-    </p>
-  </div>
-</footer>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  $('body').scrollspy({target: '#navbar-links'});
-  $('a').on('click', function (e) {
-    if (this.hash === '') {
-      return;
-    }
-    e.preventDefault();
-    var hash = this.hash;
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 200, function () {
-      window.location.hash = hash;
-    });
-  });
-});
-</script>
+  <section class="contact">
+    <h1>Contact Me</h1>
+    <p class="contact__email"><a href="mailto:frederik@debleser.be">frederik@debleser.be</a></p>
+    <div class="contact__social"><a href="https://github.com/fdb">GitHub</a> — <a href="https://www.linkedin.com/in/frederik-de-bleser/">LinkedIn</a> — <a href="https://twitter.com/enigmeta/">Twitter</a></div>
+  </section>

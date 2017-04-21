@@ -1,3 +1,4 @@
+repository: fdb/fdb.github.io
 permalink: /blog/:title/
 exclude:
   - README.md

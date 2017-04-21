@@ -1,20 +1,22 @@
 ---
 layout: default
 ---
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h2>{{ page.title }}</h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8 project-text">
-      {{ content }}
-    </div>
-    <div class="col-md-4 project-images">
-    {% for image in page.images %}
-        <img src="{{ image }}" alt="{{ image }}" class="img-responsive project-image">
-    {% endfor %}
-    </div>
-  </div>
+<div class="page-header">
+  <h1>{{ page.title }}</h1>
 </div>
+<div class="page">
+  {{ content }}
+  {% for image in page.images %}
+    <img src="{{ image }}" alt="{{ image }}" class="project-image">
+  {% endfor %}
+</div>
+{% if page.background %}
+<style>
+  .header__bar {
+    background-color: #{{ page.background }};
+  }
+  .page-header {
+    background-color: #{{ page.background }};
+  }
+</style>
+{% endif %}

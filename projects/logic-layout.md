@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Logic Layout
+background: 5fadad;
 images:
   - /media/projects/ll-screenshot.png
   - /media/projects/ll-constraints.png

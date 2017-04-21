@@ -1,39 +1,49 @@
 ---
 layout: base
 ---
-<header class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="http://www.enigmeta.com/" class="navbar-brand">Frederik De Bleser</a> </div>
-    <nav class="collapse navbar-collapse" id="navbar-links">
-      <ul class="nav navbar-nav">
-        <li><a href="/#about">Home</a></li>
-        <li><a href="/#projects">Projects</a></li>
-        <li><a href="/#exhibitions">Exhibitions</a></li>
-        <li><a href="/#blog">Blog</a></li>
-        <li><a href="/#contact">Contact</a></li>
-        <li><a href="/cv/">Resume</a></li>
-      </ul>
-    </nav>
+<header>
+  <div class="header__bar">
+    <div class="header__brand"><a href="/">Enigmeta</a></div>
+    <div class="header__menu">
+      <a href="#" class="header__hamburger">
+        <div class="header__hamburger-top"></div>
+        <div class="header__hamburger-middle"></div>
+        <div class="header__hamburger-bottom"></div>
+      </a>
+    </div>
+  </div>
+  <div class="header__overlay">
+    <ul class="header__nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/#exhibitions">Exhibitions</a></li>
+      <li><a href="/#blog">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+      <li><a href="/cv/">Resume</a></li>
+    </ul>
   </div>
 </header>
 
 <main>
-{{ content }}
+  {{ content }}
 </main>
 
 <footer>
-  <div class="container-fluid">
-    <p class="text-center">
-      <a href="http://www.enigmeta.com/">enigmeta.com</a> is the personal blog of <a href="/about/">Frederik De Bleser</a>. Contact me by <a href="mailto:frederik@debleser.be">Email</a>, <a href="https://twitter.com/enigmeta/">Twitter</a> or <a href="https://github.com/fdb">GitHub</a>. <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Some Rights Reserved</a>.
-    </p>
+  <div class="footer__intro"><a href="https://www.enigmeta.com/">Enigmeta</a> is the personal site of Frederik De
+    Bleser.<br></div>
+  <div class="footer__links">
+    <div class="footer__left">
+      <a href="/#projects">Projects</a><br>
+      <a href="/#exhibitions">Exhibitions</a><br>
+      <a href="/#blog">Blog</a><br>
+      <a href="/#contact">Contact</a><br>
+      <a href="/cv/">Resume</a><br>
+    </div>
+    <div class="footer__right">
+      <a href="mailto:frederik@debleser.be">frederik@debleser.be</a><br>
+      <a href="https://github.com/fdb">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/frederik-de-bleser/">LinkedIn</a><br>
+      <a href="https://twitter.com/enigmeta/">Twitter</a><br>
+    </div>
   </div>
 </footer>
-</body>
-</html>

@@ -1,57 +1,15 @@
-/** {
-  box-sizing: border-box;
-}
-
-body {
-  font: 14px sans-serif;
-  width: 800px;
-  margin: 0 auto;
-  background: #f7f7f7;
-  padding: 0;
-}
-
-header {
- border-bottom: 1px solid #ddd;
- padding: 10px 0;
- margin-bottom: 10px;
-}
-
-h1 {
-  display: inline-block;
-  width: 60%;
-  font-weight: 200;
-  color: #444;
-  margin: 0;
-}
-
-h2 {
-  display: inline-block;
-  text-align: right;
-  width: 39%;
-  font-weight: 200;
-  color: #666;
-  margin: 0;
-}
-
-#explain {
-
-
-}*/
-
 p.warning {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   color: #999;
-}
-
-p {
-  /*color: #666;*/
-  /*line-height: 1.4em;*/
-  /*font-size: 0.9rem;*/
 }
 
 .controls {
   width: 100%;
   margin-bottom: 1rem;
+}
+
+#styleSlider {
+  width: 100%;
 }
 
 .styles {
