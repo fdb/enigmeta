@@ -22,18 +22,36 @@ The application was designed to help *non-programmers* visualize data using a po
   </div>
 </div>
 
-The NodeBox Live interface is made to be user-friendly, with an integrated help guide.
+Through an intuitive interface, variations can easily be created. This typographic example shows all variations just by dragging around parameters.
 
-<img src="/media/projects/nbl-guide.png" alt="NodeBox Live Help Guide">
+<img src="/media/projects/nbl-variations.jpg" alt="">
+
+The application can be used for **data visualization** and **generative design**. We regularly undertake user studies to optimize usability.
+
+<div class="two columns">
+  <div class="column">
+    <img src="/media/projects/nbl-goldberg.png" alt="Goldberg Variations">
+    <p class="caption">"Goldberg Variations", Anton Sovetov</p>
+  </div>
+  <div class="column">
+    <img src="/media/projects/nbl-surnames.jpg" alt="Finnish Surnames">
+    <p class="caption">"Finnish Surnames", Eemeli Nieminen</p>
+  </div>
+</div>
+
+Integration with <a href="/projects/opentype-js/">OpenType.js</a> opens up the world of generative typography on the web.
+
+<img src="/media/projects/nbl-grow.jpg" alt="Grow">
 
 The programming model supports both **visual programming** and **textual programming**.
 
 <img src="/media/projects/nbl-supershape.jpg" alt="NodeBox Live Supershape example">
 
-By integrating with web services, the visualizations can be linked to *live data*. This example shows a generative typeface that **changes according to current wind speed and direction**.
+By integrating with **web services**, the visualizations can be linked to *live data*. This example shows a generative typeface that **changes according to current wind speed and direction**.
 
 <img src="/media/projects/nbl-wind-type.jpg" alt="">
 <p class="caption">"Wind Type", Milda Siulyte &amp; Vincentas Kuodis</p>
+
 
 NodeBox Live is in private beta. A release is expected later this year.
 
