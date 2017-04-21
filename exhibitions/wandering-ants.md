@@ -1,6 +1,7 @@
 ---
 title: Wandering Ants
 layout: page
+background: 5f6360
 ---
 This is a simple algorithm for crawling and reproducing ants, initially designed for a [NodeBox](https://www.nodebox.net/) workshop. Each time two ants meet, they produce offspring. However, nobody dies, so the population grows explosively.
 

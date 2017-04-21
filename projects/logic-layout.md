@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: page
 title: Logic Layout
 background: 5fadad;
 ---

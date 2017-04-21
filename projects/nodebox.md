@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: page
 title: NodeBox Live
 background: 3E4C80;
 ---

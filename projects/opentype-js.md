@@ -1,8 +1,7 @@
 ---
-layout: project
+layout: page
 title: OpenType.js
 background: 649664;
-images:
 ---
 Font creation technologies have so far largely been written in C or Python and offered to users as desktop applications or command line tools. Since 2014, the library OpenType.js has been able to **parse and generate fonts in JavaScript**. This opens up exciting possibilities for detailed control over all of aspects of typography on the web.
 
