@@ -5,11 +5,13 @@ It uses [Jekyll][] to transform it into a static site that gets pushed to my ser
 
 Installing on Mac
 -----------------
-Install [Xcode][] first.
 
+    xcode-select --install
+    brew install ruby libxml2
     sudo gem update --system
     sudo gem install bundler
-    bundle
+    bundle config build.nokogiri --use-system-libraries
+    sudo bundle
 
 Installing on Ubuntu
 --------------------
@@ -18,7 +20,7 @@ Installing on Ubuntu
     sudo gem install rubygems-update
     sudo gem install rake jekyll RedCloth
     sudo easy_install pygments
-    
+
 Installing on Windows
 ---------------------
 * Download and install [Ruby](http://rubyinstaller.org/downloads/).
@@ -54,7 +56,7 @@ Running
 On Windows, make sure Ruby can find the certificates. In every new command prompt, write:
 
     set SSL_CERT_FILE=C:\tools\ruby23\cacert.pem
-    
+
 To build the website:
 
     rake

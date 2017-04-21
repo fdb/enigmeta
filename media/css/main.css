@@ -447,6 +447,45 @@ footer a {
   font-weight: bold;
 }
 
+@media screen and (min-width: 550px) {
+
+  .page .columns {
+    display: flex;
+  }
+
+  .page .column {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .page .column:first-child {
+    padding-left: 0;
+  }
+
+  .page .column:last-child {
+    padding-right: 0;
+  }
+
+  .page .two .column {
+    width: 50%;
+  }
+
+  .page .three .column {
+    width: 33.3333%;
+  }
+
+  .page .four .column {
+    width: 25%;
+  }
+
+}
+
+.page .caption {
+  font-size: 0.7rem;
+  color: #666;
+  text-align: center;
+}
+
 /* Project */
 
 .project-image {
