@@ -22,13 +22,8 @@ h1, h2, h3 {
   page-break-after: avoid;
 }
 
-p { 
+p {
   page-break-inside: avoid;
-}
-
-.mugshot {
-  float: right;
-  margin-left: 20px;
 }
 
 .print-only {
