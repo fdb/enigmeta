@@ -457,27 +457,15 @@ footer a {
 
   .page .columns {
     display: flex;
-  }
-
-  .page .column {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .page .column:first-child {
-    padding-left: 0;
-  }
-
-  .page .column:last-child {
-    padding-right: 0;
+    justify-content: space-between;
   }
 
   .page .two .column {
-    width: 50%;
+    width: 48%;
   }
 
   .page .three .column {
-    width: 33.3333%;
+    width: 30%;
   }
 
   .page .four .column {
