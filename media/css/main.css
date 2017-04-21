@@ -289,7 +289,7 @@ main {
 
 #home .contact__email {
   font-family: 'Roboto Mono', monospace;
-  font-size: 2rem;
+  font-size: 1.5rem;
   opacity: 0.8;
   text-align: center;
   font-weight: normal;
@@ -345,11 +345,13 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-
   #home .about p {
     font-size: 2rem;
   }
 
+  #home .contact__email {
+    font-size: 2rem;
+  }
 }
 
 
