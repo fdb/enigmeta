@@ -21,6 +21,11 @@ Frequensea consists of a 10m print on aluminium of the frequency spectrum, a num
   </div>
 </div>
 
+The Wi-Fi part of the spectrum is especially busy:
+
+<img src="/media/exhibitions/frequensea-wifi.jpg" alt="Closeup of the Wi-Fi spectrum.">
+
+
 Special tracking software installed on a Raspberry Pi allowed us to track airplanes, live.
 
 <img src="/media/exhibitions/frequensea-planes.jpg" alt="Planes visualization">
