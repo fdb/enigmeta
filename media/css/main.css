@@ -552,10 +552,20 @@ a.anchor {
   }
 }
 
+#cv .page h3 {
+  margin: 0.2rem 0 0.8rem 0;
+  font-weight: normal;
+  font-size: 1.0rem;
+}
+
 #cv .page a {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#cv .page code {
+  font-size: 1rem;
 }
 
 #cv .page .mugshot {
@@ -590,15 +600,16 @@ a.anchor {
 
 #cv .page li {
   font-size: 0.85rem;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.4em;
 }
 
 #cv .project {
-  padding-bottom: 2rem;
+  padding-bottom: 0.2rem;
   page-break-inside: avoid;
 }
 
 #cv .project__meta {
+  display: none;
   font-family: 'Roboto Mono', monospace;
   font-size: 1.0rem;
   padding-right: 2rem;
@@ -622,7 +633,7 @@ a.anchor {
   opacity: 0.5;
 }
 
-#cv .project__role {
+#cv .project__role, #cv .project__tech {
   color: #666;
   font-size: 0.85rem;
   margin-bottom: 1em;
@@ -636,7 +647,7 @@ a.anchor {
 
 #cv .project__accomplishments li {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0.2rem;
 }
 
 @media screen and (min-width: 768px), print {
@@ -645,7 +656,7 @@ a.anchor {
   }
 
   #cv .project {
-    display: flex;
+    /*display: flex;*/
   }
 
   #cv .project__meta {
@@ -653,9 +664,10 @@ a.anchor {
   }
 
   #cv .project__desc {
-    border-left: 1px solid #ddd;
+
+    /*border-left: 1px solid #ddd;*/
     padding-left: 1.3rem;
-    flex: 1;
+    /*flex: 1;*/
   }
 
   #cv .project__title small {
