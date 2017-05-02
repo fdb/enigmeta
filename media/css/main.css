@@ -571,6 +571,7 @@ a.anchor {
 #cv .page .mugshot {
   float: right;
   margin-left: 20px;
+  max-width: 150px;
 }
 
 #cv .page address {
