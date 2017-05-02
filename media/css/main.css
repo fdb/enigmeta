@@ -134,10 +134,11 @@ header {
 }
 
 .header__overlay {
+  z-index: 1;
   background: #123;
   font-family: 'Roboto Mono', monospace;
   position: fixed;
-  transform: translate(0, 200vw);
+  transform: translate(0, 100vh);
   top: 0;
   left: 0;
   height: 100%;
@@ -147,7 +148,6 @@ header {
 }
 
 .header--open .header__overlay {
-  z-index: 1;
   transform: translate(0, 0);
 }
 
