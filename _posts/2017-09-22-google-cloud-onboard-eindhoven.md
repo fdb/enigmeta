@@ -10,7 +10,7 @@ On Wednesday September 20th I participated in the Google Cloud OnBoard event at 
 
 The event was an introduction in the features of the Google Cloud infrastructure: everything from hosting your own apps, storage and databases to working with big data and machine learning.
 
-The event was organized by Google, and presented by [Matthew Feigal](https://twitter.com/mattfgl) from Google and [Mark Crump](https://twitter.com/crumpyscloud) from [QA](https://www.qa.com), a Google training partner.
+The event was organized by Google and presented by [Matthew Feigal](https://twitter.com/mattfgl) from Google and [Mark Crump](https://twitter.com/crumpyscloud) from [QA](https://www.qa.com), a Google training partner.
 
 # Introduction
 
@@ -19,8 +19,8 @@ The event was organized by Google, and presented by [Matthew Feigal](https://twi
 The Google Cloud platform is big, but can be broken down in four sections:
 - **Compute**: managing the machines that run your applications. Ranging from Compute Engine, which is a VPS, to App Engine, which is a Platform as a Service (PaaS).
 - **Storage**: managing how you store and access data. This covers file storage (Cloud Storage), Cloud SQL and Bigtable for big projects.
-- **Big Data**: asking questions about large datasets. Use BigQuery to perform SQL-like queries on terrabyte-size datasets, Pub/Sub for messaging, Datalab for an IPython Notebook in the cloud.
-- **Machine Learning**: access to Google's infrastructure for your own machine learning jobs using Tensorflow, or pre-built machine learning apps like Cloud Vision, the Natural Language API or the Speech API.
+- **Big Data**: asking questions about large datasets. Use BigQuery to perform SQL-like queries on terabyte-size datasets, Pub/Sub for messaging, Datalab for an IPython Notebook in the cloud.
+- **Machine Learning**: access to Google's infrastructure for your own machine learning jobs using TensorFlow, or pre-built machine learning apps like Cloud Vision, the Natural Language API or the Speech API.
 
 Monitoring all of that data happens through [StackDriver](https://cloud.google.com/stackdriver/), an application to monitor, log and debug applications.
 
@@ -57,7 +57,7 @@ You can access GCP (Google Cloud Platform) using different methods:
 - Similar to [Heroku](https://www.heroku.com/).
 - Two types of environments:
   - **Standard**: autoscaling, free daily quota, limited language support (Java, Python, Go). Has some restrictions to enable scaling: no writing to local file system, for example. Automatic shutdown if the app is not used, saving cost.
-  - **Flex**: works with containers, which you can inspect an log in to. Supports every possible language.
+  - **Flex**: works with containers, which you can inspect and log in to. Supports every possible language.
 - Provides extra services like cron jobs, task queues for rendering or batch processing, search, logs.
 - Example: [Crowdsite](https://www.crowdsite.com/), dutch marketplace for design & creatives.
 
@@ -74,7 +74,7 @@ You can access GCP (Google Cloud Platform) using different methods:
 ## [Container Engine](https://cloud.google.com/container-engine/)
 Used for virtualization at the operating system layer. Separates operating system from *application code and dependencies*.
 
-Containers are used *everywhere* in Google. Any application runs in a container: Search, Mail, Maps, ... It's the best way to keep dependencies of different applications from messing with eachother.
+Containers are used *everywhere* in Google. Any application runs in a container: Search, Mail, Maps, ... It's the best way to keep dependencies of different applications from messing with each other.
 
 Consistent environment for development, testing, and production. Simple to migrate and move around.
 
@@ -133,7 +133,7 @@ Example: [Philips Hue](https://cloud.google.com/customers/philips/) uses contain
 
 ## [Cloud Bigtable](https://cloud.google.com/bigtable/)
 - Wide-column NoSQL store for terabyte to petabyte-scale applications.
-- Uesd in Gmail, Google Analytics.
+- Used in Gmail, Google Analytics.
 - Similar to Cassandra. Accessed using the HBase API (Hadoop).
 - Good for "flat data": time series, AdTech, financial data, IoT sensor data, computer logs.
 
@@ -153,17 +153,17 @@ Example: [Philips Hue](https://cloud.google.com/customers/philips/) uses contain
 ## [Cloud Source Repositories](https://cloud.google.com/source-repositories/)
 - Managed private Git hosting, like GitHub enterprise.
 - Can mirror other Git repositories, like from GitHub for example.
-- Supports web hooks so that actions happen when a commit is pushed.
+- Supports webhooks so that actions happen when a commit is pushed.
 
 ## [StackDriver](https://cloud.google.com/stackdriver/)
-- Used for monitoring, logging, debugging, error reporting on your infrastucture.
+- Used for monitoring, logging, debugging, error reporting on your infrastructure.
 - Nice visualizations.
 
 # Big Data and Machine Learning
 Running big data operations on Google Cloud means you just need to focus on the application. You don't have to manage servers or acquire costly GPUs.
 
 ## [Cloud BigQuery](https://cloud.google.com/bigquery/)
-An analytics database tht provides near real-time interactive analysis of massive datasets (hundreds of TBs).
+An analytics database that provides near real-time interactive analysis of massive datasets (hundreds of TBs).
 - You throw your data at it (CSV, JSON, realtime streams), write a SQL query, and get a result back.
 - Based on the [Dremel paper](https://research.google.com/pubs/pub36632.html).
 - During the presentation, we saw queries on the full Wikipedia data set (100 billion rows) in a few seconds.
@@ -200,7 +200,7 @@ An analytics database tht provides near real-time interactive analysis of massiv
 ## [Machine Learning](https://cloud.google.com/products/machine-learning/)
 Google open-source [TensorFlow](https://www.tensorflow.org), a widely-used tool for machine learning. They now provide tools to run TensorFlow jobs in the cloud, as well as pre-trained models for computer vision, language analysis and translation, and text-to-speech.
 
-[Rokesh Jankie](https://twitter.com/rjankie), a Google engineer, gave the best one-line introduction to AI I've ever heard: "You create a function, only we don't know yet the formula of the function." Instead of linear functions, we use neural networks, which can handle complex transformations and noise better. He demonstrated this using the [Tensorflow Playground](http://playground.tensorflow.org/). He also showed the [Cloud Vision Explorer](http://vision-explorer.reactive.ai/), showing an interactive demonstration of the capabilities of the Cloud Vision API. He also showed [WaveNet](https://deepmind.com/blog/wavenet-generative-model-raw-audio/), a generative model for the generation of text-to-speech. He demonstrated how computer vision can be used to find disease patterns in images of eyes.
+[Rokesh Jankie](https://twitter.com/rjankie), a Google engineer, gave the best one-line introduction to AI I've ever heard: "You create a function, only we don't know yet the formula of the function." Instead of linear functions, we use neural networks, which can handle complex transformations and noise better. He demonstrated this using the [TensorFlow Playground](http://playground.tensorflow.org/). He also showed the [Cloud Vision Explorer](http://vision-explorer.reactive.ai/), showing an interactive demonstration of the capabilities of the Cloud Vision API. He also showed [WaveNet](https://deepmind.com/blog/wavenet-generative-model-raw-audio/), a generative model for the generation of text-to-speech. He demonstrated how computer vision can be used to find disease patterns in images of eyes.
 
 A few use cases:
 - **Classification / Regression**: forecasting, customer churn analysis ("why are my customers leaving?")
@@ -212,16 +212,16 @@ A few use cases:
 ### [Cloud Machine Learning Engine](https://cloud.google.com/ml-engine/)
 - For custom machine learning jobs.
 - Google provides infrastructure for training your model.
-- Once trained, your model can run on users' computer or smartphones.
+- Once trained, your model can run on user's computer or smartphones.
 
 ### [Cloud Vision API](https://cloud.google.com/vision/)
-- Analyze iamges with a REST api.
+- Analyze images with a REST api.
 - Supports face detection, label detection, sentiment analysis, text extraction (OCR).
 - Returns bounding boxes of faces (and facial features), objects in JSON.
 - [COCO](http://cocodataset.org/) is an image dataset that has labelled and segmented images for use in image recognition. It is available under a [Creative Commons license](http://cocodataset.org/#termsofuse).
 
 ### [Cloud Speech API](https://cloud.google.com/speech/)
-- Recognizes over 80 langauges.
+- Recognizes over 80 languages.
 - Can return text in real-time (streaming).
 
 ### [Cloud Natural Language API](https://cloud.google.com/natural-language/)
