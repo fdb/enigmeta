@@ -2,12 +2,15 @@
 title: Counting Words with Python 3
 pubdate: 2018-02-17
 layout: post
+bigshot: bigshot.jpg
 ---
 This post will get you set up to start processing datasets with Python 3. We will learn how to use the terminal, install Python if you don't have it already, and write a simple word-counting script that returns the result in CSV.
 
 A big focus will be on getting you to "Google level experience", meaning that you will know the right things to search for if you want to do something not mentioned in this article, or if you get stuck. Knowing *what* to search for is important to tackle your own data processing jobs.
 
 During the many NodeBox workshops I've given I noticed that students would eventually be able to figure out the visualization on their own, but they had trouble getting the data in the correct shape. Being able to acquire the data (e.g. from an external API), converting it to a format you can use is key to making good visualizations. But first, we need to talk about the terminal.
+
+Full source code of this project is available here: <https://gist.github.com/fdb/1c7234fb49757df588c1302f44f0f125>
 
 ## The Terminal is Your Friend
 
@@ -57,15 +60,27 @@ The root folder contains a directory called "Users". In that directory is a fold
 
 To see which files are in a directory use the `ls` command. Type `ls` and press enter. This will show you a list of files inside of the current (home) folder. Here are mine:
 
-Fixme: file listing
+```
+Desktop
+Documents
+Downloads
+Dropbox
+Experiments
+Google Drive
+Library
+Movies
+Music
+Pictures
+Public
+```
 
-You probably recognize some: your desktop, your documents, downloads and so on. All of these are inside our home folder. Note that the desktop is also a directory, just like your downloads directory.
+You probably recognize some: your desktop, your documents, downloads and so on. All of these are inside our home folder. Note that the desktop is *also* a directory, just like your downloads directory.
 
 The Finder provides a different, somewhat more user-friendly, view on the same information. If we go to the "Go" menu in the finder and choose "Home", it opens up a window with the same files. It's important to realize that what the Finder shows and what the terminal views are two views on the same information: the files stored in a directory on your hard drive.
 
 ## Changing Directories
 
-Your projects are probably saved in the Documents folder, or the desktop, or maybe  the Dropbox folder. Whatever the place we need to switch to that directory before we start executing commands. We'll use the `cd` command, short for *change directory*, for that.
+Your projects are probably saved in the Documents folder, or the desktop, or maybe the Dropbox folder. Whatever the place we need to switch to that directory before we start executing commands. We'll use the `cd` command, short for *change directory*, for that.
 
 To get to your desktop type the following command and press enter:
 
@@ -77,7 +92,12 @@ If we type `pwd` now (don't forget to press enter!) we'll see that the working d
 
 Type `ls` to see the files on your desktop:
 
-FIXME: desktop listing
+```
+Screen Shot 2018-03-06 at 23.38.57.png
+Screen Shot 2018-03-06 at 23.39.13.png
+Screen Shot 2018-03-06 at 23.41.43.png
+Screen Shot 2018-03-06 at 23.45.14.png
+```
 
 My listing will have very different files from yours. The Desktop starts out empty, and in my case fills up quickly as the deadline approaches!
 
@@ -112,7 +132,7 @@ If you *have* Python installed, it will show some text and then the Python `>>>`
 To install Python 3, type:
 
 ```
-brew install python3
+brew install python
 ```
 
 After that, you should be able to type `python3` (and enter) to start Python in what's called *"interactive mode"*. It will show the version number, and then the Python prompt, indicating it's listening to your commands:
@@ -130,7 +150,7 @@ The interactive mode is useful for trying out quick things. In general though, w
 
 ## Text Editors and Project Folders
 
-To edit files we need a plain text editor. This is not Word or LibreOffice, but a program like Sublime Text, Atom or [Visual Studio Code](FIXME:link). I prefer the latter since it has an integrated terminal, which will automatically change the directory to the current project path.
+To edit files we need a plain text editor. This is not Word or LibreOffice, but a program like Sublime Text, Atom or [Visual Studio Code](https://code.visualstudio.com/). I prefer the latter since it has an integrated terminal, which will automatically change the directory to the current project path.
 
 Whenever we work on a data processing folder we should create a *project folder*. It's generally a bad idea just to create files randomly on the desktop, but especially for data processing jobs since they can produce many intermediate folders. Also, our editor works at the folder level, automatically helping us find files in the project folder.
 
@@ -150,7 +170,7 @@ We're going to write a small script that will load a file, count the unique word
 
 First we need to have some content. I'm going to use the American declaration of dependence since it's freely available. You can download it here:
 
-https://gist.github.com/fdb/1c7234fb49757df588c1302f44f0f125
+<https://gist.github.com/fdb/1c7234fb49757df588c1302f44f0f125>
 
 But wait! Since we can now use the command line, we can also download it by using `curl`, a program that can fetch web pages and files from the web.
 
