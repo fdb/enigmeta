@@ -1,5 +1,8 @@
 ---
+date: 2016-01-01
 title: Wandering Ants
+slug: wandering-ants
+thumbnail: wandering-ants-thumb.jpg
 layout: page
 background: 5f6360
 ---

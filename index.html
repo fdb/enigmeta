@@ -5,89 +5,21 @@ layout: default
 ---
   <a id="about" class="anchor"></a>
   <section class="about">
-    <p><strong>Hi, I'm Frederik.</strong> I'm a designer / developer / researcher in interactive media at <a href="https://www.emrg.be/" target="_blank">EMRG</a>.</p>
+    <p><strong>Hi, I'm Frederik.</strong> I'm a designer / developer / researcher in interactive media at <a href="https://www.sintlucasantwerpen.be/" target="_blank">Sint Lucas Antwerpen</a>.</p>
     <br>
-    <p class="small"><a href="/cv/">Read my resume</a>.</p>
     <div class="about__scroll"><span>&raquo;</span></div>
   </section>
 
   <a id="projects" class="anchor"></a>
   <section class="projects">
-    <h1>Projects</h1>
     <div class="thumb-list">
-      <div class="thumb project">
-        <a href="/projects/nodebox/">
-          <img src="/media/home/nodebox-live-screenshot.png" alt="NodeBox Live Screenshot" class="img img-responsive">
-          <p class="caption">NodeBox Live</p>
-        </a>
-      </div>
-      <div class="thumb project">
-        <a href="/projects/opentype-js/">
-          <img src="/media/home/opentype-js-screenshot.png" alt="OpenType.js Screenshot" class="img img-responsive">
-          <p class="caption">OpenType.js</p>
-        </a>
-      </div>
-      <div class="thumb project">
-        <a href="/projects/logic-layout/">
-          <img src="/media/home/logic-layout-screenshot.png" alt="Logic Layout Screenshot" class="img img-responsive">
-          <p class="caption">Logic Layout</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <a id="exhibitions" class="anchor"></a>
-  <section class="exhibitions">
-    <h1>Exhibitions</h1>
-    <div class="thumb-list">
-      <div class="thumb exhibition">
-        <a href="/exhibitions/wandering-ants/">
-          <img src="/media/home/wandering-ants.jpg" alt="" class="img img-responsive">
-          <p class="caption">Wandering Ants —
-            <time>2016</time>
-          </p>
-        </a>
-      </div>
-      <div class="thumb exhibition">
-        <a href="/exhibitions/frequensea/">
-          <img src="/media/home/frequensea.jpg" alt="" class="img img-responsive">
-          <p class="caption">Frequensea —
-            <time>2015</time>
-          </p>
-        </a>
-      </div>
-      <div class="thumb exhibition">
-        <a href="/exhibitions/arial-wtf/">
-          <img src="/media/home/arialwtf.jpg" alt="" class="img img-responsive">
-          <p class="caption">Arial.wtf —
-            <time>2013</time>
-          </p>
-        </a>
-      </div>
-      <div class="thumb exhibition">
-        <a href="/exhibitions/metashape/">
-          <img src="/media/home/metashape.jpg" alt="" class="img img-responsive">
-          <p class="caption">Metashape —
-            <time>2013</time>
-          </p>
-        </a>
-      </div>
-      <div class="thumb exhibition">
-        <a href="/exhibitions/traveling-letters/">
-          <img src="/media/home/traveling-letters.jpg" alt="" class="img img-responsive">
-          <p class="caption">Traveling Letters —
-            <time>2013</time>
-          </p>
-        </a>
-      </div>
-      <div class="thumb exhibition">
-        <a href="/exhibitions/word-maze/">
-          <img src="/media/home/word-maze.jpg" alt="" class="img img-responsive">
-          <p class="caption">Word Maze —
-            <time>2011</time>
-          </p>
-        </a>
-      </div>
+      {% assign sorted = site.projects | sort: 'date' | reverse %}
+      {% for project in sorted %}
+      <a class="thumb" href="{{ project.url }}">
+        <img src="/media/projects/{{ project.slug }}/{{ project.thumbnail }}" alt="{{ project.slug }}" class="img img-responsive">
+        <p class="caption">{{ project.title }} <time>({{ project.date | date: "%Y" }})</time></p>
+      </a>
+      {% endfor %}
     </div>
   </section>
 

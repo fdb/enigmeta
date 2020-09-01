@@ -1,5 +1,8 @@
 ---
+date: 2013-01-01
 title: Metashape
+slug: metashape
+thumbnail: metashape-thumb.jpg
 layout: page
 background: 093264
 ---
@@ -9,9 +12,9 @@ Metashape was displayed at the 2013 <a href="http://incubate.org/">Incubate</a> 
 
 <div class="two columns">
   <div class="column">
-    <img src="/media/exhibitions/metashape-square.png" alt="Metashape/Square">
+    <img src="/media/projects/metashape/metashape-square.png" alt="Metashape/Square">
   </div>
   <div class="column">
-    <img src="/media/exhibitions/metashape-curved.png" alt="Metashape/Curved">
+    <img src="/media/projects/metashape/metashape-curved.png" alt="Metashape/Curved">
   </div>
 </div>

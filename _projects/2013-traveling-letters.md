@@ -1,5 +1,8 @@
 ---
+date: 2013-01-01
 title: Traveling Letters
+slug: traveling-letters
+thumbnail: traveling-letters-thumb.jpg
 layout: page
 ---
 Traveling Letters takes the theme of the exhibition quite literally. What if letters had to travel to form words? What if only a single letter of the alphabet was available, having to travel from one word to the next? Would the text still be readable? Would the letters grow weary? Would their trails form patterns?

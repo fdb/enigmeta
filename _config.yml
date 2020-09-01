@@ -3,3 +3,8 @@ permalink: /blog/:title/
 exclude:
   - README.md
   - Rakefile
+collections:
+  projects:
+    year: true
+    output: true
+    permalink: /:collection/:name
