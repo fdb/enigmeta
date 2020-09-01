@@ -12,15 +12,15 @@ img {
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   background: #123;
   position: relative;
   margin: 0;
 }
 
 h2 {
-  font-family: 'Roboto Mono', monospace;
-  margin: 0.6em 0 0.5em 0;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  margin: 1.5rem 0 0.5rem 0;
   font-size: 1.2rem;
 }
 
@@ -47,6 +47,7 @@ img {
 }
 
 pre {
+  font-family: 'IBM Plex Mono', monospace;
   background: #eee;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
@@ -54,7 +55,12 @@ pre {
   overflow: auto;
 }
 
+code {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
 p code {
+  font-family: 'IBM Plex Mono', monospace;
   position: relative;
   top: -1px;
   background: #eee;
@@ -104,7 +110,7 @@ header {
 
 .header__brand {
   flex: 1;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
 .header__brand a {
@@ -168,7 +174,7 @@ header {
 .header__overlay {
   z-index: 1;
   background: #123;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   position: fixed;
   transform: translate(100vw, 0);
   top: 0;
@@ -229,7 +235,7 @@ main {
 }
 
 #home h1 {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-weight: normal;
   font-size: 1.8rem;
   text-align: center;
@@ -253,7 +259,7 @@ main {
 
 #home .about p {
   font-size: 1.5rem;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Sans', sans-serif;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   color: #fff;
   max-width: 1000px;
@@ -261,7 +267,7 @@ main {
 }
 
 #home .about p.small {
-  font-family: Roboto, sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 1.2rem;
 }
 
@@ -365,7 +371,7 @@ main {
 }
 
 #home .contact__email {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-size: 1.5rem;
   opacity: 0.8;
   text-align: center;
@@ -471,7 +477,7 @@ footer a {
   padding-top: 2rem;
   padding-bottom: 2rem;
   text-align: center;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-weight: normal;
   color: #eee;
 }
