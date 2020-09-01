@@ -16,3 +16,5 @@ Thumbs.db
 
 # Ruby cruft
 Gemfile.lock
+.jekyll-cache/
+
