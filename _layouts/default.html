@@ -5,21 +5,19 @@ layout: base
   <div class="header__bar">
     <div class="header__brand"><a href="/">Enigmeta</a></div>
     <div class="header__menu">
-      <a href="#" class="header__hamburger">
+      <button id="hamburger" class="header__hamburger">
         <div class="header__hamburger-top"></div>
         <div class="header__hamburger-middle"></div>
         <div class="header__hamburger-bottom"></div>
-      </a>
+      </button>
     </div>
   </div>
   <div class="header__overlay">
     <ul class="header__nav">
       <li><a href="/">Home</a></li>
       <li><a href="/#projects">Projects</a></li>
-      <li><a href="/#exhibitions">Exhibitions</a></li>
       <li><a href="/#blog">Blog</a></li>
       <li><a href="/#contact">Contact</a></li>
-      <li><a href="/cv/">Resume</a></li>
     </ul>
   </div>
 </header>
@@ -45,3 +43,12 @@ layout: base
     </div>
   </div>
 </footer>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.body.classList.toggle('header--open');
+  });
+  Array.from(document.querySelectorAll('.header__nav a')).forEach(el => el.addEventListener('click', () => {
+    document.body.classList.remove('header--open');
+  }))
+</script>
