@@ -6,6 +6,7 @@ thumbnail: ultravel-thumb.jpg
 layout: page
 background: 111711
 ---
+
 Our digital wireless communication fills the airwaves with text messages, images, videos and emoji’s. We write more than ever using technology and protocols that we can’t see, hear or feel.
 
 This installation attempts to visualize the hidden world of wireless communication by breaking it down in its simplest form: words, encoded into sound, are received on the other end through a microphone and converted back into an image. Pixels are transferred to an audio axis and back to a visual axis.
@@ -20,5 +21,6 @@ Unlike modern digital protocols the system does not cancel out noise or interfer
 <img src="/media/projects/ultravel/ultravel-4.jpg" alt="Ultravel" />
 <img src="/media/projects/ultravel/ultravel-5.jpg" alt="Ultravel" />
 <img src="/media/projects/ultravel/ultravel-6.jpg" alt="Ultravel" />
+<img src="/media/projects/ultravel/ultravel-7.jpg" alt="Ultravel" />
 
 Presented at the "Travelling Letters" exhibition in 2017 in Vilnius, Lithuania.
