@@ -12,18 +12,13 @@ background: 3ecf6e
 <video src="https://enigmeta.s3.amazonaws.com/enigmeta/projects/budget-brussels/budget-brussels-overview.mp4" autoplay loop muted playsinline></video>
 </div>
 
-As a citizen of Brussels you have the right to know where the budget goes. The challenge is figuring out how to show it in an interesting visual way. 
-
-
-[Tree Company](https://treecompany.be/) and [Spaced](https://www.spaced.be/) came together to build the website framework. For the main visualization we developed a hierarchical circle. Fully zoomed out, you can see an overview of all the categories of the budget. When clicking a category you zoom in to a category, replacing parts of the site dynamically. Some categories have sub-categories, allowing you to zoom in even further. 
-
-The challenge is the wildly different sizes of the categories. This means that zooming in to a circle would not work, because some parts would be too round, and other parts would be too flat. To solve this we “unfold”  the circle, flattening out to the ideal curvature to show the category in question. The size of the unwrapping would depend on the category size. Here's an early prototype showing the idea:
+As a citizen of Brussels you have the right to know where the budget goes. [Tree Company](https://treecompany.be/) and [Spaced](https://www.spaced.be/) came together to build the website framework. For the main visualization we developed a hierarchical circle. Fully zoomed out, you can see an overview of all the categories of the budget. When clicking a category you zoom in to a category, replacing parts of the site dynamically. Some categories have sub-categories, allowing you to zoom in even further. 
 
 <div class="full-width">
 <video src="https://enigmeta.s3.amazonaws.com/enigmeta/projects/budget-brussels/budget-brussels-prototype.mp4" autoplay loop muted playsinline></video>
 </div>
 
-In the site this is seamless. Seeing it zoomed out shows you the complexity of what’s going on:
+The challenge is the wildly different sizes of the categories. This means that zooming in to a circle would not work, because some parts would be too round, and other parts would be too flat. To solve this we “unfold”  the circle, flattening out to the ideal curvature to show the category in question. The size of the unwrapping would depend on the category size. Seeing it zoomed out shows you the complexity of what’s going on:
 
 <div class="full-width">
 <video src="https://enigmeta.s3.amazonaws.com/enigmeta/projects/budget-brussels/budget-brussels-zoomed-out.mp4
