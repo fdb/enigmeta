@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="page-header">
+  <h1>{{ title }}</h1>
+</div>
+<div class="page">
+  {{ content }}
+  {% for image in images %}
+    <img src="{{ image }}" alt="{{ image }}" class="project-image">
+  {% endfor %}
+</div>
+{% if background %}
+<style>
+  /*.header__bar {
+    background-color: #{{ background }};
+  }
+  .page-header {
+    background-color: #{{ background }};
+  }*/
+</style>
+{% endif %}

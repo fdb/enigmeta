@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="post-header" style="background-image: url(/media/blog/{{ page.fileSlug }}/{{ bigshot }});">
+  <h1>{{ title }}</h1>
+</div>
+
+<div class="page">
+  <p class="meta">{{ date | date:"%Y-%m-%d" }}</p>
+  {% if copyright %}
+  <p class="copyright">{{ copyright }}</p>
+  {% endif %}
+  <div class="post">
+    {{ content }}
+  </div>
+</div>

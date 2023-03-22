@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- if title == "Enigmeta" %}
+  <title>Enigmeta</title>
+  {%- else %}
+  <title>{{ title }} | Enigmeta</title>
+  {%- endif %}
+  <meta name="author" content="Frederik De Bleser">
+  <meta name="description"
+    content="Personal Homepage of Frederik De Bleser, designer, researcher and teacher at Sint Lucas Antwerpen">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans+Condensed:wght@700&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/media/css/main.css?{{site.time | date: '%s%N'}}">
+  <link rel="stylesheet" href="/media/css/syntax.css?{{site.time | date: '%s%N'}}">
+  <link rel="stylesheet" href="/media/css/print.css?{{site.time | date: '%s%N'}}" media="print">
+</head>
+
+<body id="{{  id }}">
+  {{ content }}
+</body>
+
+</html>

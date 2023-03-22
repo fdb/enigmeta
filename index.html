@@ -3,46 +3,49 @@ id: home
 title: Frederik De Bleser
 layout: default
 ---
-  <a id="about" class="anchor"></a>
-  <section class="about">
-    <p><strong>Hi, I'm Frederik.</strong> I'm a teacher / researcher in interactive media at <a href="https://www.sintlucasantwerpen.be/" target="_blank">Sint&nbsp;Lucas&nbsp;Antwerpen</a>.</p>
-    <br>
-    <div class="about__scroll"><span>&raquo;</span></div>
-  </section>
+<a id="about" class="anchor"></a>
+<section class="about">
+  <p><strong>Hi, I'm Frederik.</strong> I'm a teacher / researcher in digital media at <a
+      href="https://www.sintlucasantwerpen.be/" target="_blank">Sint&nbsp;Lucas&nbsp;Antwerpen</a>.<br>I also work
+    freelance as a data visualization designer.</p>
+  <br>
+  <div class="about__scroll"><span>&raquo;</span></div>
+</section>
 
-  <a id="projects" class="anchor"></a>
-  <section class="projects">
-    <div class="thumb-list">
-      {% assign sorted = site.projects | sort: 'date' | reverse %}
-      {% for project in sorted %}
-      <a class="thumb" href="{{ project.url }}">
-        <img src="/media/projects/{{ project.slug }}/{{ project.thumbnail }}" alt="{{ project.slug }}" class="img img-responsive">
-        <p class="caption">{{ project.title }} <time>({{ project.date | date: "%Y" }})</time></p>
+<a id="projects" class="anchor"></a>
+<section class="projects">
+  <div class="thumb-list">
+    {%- for project in collections.project reversed -%}
+    <a class="thumb" href="{{ project.url }}">
+      <img src="/media/projects/{{ project.data.slug }}/{{ project.data.thumbnail }}" alt="{{ project.slug }}"
+        class="img img-responsive">
+      <div class="caption"><span>{{ project.data.title }}</span><time>{{ project.date | date: "%Y" }}</time></div>
+    </a>
+    {%- endfor -%}
+  </div>
+</section>
+
+<a id="blog" class="anchor"></a>
+<section class="blog">
+  <h1>Blog</h1>
+  <div class="thumb-list">
+    {%- for post in collections.post reversed -%}
+    <div class="thumb post">
+      <a href="{{ post.url }}">
+        <img src="/media/blog/{{ post.fileSlug }}/{{post.data.bigshot}}" title="{{ post.data.title }}"
+          class="img img-responsive">
+        <div class="caption"><span>{{ post.data.title }}</span>
+          <time>{{ post.date | date:"%Y-%m-%d" }}</time>
+        </div>
       </a>
-      {% endfor %}
     </div>
-  </section>
+    {%- endfor -%}
+  </div>
+</section>
 
-  <a id="blog" class="anchor"></a>
-  <section class="blog">
-    <h1>Blog</h1>
-    <div class="thumb-list">
-      {% for post in site.posts %}
-      <div class="thumb post">
-        <a href="{{ post.url }}">
-          <img src="/media{{ post.id }}/{{post.bigshot}}" title="{{ post.title }}" class="img img-responsive">
-          <p class="caption">{{ post.title }} —
-            <time>{{ post.date | date_to_string }}</time>
-          </p>
-        </a>
-      </div>
-      {% endfor %}
-    </div>
-  </section>
-
-  <a id="contact" class="anchor"></a>
-  <section class="contact">
-    <h1>Contact Me</h1>
-    <p class="contact__email"><a href="mailto:frederik@debleser.be">frederik@debleser.be</a></p>
-    <div class="contact__social"><a href="https://github.com/fdb">GitHub</a> — <a href="https://www.linkedin.com/in/frederik-de-bleser/">LinkedIn</a> — <a href="https://twitter.com/enigmeta/">Twitter</a></div>
-  </section>
+<a id="contact" class="anchor"></a>
+<section class="contact">
+  <h1>Contact Me</h1>
+  <div class="contact__name">Frederik De Bleser</div>
+  <div class="contact__email"><a href="mailto:frederik@debleser.be">frederik@debleser.be</a></div>
+</section>

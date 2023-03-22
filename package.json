@@ -1,0 +1,30 @@
+{
+	"name": "enigmeta",
+	"version": "1.0.0",
+	"description": "Enigmeta is my personal blog. https://enigmeta.com/",
+	"main": ".eleventy.js",
+	"scripts": {
+		"start": "eleventy --serve",
+		"build": "eleventy",
+		"clean": "rm -rf _site",
+		"format": "prettier --write '**/*.{md,js,css,scss,html,yml,json}'"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fdb/enigmeta.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/fdb/enigmeta/issues"
+	},
+	"homepage": "https://enigmeta/com/",
+	"devDependencies": {
+		"@11ty/eleventy": "2.0.0",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+		"concurrently": "7.5.0",
+		"prettier": "2.7.1",
+		"serve": "^14.0.1"
+	}
+}
