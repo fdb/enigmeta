@@ -13,7 +13,7 @@ img {
 
 body {
 	font-family: 'IBM Plex Sans', sans-serif;
-	font-size: 1.0rem;
+	font-size: 1rem;
 	background-color: #012;
 	color: #fff;
 	position: relative;
@@ -21,11 +21,9 @@ body {
 }
 
 @media (min-width: 768px) {
-  body {
-    font-size: 1.2rem;
-  }
-}
-  
+	body {
+		font-size: 1.2rem;
+	}
 }
 
 h2 {
@@ -55,6 +53,11 @@ a {
 img,
 video {
 	max-width: 100%;
+}
+
+img.rounded,
+video.rounded {
+	border-radius: 8px;
 }
 
 pre {
@@ -146,12 +149,12 @@ header {
 	padding: 1rem;
 	z-index: 2;
 	background: #012;
-  text-align: center;
-  box-shadow: 0 5px 10px rgba(0, 0, 10, 0.2);
+	text-align: center;
+	box-shadow: 0 5px 10px rgba(0, 0, 10, 0.2);
 }
 
 #home .header__bar {
-  box-shadow: none;
+	box-shadow: none;
 }
 
 .header__brand {
@@ -164,8 +167,8 @@ header {
 }
 
 .header__menu {
-  position: absolute;
-  right: 20px;
+	position: absolute;
+	right: 20px;
 	width: 23px;
 	height: 19px;
 }
@@ -385,14 +388,14 @@ main {
 	font-size: 0.9rem;
 	display: flex;
 	flex-direction: column;
-  align-items: flex-start;
+	align-items: flex-start;
 	justify-content: space-between;
 }
 
 @media (min-width: 768px) {
-  #home .thumb .caption {
-	flex-direction: row;
-  }
+	#home .thumb .caption {
+		flex-direction: row;
+	}
 }
 
 #home .thumb .caption time {
@@ -423,16 +426,16 @@ main {
 	padding-bottom: 5rem;
 	background: #012;
 	color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #home .contact__name {
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  opacity: 0.4;
-  margin-bottom: 0.5rem;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	opacity: 0.4;
+	margin-bottom: 0.5rem;
 }
 
 #home .contact__email {
@@ -481,16 +484,15 @@ main {
 	margin: 0 auto;
 	display: grid;
 	max-width: 1350px;
-  padding: 0 1rem;
+	padding: 0 1rem;
 	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	grid-gap: 5rem 2rem;
 }
 
 @media screen and (min-width: 768px) {
-
-  #home .thumb-list {
-    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
-  }
+	#home .thumb-list {
+		grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+	}
 
 	#home .about p {
 		font-size: 2rem;
@@ -554,7 +556,7 @@ footer a {
 
 .page-header {
 	background: #123;
-  opacity: 0.8;
+	opacity: 0.8;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 	text-align: center;
