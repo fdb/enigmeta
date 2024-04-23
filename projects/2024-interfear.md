@@ -14,7 +14,21 @@ Using non-traditional sensing techniques (electromagnetic radiation, LIDAR) we i
 
 <img src="/media/projects/interfear/interfear-room.jpg" alt="INTERFEAR">
 
-The project is developed in collaboration with _notthecenter collective_, a group of four artists creating time based work through the mediums of sound and movement. It consists of Myrthe Bokelmann (dancer, performer), Roma Gavryliuk (sound artist, performer), Leonie Strecker (sound artist, performer) and Cèlia Tort Pujol (oboist, performer).
+<p style="margin-bottom: 2rem">The project is developed in collaboration with <a href="https://myrthebokelmann.com/not-the-center"><em>notthecenter</em></a>, a group of four artists creating time based work through the mediums of sound and movement:</p>
+
+- [Myrthe Bokelmann](https://myrthebokelmann.com/) — dancer, performer
+- [Roma Gavryliuk](https://gavryli.uk/) — sound artist, performer
+- [Leonie Strecker](https://www.leoniestrecker.com/) — sound artist, performer
+- [Cèlia Tort Pujol](https://www.instagram.com/celiatortpujol/) — oboist, performer
+
+<br/>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/825407223?h=411ca82d58"></iframe>
+</div>
+
+<br/>
+<br/>
 
 <div class="two columns">
   <div class="column">
@@ -33,7 +47,7 @@ During the performance we manifest as a human antenna, mapping the invisible dig
 
 <img src="/media/projects/interfear/interfear-screenshot.jpg" alt="Screenshot of the custom INTERFEAR software">
 
-The project is under development. We did two working sessions, one in Antwerp and one in Vienna in 2023. In 2024 we will do a residency at deSingel (ON_OFF Space) and at HetBos.
+The project is under development. We did two working sessions, one in Antwerp and one in Vienna in 2023. In 2024 we will do residencies at [ON_OFF_SPACE](https://www.instagram.com/on_off_space/) in deSingel (Antwerp) and [Het Bos](https://www.hetbos.be/) (Antwerp).
 
 <img src="/media/projects/interfear/interfear-work.jpg" alt="INTERFEAR working session in Vienna.">
 
