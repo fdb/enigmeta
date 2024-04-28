@@ -5,6 +5,7 @@
 	"main": ".eleventy.js",
 	"scripts": {
 		"start": "eleventy --serve",
+		"dev": "eleventy --serve",
 		"build": "eleventy",
 		"clean": "rm -rf _site",
 		"format": "prettier --write '**/*.{md,js,css,scss,html,yml,json}'"
@@ -21,10 +22,8 @@
 	},
 	"homepage": "https://enigmeta/com/",
 	"devDependencies": {
-		"@11ty/eleventy": "2.0.0",
-		"@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-		"concurrently": "7.5.0",
-		"prettier": "2.7.1",
-		"serve": "^14.0.1"
+		"@11ty/eleventy": "2.0.1",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+		"prettier": "3.2.5"
 	}
 }
