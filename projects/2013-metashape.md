@@ -10,7 +10,6 @@ background: 093264
 
 Metashape is a set of works based on the <a href="https://en.wikipedia.org/wiki/Superformula">superformula</a>. By recursively applying the formula we create images that refer to the energy of japanese Manga.
 
-
 <div class="two columns">
   <div class="column">
     <img src="/media/projects/metashape/metashape-square.png" alt="Metashape/Square">

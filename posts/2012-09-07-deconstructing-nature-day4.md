@@ -3,7 +3,8 @@ layout: post
 title: Deconstructing Nature - Day 4
 bigshot: bigshot.jpg
 ---
-*My colleague Werner and I are holding a challenge this week to produce one visual work each day. I'm working around the theme of "Deconstructing Nature".*
+
+_My colleague Werner and I are holding a challenge this week to produce one visual work each day. I'm working around the theme of "Deconstructing Nature"._
 
 [Day 1](/blog/deconstructing-nature-day1) — [Day 2](/blog/deconstructing-nature-day2) — [Day 3](/blog/deconstructing-nature-day3) — [Day 4](/blog/deconstructing-nature-day4) — [Day 5](/blog/deconstructing-nature-day5)
 

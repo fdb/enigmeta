@@ -3,6 +3,7 @@ layout: default
 title: About Me
 bigshot: /media/about/bigshot.jpg
 ---
+
 <img src="/media/img/frederik-de-bleser.jpg" alt="Frederik De Bleser" class="float-right" style="padding-bottom: 20px; position: relative; top: -44px;" />
 
 I'm Frederik De Bleser. I'm a PhD researcher at <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerpen</a>. I develop <a href="http://nodebox.net/">NodeBox</a>, an application for creating generative design.

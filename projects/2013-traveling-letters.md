@@ -16,4 +16,3 @@ We designed a custom typeface and application that demonstrates this concept. To
 </div>
 
 The Traveling Letters installation was part of the "Traveling Letters" exhibition organized in Lahti, Finland in 2012.
-

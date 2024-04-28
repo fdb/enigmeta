@@ -11,8 +11,6 @@ The TrueType file format is a rigid, arcane and brittle font standard that store
 
 This work represents the struggle interpreting the Arial typeface and shows the happy accidents that occur when things go wrong. Just like jazz music, it's impromptu and unrehearsed which makes it interesting.
 
-
-
 <img src="/media/projects/arial-wtf/arial-wtf.png" alt="arial.wtf poster" class="img img-responsive">
 
 _Arial.wtf was part of the "Traveling Letters — Typo Jazz" exhibition organized in Vilnius, Lithuania in 2013._

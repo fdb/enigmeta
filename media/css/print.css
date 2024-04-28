@@ -1,52 +1,55 @@
 @page {
-  margin: 1.5cm 2cm 1cm 1cm;
+	margin: 1.5cm 2cm 1cm 1cm;
 }
 
 html {
-  font-size: 10pt;
+	font-size: 10pt;
 }
 
-header, footer {
-  display: none;
+header,
+footer {
+	display: none;
 }
 
 main {
-  background: white;
+	background: white;
 }
 
 .page {
-  padding: 0;
+	padding: 0;
 }
 
-h1, h2, h3 {
-  page-break-after: avoid;
+h1,
+h2,
+h3 {
+	page-break-after: avoid;
 }
 
 p {
-  page-break-inside: avoid;
+	page-break-inside: avoid;
 }
 
 .print-only {
-  display: block;
+	display: block;
 }
 
 .screen-only {
-  display: none;
+	display: none;
 }
 
 span.print-only {
-  display: inline;
+	display: inline;
 }
 
 hr.page-break {
-  page-break-before: always;
-  display: block;
-  width: 0;
-  height: 0;
+	page-break-before: always;
+	display: block;
+	width: 0;
+	height: 0;
 }
 
 h1.print-only {
-  padding: 0 0 0.2em 0;
-  border-bottom: 3px solid #0645ad;
-  margin: 0 0 0.5em 0;
+	padding: 0 0 0.2em 0;
+	border-bottom: 3px solid #0645ad;
+	margin: 0 0 0.5em 0;
 }

@@ -1,70 +1,69 @@
 p.warning {
-  font-size: 0.8rem;
-  color: #999;
+	font-size: 0.8rem;
+	color: #999;
 }
 
 .controls {
-  width: 100%;
-  margin-bottom: 1rem;
+	width: 100%;
+	margin-bottom: 1rem;
 }
 
 #styleSlider {
-  width: 100%;
+	width: 100%;
 }
 
 .styles {
-  display: flex;
-  margin-top: 10px;
+	display: flex;
+	margin-top: 10px;
 }
 
 .style {
-  color: #888;
-  text-transform: uppercase;
-  font-size: 80%;
-  flex: 1;
-  width: 50%;
+	color: #888;
+	text-transform: uppercase;
+	font-size: 80%;
+	flex: 1;
+	width: 50%;
 }
 
 .style.right {
-  flex: 1;
-  text-align: right;
+	flex: 1;
+	text-align: right;
 }
 
 .loader-wrap {
-  position: relative;
-  width: 100%;
+	position: relative;
+	width: 100%;
 }
 
 .embed-responsive {
-  height: 75vh;
+	height: 75vh;
 }
 
 #loader {
-  z-index: 999;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  font-size: 72px;
-  text-align: center;
-  padding-top: 100px;
-  transition: opacity 500ms;
-  color: #666;
-  opacity: 1;
-  pointer-events: none;
+	z-index: 999;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.9);
+	font-size: 72px;
+	text-align: center;
+	padding-top: 100px;
+	transition: opacity 500ms;
+	color: #666;
+	opacity: 1;
+	pointer-events: none;
 }
 
 iframe {
-  border: 1px solid #ddd;
-  width: 100%;
-  height: 75vh;
-  margin-bottom: 50px;
+	border: 1px solid #ddd;
+	width: 100%;
+	height: 75vh;
+	margin-bottom: 50px;
 }
 
 footer {
-  text-align: center;
-  font-size: 16px;
-  opacity: 0.4;
-  margin: 20px 0;
+	text-align: center;
+	font-size: 16px;
+	opacity: 0.4;
+	margin: 20px 0;
 }
-

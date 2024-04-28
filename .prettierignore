@@ -1,0 +1,8 @@
+# Experimental folders
+codevember/
+doodles/
+experiments/
+presentation/
+
+# Minified JavaScript
+*.min.js
