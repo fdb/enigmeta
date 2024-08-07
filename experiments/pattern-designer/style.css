@@ -1,0 +1,33 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	align-items: stretch;
+}
+
+section {
+	flex: 1;
+	overflow: hidden;
+}
+
+canvas {
+	width: 100%;
+	height: 100%;
+}
+
+section.preview {
+	background: #ffc300;
+}
+
+/* pattern-component {
+	display: block;
+	width: 100%;
+	height: 500px;
+} */
