@@ -2,31 +2,35 @@
 layout: post
 tags: post
 title: "Fighting Cognitive Debt in Agentic Code with Video Overviews"
-description: "Using Remotion and AI-generated narration to build animated video explainers that keep developers in sync with agentic code."
+description: "When AI writes your code, understanding doesn't come along for the ride. What if the same codebase that builds the software also generates narrated video walkthroughs that explain it?"
 bigshot: bigshot.png
 ---
 
-[Vamos](https://github.com/fdb/vamos) is two things at once. On one hand, it's a polyphonic synthesizer plugin — eight voices, dual oscillators, eight filter types, a modulation matrix — written in C++20 with [JUCE](https://juce.com/) using [Claude Code](https://claude.ai/code). On the other, it's an experiment in **regaining control over what the AI has written**, by building animated video explainers in lockstep with the code.
+_AI writes code faster than I can understand it — so I made the same codebase generate narrated video walkthroughs of itself._
+
+I've always been fascinated by synthesizers — the idea that you can generate sound purely from instructions, that a sawtooth wave is just a formula and a filter is just math reshaping it in real time. Building one from scratch seemed daunting, until [Claude Code](https://claude.ai/code) came along. Within a few days I had a working polyphonic synth plugin in C++20 — everything compiled, tests passed — but somewhere between the third and fourth coding session I'd lost the plot. I couldn't explain the filter architecture anymore, or articulate why PolyBLEP costs only two multiplications per sample. The code worked, but the understanding hadn't stuck, because I wasn't the one who wrote most of it.
+
+Researcher Margaret-Anne Storey [calls this "cognitive debt"](https://margaretstorey.com/blog/2026/02/09/cognitive-debt/) — not shortcuts in the code, but gaps in human comprehension that widen even when the code itself is perfectly fine. She observed student teams becoming paralyzed not because anything was broken, but because nobody could hold a complete mental model of their own project anymore. Agentic coding accelerates this: the code arrives faster than your ability to absorb it.
+
+Documentation is the usual remedy, but nobody writes enough of it, and whatever gets written goes stale the moment the code changes. So I tried something different: **what if the same codebase that builds the synth also generates narrated video walkthroughs that explain it?**
+
+Code descriptions become narration scripts, [ElevenLabs](https://elevenlabs.io/) generates the voice-over, custom React components visualize waveforms and signal flow, and the whole thing syncs to the narration's timing. Rather than maintaining separate documentation that drifts from reality, the videos are produced from the same source of truth as the software.
+
+The test case is [Vamos](https://github.com/fdb/vamos), a deliberately standard polyphonic synthesizer — eight voices, dual oscillators, eight filter types, a modulation matrix — written in C++20 with [JUCE](https://juce.com/). Standard is the point: a known domain makes it easier to judge whether the video approach actually teaches you anything.
 
 ![The Vamos synthesizer UI — dark synthwave theme with signal flow, knobs, and modulation controls](/media/blog/video-overviews-for-agentic-code/vamos-ui.png)
 
-Here's the first episode — a 8-minute walkthrough of Phase 1, from an empty project to a working eight-voice polyphonic synth:
+Here's the first episode — an 8-minute walkthrough of Phase 1, from an empty project to a working eight-voice polyphonic synth:
 
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B-rts5qSmZY" allowfullscreen="allowfullscreen"></iframe>
 </div>
 
-Most of the synth code was written in collaboration with Claude. Within a few days, I was already struggling to remember the specifics of how the filter architecture worked, or why the envelope overshoots to 1.2 before settling. The code was clean. The tests passed. But somewhere between the third and fourth coding session, I'd lost the plot.
-
-Researcher Margaret-Anne Storey [describes this phenomenon](https://margaretstorey.com/blog/2026/02/09/cognitive-debt/) as "cognitive debt" — not shortcuts in the code, but gaps in human understanding. She observed student teams becoming paralyzed by weeks seven and eight, not because their code was broken, but because no one could hold a complete mental model anymore. We're all living a version of this now. Agentic coding tools generate code at a pace that wasn't possible before. The code is fine. The problem is that we can't keep up.
-
-The usual answer is documentation. But nobody writes enough of it, and what gets written tends to go stale the moment the code changes. So instead of more docs, the Vamos experiment tries something different: the same code-driven approach that builds the synth also builds narrated video walkthroughs that explain it.
-
 ## How the synth and videos feed each other
 
-The synth gives the videos something real to explain — actual DSP code that runs in a DAW, not a toy example. The phase documents in `docs/` capture the architectural thinking behind each step, and that thinking becomes the backbone of each episode's narration.
+The synth gives the videos something real to explain — actual DSP code that runs in a DAW, not a toy example. The phase documents in `docs/` capture the architectural thinking behind each step, and that thinking becomes each episode's narration backbone.
 
-The videos force clarity back into the code. If you can't explain a design decision in plain language — why the envelope overshoots to 1.2, why PolyBLEP costs only two multiplications per sample, why the DSP layer has zero JUCE dependencies — it's probably not clean enough yet. The act of producing the episode becomes a review of the code itself.
+But the feedback loop runs both ways. If you can't explain a design decision in plain language — why the envelope overshoots to 1.2, why PolyBLEP costs only two multiplications per sample, why the DSP layer has zero JUCE dependencies — the code probably isn't clean enough yet. Producing the episode becomes a review of the code itself.
 
 ![Signal flow diagram from the video: Osc1 + Osc2 + Noise → Mixer → Filter → Amp Envelope → Output](/media/blog/video-overviews-for-agentic-code/ep01-signal-flow.png)
 
