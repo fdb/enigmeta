@@ -1,22 +1,20 @@
 /**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
+ * Syntax theme — tuned to the OKLCH periwinkle palette in main.css.
+ * Replaces the default Okaidia/Monokai theme.
  */
 
 code[class*='language-'],
 pre[class*='language-'] {
-	color: #f8f8f2;
+	color: oklch(0.88 0.01 85);
 	background: none;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 0.85em;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	line-height: 1.5;
+	line-height: 1.6;
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -33,81 +31,90 @@ pre[class*='language-'] {
 	padding: 1em;
 	margin: 0.5em 0;
 	overflow: auto;
-	border-radius: 0.3em;
+	border-radius: 6px;
 }
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-	background: #272822;
+	background: oklch(0.18 0.025 260);
 }
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
-	padding: 0.1em;
-	border-radius: 0.3em;
+	padding: 0.1em 0.3em;
+	border-radius: 3px;
 	white-space: normal;
 }
 
+/* Comments — fade into background */
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: slategray;
+	color: oklch(0.48 0.03 260);
 }
 
+/* Punctuation — subdued */
 .token.punctuation {
-	color: #f8f8f2;
+	color: oklch(0.65 0.02 260);
 }
 
 .token.namespace {
 	opacity: 0.7;
 }
 
+/* Tags, properties, constants — soft rose */
 .token.property,
 .token.tag,
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: #f92672;
+	color: oklch(0.74 0.12 10);
 }
 
+/* Numbers, booleans — soft lilac */
 .token.boolean,
 .token.number {
-	color: #ae81ff;
+	color: oklch(0.72 0.14 310);
 }
 
+/* Strings — sage green */
 .token.selector,
 .token.attr-name,
 .token.string,
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: #a6e22e;
+	color: oklch(0.76 0.12 155);
 }
 
+/* Operators, URLs, variables — base text */
 .token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-	color: #f8f8f2;
+	color: oklch(0.80 0.01 85);
 }
 
+/* Functions, class names — warm amber */
 .token.atrule,
 .token.attr-value,
 .token.function,
 .token.class-name {
-	color: #e6db74;
+	color: oklch(0.80 0.13 75);
 }
 
+/* Keywords — periwinkle, matches site accent */
 .token.keyword {
-	color: #66d9ef;
+	color: oklch(0.72 0.15 270);
 }
 
+/* Regex, important — muted orange */
 .token.regex,
 .token.important {
-	color: #fd971f;
+	color: oklch(0.75 0.13 55);
 }
 
 .token.important,

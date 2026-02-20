@@ -1,3 +1,26 @@
+/* Palette — OKLCH for perceptually uniform spacing */
+:root {
+	/* Backgrounds — deep indigo, low chroma */
+	--bg-deep: oklch(0.10 0.025 260);
+	--bg: oklch(0.14 0.03 260);
+	--bg-raised: oklch(0.19 0.03 260);
+	--bg-surface: oklch(0.24 0.025 260);
+
+	/* Text — warm whites to cool greys */
+	--text: oklch(0.93 0.01 85);
+	--text-secondary: oklch(0.75 0.012 260);
+	--text-muted: oklch(0.50 0.012 260);
+	--text-faint: oklch(0.35 0.012 260);
+
+	/* Accent — periwinkle */
+	--accent: oklch(0.72 0.17 270);
+	--accent-hover: oklch(0.82 0.17 270);
+
+	/* Borders */
+	--border: oklch(0.28 0.02 260);
+	--border-subtle: oklch(0.20 0.015 260);
+}
+
 /* Global styling */
 * {
 	box-sizing: border-box;
@@ -12,10 +35,10 @@ img {
 }
 
 body {
-	font-family: 'IBM Plex Sans', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	font-size: 1rem;
-	background-color: #012;
-	color: #fff;
+	background-color: var(--bg);
+	color: var(--text-secondary);
 	position: relative;
 	margin: 0;
 }
@@ -27,9 +50,10 @@ body {
 }
 
 h2 {
-	font-family: 'IBM Plex Sans Condensed', sans-serif;
-	margin: 1.5rem 0 0.5rem 0;
-	font-size: 1.2rem;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
+	margin: 2.5rem 0 0.5rem 0;
+	font-size: 1.5rem;
+	color: var(--text);
 }
 
 ul {
@@ -51,8 +75,12 @@ h2 + p {
 }
 
 a {
-	color: #66d;
+	color: var(--accent);
 	text-decoration: none;
+}
+
+a:hover {
+	color: var(--accent-hover);
 }
 
 img,
@@ -67,9 +95,10 @@ video.rounded {
 
 pre {
 	font-family: 'IBM Plex Mono', monospace;
-	background: #eee;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
+	font-size: 0.85rem;
+	background: var(--bg-surface);
+	border-top: 1px solid var(--border-subtle);
+	border-bottom: 1px solid var(--border-subtle);
 	padding: 10px 10px;
 	overflow: auto;
 }
@@ -82,7 +111,7 @@ p code {
 	font-family: 'IBM Plex Mono', monospace;
 	position: relative;
 	top: -1px;
-	background: #223;
+	background: var(--bg-surface);
 	padding: 2px 2px 3px 2px;
 	border-radius: 3px;
 }
@@ -144,18 +173,19 @@ p code {
 header {
 	height: 3rem;
 	overflow: hidden;
-	color: #eee;
+	color: var(--text);
 }
 
 .header__bar {
 	position: fixed;
-	width: 100%;
+	left: 0;
+	right: 0;
 	display: flex;
 	padding: 1rem;
 	z-index: 2;
-	background: #012;
+	background: var(--bg);
 	text-align: center;
-	box-shadow: 0 5px 10px rgba(0, 0, 10, 0.2);
+	box-shadow: 0 5px 10px oklch(0.05 0.02 260 / 0.3);
 }
 
 #home .header__bar {
@@ -164,7 +194,7 @@ header {
 
 .header__brand {
 	flex: 1;
-	font-family: 'IBM Plex Sans Condensed', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 }
 
 .header__brand a {
@@ -194,7 +224,7 @@ header {
 	height: 3px;
 	width: 23px;
 	left: 0;
-	background-color: white;
+	background-color: var(--text);
 	transition: 0.15s;
 }
 
@@ -227,8 +257,8 @@ header {
 
 .header__overlay {
 	z-index: 1;
-	background: #012;
-	font-family: 'IBM Plex Sans Condensed', sans-serif;
+	background: var(--bg);
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	position: fixed;
 	transform: translate(100vw, 0);
 	top: 0;
@@ -260,12 +290,12 @@ header {
 }
 
 .header__nav a {
-	color: #ddd;
+	color: var(--text-secondary);
 	transition: color 0.15s;
 }
 
 .header__nav a:hover {
-	color: #fff;
+	color: var(--text);
 }
 
 main {
@@ -287,7 +317,7 @@ main {
 }
 
 #home h1 {
-	font-family: 'IBM Plex Sans Condensed', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	font-weight: normal;
 	font-size: 1.8rem;
 	text-align: center;
@@ -304,22 +334,22 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background: #ccc url(/media/home/about-background.jpg) no-repeat center center scroll;
+	background: var(--bg-raised) url(/media/home/about-background.jpg) no-repeat center center scroll;
 	background-size: cover;
 	position: relative;
 }
 
 #home .about p {
 	font-size: 1.5rem;
-	font-family: 'IBM Plex Sans', sans-serif;
-	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-	color: #fff;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
+	text-shadow: 0 1px 2px oklch(0.05 0.02 260 / 0.5);
+	color: var(--text);
 	max-width: 1000px;
 	margin: 0 auto;
 }
 
 #home .about p.small {
-	font-family: 'IBM Plex Sans', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	font-size: 1.2rem;
 }
 
@@ -330,7 +360,7 @@ main {
 }
 
 #home .about p strong {
-	color: white;
+	color: var(--text);
 }
 
 #home .about .mugshot {
@@ -386,7 +416,7 @@ main {
 }
 
 #home .thumb .caption {
-	color: #fff;
+	color: var(--text);
 	text-decoration: none;
 	text-align: center;
 	padding-top: 0.5rem;
@@ -415,13 +445,13 @@ main {
 #home .exhibitions {
 	padding-top: 10px;
 	padding-bottom: 20px;
-	color: #fff;
-	background: #666;
+	color: var(--text);
+	background: var(--bg-surface);
 }
 
 #home .blog {
-	background: #112;
-	color: #666;
+	background: var(--bg-raised);
+	color: var(--text-muted);
 	padding-top: 10px;
 	padding-bottom: 20px;
 }
@@ -429,8 +459,8 @@ main {
 #home .contact {
 	padding-top: 5rem;
 	padding-bottom: 5rem;
-	background: #012;
-	color: #fff;
+	background: var(--bg);
+	color: var(--text);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -444,7 +474,7 @@ main {
 }
 
 #home .contact__email {
-	font-family: 'IBM Plex Sans Condensed', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	font-size: 1rem;
 	opacity: 0.8;
 	text-align: center;
@@ -471,9 +501,9 @@ main {
 }
 
 #home .contact .fa {
-	color: #eee;
+	color: var(--text-secondary);
 	font-size: 2.5rem;
-	border: 2px solid #eee;
+	border: 2px solid var(--text-secondary);
 	border-radius: 50%;
 	padding: 1rem;
 	transition: all 200ms ease-out;
@@ -481,8 +511,8 @@ main {
 }
 
 #home .contact .fa:hover {
-	background: #eee;
-	color: #333;
+	background: var(--text-secondary);
+	color: var(--bg);
 }
 
 #home .thumb-list {
@@ -511,10 +541,9 @@ main {
 /* Footer */
 
 footer {
-	background-color: #123;
-	opacity: 0.6;
+	background-color: var(--bg-raised);
 	font-size: 0.8rem;
-	color: rgba(255, 255, 255, 0.5);
+	color: var(--text-muted);
 	line-height: 1.6rem;
 }
 
@@ -554,20 +583,19 @@ footer p {
 
 footer a {
 	color: inherit;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid var(--border-subtle);
 }
 
 /* Generic Page */
 
 .page-header {
-	background: #123;
-	opacity: 0.8;
+	background: var(--bg-raised);
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 	text-align: center;
-	font-family: 'IBM Plex Sans Condensed', sans-serif;
+	font-family: 'Atkinson Hyperlegible Next', sans-serif;
 	font-weight: normal;
-	color: #eee;
+	color: var(--text);
 }
 
 .page {
@@ -605,17 +633,24 @@ footer a {
 	}
 }
 
+.page > p {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .page .caption {
 	font-size: 0.7rem;
-	color: #666;
+	color: var(--text-muted);
 	text-align: center;
 }
 
 /* Project */
 
 .project-image {
-	margin-bottom: 1rem;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+	margin-top: 8rem;
+	margin-bottom: 8rem;
+	box-shadow: 0 1px 2px oklch(0.05 0.02 260 / 0.3);
 }
 
 .screenshot-grid {
@@ -645,8 +680,19 @@ footer a {
 	text-align: center;
 	line-height: 400px;
 	vertical-align: middle;
-	color: #f7f7f7;
-	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+	color: var(--text);
+	text-shadow: 1px 1px 10px oklch(0.05 0.02 260 / 0.6);
+}
+
+.post {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.post blockquote {
+	border-left: 2px solid var(--border);
+	margin-left: 0;
+	padding-left: 1.2rem;
 }
 
 .post p img {
