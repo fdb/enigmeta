@@ -2,6 +2,7 @@
 layout: post
 tags: post
 title: "Fighting Cognitive Debt in Agentic Code with Video Overviews"
+description: "Using Remotion and AI-generated narration to build animated video explainers that keep developers in sync with agentic code."
 bigshot: bigshot.png
 ---
 

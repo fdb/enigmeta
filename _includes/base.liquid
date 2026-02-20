@@ -11,8 +11,31 @@
   <title>{{ title }} | Enigmeta</title>
   {%- endif %}
   <meta name="author" content="Frederik De Bleser">
-  <meta name="description"
-    content="Personal Homepage of Frederik De Bleser, designer, researcher and teacher at Sint Lucas Antwerpen">
+  {%- assign page_description = description | default: "Personal Homepage of Frederik De Bleser, designer, researcher and teacher at Sint Lucas Antwerpen" %}
+  <meta name="description" content="{{ page_description }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title | default: 'Enigmeta' }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  {%- if bigshot %}
+  <meta property="og:image" content="{{ site.url }}/media/blog/{{ page.fileSlug }}/{{ bigshot }}">
+  <meta property="og:type" content="article">
+  {%- else %}
+  <meta property="og:type" content="website">
+  {%- endif %}
+
+  <!-- Twitter Card -->
+  {%- if bigshot %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ site.url }}/media/blog/{{ page.fileSlug }}/{{ bigshot }}">
+  {%- else %}
+  <meta name="twitter:card" content="summary">
+  {%- endif %}
+  <meta name="twitter:site" content="@enigmeta">
+  <meta name="twitter:title" content="{{ title | default: 'Enigmeta' }}">
+  <meta name="twitter:description" content="{{ page_description }}">
+
   <link
     href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Mono&display=swap"
     rel="stylesheet">
