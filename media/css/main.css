@@ -520,13 +520,13 @@ main {
 	display: grid;
 	max-width: 1350px;
 	padding: 0 1rem;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
 	grid-gap: 5rem 2rem;
 }
 
 @media screen and (min-width: 768px) {
 	#home .thumb-list {
-		grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(min(550px, 100%), 1fr));
 	}
 
 	#home .about p {
