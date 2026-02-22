@@ -46,6 +46,7 @@ pre[class*='language-'] {
 	white-space: normal;
 }
 
+/* Comments — fade into background */
 .token.comment,
 .token.prolog,
 .token.doctype,
@@ -54,6 +55,7 @@ pre[class*='language-'] {
 	font-style: italic;
 }
 
+/* Punctuation — subdued */
 .token.punctuation {
 	color: #383a42;
 }
@@ -62,6 +64,7 @@ pre[class*='language-'] {
 	opacity: 0.7;
 }
 
+/* Tags, properties, constants — soft rose */
 .token.property,
 .token.tag,
 .token.constant,
@@ -70,11 +73,13 @@ pre[class*='language-'] {
 	color: #e45649;
 }
 
+/* Numbers, booleans — soft lilac */
 .token.boolean,
 .token.number {
 	color: #986801;
 }
 
+/* Strings — sage green */
 .token.selector,
 .token.attr-name,
 .token.string,
@@ -84,6 +89,7 @@ pre[class*='language-'] {
 	color: #50a14f;
 }
 
+/* Operators, URLs, variables — base text */
 .token.operator,
 .token.entity,
 .token.url,
@@ -93,6 +99,7 @@ pre[class*='language-'] {
 	color: #383a42;
 }
 
+/* Functions, class names — warm amber */
 .token.atrule,
 .token.attr-value,
 .token.function,
@@ -100,10 +107,12 @@ pre[class*='language-'] {
 	color: #c18401;
 }
 
+/* Keywords — periwinkle, matches site accent */
 .token.keyword {
 	color: #a626a4;
 }
 
+/* Regex, important — muted orange */
 .token.regex,
 .token.important {
 	color: #986801;
