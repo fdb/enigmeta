@@ -1,16 +1,18 @@
 ---
 layout: default
 ---
-<div class="post-header" style="background-image: url(/media/blog/{{ page.fileSlug }}/{{ bigshot }});">
-  <h1>{{ title }}</h1>
-</div>
-
-<div class="page">
-  <p class="meta">{{ date | date:"%Y-%m-%d" }}</p>
-  {% if copyright %}
-  <p class="copyright">{{ copyright }}</p>
+<article class="post">
+  <header class="post-header">
+    <h1>{{ title }}</h1>
+    <time class="post-date">{{ page.date | date: "%B %d, %Y" }}</time>
+    {% if copyright %}
+    <p class="post-copyright">{{ copyright }}</p>
+    {% endif %}
+  </header>
+  {% if bigshot %}
+  <img class="post-hero" src="/media/blog/{{ page.fileSlug }}/{{ bigshot }}" alt="{{ title }}" loading="lazy">
   {% endif %}
-  <div class="post">
+  <div class="post-body">
     {{ content }}
   </div>
-</div>
+</article>

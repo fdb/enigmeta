@@ -1,22 +1,20 @@
 /**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
+ * Light syntax theme — warm editorial style
+ * For use with Prism.js / 11ty syntax highlight plugin
  */
 
 code[class*='language-'],
 pre[class*='language-'] {
-	color: #f8f8f2;
+	color: #383a42;
 	background: none;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
+	font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+	font-size: 0.875rem;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	line-height: 1.5;
+	line-height: 1.6;
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -33,18 +31,18 @@ pre[class*='language-'] {
 	padding: 1em;
 	margin: 0.5em 0;
 	overflow: auto;
-	border-radius: 0.3em;
+	border-radius: 3px;
 }
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-	background: #272822;
+	background: oklch(0.94 0.01 85);
 }
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
-	padding: 0.1em;
-	border-radius: 0.3em;
+	padding: 0.1em 0.3em;
+	border-radius: 3px;
 	white-space: normal;
 }
 
@@ -52,11 +50,12 @@ pre[class*='language-'] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: slategray;
+	color: #a0a1a7;
+	font-style: italic;
 }
 
 .token.punctuation {
-	color: #f8f8f2;
+	color: #383a42;
 }
 
 .token.namespace {
@@ -68,12 +67,12 @@ pre[class*='language-'] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: #f92672;
+	color: #e45649;
 }
 
 .token.boolean,
 .token.number {
-	color: #ae81ff;
+	color: #986801;
 }
 
 .token.selector,
@@ -82,7 +81,7 @@ pre[class*='language-'] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: #a6e22e;
+	color: #50a14f;
 }
 
 .token.operator,
@@ -91,29 +90,30 @@ pre[class*='language-'] {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-	color: #f8f8f2;
+	color: #383a42;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.function,
 .token.class-name {
-	color: #e6db74;
+	color: #c18401;
 }
 
 .token.keyword {
-	color: #66d9ef;
+	color: #a626a4;
 }
 
 .token.regex,
 .token.important {
-	color: #fd971f;
+	color: #986801;
 }
 
 .token.important,
 .token.bold {
 	font-weight: bold;
 }
+
 .token.italic {
 	font-style: italic;
 }

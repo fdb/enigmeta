@@ -4,6 +4,11 @@
 
 html {
 	font-size: 10pt;
+	font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
 }
 
 header,
