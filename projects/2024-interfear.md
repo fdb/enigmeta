@@ -21,14 +21,6 @@ Using non-traditional sensing techniques (electromagnetic radiation, LIDAR) we i
 - [Leonie Strecker](https://www.leoniestrecker.com/) — sound artist, performer
 - [Cèlia Tort Pujol](https://www.instagram.com/celiatortpujol/) — oboist, performer
 
-<br/>
-
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/825407223?h=411ca82d58"></iframe>
-</div>
-
-<br/>
-<br/>
 
 <div class="two columns">
   <div class="column">
