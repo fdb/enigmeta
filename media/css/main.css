@@ -83,7 +83,7 @@ video {
 
 /* ---------- Layout Container ---------- */
 
-header nav,
+.site-header nav,
 main,
 footer {
 	max-width: var(--content-width);
@@ -192,11 +192,26 @@ p code {
 
 /* ---------- Header / Navigation ---------- */
 
-header {
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background-color: var(--color-bg);
 	margin-bottom: var(--space-12);
 }
 
-header nav {
+.site-header::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	height: var(--space-8);
+	background: linear-gradient(var(--color-bg), transparent);
+	pointer-events: none;
+}
+
+.site-header nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
