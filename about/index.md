@@ -4,10 +4,10 @@ title: About Me
 bigshot: /media/about/bigshot.jpg
 ---
 
-<img src="/media/img/frederik-de-bleser.jpg" alt="Frederik De Bleser" class="float-right" style="padding-bottom: 20px; position: relative; top: -44px;" />
+<img src="/media/img/frederik-de-bleser.jpg" alt="Frederik De Bleser" class="about-photo" />
 
-I'm Frederik De Bleser. I'm a PhD researcher at <a href="http://www.sintlucasantwerpen.be/">Sint Lucas Antwerpen</a>. I develop <a href="http://nodebox.net/">NodeBox</a>, an application for creating generative design.
+I'm Frederik De Bleser. I'm a postdoctoral researcher and I lead the [Algorithmic Gaze](https://algorithmicgaze.com/) research group at [Sint Lucas Antwerpen](https://www.sintlucasantwerpen.be/).
 
-<a href="/cv/">Read my Curriculum Vitae.</a>
+I develop open source software, like [Figment](https://figmentapp.com/) and [NodeBox](https://www.nodebox.net/).
 
-You can reach me at frederik (at) debleser (dot) be. I'm also on <a href="https://twitter.com/enigmeta/">Twitter</a> and <a href="https://github.com/fdb/">GitHub</a>.
+You can reach me at [frederik@debleser.be](mailto:frederik@debleser.be). I'm also on [GitHub](https://github.com/fdb/) and [LinkedIn](https://www.linkedin.com/in/frederik-de-bleser/).
