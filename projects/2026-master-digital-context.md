@@ -135,3 +135,11 @@ We noticed a big interest in digital projects across the school, but often a lac
 <img src="/media/projects/master-digital-context/raive-summer-school.jpg" alt="RAIVE Summer School — participants gathered around a presentation">
 
 Every year we organize [RAIVE](https://raive.school/), a multidisciplinary summer school focused on the creative use — and mis-use — of AI. Young artists from all disciplines come together: designers, musicians, composers, dancers, to make art together in one intensive week. It takes place at the beginning of September at the Royal Conservatory in Antwerp, and is a perfect complement to the Master Digital Context.
+
+---
+
+## Interested?
+
+If you want to build your own tools, question the role of technology in society, and create work that sits at the intersection of art, design, and code — come study with us. The Master Digital Context is a one-year English-language program at Sint Lucas Antwerpen.
+
+[Learn more and apply →](https://www.sintlucasantwerpen.be/en/get-to-know-our-study-programmes/master-of-visual-arts/)
