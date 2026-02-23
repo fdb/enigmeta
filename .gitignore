@@ -12,3 +12,6 @@ Thumbs.db
 
 # Node.js cruft
 node_modules/
+
+# Playwright test artifacts
+.playwright-mcp/
