@@ -8,12 +8,16 @@ thumbnail: master-digital-context-thumb.jpg
 background: "111"
 ---
 
-**In the Master Digital Context at Sint Lucas Antwerpen, we believe the tools you use shape the work you make. So why use someone else's language when you can build your own?**
+**Why use someone else's language when you can build your own?**
 
 > "The limits of my language mean the limits of my world."
 > — Ludwig Wittgenstein
 
+In 2020, together with my colleague Werner Van dermeersch, we launched the Master in the Digital Context at Sint Lucas Antwerpen. We wanted to create a program that would give students the tools to design their own digital languages; building new sandboxes, "idea spaces", that were decoupled from mainstream tools, moving beyond the idea of "using" technology and instead focus on "creating" technology. 
+
 If you work in Photoshop, you think in layers, filters, and brushes — the nouns and verbs Adobe gives you. But what if you designed your own vocabulary? In the Master Digital Context, we take a tool-first approach: you don't start by writing the story, you start by imagining the language that could contain many stories. The tool is the first step in the design. It shapes everything that follows.
+
+Since 2025, I'm collaborating with my colleague Imane Benyecif, and together we continue to evolve the program, keeping up to date with digital media in all its forms.
 
 The best way to show what this means is through the work of our students.
 
@@ -68,9 +72,7 @@ Students in the Master Digital Context look at technology critically. Technology
   </div>
 </div>
 
-Laura created [YOU](https://you.lauramae.be/), a fashion-on-demand brand. On the website, you take a personality test that determines your preferences and generates a design — a combination of Laura's style and your personality. You can then adjust the design yourself, creating something completely unique. The design is embroidered onto a garment of your choice: t-shirts, jackets, veils, shawls. These one-of-a-kind pieces are far more valuable than mass-produced clothing — nobody else has them, and they never go out of style.
-
-<video src="https://enigmeta-website.s3.amazonaws.com/media/projects/2026-master-digital-context/laura-you.mp4" autoplay loop muted playsinline></video>
+Laura created YOU, a fashion-on-demand brand. On the website, you take a personality test that determines your preferences and generates a design — a combination of Laura's style and your personality. You can then adjust the design yourself, creating something completely unique. The design is embroidered onto a garment of your choice: t-shirts, jackets, veils, shawls. These one-of-a-kind pieces are far more valuable than mass-produced clothing — nobody else has them, and they never go out of style.
 
 ### Replica of a Replica — Madina Mahomedova (2025)
 
@@ -104,6 +106,8 @@ The first semester focuses on giving you enough knowledge about the digital medi
 
 **AI museum workshop** — Students used Stable Diffusion to generate an entire museum filled with AI-generated artworks. Even the layout of the museum itself was AI-generated.
 
+<video src="https://enigmeta-website.s3.amazonaws.com/media/projects/2026-master-digital-context/workshop-ai-museum.mp4" autoplay loop muted playsinline></video>
+
 ### Personal Coaching
 
 <img src="/media/projects/master-digital-context/coaching-plenum.jpg" alt="Students presenting their work during a coaching session">
@@ -120,11 +124,11 @@ The plenum and jury follow the same structure, with transparent criteria so you'
 
 <img src="/media/projects/master-digital-context/digital-arts-archive.jpg" alt="The Digital Arts Archive — a curated collection of digital art projects, people, organizations, and books">
 
-Over the years we've built a thorough [digital arts archive](https://digitalmaster.sint-lucas.cloud/) of people, projects, organizations, books, and films — all about digital arts. It's a great place to explore when looking for inspiration, and you can search by tags when you have a specific theme in mind.
+Over the years we've built a thorough digital arts archive of people, projects, organizations, books, and films — all about digital arts. It's a great place to explore when looking for inspiration, and you can search by tags when you have a specific theme in mind.
 
 ### Code Space
 
-Code Space helps students with all technical questions — not just for the Master Digital Context, but for all students at Sint Lucas Antwerpen.
+We noticed a big interest in digital projects across the school, but often a lack of technical skills to realise them. [Code Space](https://codespace.help/) is there to fill that gap. From "simple" things like building a portfolio website in HTML, CSS, and JavaScript, to physical computing with Arduino and ESP32, to digital fabrication techniques such as laser cutting and 3D printing — Code Space helps students with all technical questions. Not just for the Master Digital Context, but for all students at Sint Lucas Antwerpen.
 
 ### RAIVE Summer School
 
