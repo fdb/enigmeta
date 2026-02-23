@@ -1,14 +1,14 @@
 /**
- * Syntax theme — tuned to the OKLCH periwinkle palette in main.css.
- * Replaces the default Okaidia/Monokai theme.
+ * Light syntax theme — warm editorial style
+ * For use with Prism.js / 11ty syntax highlight plugin
  */
 
 code[class*='language-'],
 pre[class*='language-'] {
-	color: oklch(0.88 0.01 85);
+	color: #383a42;
 	background: none;
-	font-family: 'IBM Plex Mono', monospace;
-	font-size: 0.85em;
+	font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+	font-size: 0.875rem;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -31,12 +31,12 @@ pre[class*='language-'] {
 	padding: 1em;
 	margin: 0.5em 0;
 	overflow: auto;
-	border-radius: 6px;
+	border-radius: 3px;
 }
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-	background: oklch(0.18 0.025 260);
+	background: oklch(0.94 0.01 85);
 }
 
 /* Inline code */
@@ -51,12 +51,13 @@ pre[class*='language-'] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: oklch(0.48 0.03 260);
+	color: #a0a1a7;
+	font-style: italic;
 }
 
 /* Punctuation — subdued */
 .token.punctuation {
-	color: oklch(0.65 0.02 260);
+	color: #383a42;
 }
 
 .token.namespace {
@@ -69,13 +70,13 @@ pre[class*='language-'] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: oklch(0.74 0.12 10);
+	color: #e45649;
 }
 
 /* Numbers, booleans — soft lilac */
 .token.boolean,
 .token.number {
-	color: oklch(0.72 0.14 310);
+	color: #986801;
 }
 
 /* Strings — sage green */
@@ -85,7 +86,7 @@ pre[class*='language-'] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: oklch(0.76 0.12 155);
+	color: #50a14f;
 }
 
 /* Operators, URLs, variables — base text */
@@ -95,7 +96,7 @@ pre[class*='language-'] {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-	color: oklch(0.80 0.01 85);
+	color: #383a42;
 }
 
 /* Functions, class names — warm amber */
@@ -103,24 +104,25 @@ pre[class*='language-'] {
 .token.attr-value,
 .token.function,
 .token.class-name {
-	color: oklch(0.80 0.13 75);
+	color: #c18401;
 }
 
 /* Keywords — periwinkle, matches site accent */
 .token.keyword {
-	color: oklch(0.72 0.15 270);
+	color: #a626a4;
 }
 
 /* Regex, important — muted orange */
 .token.regex,
 .token.important {
-	color: oklch(0.75 0.13 55);
+	color: #986801;
 }
 
 .token.important,
 .token.bold {
 	font-weight: bold;
 }
+
 .token.italic {
 	font-style: italic;
 }
