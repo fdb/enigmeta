@@ -2,7 +2,7 @@
 layout: project
 tags: project
 date: 2024-01-01
-title: INTERFEAR
+title: Interfear
 slug: interfear
 thumbnail: interfear-thumb.jpg
 background: 111
