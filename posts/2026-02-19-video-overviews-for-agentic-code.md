@@ -6,7 +6,7 @@ description: "When AI writes your code, understanding doesn't come along for the
 bigshot: bigshot.png
 ---
 
-_AI writes code faster than I can understand it — so I made the same codebase generate narrated video walkthroughs of itself._
+_AI writes code faster than I can understand it — so now the system generates narrated videos of itself._
 
 I've always been fascinated by synthesizers — the idea that you can generate sound purely from instructions, that a sawtooth wave can be expressed as a formula and a filter is a piece of math, reshaping it in real time. Building a software synth from scratch seemed an impossible task, until [Claude Code](https://claude.ai/code) came along. You can just throw half-formed ideas at it, and get something that works in a few hours; a working polyphonic synth plugin in C++20. However, since I didn't write any of the code, I'm missing the crucial part: understanding what exactly was implemented.
 
@@ -14,7 +14,7 @@ Researcher Margaret-Anne Storey [calls this "cognitive debt"](https://margaretst
 
 Sure, I could go through the code and try reading bits of it, but that's not the same as writing and understanding the code. So I tried something different: **what if the synth code also generates narrated video walkthroughs that explain it?**. [Remotion](https://www.remotion.dev/) is *awesome* for this, it even has [agent skills](https://www.remotion.dev/docs/ai/skills) so coding agents know exactly how to use the tool. And with custom narration using [ElevenLabs](https://elevenlabs.io/) to generate the voice-over, the whole thing feels as a natural YouTube series.
 
-This could apply to any codebase, but I created [Vamos](https://github.com/fdb/vamos), a polyphonic synthesizer, based on Ableton's Drift synthesizer. The synth has a standard signal path taking two oscillators and a noise source through a mixer, then a filter, then an envelope. A modulation matrix allows parameter automation. The synt is written in C++20 with [JUCE](https://juce.com/).
+This could apply to any codebase, but I created [Vamos](https://github.com/fdb/vamos), a polyphonic synthesizer, based on Ableton's Drift synthesizer. The synth has a standard signal path taking two oscillators and a noise source through a mixer, then a filter, then an envelope. A modulation matrix allows parameter automation. The synth is written in C++20 with [JUCE](https://juce.com/).
 
 ![The Vamos synthesizer UI — dark synthwave theme with signal flow, knobs, and modulation controls](/media/blog/video-overviews-for-agentic-code/vamos-ui.png)
 
