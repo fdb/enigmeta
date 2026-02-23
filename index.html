@@ -7,8 +7,8 @@ layout: default
 <section class="intro">
 	<h1>Frederik De Bleser</h1>
 	<p class="intro-text">
-		Teacher &amp; researcher in digital media at
-		<a href="https://www.sintlucasantwerpen.be/" target="_blank">Sint&nbsp;Lucas&nbsp;Antwerpen</a>. Freelance data visualization designer.
+		Researcher &amp; professor in digital media at
+		<a href="https://www.sintlucasantwerpen.be/" target="_blank">Sint&nbsp;Lucas&nbsp;Antwerpen</a>.<br/>Freelance data visualization designer.
 	</p>
 </section>
 
@@ -31,11 +31,8 @@ layout: default
 		{%- for post in collections.post reversed -%}
 		<li class="writing-item">
 			<a href="{{ post.url }}">
-				<img class="writing-thumb" src="/media/blog/{{ post.fileSlug }}/{{ post.data.bigshot }}" alt="{{ post.data.title }}" loading="lazy" />
-				<span class="writing-info">
-					<span class="writing-title">{{ post.data.title }}</span>
-					<time class="writing-date">{{ post.date | date: "%Y-%m-%d" }}</time>
-				</span>
+				<span class="writing-title">{{ post.data.title }}</span>
+				<time class="writing-date">{{ post.date | date: "%Y-%m-%d" }}</time>
 			</a>
 		</li>
 		{%- endfor -%}
