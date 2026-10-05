@@ -18,6 +18,10 @@ This EDUbox uses [Build It](https://treecompany.be/build-it-interactieve-simulat
 
 ![Results Page](/media/projects/edubox-ruimtelijk-bewustzijn/results-page.jpg)
 
+In the Build It editor, artists can work with layers and objects.
+
+![The Build It editor, with the 3D city on the left and the grid of the selected layer on the right](/media/projects/edubox-ruimtelijk-bewustzijn/build-it-editor.jpg)
+
 New in this EDUbox is that we added the option to change the camera, allowing the children to explore the city from different perspectives. This is a feature that we will be adding to the full version of Build It as well.
 
 <video src="https://debleser.s3.eu-central-1.amazonaws.com/enigmeta/projects/edubox-ruimtelijk-bewustzijn/camera-controls.mp4" autoplay loop muted playsinline></video>
