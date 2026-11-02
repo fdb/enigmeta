@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: post
 title: Deconstructing Nature - Day 4
 bigshot: bigshot.jpg
 ---
