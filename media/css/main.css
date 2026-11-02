@@ -461,6 +461,57 @@ footer p {
 	margin-bottom: var(--space-4);
 }
 
+/* ---------- Talk: slides left, text right ---------- */
+
+.talk {
+	--talk-width: min(72rem, 100vw - 2 * var(--content-padding));
+	width: var(--talk-width);
+	margin-left: calc((100% - var(--talk-width)) / 2);
+}
+
+.slide-row {
+	display: grid;
+	grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+	gap: var(--space-8);
+	align-items: start;
+	margin: var(--space-12) 0;
+}
+
+.slide-row .slides {
+	display: grid;
+	gap: var(--space-2);
+	position: sticky;
+	top: 6rem;
+}
+
+.slide-row .slides.grid-2 {
+	grid-template-columns: 1fr 1fr;
+}
+
+.post-body .slide-row img,
+.slide-row video {
+	width: 100%;
+	margin: 0;
+	border-radius: 3px;
+	border: 1px solid var(--color-border);
+}
+
+.slide-row .slide-text > :first-child {
+	margin-top: 0;
+}
+
+@media (max-width: 860px) {
+	.slide-row {
+		grid-template-columns: minmax(0, 1fr);
+		gap: var(--space-4);
+		margin: var(--space-8) 0;
+	}
+
+	.slide-row .slides {
+		position: static;
+	}
+}
+
 .meta {
 	font-size: var(--text-sm);
 	color: var(--color-text-secondary);
