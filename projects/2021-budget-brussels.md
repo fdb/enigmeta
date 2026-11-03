@@ -33,4 +33,4 @@ In summary, the site provides an engaging and informative way for citizens to ex
 
 - [Tree Company](https://www.treecompany.be/) — project lead, back-end development
 - [Spaced](https://www.spaced.be/) — front end development
-- [Frederik De Bleser](https://www.enigmeta.com/) — visualisation designer
+- [Frederik De Bleser](https://enigmeta.com/) — visualisation designer

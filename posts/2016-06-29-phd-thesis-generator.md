@@ -45,4 +45,4 @@ The text of the thesis was written in <a href="https://workflowy.com/">Workflowy
 
 The low-level PDF handling and layout and typesetting calculations might be interesting as a library to release in the future. In addition, higher-level concepts like style interpolation might be interesting as well; currently they are connected to the thesis.
 
-[Go generate your own thesis](http://www.enigmeta.com/thesis/)
+[Go generate your own thesis](https://enigmeta.com/thesis/)

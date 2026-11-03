@@ -37,4 +37,4 @@ By interactively exploring the impact of their choices, the children learn about
 - [Eva Henkens](https://www.treecompany.be/) — project manager
 - [Fien Hendrickx](https://www.treecompany.be/) — developer and designer
 - [Willem Pirquin](https://www.willempirquin.be/) — designer, 3D artist
-- [Frederik De Bleser](https://www.enigmeta.com/) — designer / tool developer
+- [Frederik De Bleser](https://enigmeta.com/) — designer / tool developer

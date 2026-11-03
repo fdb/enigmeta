@@ -5,6 +5,12 @@ module.exports = async function (eleventyConfig) {
 	const { feedPlugin } = await import('@11ty/eleventy-plugin-rss');
 
 	eleventyConfig.addPassthroughCopy('media');
+	eleventyConfig.addPassthroughCopy('favicon.ico');
+	eleventyConfig.addPassthroughCopy('robots.txt');
+	// Hand-built pages keep their scripts, images and fonts next to them.
+	for (const dir of ['codevember', 'doodles', 'experiments', 'images', 'presentation', 'thesis']) {
+		eleventyConfig.addPassthroughCopy(`${dir}/**/*.{js,css,png,jpg,jpeg,gif,svg,ico,ogg,otf,ttf,woff,woff2,coffee,htc}`);
+	}
 	eleventyConfig.addPlugin(syntaxHighlight);
 	eleventyConfig.addPlugin(feedPlugin, {
 		type: 'atom',

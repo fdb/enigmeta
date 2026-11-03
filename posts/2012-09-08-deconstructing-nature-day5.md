@@ -7,7 +7,7 @@ bigshot: bigshot.jpg
 
 _My colleague Werner and I are holding a challenge this week to produce one visual work each day. I'm working around the theme of "Deconstructing Nature"._
 
-[Day 1](/blog/deconstructing-nature-day1) — [Day 2](/blog/deconstructing-nature-day2) — [Day 3](/blog/deconstructing-nature-day3) — [Day 4](/blog/deconstructing-nature-day4) — [Day 5](/blog/deconstructing-nature-day5)
+[Day 1](/posts/2012-09-04-deconstructing-nature-day1/) — [Day 2](/posts/2012-09-05-deconstructing-nature-day2/) — [Day 3](/posts/2012-09-06-deconstructing-nature-day3/) — [Day 4](/posts/2012-09-07-deconstructing-nature-day4/) — [Day 5](/posts/2012-09-08-deconstructing-nature-day5/)
 
 For the last day I wanted to do something with _human_ nature. And there is no better place on the internet to watch human nature decompose than [4chan](http://www.4chan.org/) (Warning: Not Safe For Work!). The website is a huge image board on a large number of topics ranging from Anime to Politics.
 

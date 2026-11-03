@@ -44,7 +44,7 @@ The application can be used for **data visualization** and **generative design**
   </div>
 </div>
 
-Integration with <a href="/projects/opentype-js/">OpenType.js</a> opens up the world of generative typography on the web.
+Integration with <a href="/projects/2016-opentype-js/">OpenType.js</a> opens up the world of generative typography on the web.
 
 <img src="/media/projects/nodebox-live/nbl-grow.jpg" alt="Grow">
 

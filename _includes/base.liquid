@@ -21,7 +21,10 @@
   <meta property="og:description" content="{{ page_description }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   {%- if bigshot %}
-  <meta property="og:image" content="{{ site.url }}/media/blog/{{ page.fileSlug }}/{{ bigshot }}">
+  {%- assign first_char = bigshot | slice: 0 %}
+  {%- if first_char == '/' %}{% assign share_image = site.url | append: bigshot %}
+  {%- else %}{% assign share_image = site.url | append: '/media/blog/' | append: page.fileSlug | append: '/' | append: bigshot %}{% endif %}
+  <meta property="og:image" content="{{ share_image }}">
   <meta property="og:type" content="article">
   {%- else %}
   <meta property="og:type" content="website">
@@ -30,7 +33,7 @@
   <!-- Twitter Card -->
   {%- if bigshot %}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="{{ site.url }}/media/blog/{{ page.fileSlug }}/{{ bigshot }}">
+  <meta name="twitter:image" content="{{ share_image }}">
   {%- else %}
   <meta name="twitter:card" content="summary">
   {%- endif %}

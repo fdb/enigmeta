@@ -37,6 +37,6 @@ The project was presented during "Smaakmakers", an event held at the start of 20
 
 In collaboration with [Tree Company](https://treecompany.be).
 
-- [Frederik De Bleser](https://www.enigmeta.com) — software development
-- [Lieven Menschaert](https://www.enigmeta.com) — hardware development
+- [Frederik De Bleser](https://enigmeta.com) — software development
+- [Lieven Menschaert](https://enigmeta.com) — hardware development
 - [Michiel Nuytemans](https://be.linkedin.com/in/michielnuytemans) — business development
