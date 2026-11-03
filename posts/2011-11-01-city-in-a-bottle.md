@@ -11,6 +11,6 @@ Together with artists, musicians and programmers, we created a project bordering
 
 <http://www.cityinabottle.org/>
 
-<img src="/media/city-in-a-bottle/promo.jpg">
-<img src="/media/city-in-a-bottle/shot1.jpg">
-<img src="/media/city-in-a-bottle/shot2.jpg">
+<img src="/media/blog/city-in-a-bottle/promo.jpg">
+<img src="/media/blog/city-in-a-bottle/shot1.jpg">
+<img src="/media/blog/city-in-a-bottle/shot2.jpg">

@@ -17,5 +17,5 @@ Using generative software, we map the democratic and republican candidate on a v
 
 The project uses an alpha version of [NodeBox 3](http://alpha.nodebox.net/), developed simultaneously with the project.
 
-<img src="/media/profilitics/head-overlays.png">
-<img src="/media/profilitics/keywords-laser-cut.jpg">
+<img src="/media/blog/profilitics/head-overlays.png">
+<img src="/media/blog/profilitics/keywords-laser-cut.jpg">
