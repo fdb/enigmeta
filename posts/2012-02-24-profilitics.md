@@ -15,7 +15,7 @@ Using generative software, we map the democratic and republican candidate on a v
 - Campaign contributions: amount of contributions from various sectors.
 - Regional popularity: a map of the states linked to a certain party.
 
-The project uses an alpha version of [NodeBox 3](http://alpha.nodebox.net/), developed simultaneously with the project.
+The project uses an alpha version of [NodeBox 3](https://web.archive.org/web/20120222051836/http://alpha.nodebox.net:80/), developed simultaneously with the project.
 
 <img src="/media/blog/profilitics/head-overlays.png">
 <img src="/media/blog/profilitics/keywords-laser-cut.jpg">

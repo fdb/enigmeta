@@ -11,7 +11,7 @@ _My colleague Werner and I are holding a challenge this week to produce one visu
 
 Inspired by Werner's work I wanted to do something with swarms. For another project we're talking about creating a _living wallpaper_ which I also wanted to integrate here. And I wanted to make something that was animated and a little bit interactive.
 
-I decided to create an animated swarm in a browser, using trails to create a wallpaper. I used the excellent [three.js](http://mrdoob.github.com/three.js/) library to access WebGL.
+I decided to create an animated swarm in a browser, using trails to create a wallpaper. I used the excellent [three.js](https://web.archive.org/web/20120923150634/http://mrdoob.github.com:80/three.js/) library to access WebGL.
 
 Here's the result from day 3. **Click the image to view it live (Chrome / Firefox)**.
 

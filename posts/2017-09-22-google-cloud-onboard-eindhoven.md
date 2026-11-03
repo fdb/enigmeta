@@ -147,7 +147,7 @@ Example: [Philips Hue](https://cloud.google.com/customers/philips/) uses contain
 - View and edit the data in the web console interface.
 - Useful for simple applications but you often need some sort of schema for more complex operations.
 - Good for product catalogs, user profiles.
-- [Tutorial application with App Engine and Cloud Datastore](https://codelabs.developers.google.com/codelabs/cp100-app-engine/)
+- [Tutorial application with App Engine and Cloud Datastore](https://web.archive.org/web/20191006134135/https://codelabs.developers.google.com/codelabs/cp100-app-engine/)
 
 ## [Cloud Bigtable](https://cloud.google.com/bigtable/)
 
@@ -216,7 +216,7 @@ An analytics database that provides near real-time interactive analysis of massi
 - Fast to create your own clusters (90 seconds).
 - Good for analyzing large data sets (e.g. logging data) stored in Cloud Storage.
 
-## [Cloud Datalab](https://cloud.google.com/datalab/)
+## [Cloud Datalab](https://web.archive.org/web/20170929035006/https://cloud.google.com/datalab/)
 
 - [Jupyter](http://jupyter.org) (IPython notebook) in the cloud.
 - Run and manage data tasks and machine learning in a cloud environment, with fast access to Cloud Storage, machine learning APIs, etc.
@@ -231,7 +231,7 @@ An analytics database that provides near real-time interactive analysis of massi
 
 Google open-source [TensorFlow](https://www.tensorflow.org), a widely-used tool for machine learning. They now provide tools to run TensorFlow jobs in the cloud, as well as pre-trained models for computer vision, language analysis and translation, and text-to-speech.
 
-[Rokesh Jankie](https://twitter.com/rjankie), a Google engineer, gave the best one-line introduction to AI I've ever heard: "You create a function, only we don't know yet the formula of the function." Instead of linear functions, we use neural networks, which can handle complex transformations and noise better. He demonstrated this using the [TensorFlow Playground](http://playground.tensorflow.org/). He also showed the [Cloud Vision Explorer](http://vision-explorer.reactive.ai/), showing an interactive demonstration of the capabilities of the Cloud Vision API. He also showed [WaveNet](https://deepmind.com/blog/wavenet-generative-model-raw-audio/), a generative model for the generation of text-to-speech. He demonstrated how computer vision can be used to find disease patterns in images of eyes.
+[Rokesh Jankie](https://twitter.com/rjankie), a Google engineer, gave the best one-line introduction to AI I've ever heard: "You create a function, only we don't know yet the formula of the function." Instead of linear functions, we use neural networks, which can handle complex transformations and noise better. He demonstrated this using the [TensorFlow Playground](http://playground.tensorflow.org/). He also showed the [Cloud Vision Explorer](https://web.archive.org/web/20170929113252/http://vision-explorer.reactive.ai:80/), showing an interactive demonstration of the capabilities of the Cloud Vision API. He also showed [WaveNet](https://deepmind.com/blog/wavenet-generative-model-raw-audio/), a generative model for the generation of text-to-speech. He demonstrated how computer vision can be used to find disease patterns in images of eyes.
 
 A few use cases:
 
@@ -290,6 +290,6 @@ A few use cases:
 ## Community
 
 - In the Netherlands there is the [Google Developers Group](https://www.gdgnetherlands.org). There is also a [Meetup Group](https://www.meetup.com/Google-Developer-Group-Netherlands/).
-- In Belgium there is the [Brussels GDG](http://gdg.brussels/).
+- In Belgium there is the [Brussels GDG](https://web.archive.org/web/20180117225635/http://gdg.brussels/).
 
 ![High Tech Campus Eindhoven](/media/blog/google-cloud-onboard-eindhoven/outro.jpg)
