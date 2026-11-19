@@ -19,12 +19,14 @@ export function startAnts() {
 	let width = 0;
 	let height = 0;
 	const ink = "#000";
-	const paper = "#fff";
 	let last = 0;
 	const pointer = { x: -999, y: -999 };
 	const listeners = new Set();
 
 	const cap = () => (innerWidth < 700 ? 10 : 30);
+	// Above this many, an ant that walks off the page is gone instead of
+	// coming back on the other side, so a crowd thins out by itself.
+	const soft = () => (innerWidth < 700 ? 4 : 12);
 
 	function resize() {
 		const dpr = Math.min(devicePixelRatio || 1, 2);
@@ -67,6 +69,7 @@ export function startAnts() {
 	function step(dt) {
 		const energy = 1;
 		const room = ants.length < cap();
+		const left = new Set();
 		for (const ant of ants) {
 			ant.a += (Math.random() - 0.5) * 3.2 * dt;
 			let boost = 1;
@@ -99,10 +102,19 @@ export function startAnts() {
 			ant.cool -= dt;
 			ant.size += (1 - ant.size) * dt * 0.12;
 
+			const out = ant.x < -20 || ant.x > width + 20 || ant.y < -20 || ant.y > height + 20;
+			if (out && ants.length - left.size > soft()) {
+				left.add(ant);
+				continue;
+			}
 			if (ant.x < -20) ant.x = width + 20;
 			if (ant.x > width + 20) ant.x = -20;
 			if (ant.y < -20) ant.y = height + 20;
 			if (ant.y > height + 20) ant.y = -20;
+		}
+		if (left.size) {
+			ants = ants.filter((ant) => !left.has(ant));
+			notify();
 		}
 
 		if (!room) return;
@@ -134,14 +146,6 @@ export function startAnts() {
 			ctx.translate(ant.x, ant.y);
 			ctx.rotate(ant.a);
 			ctx.scale(ant.size * 1.15, ant.size * 1.15);
-
-			// A paper-coloured halo keeps ants readable on top of photographs.
-			ctx.strokeStyle = paper;
-			ctx.lineWidth = 2.4;
-			ctx.beginPath();
-			ctx.ellipse(-4.2, 0, 3.4, 2.3, 0, 0, TAU);
-			ctx.ellipse(3.2, 0, 1.8, 1.6, 0, 0, TAU);
-			ctx.stroke();
 
 			ctx.strokeStyle = ink;
 			ctx.fillStyle = ink;
