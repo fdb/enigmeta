@@ -46,14 +46,18 @@
 
 html {
 	-webkit-text-size-adjust: 100%;
-	background: var(--paper);
+	/* The desktop. On the root it paints the whole canvas, including the rubber-band overscroll,
+	   and fixed keeps the 2px checkerboard from shimmering while the page scrolls. */
+	background: var(--grey);
+	background-attachment: fixed;
+	/* No rubber-band bounce: it drags the fixed pattern off the pixel grid and it shimmers. */
+	overscroll-behavior: none;
 }
 
 body {
 	margin: 0;
 	min-height: 100vh;
 	padding: calc(var(--menubar) + 28px) 12px 110px;
-	background: var(--grey);
 	color: var(--ink);
 	font-family: var(--text);
 	font-size: 15px;
