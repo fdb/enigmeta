@@ -1,0 +1,13 @@
+---
+layout: base
+title: Projects
+permalink: /projects/
+bodyClass: page-list
+---
+<header class="card-header">
+	<h1>Projects</h1>
+	<p>{{ collections.projects.length }} projects, {{ (collections.projects | last).date | year }} to {{ (collections.projects | first).date | year }}.</p>
+</header>
+<div class="icons">
+	{% for item in collections.projects %}{% include "card.njk" %}{% endfor %}
+</div>

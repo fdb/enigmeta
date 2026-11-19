@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title == "Enigmeta" %}Enigmeta{% else %}{{ title }} | Enigmeta{% endif %}</title>
+<meta name="author" content="{{ site.author }}">
+<link rel="alternate" type="application/atom+xml" title="Enigmeta" href="/atom.xml">
+{% set pageDescription = description or "Personal Homepage of Frederik De Bleser, designer, researcher and teacher at Sint Lucas Antwerpen" %}
+{% set shareImage = image or (bigshot if bigshot and bigshot[0] == "/") %}
+<meta name="description" content="{{ pageDescription }}">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="{{ title or 'Enigmeta' }}">
+<meta property="og:description" content="{{ pageDescription }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+{% if shareImage %}<meta property="og:image" content="{{ site.url }}{{ shareImage }}">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ site.url }}{{ shareImage }}">
+{% else %}<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+{% endif %}<meta name="twitter:site" content="@enigmeta">
+<meta name="twitter:title" content="{{ title or 'Enigmeta' }}">
+<meta name="twitter:description" content="{{ pageDescription }}">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/jersey-15.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+(function () {
+	var root = document.documentElement;
+	var effects = ["iris", "wipe-left", "wipe-right", "barn-door", "blinds", "zoom"];
+	try {
+		if (localStorage.getItem("invert") === "1") root.dataset.invert = "";
+		if (localStorage.getItem("effects") === "0") root.dataset.noEffects = "";
+	} catch (e) {}
+	// HyperCard's "visual effect": each card arrives with one.
+	addEventListener("pagereveal", function (event) {
+		if (event.viewTransition) root.dataset.effect = effects[Math.floor(Math.random() * effects.length)];
+	});
+	root.classList.add("js");
+})();
+</script>
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | versioned }}">
+<script type="application/json" id="stack">{{ collections.stack | stackJson | safe }}</script>
+<script type="module" src="{{ '/assets/js/main.js' | versioned }}"></script>
+</head>
+{% set card = collections.stack | cardInfo(page.url) %}
+<body id="{{ id }}" class="{{ bodyClass }}">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="menubar">
+	<nav class="menus" aria-label="Menus">
+		<details class="menu" name="menu">
+			<summary aria-label="{{ site.name }}"><svg viewBox="0 0 14 14" width="14" height="14" aria-hidden="true"><path d="M7 0 14 7 7 14 0 7Z"/><path d="M7 4 10 7 7 10 4 7Z" fill="var(--paper)"/></svg></summary>
+			<div class="menu-items">
+				<a href="/about/">About this stack…</a>
+				<hr>
+				<a href="/atom.xml">Feed</a>
+				<a href="{{ site.github }}">GitHub</a>
+				<a href="{{ site.linkedin }}">LinkedIn</a>
+				<a href="mailto:{{ site.email }}">Mail</a>
+			</div>
+		</details>
+		<details class="menu" name="menu">
+			<summary>Go</summary>
+			<div class="menu-items">
+				<a href="/">Home</a>
+				<a href="/projects/">Projects</a>
+				<a href="/posts/">Writing</a>
+				<a href="/about/">About</a>
+				<hr>
+				<a href="{{ collections.stack[0].url }}">First</a>
+				{% if card.prev %}<a href="{{ card.prev.url }}">Prev <kbd>←</kbd></a>
+				<a href="{{ card.next.url }}">Next <kbd>→</kbd></a>{% endif %}
+				<a href="{{ (collections.stack | last).url }}">Last</a>
+			</div>
+		</details>
+		<details class="menu" name="menu">
+			<summary>Projects</summary>
+			<div class="menu-items">
+				{% for item in collections.projects %}<a href="{{ item.url }}">{{ item.data.title }} <kbd>{{ item.date | year }}</kbd></a>
+				{% endfor %}
+			</div>
+		</details>
+		<details class="menu" name="menu">
+			<summary>Writing</summary>
+			<div class="menu-items">
+				{% for item in collections.posts %}<a href="{{ item.url }}">{{ item.data.title }} <kbd>{{ item.date | year }}</kbd></a>
+				{% endfor %}
+			</div>
+		</details>
+		<details class="menu menu-tools" name="menu">
+			<summary>Tools</summary>
+			<div class="menu-items">
+				<button type="button" data-tool="browse">Browse</button>
+				<button type="button" data-tool="pencil">Pencil</button>
+				<button type="button" data-tool="spray">Spray</button>
+				<button type="button" data-tool="eraser">Eraser</button>
+				<hr>
+				<button type="button" data-action="erase">Erase my drawing</button>
+			</div>
+		</details>
+		<details class="menu" name="menu">
+			<summary>Options</summary>
+			<div class="menu-items">
+				<button type="button" data-action="invert">Invert screen</button>
+				<button type="button" data-action="ants">Ants</button>
+				<button type="button" data-action="effects">Visual effects</button>
+			</div>
+		</details>
+	</nav>
+	<button type="button" class="tool-indicator" data-tool="browse" data-tool-indicator hidden aria-label="Return to Browse tool"></button>
+	<span class="clock" data-clock aria-hidden="true"></span>
+</header>
+
+<div class="window stack-window">
+	<div class="titlebar">
+		<a class="closebox" href="/" aria-label="Close this card and go home"></a>
+		<span class="titlebar-title">{{ title or site.name }}</span>
+	</div>
+	<main id="main" class="card" data-card>
+{{ content | safe }}
+	</main>
+	{% if card.number %}
+	<nav class="cardnav" aria-label="Cards">
+		<a class="arrow" href="{{ card.prev.url }}" rel="prev" aria-label="Previous card: {{ card.prev.data.title or 'Home' }}"><svg viewBox="0 0 22 16" width="33" height="24" aria-hidden="true"><path d="M0 8 10 0v5h12v6H10v5Z"/></svg></a>
+		<a class="arrow" href="/" aria-label="Home card"><svg viewBox="0 0 20 16" width="30" height="24" aria-hidden="true"><path d="M10 0 20 8h-3v8h-5v-5H8v5H3V8H0Z"/></svg></a>
+		<a class="arrow" href="{{ card.next.url }}" rel="next" aria-label="Next card: {{ card.next.data.title or 'Home' }}"><svg viewBox="0 0 22 16" width="33" height="24" aria-hidden="true"><path d="M22 8 12 0v5H0v6h12v5Z"/></svg></a>
+		<span class="cardnav-count">Card {{ card.number }} of {{ card.total }}</span>
+	</nav>
+	{% endif %}
+</div>
+
+<svg class="filters" width="0" height="0" aria-hidden="true">
+	<!-- Turns the soft edge of a mask into on or off, for the dissolve on thumbnails. -->
+	<filter id="dissolve"><feComponentTransfer><feFuncA type="discrete" tableValues="0 1"/></feComponentTransfer></filter>
+</svg>
+</body>
+</html>

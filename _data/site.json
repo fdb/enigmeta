@@ -1,3 +1,8 @@
 {
-	"url": "https://enigmeta.com"
+	"url": "https://enigmeta.com",
+	"name": "Enigmeta",
+	"author": "Frederik De Bleser",
+	"email": "frederik@debleser.be",
+	"github": "https://github.com/fdb",
+	"linkedin": "https://www.linkedin.com/in/frederik-de-bleser/"
 }

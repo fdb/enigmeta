@@ -1,0 +1,15 @@
+---
+layout: base
+bodyClass: page-post
+---
+<article>
+	<header class="card-header">
+		<p class="card-meta"><a href="/posts/">Writing</a>, <time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time></p>
+		<h1>{{ title }}</h1>
+		{% if copyright %}<p class="post-copyright">{{ copyright | safe }}</p>{% endif %}
+	</header>
+	<div class="prose post">
+		{% if bigshot %}<img class="post-hero" src="/media/blog/{{ page.fileSlug }}/{{ bigshot }}" alt="{{ title }}">{% endif %}
+		{{ content | safe }}
+	</div>
+</article>

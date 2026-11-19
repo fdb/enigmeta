@@ -1,0 +1,8 @@
+<a class="icon" href="{{ item.url }}">
+	<span class="icon-picture">
+		{% if item.data.icon %}<img class="dither" src="{{ item.data.icon }}" width="288" height="162" alt="" eleventy:ignore>{% endif %}
+		{% if item.data.image %}<span class="dissolve"><img class="colour" src="{{ item.data.image }}" alt="" sizes="288px"></span>{% endif %}
+	</span>
+	<span class="icon-label">{{ item.data.title }}</span>
+	<span class="icon-year">{{ item.date | year }}</span>
+</a>
