@@ -475,12 +475,6 @@ input {
 .post-copyright {
 	font-size: 12px;
 }
-.home-hint {
-	margin: 0;
-	padding: 10px 14px;
-	border: 1px dotted var(--ink);
-	font-size: 13px;
-}
 
 /* ---------- Icon grid (projects) ---------- */
 
