@@ -1,45 +1,39 @@
 ---
 id: home
 title: Enigmeta
-layout: default
+layout: base
+bodyClass: page-home
 ---
 
-<section class="intro">
+<header class="home-header">
 	<h1>Frederik De Bleser</h1>
-	<p class="intro-text">
+	<p>
 		Researcher &amp; professor in digital media at
-		<a href="https://www.sintlucasantwerpen.be/" target="_blank">Sint&nbsp;Lucas&nbsp;Antwerpen</a>.<br/>Freelance data visualization designer.
+		<a href="https://www.sintlucasantwerpen.be/" target="_blank">Sint&nbsp;Lucas&nbsp;Antwerpen</a>.<br>Freelance data visualization designer.
 	</p>
-</section>
+</header>
 
-<section class="projects" id="projects">
+<section class="home-section" id="projects">
 	<h2>Projects</h2>
-	<div class="project-grid">
-		{%- for project in collections.project reversed -%}
-		<a class="project-card" href="{{ project.url }}">
-			<img src="/media/projects/{{ project.data.slug }}/{{ project.data.thumbnail }}" alt="{{ project.data.title }}" loading="lazy" />
-			<span class="project-card-title">{{ project.data.title }}</span>
-			<time>{{ project.date | date: "%Y" }}</time>
-		</a>
-		{%- endfor -%}
+	<div class="icons">
+		{% for item in collections.projects.slice(0, 6) %}{% include "card.njk" %}{% endfor %}
 	</div>
+	<p><a class="button" href="/projects/">All {{ collections.projects.length }} projects</a></p>
 </section>
 
-<section class="writing" id="writing">
+<section class="home-section" id="writing">
 	<h2>Writing</h2>
-	<ul class="writing-list">
-		{%- for post in collections.post reversed -%}
-		<li class="writing-item">
-			<a href="{{ post.url }}">
-				<span class="writing-title">{{ post.data.title }}</span>
-				<time class="writing-date">{{ post.date | date: "%Y-%m-%d" }}</time>
-			</a>
-		</li>
-		{%- endfor -%}
+	<ul class="rows">
+		{% for item in collections.posts.slice(0, 4) %}{% include "postrow.njk" %}{% endfor %}
 	</ul>
+	<p><a class="button" href="/posts/">All {{ collections.posts.length }} posts</a></p>
 </section>
 
-<section class="contact" id="contact">
+<section class="home-section" id="contact">
 	<h2>Contact</h2>
-	<p><a href="mailto:frederik@debleser.be">frederik@debleser.be</a></p>
+	<p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
 </section>
+
+<p class="home-hint">This site is a stack of {{ collections.stack.length }} cards. Use the arrows below or the arrow keys to flip through it, and pick a pencil from the Tools menu to draw on any card.</p>
+
+<p class="home-colophon">This design was inspired by HyperCard, one of the first creative tools I encountered and one that has a very special place in my heart.</p>

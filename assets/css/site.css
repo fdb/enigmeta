@@ -1,0 +1,944 @@
+/* A HyperCard stack on a 1-bit Macintosh desktop.
+   Two colours only: --ink and --paper. Greys are dither patterns. */
+
+@font-face {
+	font-family: "Jersey 15";
+	src: url("/assets/fonts/jersey-15.woff2") format("woff2");
+	font-weight: 400;
+	font-display: swap;
+}
+
+:root {
+	--ink: #000;
+	--paper: #fff;
+	/* The desktop: a one-pixel checkerboard, which reads as 50% grey. */
+	--grey: repeating-conic-gradient(var(--ink) 0 25%, var(--paper) 0 50%) 0 0 / 2px 2px;
+	/* A lighter 25% dot pattern for hover states and fills. */
+	--light: radial-gradient(var(--ink) 0.5px, transparent 0.6px) 0 0 / 4px 4px var(--paper);
+	--chrome: "Jersey 15", "Chicago", "Geneva", sans-serif;
+	--text: "Geneva", "Lucida Grande", Verdana, sans-serif;
+	--mono: "Monaco", Menlo, monospace;
+	--menubar: 30px;
+	color-scheme: light;
+}
+
+/* "Invert screen" works the way it did on a Mac Plus. Pictures are inverted back. */
+:root[data-invert] {
+	filter: invert(1);
+}
+:root[data-invert] :is(.prose img, .prose video, iframe, .colour) {
+	filter: invert(1);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	background: var(--paper);
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	padding: calc(var(--menubar) + 28px) 12px 110px;
+	background: var(--grey);
+	color: var(--ink);
+	font-family: var(--text);
+	font-size: 15px;
+	line-height: 1.55;
+}
+
+img,
+video,
+canvas {
+	max-width: 100%;
+}
+img,
+video {
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+.menubar,
+.titlebar,
+.button,
+.cardnav,
+.icon-label,
+.row-title,
+.card-meta {
+	font-family: var(--chrome);
+	-webkit-font-smoothing: none;
+	font-smooth: never;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 400;
+	line-height: 1.05;
+	margin: 0;
+	text-wrap: balance;
+}
+
+a {
+	color: inherit;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+}
+a:hover {
+	background: var(--ink);
+	color: var(--paper);
+}
+
+:focus-visible {
+	outline: 2px dotted var(--ink);
+	outline-offset: 2px;
+}
+
+button,
+input {
+	font: inherit;
+	color: inherit;
+}
+
+.skip {
+	position: fixed;
+	left: 8px;
+	top: -60px;
+	z-index: 300;
+	padding: 6px 10px;
+	background: var(--ink);
+	color: var(--paper);
+}
+.skip:focus {
+	top: 40px;
+}
+
+/* ---------- Menu bar ---------- */
+
+.menubar {
+	position: fixed;
+	inset: 0 0 auto 0;
+	z-index: 200;
+	display: flex;
+	align-items: stretch;
+	height: var(--menubar);
+	padding: 0 10px;
+	background: var(--paper);
+	border-bottom: 2px solid var(--ink);
+	font-size: 20px;
+	line-height: 1;
+	view-transition-name: menubar;
+}
+.menus {
+	display: flex;
+	min-width: 0;
+}
+.menu {
+	position: relative;
+}
+.menu summary {
+	display: flex;
+	align-items: center;
+	height: calc(var(--menubar) - 2px);
+	padding: 0 10px;
+	list-style: none;
+	cursor: default;
+	user-select: none;
+}
+.menu summary::-webkit-details-marker {
+	display: none;
+}
+.menu summary svg {
+	fill: currentColor;
+}
+.menu[open] summary,
+.menu summary:hover {
+	background: var(--ink);
+	color: var(--paper);
+}
+.menu[open] summary svg path + path {
+	fill: var(--ink);
+}
+.menu-items {
+	position: absolute;
+	left: 0;
+	top: calc(var(--menubar) - 2px);
+	min-width: 12em;
+	max-height: calc(100vh - var(--menubar) - 16px);
+	overflow-y: auto;
+	padding: 2px 0;
+	background: var(--paper);
+	border: 1px solid var(--ink);
+	box-shadow: 2px 2px 0 var(--ink);
+}
+.menu-items a,
+.menu-items button {
+	display: flex;
+	justify-content: space-between;
+	gap: 2em;
+	width: 100%;
+	padding: 4px 14px 4px 22px;
+	border: 0;
+	background: none;
+	text-align: left;
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: default;
+}
+.menu-items a:hover,
+.menu-items button:hover,
+.menu-items a:focus-visible,
+.menu-items button:focus-visible {
+	background: var(--ink);
+	color: var(--paper);
+	outline: 0;
+}
+.menu-items [aria-checked="true"]::before {
+	content: "✓";
+	position: absolute;
+	left: 7px;
+}
+.menu-items [role] {
+	position: relative;
+}
+.menu-items hr {
+	height: 1px;
+	margin: 3px 0;
+	border: 0;
+	background: var(--grey);
+}
+.menu-items kbd {
+	font: inherit;
+}
+.clock {
+	margin-left: auto;
+	align-self: center;
+	white-space: nowrap;
+}
+@media (max-width: 640px) {
+	.menubar {
+		padding: 0 2px;
+		font-size: 18px;
+	}
+	.menu summary {
+		padding: 0 7px;
+	}
+	.clock,
+	.menu-tools {
+		display: none;
+	}
+	.menu {
+		position: static;
+	}
+	.menu-items {
+		left: 4px;
+		right: 4px;
+	}
+	.menu-items a {
+		white-space: normal;
+	}
+}
+
+/* ---------- Windows ---------- */
+
+.window {
+	background: var(--paper);
+	border: 1px solid var(--ink);
+	box-shadow: 2px 2px 0 var(--ink);
+}
+.stack-window {
+	max-width: 1012px;
+	margin: 0 auto;
+}
+.titlebar {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 22px;
+	padding: 0 34px;
+	border-bottom: 1px solid var(--ink);
+	/* Six pinstripes, as on a System 6 window. */
+	background:
+		linear-gradient(var(--paper), var(--paper)) 0 0 / 100% 4px no-repeat,
+		linear-gradient(var(--paper), var(--paper)) 0 100% / 100% 4px no-repeat,
+		linear-gradient(90deg, var(--paper) 2px, transparent 2px, transparent calc(100% - 2px), var(--paper) calc(100% - 2px)),
+		repeating-linear-gradient(var(--ink) 0 1px, var(--paper) 1px 2px) 0 4px;
+	font-size: 19px;
+	line-height: 1;
+}
+.titlebar-title {
+	padding: 0 10px;
+	background: var(--paper);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.closebox {
+	position: absolute;
+	left: 9px;
+	top: 4px;
+	width: 13px;
+	height: 13px;
+	padding: 0;
+	border: 1px solid var(--ink);
+	background: var(--paper);
+	box-shadow: 0 0 0 2px var(--paper);
+	cursor: default;
+}
+.closebox:hover,
+.closebox:active {
+	background:
+		linear-gradient(45deg, transparent 45%, var(--ink) 45% 55%, transparent 55%),
+		linear-gradient(-45deg, transparent 45%, var(--ink) 45% 55%, transparent 55%), var(--paper);
+}
+
+/* ---------- The card ---------- */
+
+.card {
+	position: relative;
+	padding: 34px clamp(16px, 4vw, 40px) 44px;
+	min-height: 342px;
+	overflow: hidden;
+	cursor: url("/assets/hand.svg") 6 1, auto;
+}
+.card a,
+.card button {
+	cursor: url("/assets/hand.svg") 6 1, pointer;
+}
+.paint {
+	position: absolute;
+	left: 0;
+	top: 0;
+	max-width: none;
+	image-rendering: pixelated;
+	pointer-events: none;
+	z-index: 5;
+}
+:root[data-tool="pencil"] .paint,
+:root[data-tool="spray"] .paint,
+:root[data-tool="eraser"] .paint {
+	pointer-events: auto;
+	touch-action: none;
+	cursor: crosshair;
+}
+
+.cardnav {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 14px;
+	border-top: 1px solid var(--ink);
+	font-size: 20px;
+}
+.arrow {
+	display: grid;
+	place-items: center;
+	width: 50px;
+	height: 36px;
+	border: 1px solid var(--ink);
+	border-radius: 8px;
+	box-shadow: 1px 1px 0 var(--ink);
+	background: var(--paper);
+}
+.arrow svg {
+	fill: currentColor;
+}
+.arrow:active {
+	background: var(--ink);
+	color: var(--paper);
+}
+.cardnav-count {
+	margin-left: auto;
+}
+
+.button {
+	display: inline-block;
+	padding: 5px 16px 6px;
+	border: 1px solid var(--ink);
+	border-radius: 8px;
+	box-shadow: 1px 1px 0 var(--ink);
+	background: var(--paper);
+	color: var(--ink);
+	font-size: 20px;
+	line-height: 1.1;
+	text-decoration: none;
+}
+.button:hover,
+.button:active {
+	background: var(--ink);
+	color: var(--paper);
+}
+.button.default {
+	outline: 2px solid var(--ink);
+	outline-offset: 2px;
+	border-radius: 8px;
+}
+
+.card-header {
+	margin-bottom: 30px;
+	padding-bottom: 18px;
+	border-bottom: 4px double var(--ink);
+}
+.card-header h1,
+.home-header h1 {
+	font-size: clamp(40px, 8vw, 75px);
+	overflow-wrap: break-word;
+}
+.card-header p {
+	max-width: 60ch;
+	margin: 12px 0 0;
+}
+.card-meta {
+	margin: 0 0 8px !important;
+	font-size: 20px;
+}
+
+/* ---------- Home ---------- */
+
+.home-header {
+	margin-bottom: 34px;
+	padding: 22px 24px 24px;
+	border: 1px solid var(--ink);
+	box-shadow: 2px 2px 0 var(--ink);
+	background: var(--light);
+}
+.home-header h1,
+.home-header p {
+	display: table;
+	padding: 2px 8px;
+	background: var(--paper);
+}
+.home-header p {
+	margin: 10px 0 0;
+	font-size: 17px;
+}
+.home-section {
+	margin-bottom: 40px;
+}
+.home-section h2,
+.year h2 {
+	margin-bottom: 14px;
+	font-size: 38px;
+}
+.home-colophon {
+	margin: 14px 0 0;
+	font-size: 13px;
+	font-style: italic;
+}
+.post-copyright {
+	font-size: 12px;
+}
+.home-hint {
+	margin: 0;
+	padding: 10px 14px;
+	border: 1px dotted var(--ink);
+	font-size: 13px;
+}
+
+/* ---------- Icon grid (projects) ---------- */
+
+.icons {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 288px);
+	gap: 30px 32px;
+	justify-content: center;
+	margin-bottom: 24px;
+}
+.icon {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 6px 8px;
+	width: 288px;
+	max-width: 100%;
+	text-decoration: none;
+}
+.icon:hover {
+	background: none;
+	color: inherit;
+}
+.icon-picture {
+	position: relative;
+	grid-column: 1 / -1;
+	display: block;
+	aspect-ratio: 16 / 9;
+	border: 1px solid var(--ink);
+	box-shadow: 2px 2px 0 var(--ink);
+	background: var(--paper);
+	overflow: hidden;
+}
+.icon-picture img {
+	position: absolute;
+	inset: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.dither,
+.row-icon img,
+.about-portrait {
+	image-rendering: pixelated;
+}
+/* The picture is 1-bit until you point at it, then the colour dissolves in.
+   The mask is a 4x4 Bayer tile whose pixels differ in opacity. The #dissolve
+   filter on the wrapper cuts the result to on or off, so stepping the opacity
+   of the picture switches on two more pixels of every tile at each step. */
+.dissolve {
+	position: absolute;
+	inset: 0;
+	filter: url("#dissolve");
+}
+.icon-picture .colour {
+	opacity: 0.49;
+	visibility: hidden;
+	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4' shape-rendering='crispEdges'%3E%3Crect x='0' y='0' width='1' height='1' fill-opacity='0.970'/%3E%3Crect x='1' y='0' width='1' height='1' fill-opacity='0.653'/%3E%3Crect x='2' y='0' width='1' height='1' fill-opacity='0.865'/%3E%3Crect x='3' y='0' width='1' height='1' fill-opacity='0.604'/%3E%3Crect x='0' y='1' width='1' height='1' fill-opacity='0.561'/%3E%3Crect x='1' y='1' width='1' height='1' fill-opacity='0.780'/%3E%3Crect x='2' y='1' width='1' height='1' fill-opacity='0.525'/%3E%3Crect x='3' y='1' width='1' height='1' fill-opacity='0.711'/%3E%3Crect x='0' y='2' width='1' height='1' fill-opacity='0.821'/%3E%3Crect x='1' y='2' width='1' height='1' fill-opacity='0.582'/%3E%3Crect x='2' y='2' width='1' height='1' fill-opacity='0.914'/%3E%3Crect x='3' y='2' width='1' height='1' fill-opacity='0.627'/%3E%3Crect x='0' y='3' width='1' height='1' fill-opacity='0.508'/%3E%3Crect x='1' y='3' width='1' height='1' fill-opacity='0.681'/%3E%3Crect x='2' y='3' width='1' height='1' fill-opacity='0.542'/%3E%3Crect x='3' y='3' width='1' height='1' fill-opacity='0.744'/%3E%3C/svg%3E") 0 0 / 8px 8px;
+	transition: opacity 0.45s steps(8), visibility 0s 0.45s;
+}
+.icon:hover .colour,
+.icon:focus-visible .colour {
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0s;
+}
+@media (prefers-reduced-motion: reduce) {
+	.icon-picture .colour {
+		transition: none;
+	}
+}
+.filters {
+	position: absolute;
+}
+.icon-label {
+	justify-self: start;
+	padding: 1px 5px;
+	font-size: 21px;
+	line-height: 1.15;
+}
+.icon:hover .icon-label {
+	background: var(--ink);
+	color: var(--paper);
+}
+.icon-year {
+	font-size: 12px;
+	padding-top: 3px;
+}
+
+/* ---------- Rows (posts): a list field ---------- */
+
+.rows {
+	list-style: none;
+	margin: 0 0 22px;
+	padding: 0;
+	border: 1px solid var(--ink);
+	box-shadow: 2px 2px 0 var(--ink);
+}
+.rows li + li {
+	border-top: 1px dotted var(--ink);
+}
+.row {
+	display: grid;
+	grid-template-columns: 64px 1fr auto;
+	gap: 4px 16px;
+	align-items: center;
+	padding: 10px 14px 10px 10px;
+	text-decoration: none;
+}
+.row-icon {
+	width: 64px;
+	height: 64px;
+	border: 1px solid var(--ink);
+	background: var(--light);
+}
+.row-icon img {
+	display: block;
+}
+.row:hover .row-icon img {
+	filter: invert(1);
+}
+.row-title {
+	display: block;
+	font-size: 23px;
+	line-height: 1.1;
+}
+.row-excerpt {
+	display: block;
+	margin-top: 4px;
+	font-size: 13px;
+	line-height: 1.4;
+	max-width: 70ch;
+}
+.row-date {
+	font-size: 12px;
+	white-space: nowrap;
+}
+@media (max-width: 640px) {
+	.row {
+		grid-template-columns: 64px 1fr;
+	}
+	.row-date {
+		grid-column: 2;
+	}
+	.row-excerpt {
+		display: none;
+	}
+}
+.year {
+	margin-bottom: 30px;
+}
+
+/* ---------- Prose ---------- */
+
+.prose {
+	display: grid;
+	grid-template-columns: [wide-start] 1fr [text-start] min(620px, 100%) [text-end] 1fr [wide-end];
+}
+.prose > * {
+	grid-column: text;
+	min-width: 0;
+	margin-block: 0 16px;
+}
+.prose > p:has(> img),
+.prose > p:has(> video),
+.prose > img,
+.prose > video,
+.prose > iframe,
+.prose > .embed-responsive,
+.prose > .columns,
+.prose > .screenshot-grid,
+.prose > .talk {
+	grid-column: wide;
+	margin-block: 12px 28px;
+}
+.prose h1,
+.prose h2 {
+	font-size: 34px;
+	margin-block: 26px 12px;
+}
+.prose h3 {
+	font-size: 25px;
+	margin-block: 20px 8px;
+}
+.prose > p:first-child {
+	font-size: 17px;
+}
+.prose ul,
+.prose ol {
+	padding-left: 22px;
+}
+.prose li {
+	margin-bottom: 4px;
+}
+.prose ul {
+	list-style: square;
+}
+.prose blockquote {
+	margin-inline: 0;
+	padding: 12px 16px;
+	border: 1px solid var(--ink);
+	box-shadow: 2px 2px 0 var(--ink);
+	background: var(--light);
+}
+.prose blockquote p {
+	display: table;
+	margin: 0;
+	padding: 2px 6px;
+	background: var(--paper);
+	font-size: 17px;
+}
+.prose hr {
+	width: 100%;
+	height: 2px;
+	border: 0;
+	background: var(--grey);
+}
+
+/* :where() keeps specificity at zero so the style blocks inside old posts still win. */
+:where(.prose) img,
+:where(.prose) video,
+:where(.prose) iframe {
+	display: block;
+	width: 100%;
+	border: 1px solid var(--ink);
+	box-shadow: 2px 2px 0 var(--ink);
+}
+:where(.prose) p > img + img {
+	margin-top: 20px;
+}
+:where(.prose) iframe {
+	aspect-ratio: 16 / 9;
+	height: auto;
+}
+.embed-responsive {
+	aspect-ratio: 16 / 9;
+}
+.embed-responsive iframe {
+	height: 100%;
+}
+.columns {
+	display: grid;
+	gap: 18px;
+	align-items: start;
+}
+.two.columns { grid-template-columns: repeat(2, 1fr); }
+.three.columns { grid-template-columns: repeat(3, 1fr); }
+.four.columns { grid-template-columns: repeat(4, 1fr); }
+.screenshot-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+	gap: 18px;
+	align-items: start;
+}
+.caption {
+	margin: 10px 0 0;
+	font-size: 12px;
+}
+@media (max-width: 640px) {
+	.two.columns,
+	.three.columns {
+		grid-template-columns: 1fr;
+	}
+	.four.columns {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+.slide-row {
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+	gap: 12px 28px;
+	align-items: start;
+	margin-bottom: 34px;
+}
+.slide-row .slides {
+	display: grid;
+	gap: 12px;
+}
+.slide-row .slides.grid-2 {
+	grid-template-columns: 1fr 1fr;
+}
+.slide-text > :first-child {
+	margin-top: 0;
+}
+.talk h2,
+.talk h3 {
+	margin-block: 0 10px;
+}
+@media (max-width: 760px) {
+	.slide-row {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+.missing {
+	display: grid;
+	place-items: center;
+	min-height: 100px;
+	padding: 12px;
+	border: 1px dotted var(--ink);
+	font-size: 13px;
+	text-align: center;
+}
+
+/* ---------- Code: a scrolling field in Monaco ---------- */
+
+code,
+pre {
+	font-family: var(--mono);
+	font-size: 12.5px;
+}
+:not(pre) > code {
+	padding: 1px 4px;
+	border: 1px dotted var(--ink);
+}
+pre {
+	padding: 12px 14px;
+	overflow-x: auto;
+	line-height: 1.5;
+	tab-size: 4;
+	background: var(--paper);
+	border: 1px solid var(--ink);
+	box-shadow: 2px 2px 0 var(--ink);
+}
+.token.comment { font-style: italic; }
+.token.keyword, .token.tag, .token.function { font-weight: bold; }
+.token.string, .token.attr-value { text-decoration: underline dotted 1px; text-underline-offset: 3px; }
+
+/* ---------- About, 404 ---------- */
+
+.about {
+	display: grid;
+	grid-template-columns: 320px minmax(0, 1fr);
+	gap: clamp(20px, 4vw, 44px);
+	align-items: start;
+}
+.about-portrait {
+	display: block;
+	border: 1px solid var(--ink);
+	box-shadow: 2px 2px 0 var(--ink);
+}
+.about h1 {
+	font-size: clamp(40px, 8vw, 75px);
+	margin-bottom: 18px;
+}
+.about-text > p:first-of-type {
+	font-size: 18px;
+}
+@media (max-width: 760px) {
+	.about {
+		grid-template-columns: 1fr;
+	}
+	.about-portrait {
+		width: 160px;
+		height: 200px;
+	}
+}
+.lost h1 {
+	font-size: clamp(30px, 6vw, 54px);
+}
+.lost p {
+	max-width: 60ch;
+}
+.maze {
+	display: block;
+	width: 100%;
+	margin: 22px 0;
+	border: 1px solid var(--ink);
+	box-shadow: 2px 2px 0 var(--ink);
+	image-rendering: pixelated;
+}
+.lost .button {
+	margin: 0 10px 10px 0;
+}
+
+/* ---------- Ants ---------- */
+
+.ants {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	max-width: none;
+	pointer-events: none;
+	z-index: 100;
+}
+
+/* ---------- Visual effects between cards ----------
+   Cross-document view transitions. The old card stays put and the new one is
+   revealed on top of it, in steps, the way HyperCard drew them. */
+
+@view-transition {
+	navigation: auto;
+}
+::view-transition-group(root) {
+	animation: none;
+}
+::view-transition-old(root) {
+	animation: none;
+	mix-blend-mode: normal;
+}
+::view-transition-new(root) {
+	mix-blend-mode: normal;
+	animation: 0.42s steps(9, jump-end) both iris;
+}
+::view-transition-group(menubar),
+::view-transition-old(menubar),
+::view-transition-new(menubar) {
+	animation: none;
+}
+::view-transition-old(menubar) {
+	display: none;
+}
+:root[data-effect="wipe-left"]::view-transition-new(root) { animation-name: wipe-left; }
+:root[data-effect="wipe-right"]::view-transition-new(root) { animation-name: wipe-right; }
+:root[data-effect="barn-door"]::view-transition-new(root) { animation-name: barn-door; }
+:root[data-effect="zoom"]::view-transition-new(root) { animation-name: zoom; }
+:root[data-effect="blinds"]::view-transition-new(root) {
+	animation-name: blinds;
+	mask: repeating-linear-gradient(#000 0 var(--slat), transparent var(--slat) 40px);
+}
+@property --slat {
+	syntax: "<length>";
+	inherits: false;
+	initial-value: 40px;
+}
+@keyframes iris {
+	from { clip-path: circle(0% at 50% 45%); }
+	to { clip-path: circle(110% at 50% 45%); }
+}
+@keyframes wipe-left {
+	from { clip-path: inset(0 0 0 100%); }
+	to { clip-path: inset(0); }
+}
+@keyframes wipe-right {
+	from { clip-path: inset(0 100% 0 0); }
+	to { clip-path: inset(0); }
+}
+@keyframes barn-door {
+	from { clip-path: inset(0 50%); }
+	to { clip-path: inset(0); }
+}
+@keyframes zoom {
+	from { clip-path: inset(45% 45%); }
+	to { clip-path: inset(0); }
+}
+@keyframes blinds {
+	from { --slat: 0px; }
+	to { --slat: 40px; }
+}
+:root[data-no-effects]::view-transition-new(root) {
+	animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation: none !important;
+		transition: none !important;
+	}
+	@view-transition {
+		navigation: none;
+	}
+}
+
+@media print {
+	.menubar,
+	.ants,
+	.cardnav,
+	.titlebar,
+	.paint {
+		display: none !important;
+	}
+	body {
+		padding: 0;
+		background: none;
+	}
+	.window {
+		border: 0;
+		box-shadow: none;
+	}
+}
+
+/* ---------- Hand-built pages (cv, doodles) ---------- */
+
+.mugshot img {
+	width: 160px;
+}
+.doodles {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding: 0;
+	list-style: none;
+}
+.doodles img {
+	width: 200px;
+	height: 200px;
+	margin-bottom: 6px;
+}

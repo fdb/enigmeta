@@ -7,6 +7,7 @@
 		"start": "eleventy --serve",
 		"dev": "eleventy --serve",
 		"build": "eleventy",
+		"check": "eleventy --quiet && node scripts/check-links.mjs",
 		"clean": "rm -rf _site",
 		"format": "prettier --write '**/*.{md,js,css,scss,html,yml,json}'"
 	},
@@ -23,9 +24,12 @@
 	"homepage": "https://enigmeta/com/",
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.6",
+		"@11ty/eleventy-img": "^7.1.1",
 		"@11ty/eleventy-plugin-rss": "^3.1.0",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
-		"prettier": "^3.8.1"
+		"@fontsource/jersey-15": "^5.3.0",
+		"prettier": "^3.8.1",
+		"sharp": "^0.35.5"
 	},
 	"overrides": {
 		"@11ty/recursive-copy": "^5.2.0"

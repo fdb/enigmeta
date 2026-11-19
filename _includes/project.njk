@@ -1,0 +1,15 @@
+---
+layout: base
+bodyClass: page-project
+---
+<article>
+	<header class="card-header">
+		<p class="card-meta"><a href="/projects/">Projects</a>, {{ page.date | year }}</p>
+		<h1>{{ title }}</h1>
+	</header>
+	<div class="prose">
+		{{ content | safe }}
+		{% for image in images %}<img src="{{ image }}" alt="{{ title }}" class="project-image">
+		{% endfor %}
+	</div>
+</article>

@@ -1,0 +1,10 @@
+<li>
+	<a class="row" href="{{ item.url }}">
+		<span class="row-icon">{% if item.data.icon %}<img src="{{ item.data.icon }}" width="64" height="64" alt="" eleventy:ignore>{% endif %}</span>
+		<span class="row-text">
+			<span class="row-title">{{ item.data.title }}</span>
+			<span class="row-excerpt">{{ item.data.description or (item.templateContent | excerpt) }}</span>
+		</span>
+		<time class="row-date" datetime="{{ item.date | isoDate }}">{{ item.date | monthYear }}</time>
+	</a>
+</li>

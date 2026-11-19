@@ -1,0 +1,18 @@
+---
+layout: base
+title: Writing
+permalink: /posts/
+bodyClass: page-list
+---
+<header class="card-header">
+	<h1>Writing</h1>
+	<p>{{ collections.posts.length }} posts since {{ (collections.posts | last).date | year }}. Also available as a <a href="/atom.xml">feed</a>.</p>
+</header>
+{% for group in collections.posts | byYear %}
+<section class="year">
+	<h2>{{ group.year }}</h2>
+	<ul class="rows">
+		{% for item in group.items %}{% include "postrow.njk" %}{% endfor %}
+	</ul>
+</section>
+{% endfor %}
