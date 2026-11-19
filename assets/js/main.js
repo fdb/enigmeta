@@ -55,11 +55,17 @@ function toggleEffects() {
 	save("effects", off ? "0" : "1");
 	check("effects", !off);
 }
+const toolIndicator = $("[data-tool-indicator]");
 function tool(name) {
 	setTool(name);
-	for (const item of document.querySelectorAll("[data-tool]")) {
+	for (const item of document.querySelectorAll(".menu-items [data-tool]")) {
 		item.setAttribute("role", "menuitemradio");
 		item.setAttribute("aria-checked", item.dataset.tool === name);
+	}
+	if (toolIndicator) {
+		const active = name !== "browse";
+		toolIndicator.hidden = !active;
+		if (active) toolIndicator.textContent = `${name[0].toUpperCase()}${name.slice(1)} ×`;
 	}
 }
 
